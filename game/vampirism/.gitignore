@@ -1,0 +1,16 @@
+# Cache crap that Valve autogenerates
+*.bin
+
+# Compiled formats
+
+
+# Panorama debugger
+*.cfg
+
+# Map overviews
+content/dota_addons/trollnelves2/materials/overviews/*
+game/dota_addons/trollnelves2/resource/overviews/*
+
+# Map files
+
+
