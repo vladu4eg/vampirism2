@@ -281,6 +281,7 @@ end
 function InitializeBuilder(hero)
     DebugPrint("Initialize builder")
     local playerID = hero:GetPlayerOwnerID()
+    GameRules.maxFood[playerID] = STARTING_MAX_FOOD
     hero.food = 0
     hero.wisp = 0
     hero.mine = 0

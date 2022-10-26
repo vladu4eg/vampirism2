@@ -512,7 +512,7 @@ function SpawnUnitOnSpellStart(event)
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			return false
 		end
-		if hero.food > GameRules.maxFood and food ~= 0 then
+		if (hero.food > GameRules.maxFood[playerID] and food ~= 0) or hero.food > 300 then
 			SendErrorMessage(playerID, "error_not_enough_food")
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			return false
@@ -753,7 +753,7 @@ function UpgradeWisp(event)
 			end
             return false
         end
-		if hero.food > GameRules.maxFood and food ~= 0 then
+		if (hero.food > GameRules.maxFood[pID] and food ~= 0) or hero.food > 300 then
 			SendErrorMessage(pID, "error_not_enough_food")
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			if casterAbility ~= nil then
@@ -1544,4 +1544,43 @@ function DisableRepairKillWisp(keys)
 		SendErrorMessage(event.casterID, "error_type_only_kill_wisp")
 	end
 
+end
+
+function build_tree( event )
+	local caster = event.caster
+	local ability = event.ability
+	local point = ability:GetCursorPosition()
+	
+	local treePos = Vector(point.x, point.y, 0)
+    local tree -- Figure out which tree was cut
+    for _, t in pairs(BuildingHelper.AllTrees) do
+        local pos = t:GetAbsOrigin()
+        if IsInsideBoxEntity2(point, pos) then
+			BuildingHelper.TreeDummies[t:GetEntityIndex()] = nil
+            UTIL_Remove(t.chopped_dummy)
+			BuildingHelper:BlockGridSquares(2, 2, pos)
+		end
+	end
+end
+
+function GiveWoodGoldForAttackTree (event)
+	if IsServer() then
+		local caster = event.caster
+		PlayerResource:ModifyGold(caster, tonumber(event.Gold))
+		PlayerResource:ModifyLumber(caster, tonumber(event.Wood))
+	end	
+end
+
+function IsInsideBoxEntity2(box, location)
+    local origin = box
+    local X = location.x
+    local Y = location.y
+    local minX = -600 + origin.x
+    local minY = -600 + origin.y
+    local maxX = 600 + origin.x
+    local maxY = 600 + origin.y
+    local betweenX = X >= minX and X <= maxX
+    local betweenY = Y >= minY and Y <= maxY
+    
+    return betweenX and betweenY
 end

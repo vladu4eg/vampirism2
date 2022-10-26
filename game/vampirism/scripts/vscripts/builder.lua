@@ -173,9 +173,9 @@ function Build( event )
         
         -- Give the unit their original attack capability
         unit:RemoveModifierByName("modifier_stunned")
-        local itemBuildingDestroy = CreateItem("item_building_destroy", nil, nil)
+        --local itemBuildingDestroy = CreateItem("item_building_destroy", nil, nil)
        -- if building_name ~= "flag"  then
-            unit:AddItem(itemBuildingDestroy)
+           -- unit:AddItem(itemBuildingDestroy)
             if building_name == "flag" then 
              --   unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
                 unit:AddNewModifier(unit, nil, "modifier_phased", {})
@@ -201,7 +201,10 @@ function Build( event )
         if player then
             CustomGameEventManager:Send_ServerToPlayer(player, "unit_upgrade_complete", { })
         end
-        
+        if building_name == "tent" then
+            GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 50
+            PlayerResource:ModifyFood(hero, 0)
+        end
         if (string.match(building_name, "tent") or string.match(building_name, "barracks")) and string.match(GetMapName(),"clanwars") and GameRules.tent[playerID] ~= nil then
             --local hero2 = PlayerResource:GetSelectedHeroEntity(playerID)
             --if hero2:HasModifier("modifier_kill") then
@@ -216,6 +219,7 @@ function Build( event )
             SendErrorMessage(playerID, "error_not_upgrade_flag_base")
             return false
         end
+
     end)
     
     -- These callbacks will only fire when the state between below half health/above half health changes.
@@ -381,6 +385,7 @@ function UpgradeBuilding( event )
         SendErrorMessage(playerID, "error_not_enough_lumber")
         return false
     end
+
     -- if GameRules.MapSpeed >= 4 and NewBuildingName == 'tower_19' then
     --    SendErrorMessage(playerID, "error_not_upgrade_tower19_x4")
     --     return false
@@ -393,7 +398,13 @@ function UpgradeBuilding( event )
    -- end)
     local newBuildingName = newBuilding:GetUnitName()
     newBuilding.state = "complete"
-    
+    if newBuilding:GetUnitName() == "tent_2" then
+        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 100 
+        PlayerResource:ModifyFood(hero, 0)
+    elseif newBuilding:GetUnitName() == "tent_3" then
+        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 300 
+        PlayerResource:ModifyFood(hero, 0)
+    end
     newBuilding.ancestors = building.ancestors
     table.insert(newBuilding.ancestors,building:GetUnitName())
     for _, ancestorUnitName in pairs(newBuilding.ancestors) do
@@ -653,14 +664,15 @@ function UpgradeBuilding( event )
         
         newBuilding:RemoveModifierByName("modifier_stunned")
         if not string.match(newBuildingName,"troll_hut") and newBuildingName ~= "tower_19" and newBuildingName ~= "tower_19_1" and newBuildingName ~= "tower_19_2" then
-            local item = CreateItem("item_building_destroy", nil, nil)
-            newBuilding:AddItem(item)
+            --local item = CreateItem("item_building_destroy", nil, nil)
+            --newBuilding:AddItem(item)
         end
         ModifyCompletedConstructionBuildingCount(hero, newBuildingName, 1)
         UpdateSpells(hero)
         for _, value in ipairs(hero.units) do
             UpdateUpgrades(value)
         end
+
     end)
 end
 

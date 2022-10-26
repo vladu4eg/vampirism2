@@ -127,18 +127,24 @@ function CDOTA_PlayerResource:GetAllStats(pID)
 	return sum
 end
 
-function CDOTA_PlayerResource:ModifyFood(hero,food)
-	if hero == nil then
-		return
-	end
+function CDOTA_PlayerResource:ModifyFood(hero, food)
     food = string.match(food,"[-]?%d+") or 0
     local playerID = hero:GetPlayerOwnerID()
+	local maxFoodPlayer = 300
+	if hero.food ~= nil then
+		if GameRules.maxFood[playerID] == nil then
+			GameRules.maxFood[playerID] = STARTING_MAX_FOOD
+		end
+		if GameRules.maxFood[playerID] <= 300 then
+			maxFoodPlayer = GameRules.maxFood[playerID]
+		end
     hero.food = hero.food + food
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_food_changed", {
 		playerID = playerID,
 		food = math.floor(hero.food),
-		maxFood = GameRules.maxFood,
+		maxFood = maxFoodPlayer,
 	})
+	end
 end
 
 function CDOTA_PlayerResource:ModifyWisp(hero,wisp)

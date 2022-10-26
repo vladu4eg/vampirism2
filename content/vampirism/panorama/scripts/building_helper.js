@@ -175,10 +175,11 @@ function StartBuildingHelper( params )
             else
             {
                 // Put tree dummies on a separate table to skip trees
-                if (Entities.GetUnitName(entities[i]) == 'npc_dota_units_base')
+                if (Entities.GetUnitName(creature_entities[i]) == 'npc_dota_units_base2')
                 {
-                    if (HasModifier(entities[i], "modifier_tree_cut"))
-                        cutTrees[entPos] = entities[i]
+					//$.Msg("entPos ", entPos)
+					cutTrees = []
+                    cutTrees[entPos] = entities[i]
                 }
                 // Block 2x2 squares if its an enemy unit
                 else if (Entities.GetTeamNumber(entities[i]) != Entities.GetTeamNumber(builderIndex) && !HasModifier(entities[i], "modifier_out_of_world"))
@@ -191,7 +192,7 @@ function StartBuildingHelper( params )
                 }
             }
 
-            /*var specialGrid = GetCustomGrid(entities[i])
+            var specialGrid = GetCustomGrid(entities[i])
             if (specialGrid)
             {
                 for (var gridType in specialGrid)
@@ -207,9 +208,8 @@ function StartBuildingHelper( params )
                         BlockGridInRadius(entPos, Number(specialGrid[gridType].Radius), GRID_TYPES[gridType.toUpperCase()])
                     }
                 }              
-            }*/
+            }
         }
-
         // Update treeGrid (slowly, as its the most expensive)
         if (update_trees)
         {
@@ -222,7 +222,9 @@ function StartBuildingHelper( params )
                 treeGrid = [];
                 for (var i = 0; i < tree_entities.length; i++)
                 {
+
                     var treePos = Entities.GetAbsOrigin(tree_entities[i]);
+					//$.Msg("treePos ", treePos)
                     // Block the grid if the tree isn't chopped
                     if (cutTrees[treePos] === undefined)
                         BlockGridSquares(treePos, 2, "TREE")
@@ -272,7 +274,10 @@ function StartBuildingHelper( params )
 							color = [255,0,0]
 							invalid = true
 						}
-
+						else if (IsTreeGrid(pos))
+						{
+							color = [255,245,0]
+						}	
 						Particles.SetParticleControl(gridParticle, 2, color)   
 					}
 				}
@@ -316,7 +321,9 @@ function StartBuildingHelper( params )
 							part2++;
 
 							if (IsBlocked(pos2) || TooCloseToGoldmine(pos2))
-								color = [255,0,0]                        
+								color = [255,0,0]
+							else if (IsTreeGrid(pos2))
+								color = [255,245,0]
 
 							Particles.SetParticleControl(overlayParticle, 2, color)
 						}
@@ -532,7 +539,7 @@ function RegisterGNV(msg){
     for (var i = 0; i < treeEntities.length; i++)
     {
         var treePos = Entities.GetAbsOrigin(treeEntities[i]);
-        BlockGridSquares(treePos, 2, "TREE")
+		BlockGridSquares(treePos, 2, "TREE")
     }
 
     $.Msg("Free: ",tab["1"]," Blocked: ",tab["2"], " gnvLen: ", msg.gnv.length)
@@ -606,12 +613,12 @@ function IsBlocked(position) {
     if ((flag & requires) != requires)
         return true
 
-    // If there's a tree standing, its invalid
-    if (treeGrid[x] && (treeGrid[x][y] & GRID_TYPES["BLOCKED"]))
-        return true
+	    // If there's a tree standing, its invalid
+   	//if (treeGrid[x] && (treeGrid[x][y] & GRID_TYPES["BLOCKED"]))
+    //    return true
 
     return false
-}
+	}
 
 function BlockEntityGrid(position, gridType) {
     var y = WorldToGridPosX(position[0]) - Root.boundX
@@ -627,10 +634,18 @@ function BlockEntityGrid(position, gridType) {
 function BlockTreeGrid (position) {
     var y = WorldToGridPosX(position[0]) - Root.boundX
     var x = WorldToGridPosY(position[1]) - Root.boundY
+		
+	if (treeGrid[x] === undefined) 
+		treeGrid[x] = []
+	treeGrid[x][y] = GRID_TYPES["BLOCKED"]
+}
 
-    if (treeGrid[x] === undefined) treeGrid[x] = []
-
-    treeGrid[x][y] = GRID_TYPES["BLOCKED"]
+function IsTreeGrid (position) {
+    var y = WorldToGridPosX(position[0]) - Root.boundX
+    var x = WorldToGridPosY(position[1]) - Root.boundY
+	    // If there's a tree standing, its invalid
+    if (treeGrid[x] && treeGrid[x][y])
+        return true
 }
 
 function BlockGridSquares (position, squares, gridType) {

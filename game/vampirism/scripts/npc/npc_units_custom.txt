@@ -1148,7 +1148,115 @@
 		"VisionDaytimeRange"		"0"		// Range of vision during day light.
 		"VisionNighttimeRange"		"0"		// Range of vision at night time.
 	} 
-	
+	"npc_dota_units_base_tree"
+	{
+		"BaseClass"					"npc_dota_creature"
+		// General
+		//
+		"Model"						"models/development/invisiblebox.vmdl"	// Model.
+		"SoundSet"					"0"					// Name of sound set.
+		"Level"						"1"
+		"IsAncient"					"0"
+		"IsNeutralUnitType"			"0"
+		"SelectionGroup"			""					// Units with the same selection group will cycle together when tabbing through owned units
+		"SelectOnSpawn"				"0"
+		"CanBeDominated"			"1"
+		"IgnoreAddSummonedToSelection" "0"
+		"AutoAttacksByDefault"		"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					""			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"BaseAttackSpeed"		"100"
+		"AttackDamageMin"			"1"			// Damage range min.
+		"AttackDamageMax"			"1"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.7"		// Speed of attack.
+		"AttackAnimationPoint"		"0.75"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRangeBuffer"			"250"		// Extra attack range within which the target can move without canceling the attack
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"0"			// Gold earned min.
+		"BountyGoldMax"				"0"			// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"RingRadius"				"32"
+		"HealthBarOffset"			"-1"		// -1 means use the models
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"300"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+		"HasAggressiveStance"		"0"			// Plays alternate idle/run animation when near enemies
+		"FollowRange"				"100"		// Distance to keep when following
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"150"		// Base health.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+		"StatusStartingMana"		"-1"		// -1 means default to full mana
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1"		// Range of vision at night time.
+		
+		// Bots
+		//----------------------------------------------------------------
+		"AttackDesire"				"1.0"		// How much bots want to attack them vs other non-hero things
+
+		//Inventory
+		"HasInventory"				"0"
+		
+		"WakesNeutrals"				"1"
+
+		"IdleSoundLoop"				""
+	}
 	"npc_dota_units_base2"
 	{
 		"BaseClass"					"npc_dota_creature"
@@ -1558,7 +1666,7 @@
 		"PlayerCanControl"			"1"
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
-		"Limit"						"1"
+		"Limit"						"20"
 		"StartingBuilding"          "1"
 		
 	    // Stats
@@ -1570,7 +1678,7 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_2"
-				"gold_cost"			"50"
+				"gold_cost"			"0"
 				"lumber_cost"		"0"
 			}
 	    }
@@ -1581,7 +1689,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"gain_gold"
+		"Ability1"					"food_cost"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -1590,8 +1698,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "5"
-		"StatusHealth"              "30"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "300"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1635,24 +1743,23 @@
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "2"
-	    "BuildTime"                 "2"
+	    "BuildTime"                 "3"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_3"
-				"gold_cost"			"100"
+				"gold_cost"			"0"
 				"lumber_cost"		"0"
 			}
 	    }
 		"Requirements"{
-			"rock_1"				"1"
 		}
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"gain_gold"
+		"Ability1"					"food_cost"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -1661,8 +1768,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "5"
-		"StatusHealth"              "30"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "500"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1706,24 +1813,14 @@
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "3"
-	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"tent_4"
-				"gold_cost"			"200"
-				"lumber_cost"		"0"
-			}
-	    }
+	    "BuildTime"                 "3"
 		"Requirements"{
-			"rock_4"				"1"
 		}
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"gain_gold"
+		"Ability1"					"food_cost"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -1732,8 +1829,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "5"
-		"StatusHealth"              "30"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "3000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2636,7 +2733,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"2"
+		"Limit"						"4"
 		"StartingBuilding"          "1"
 
 	    // Stats
@@ -2645,26 +2742,11 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "4"
+	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_2"
-				"gold_cost"			"8"
-				"lumber_cost"		"0"
-			}
-	        "2"{
-				"unit_name"			"rock_16"
-				"gold_cost"			"131072"
-				"lumber_cost"		"1024"
-			}
-			"3"{
-				"unit_name"			"rock_17"
-				"gold_cost"			"262144"
-				"lumber_cost"		"2048"
-			}
-			"4"{
-				"unit_name"			"rock_18"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
+				"gold_cost"			"0"
+				"lumber_cost"		"1000"
 			}
 	    }
 		"Requirements"{
@@ -2683,8 +2765,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "50"
+	    "ArmorPhysical"             "15"
+		"StatusHealth"              "700"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2701,8 +2783,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "24"
-	    "RingRadius"                "24"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -2734,8 +2816,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_3"
-				"gold_cost"			"16"
-				"lumber_cost"		"0"
+				"gold_cost"			"0"
+				"lumber_cost"		"2000"
 			}
 	    }
 		"Requirements"{
@@ -2754,9 +2836,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "70"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "30"
+		"StatusHealth"              "1750"
+	    "StatusHealthRegen"         "10"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -2805,8 +2887,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_4"
-				"gold_cost"			"32"
-				"lumber_cost"		"0"
+				"gold_cost"			"0"
+				"lumber_cost"		"4000"
 			}
 	    }
 		"Requirements"{
@@ -2825,9 +2907,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "110"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "45"
+		"StatusHealth"              "3500"
+	    "StatusHealthRegen"         "45"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -2876,8 +2958,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_5"
-				"gold_cost"			"64"
-				"lumber_cost"		"0"
+				"gold_cost"			"0"
+				"lumber_cost"		"8000"
 			}
 	    }
 		"Requirements"{
@@ -2896,9 +2978,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "170"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "60"
+		"StatusHealth"              "6000"
+	    "StatusHealthRegen"         "30"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -2947,8 +3029,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_6"
-				"gold_cost"			"128"
-				"lumber_cost"		"0"
+				"gold_cost"			"30"
+				"lumber_cost"		"16000"
 			}
 	    }
 		"Requirements"{
@@ -2967,9 +3049,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "210"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "75"
+		"StatusHealth"              "14000"
+	    "StatusHealthRegen"         "60"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3018,8 +3100,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_7"
-				"gold_cost"			"256"
-				"lumber_cost"		"0"
+				"gold_cost"			"65"
+				"lumber_cost"		"32000"
 			}
 	    }
 		"Requirements"{
@@ -3038,9 +3120,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "1"
-		"StatusHealth"              "320"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "90"
+		"StatusHealth"              "30000"
+	    "StatusHealthRegen"         "250"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3089,8 +3171,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_8"
-				"gold_cost"			"512"
-				"lumber_cost"		"0"
+				"gold_cost"			"125"
+				"lumber_cost"		"64000"
 			}
 	    }
 		"Requirements"{
@@ -3109,9 +3191,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "2"
-		"StatusHealth"              "640"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "105"
+		"StatusHealth"              "45000"
+	    "StatusHealthRegen"         "200"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3160,8 +3242,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_9"
-				"gold_cost"			"1024"
-				"lumber_cost"		"0"
+				"gold_cost"			"250"
+				"lumber_cost"		"128000"
 			}
 	    }
 		"Requirements"{
@@ -3180,9 +3262,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "3"
-		"StatusHealth"              "1280"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "120"
+		"StatusHealth"              "75000"
+	    "StatusHealthRegen"         "350"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3231,8 +3313,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_10"
-				"gold_cost"			"2048"
-				"lumber_cost"		"0"
+				"gold_cost"			"440"
+				"lumber_cost"		"150000"
 			}
 	    }
 		"Requirements"{
@@ -3251,9 +3333,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "4"
-		"StatusHealth"              "2560"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "135"
+		"StatusHealth"              "200000"
+	    "StatusHealthRegen"         "1000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3302,8 +3384,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_11"
-				"gold_cost"			"4096"
-				"lumber_cost"		"32"
+				"gold_cost"			"880"
+				"lumber_cost"		"150000"
 			}
 	    }
 		"Requirements"{
@@ -3322,9 +3404,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "5"
-		"StatusHealth"              "5120"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "150"
+		"StatusHealth"              "400000"
+	    "StatusHealthRegen"         "2000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3370,15 +3452,69 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "12"
 	        "1"{
-				"unit_name"			"rock_12"
-				"gold_cost"			"8192"
-				"lumber_cost"		"64"
+				"unit_name"			"rock_13"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"2"{
+				"unit_name"			"rock_14"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"3"{
+				"unit_name"			"rock_15"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"4"{
+				"unit_name"			"rock_16"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"5"{
+				"unit_name"			"rock_17"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"6"{
+				"unit_name"			"rock_18"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"7"{
+				"unit_name"			"rock_19"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"8"{
+				"unit_name"			"rock_20"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"9"{
+				"unit_name"			"rock_21"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"10"{
+				"unit_name"			"rock_22"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"11"{
+				"unit_name"			"rock_23"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
+			}
+			"12"{
+				"unit_name"			"rock_24"
+				"gold_cost"			"2400"
+				"lumber_cost"		"750000"
 			}
 	    }
 		"Requirements"{
-			"trader_2"				"1"
 		}
 		
 		// Abilities
@@ -3393,9 +3529,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "7"
-		"StatusHealth"              "10240"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "165"
+		"StatusHealth"              "800000"
+	    "StatusHealthRegen"         "4000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3439,15 +3575,7 @@
 	    //----------------------------- 
 	    "Level"                     "12"
 	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_13"
-				"gold_cost"			"16384"
-				"lumber_cost"		"128"
-			}
-	    }
+	    
 		"Requirements"{
 		
 		}
@@ -3464,9 +3592,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "8"
-		"StatusHealth"              "20480"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "165"
+		"StatusHealth"              "80000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3495,30 +3623,33 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/demonic_wall_3.vmdl"
+		"Model"						"models/heroes/pudge/pudge.vmdl"
 	    "precache"
 		{
-			"model"						"models/demonic_wall_3.vmdl"
+			"model"						"models/heroes/pudge/pudge.vmdl"
 	    }
-		"ModelScale"                "0.7"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "6007"}//head("Murder Mask")
+		"Wearable2" {"ItemDef" "6115"}//back("Pauldron Perch")
+		"Wearable3" {"ItemDef" "6116"}//("Talon Edge")
+		"Wearable4" {"ItemDef" "6202"}//arms("Gauntlet of Dark Feathers")
+		"Wearable5" {"ItemDef" "6203"}//shoulder("Armor of the Black Bird")
+		"Wearable6" {"ItemDef" "6204"}//belt("Dendi Doll")
+		"Wearable7" {"ItemDef" "6212"}//offhand_weapon("The Crow Eater")
+	        }
+	    }
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "13"
 	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_14"
-				"gold_cost"			"32768"
-				"lumber_cost"		"256"
-			}
-	    }
 		"Requirements"{
 		
 		}
@@ -3535,9 +3666,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "10"
-		"StatusHealth"              "40960"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3566,10 +3697,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/demonic_wall_4.vmdl"
+		"Model"						"models/heroes/treant_protector/treant_protector.vmdl"
 	    "precache"
 		{
-			"model"						"models/demonic_wall_4.vmdl"
+			"model"						"models/heroes/treant_protector/treant_protector.vmdl"
 	    }
 		"ModelScale"                "0.7"
 	    "ModelRotation"             "90"
@@ -3581,14 +3712,15 @@
 	    //----------------------------- 
 	    "Level"                     "14"
 	    "BuildTime"                 "2"
-	    "Upgrades"
+		"Creature"
 	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_15"
-				"gold_cost"			"45000"
-				"lumber_cost"		"256"
-			}
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "8425"}//arms("Emberbark Arms")
+		"Wearable2" {"ItemDef" "8427"}//head("Emberbark Beard")
+		"Wearable3" {"ItemDef" "8428"}//legs("Emberbark Roots")
+		"Wearable4" {"ItemDef" "8429"}//shoulder("Emberbark Shoulders")
+	        }
 	    }
 		"Requirements"{
 		
@@ -3606,9 +3738,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "12"
-		"StatusHealth"              "81920"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "24000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3637,12 +3769,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/demonic_wall_5.vmdl"
+		"Model"						"models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
 	    "precache"
 		{
-			"model"						"models/demonic_wall_5.vmdl"
+			"model"						"models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
 	    }
-		"ModelScale"                "1.3"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -3652,14 +3784,15 @@
 	    //----------------------------- 
 	    "Level"                     "15"
 	    "BuildTime"                 "2"
-	    "Upgrades"
+		"Creature"
 	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_16"
-				"gold_cost"			"92000"
-				"lumber_cost"		"512"
-			}
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "5926"}//head("Shadow Calvaria")
+		"Wearable2" {"ItemDef" "5927"}//misc("Shadow Tracers")
+		"Wearable3" {"ItemDef" "5928"}//("Shadow Claws")
+		"Wearable4" {"ItemDef" "5929"}//back("Shadow Spine")
+	        }
 	    }
 		"Requirements"{
 		
@@ -3677,9 +3810,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "17"
-		"StatusHealth"              "214000"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3708,12 +3841,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/dragon_wall_1.vmdl"
+		"Model"						"models/heroes/shadowshaman/shadowshaman.vmdl"
 	    "precache"
 		{
-			"model"						"models/dragon_wall_1.vmdl"
+			"model"						"models/heroes/shadowshaman/shadowshaman.vmdl"
 	    }
-		"ModelScale"                "1.0"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -3723,20 +3856,19 @@
 	    //----------------------------- 
 	    "Level"                     "16"
 	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_17"
-				"gold_cost"			"128000"
-				"lumber_cost"		"512"
-			}
-	    }
 		"Requirements"{
-			"research_lab"			"1"
-			"barracks_3"			"1"
 		}
-		
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "6197"}//("Scepter of Shades")
+		"Wearable2" {"ItemDef" "6206"}//belt("Cincture of Shades")
+		"Wearable3" {"ItemDef" "6309"}//arms("Armwraps of Shades")
+		"Wearable4" {"ItemDef" "6310"}//head("Visage of Shades")
+		"Wearable5" {"ItemDef" "6198"}//offhand_weapon("Scepter of Shades - Off-Hand")
+	        }
+	    }		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -3749,9 +3881,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "21"
-		"StatusHealth"              "425000"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3780,12 +3912,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/dragon_wall_2.vmdl"
+		"Model"						"models/heroes/tuskarr/tuskarr.vmdl"
 	    "precache"
 		{
-			"model"						"models/dragon_wall_2.vmdl"
+			"model"						"models/heroes/tuskarr/tuskarr.vmdl"
 	    }
-		"ModelScale"                "1.0"
+		"ModelScale"                "0.7"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -3795,18 +3927,21 @@
 	    //----------------------------- 
 	    "Level"                     "17"
 	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_18"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
-			}
-	    }
 		"Requirements"{
 		}
-		
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "9012"}//shoulder("Coat of the Glacier Sea")
+		"Wearable2" {"ItemDef" "9011"}//back("Rudder of the Glacier Sea")
+		"Wearable3" {"ItemDef" "9010"}//arms("Hook of the Glacier Sea")
+		"Wearable4" {"ItemDef" "9009"}//("Anchor of the Glacier Sea")
+		"Wearable5" {"ItemDef" "9008"}//neck("Tusks of the Glacier Sea")
+		"Wearable6" {"ItemDef" "9007"}//head("Cap of the Glacier Sea")
+		"Wearable7" {"ItemDef" "9006"}//ability3("Frozen Sigil of the Glacier Sea")
+	        }
+	    }		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -3819,9 +3954,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "38"
-		"StatusHealth"              "655360"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3865,18 +4000,8 @@
 	    //----------------------------- 
 	    "Level"                     "18"
 	    "BuildTime"                 "2"
-		"Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_19"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
-			}
-	    }
 		"Requirements"{
-		}
-		
+		}		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -3889,9 +4014,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "128"
-		"StatusHealth"              "999999"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "300"
+		"StatusHealth"              "2400000"
+	    "StatusHealthRegen"         "16000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3918,10 +4043,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/water_dragon_wall.vmdl"
+		"Model"						"models/crystal_golem_wall.vmdl"
 	    "precache"
 		{
-			"model"						"models/water_dragon_wall.vmdl"
+			"model"						"models/crystal_golem_wall.vmdl"
 	    }
 		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
@@ -3933,21 +4058,8 @@
 	    //----------------------------- 
 	    "Level"                     "19"
 	    "BuildTime"                 "2"
-		"Upgrades"
-	    {
-	       "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_20"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
-			}
-	    }
 		"Requirements"{
-			"research_lab_4_1"		"1"
-			"barracks_3"			"1"
-			"tower_21"				"1"
-		}
-		
+		}		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -3960,9 +4072,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "196"
-		"StatusHealth"              "999999"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "550"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -3989,12 +4101,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/fire_dragon_wall.vmdl"
+		"Model"						"models/water_dragon_wall.vmdl"
 	    "precache"
 		{
-			"model"						"models/fire_dragon_wall.vmdl"
+			"model"						"models/water_dragon_wall.vmdl"
 	    }
-		"ModelScale"                "0.65"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -4004,21 +4116,8 @@
 	    //----------------------------- 
 	    "Level"                     "20"
 	    "BuildTime"                 "2"
-		"Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"rock_21"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
-			}
-	    }
 		"Requirements"{
-			"research_lab_5_1"		"1"
-			"barracks_3"			"1"
-			"tower_21"				"1"
-		}
-		
+		}	
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -4031,9 +4130,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "256"
-		"StatusHealth"              "999999"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -4060,12 +4159,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/crystal_golem_wall.vmdl"
+		"Model"						"models/heroes/wisp/wisp.vmdl"
 	    "precache"
 		{
-			"model"						"models/crystal_golem_wall.vmdl"
+			"model"						"models/heroes/wisp/wisp.vmdl"
 	    }
-		"ModelScale"                "0.8"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"200"
 		"PlayerCanControl"			"1"
@@ -4075,21 +4174,8 @@
 	    //----------------------------- 
 	    "Level"                     "21"
 	    "BuildTime"                 "2"
-	//	"Upgrades"
-	//    {
-	//        "Count"     "1"
-	//        "1"{
-	//			"unit_name"			"rock_22"
-	//			"gold_cost"			"999999"
-	//			"lumber_cost"		"999999"
-	//		}
-	//    }
 		"Requirements"{
-			"research_lab_6_1"		"1"
-			"barracks_3"			"1"
-			"tower_22"				"1"
-		}
-		
+		}	
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -4098,13 +4184,19 @@
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
-	    
+	    "Creature"
+	    {
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "536" }
+	        }
+	    }
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "512"
-		"StatusHealth"              "999999"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -4136,7 +4228,7 @@
 		{
 			"model"						"models/dark_golem_wall.vmdl"
 	    }
-		"ModelScale"                "1"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -4147,11 +4239,8 @@
 	    "Level"                     "19"
 	    "BuildTime"                 "2"
 		"Requirements"{
-			"research_lab_7"		"1"
-			"barracks_3"			"1"
-			"tower_21"				"1"
-		}
-		
+
+		}	
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -4164,9 +4253,9 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "294"
-		"StatusHealth"              "999999"
-	    "StatusHealthRegen"         "0"
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -4187,6 +4276,145 @@
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}	
+
+	"rock_23"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/fire_dragon_wall.vmdl"
+	    "precache"
+		{
+			"model"						"models/fire_dragon_wall.vmdl"
+	    }
+		"ModelScale"                "0.65"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"                     "19"
+	    "BuildTime"                 "2"
+		"Requirements"{
+
+		}
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	            "1" { "ItemDef" "8865" }
+	            "2" { "ItemDef" "8863" }
+	            "3" { "ItemDef" "8866" }
+	            "4" { "ItemDef" "8869" }
+	            "4" { "ItemDef" "8870" }
+	        }
+	    }		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+	"rock_24"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/heroes/chen/chen.vmdl"
+	    "precache"
+		{
+			"model"						"models/heroes/chen/chen.vmdl"
+	    }
+		"ModelScale"                "1"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"                     "19"
+	    "BuildTime"                 "2"
+		"Requirements"{
+
+		}
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+				"Wearable1" {"ItemDef" "5732"}//shoulder("Wings of Obelis Shoulders")
+		"Wearable2" {"ItemDef" "5663"}//arms("Wings of Obelis Arms")
+		"Wearable3" {"ItemDef" "5664"}//head("Wings of Obelis Helmet")
+		"Wearable4" {"ItemDef" "5733"}//("Wings of Obelis Staff")
+		"Wearable5" {"ItemDef" "9159"}//mount("Wings of Obelis Mount")
+	        }
+	    }		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+	    "ArmorPhysical"             "200"
+		"StatusHealth"              "1600000"
+	    "StatusHealthRegen"         "8000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}		
 
 	//=================================================================================
 	// Building: Basic Tower

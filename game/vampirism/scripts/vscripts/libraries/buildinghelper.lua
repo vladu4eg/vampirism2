@@ -26,7 +26,8 @@ function BuildingHelper:Init()
     BuildingHelper.Encoded = "" -- String containing the base terrain, networked to clients
     BuildingHelper.squareX = 0 -- Number of X grid points
     BuildingHelper.squareY = 0 -- Number of Y grid points
-    
+    BuildingHelper.TreeDummies = {} -- Holds tree chopped dummies
+
     -- Grid States
     BuildingHelper.GridTypes = {}
     BuildingHelper.NextGridValue = 1
@@ -390,6 +391,7 @@ end
 
 function BuildingHelper:OnTreeCut(keys)
     local treePos = Vector(keys.tree_x, keys.tree_y, 0)
+    BuildingHelper:FreeGridSquares(2, treePos)
     local tree -- Figure out which tree was cut
     for _, t in pairs(BuildingHelper.AllTrees) do
         local pos = t:GetAbsOrigin()
@@ -398,40 +400,45 @@ function BuildingHelper:OnTreeCut(keys)
             break
         end
     end
-    
     if not tree then
         BuildingHelper:print("ERROR: OnTreeCut couldn't find a tree for pos " ..
         treePos.x .. "," .. treePos.y)
         return
-        elseif tree.chopped_dummy then
+    elseif tree.chopped_dummy then
+        BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
-    
-    -- Create a dummy for clients to be able to detect trees standing and block their grid
-    tree.chopped_dummy = CreateUnitByName("npc_dota_units_base", treePos, false,
-    nil, nil, 0)
-    tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil,
-    "modifier_tree_cut", {})
-    BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
-    
-    -- Allow construction
-    if not GridNav:IsBlocked(treePos) then
-        BuildingHelper:FreeGridSquares(2, treePos)
+    local roll_chance = 1111  -- RandomFloat(0, 500)
+    if roll_chance <= CHANCE_DROP_LUMBER then
+        local spawnPoint = tree:GetAbsOrigin()	
+        local newItem = CreateItem( "item_lia_rune_lumber", nil, nil )
+        local dropRadius = RandomFloat( 50, 150 )
+        local randRadius = spawnPoint + RandomVector( dropRadius )
+        CreateItemOnPositionForLaunch( randRadius, newItem )
+        newItem:LaunchLootInitialHeight( false, 0, 150, 0.5, randRadius ) 
     end
     
-    -- Remove the dummy, allowing the tree to regrow
-    Timers:CreateTimer(BuildingHelper.TreeRegrowTime, function()
-        if IsValidEntity(tree.chopped_dummy) then
-            BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
-            UTIL_Remove(tree.chopped_dummy)
-        end
-    end)
+
+    -- Create a dummy for clients to be able to detect trees standing and block their grid
+    tree.chopped_dummy = CreateUnitByName("npc_dota_units_base_tree", treePos, false, nil, nil, DOTA_TEAM_NOTEAM)
+    tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
+    BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
+    
+	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
+		Timers:CreateTimer(randTime, function()
+            if IsValidEntity(tree.chopped_dummy) then
+                BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
+                UTIL_Remove(tree.chopped_dummy)
+                BuildingHelper:BlockGridSquares(2, 2, treePos)
+            end
+		end);
+    randTime = nil
+    BuildingHelper:FreeGridSquares(2, treePos)
 end
 
 function BuildingHelper:BlockBH()
     -- Trigger zones named "bh_blocked" will block the terrain for construction
-    local blocked_map_zones = Entities:FindAllByName("*bh_blocked")
-                    -- Check if the position is inside any blocking trigger
+    local blocked_map_zones = Entities:FindAllByName("*bh_blocked") -- Check if the position is inside any blocking trigger
     for _, ent in pairs(blocked_map_zones) do
         BuildingHelper:IsInsideEntityBounds(ent)
     end
@@ -590,6 +597,8 @@ function BuildingHelper:InitGNV()
     BuildingHelper.squareY = squareY
     BuildingHelper.minBoundX = boundX1
     BuildingHelper.minBoundY = boundY1
+
+    BuildingHelper.AllTrees = Entities:FindAllByClassname("ent_dota_tree")
 end
 
 function BuildingHelper:SendGNV(args)
