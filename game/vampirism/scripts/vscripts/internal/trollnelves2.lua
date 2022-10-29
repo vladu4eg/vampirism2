@@ -93,9 +93,11 @@ function trollnelves2:_Inittrollnelves2()
 
   CustomGameEventManager:RegisterListener( "SelectVO", Dynamic_Wrap(Shop,'SelectVO'))
   
+  
   CustomNetTables:SetTableValue("building_settings", "team_choice_time", { value = TEAM_CHOICE_TIME })
   
   mode:SetModifyExperienceFilter( Dynamic_Wrap( trollnelves2, "ExperienceFilter" ), self )
+  mode:SetModifyGoldFilter( Dynamic_Wrap( trollnelves2, "GoldFilter" ), self ) 
   -- mode:SetDamageFilter( Dynamic_Wrap( trollnelves2, "DamageFilter" ), self ) 
   
  -- mode:SetItemAddedToInventoryFilter(Dynamic_Wrap(trollnelves2, "ItemPickFilter"), self)
@@ -134,10 +136,11 @@ function trollnelves2:prequire(...)
 end
 
 function trollnelves2:ExperienceFilter( kv )
-    if kv.reason_const ~= 0 then
-        kv.experience = 0
-    end
-    return true
+  local team = PlayerResource:GetTeam(kv.player_id_const)
+  if team == 2 then
+      kv.experience = 0
+  end
+  return true
 end
 
 function trollnelves2:DamageFilter( kv )
@@ -151,4 +154,13 @@ function trollnelves2:DamageFilter( kv )
     end
     return true
   end
+end
+
+function trollnelves2:GoldFilter( kv )
+  local hero = PlayerResource:GetSelectedHeroEntity(kv.player_id_const)
+  if hero:IsTroll() then
+        PlayerResource:ModifyGold(hero,kv.gold)
+        SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, hero, kv.gold, nil )
+  end
+  return true
 end

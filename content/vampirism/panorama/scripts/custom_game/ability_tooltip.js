@@ -13,6 +13,7 @@ function setupTooltip() {
     var requirementsObject = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", (Players.GetLocalPlayer() + upgradedUnitName)) || {};
     var requirementKeys = Object.keys(requirementsObject);
     var gold_gain = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", upgradedUnitName) && CustomNetTables.GetTableValue("buildings", upgradedUnitName).gold_gain || 0;
+    var gold_interval = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", upgradedUnitName) && CustomNetTables.GetTableValue("buildings", upgradedUnitName).gold_interval || 0;
 
     var item = CustomNetTables.GetTableValue("items", "buy_" + abilityName) || CustomNetTables.GetTableValue("items", abilityName);
     var stats_name = item && item.bonus_stats && $.Localize("#" + item.bonus_stats) || "";
@@ -40,7 +41,8 @@ function setupTooltip() {
         reqText = reqText + "<br>" + $.Localize("#" + requirementsObject[requirementKey]);
     }
     SetText("requirements", reqText);
-    SetText("gold_gain", (gold_gain > 0 && "Gold per second:" + gold_gain || ""));
+    SetText("gold_gain", (gold_gain > 0 && "Gold amount:" + gold_gain || ""));
+    SetText("gold_interval", gold_interval > 0 && "Gold interval: " + gold_interval || "");
     SetText("item_stats", (stats_name + ":" + stats_amount));
     SetText("item_gold", (item_gold > 0 ? ("<img src='file://{images}/custom_game/gold_icon32.png'/>" + item_gold) : ""));
     SetText("item_lumber", (item_lumber > 0 ? ("<img src='file://{images}/custom_game/lumber_icon32.png'/>" + item_lumber) : ""));

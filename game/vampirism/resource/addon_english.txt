@@ -15,6 +15,16 @@
 		"npc_dota_hero_night_stalker"                                                     "Night Hunter"
 
 		// ******************** UNITS ********************
+
+		"house"                                                                            "Slayers Vault"
+		"house_2"                                                                            "Slayers Vault 2"
+		"house_3"                                                                            "Slayers Vault 3"
+		"house_4"                                                                            "Slayers Vault 4"
+		"house_5"                                                                            "Slayers Vault 5"
+
+		"human_box_fake"																	"Blood Sacrifice"
+		"human_box"																			"Blood Sacrifice"
+		
 		"tent"                                                                            "Tent"
 		"tent_2"                                                                          "Tent 2"
 		"tent_3"                                                                          "Tent 3"
@@ -86,7 +96,39 @@
 		"trader_1"                                                                        "Trader 1"
 		"trader_2"                                                                        "Trader 2"
 		"trader_3"                                                                        "Trader 3"
-		"workers_guild"                                                                   "Workers Guild"
+		"workers_guild"                                                                   "House of Workers"
+		"workers_guild_2"                                                                   "House of Workers 2"
+		"workers_guild_3"                                                                   "House of Workers 3"
+		"workers_guild_4"                                                                   "House of Workers 4"
+		"workers_guild_5"                                                                   "House of Workers 5"
+		"slayers_taverna"																"Slayer Tavern"
+
+		"buff_tower_1"                                                                   "Heal Tower"
+		"buff_tower_2"                                                                   "Heal Tower 2"
+		"buff_tower_3"                                                                   "Heal Tower 3"
+		"buff_tower_4"                                                                   "Heal Tower 4"
+		"buff_tower_5"                                                                   "Heal Tower 5"
+		"buff_tower_6"                                                                   "Heal Tower 6"
+		"buff_tower_7"                                                                   "Heal Tower 7"
+		"buff_tower_8"                                                                   "Heal Tower 8"
+		"buff_tower_9"                                                                   "Heal Tower 9"
+
+		"buff_tower_mana_1"                                                              "Mana Tower"
+		"buff_tower_mana_2"                                                              "Mana Tower 2"
+		"buff_tower_mana_3"                                                              "Mana Tower 3"
+		"buff_tower_mana_4"                                                              "Mana Tower 4"
+		"buff_tower_mana_5"                                                              "Mana Tower 5"
+		"buff_tower_mana_6"                                                              "Mana Tower 6"
+		"buff_tower_mana_7"                                                              "Mana Tower 7"
+
+		"buff_tower_fire_1"                                                              "Faerie Tower"
+		"buff_tower_fire_2"                                                              "Faerie Tower 2"
+		"buff_tower_fire_3"                                                              "Faerie Tower 3"
+		"buff_tower_fire_4"                                                              "Faerie Tower 4"
+		"buff_tower_fire_5"                                                              "Faerie Tower 5"
+		"buff_tower_fire_6"                                                              "Faerie Tower 6"
+		"buff_tower_fire_7"                                                              "Faerie Tower 7"
+		
 		"mother_of_nature"                                                                "Mother Of Nature"
 		"research_lab"                                                                    "Research Lab 1"
 		"research_lab_2"                                                                  "Research Lab 2"
@@ -111,6 +153,14 @@
 		"research_lab_6_5"                                                                "Research Lab 6 LVL 5"
 		
 		"research_lab_7_1"                                                                "Research Lab 7"
+		"wood_worker_1"                                                                        "Wood Worker 1"
+		"wood_worker_2"                                                                        "Wood Worker 2"
+		"wood_worker_3"                                                                        "Wood Worker 3"
+		"wood_worker_4"                                                                        "Wood Worker 4"
+		"wood_worker_5"                                                                        "Wood Worker 5"
+
+		"build_worker_1"                                                                        "Build Worker 1"
+		"build_worker_2"                                                                        "Build Worker 2"
 
 		"worker_1"                                                                        "Worker 1"
 		"worker_2"                                                                        "Worker 2"
@@ -377,6 +427,32 @@
 
 
 		// ******************** ABILITY MODIFIERS ********************
+		"DOTA_Tooltip_ability_spell_immunity"  "Spell Immunity"
+		"DOTA_Tooltip_ability_spell_immunity_Description"  "This creature does not feel the effects of most magical spells."
+
+
+		"DOTA_Tooltip_ability_frost_lord_freezing"	"Frostbite"
+		"DOTA_Tooltip_ability_frost_lord_freezing_Description"	"Gives Frost Lord a 22% chance to freeze his attacker and deal damage to him."
+		"DOTA_Tooltip_ability_frost_lord_freezing_stun_duration"	"DURATION:"
+		"DOTA_Tooltip_ability_frost_lord_freezing_damage"	"DAMAGE:"
+
+		"DOTA_Tooltip_modifier_frost_lord_freezing_debuff"	"Frostbite"
+		"DOTA_Tooltip_modifier_frost_lord_freezing_debuff_Description"	"This unit is frozen."
+
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor"	"Frost Armor"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_Description"	"Creates a shield of frost around a target friendly unit. The shield adds armor and slows units that attack it for 20 seconds."
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_armor_bonus"	"BONUS ARMOR:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_armor_bonus_scepter"	"STAFF BONUS ARMOR:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_duration"	"DURATION:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_duration_scepter"	"STAFF DURATION:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_movement_slow_percent"	"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_attack_slow"	"ATTACK SLOW:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_manacost_scepter"	"STAFF MANACOST:"
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_aghanim_description" "Increases bonus armor and duration, but also increases manacost."
+
+		
+		"DOTA_Tooltip_Ability_tower_15_return25"                                        "Spiked armor"
+		"DOTA_Tooltip_Ability_tower_15_return25_Description"                            "Returns 25% damage to the attacker."
 
 		"DOTA_Tooltip_ability_mars_bulwark"                                        "Bulwark"
 		"DOTA_Tooltip_ability_mars_bulwark_Description"                            "Ignores all physical damage"
@@ -513,12 +589,76 @@
 
 
 		// ******************** ITEM MODIFIERS ********************
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_1"  "Mana Burn 1"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_1_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_2"  "Mana Burn 2"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_2_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_3"  "Mana Burn 3"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_3_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_4"  "Mana Burn 4"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_4_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_5"  "Mana Burn 5"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_5_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_6"  "Mana Burn 6"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_6_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_7"  "Mana Burn 7"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_7_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_8"  "Mana Burn 8"
+		"DOTA_Tooltip_ability_wave_16_mana_burn_8_Description"	"Sends a bolt of negative energy that burns a target enemy unit's %mana_burn% mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_1"  "Faerie Fire 1"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_1_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_2"  "Faerie Fire 2"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_2_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_3"  "Faerie Fire 3"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_3_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_4"  "Faerie Fire 4"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_4_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_5"  "Faerie Fire 5"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_5_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_6"  "Faerie Fire 6"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_6_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_7"  "Faerie Fire 7"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_7_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_8"  "Faerie Fire 8"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_8_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_9"  "Faerie Fire 9"
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_9_Description"	"Reduces a target enemy unit's armor by %armor_reduction% and gives vision of that unit. Lasts %duration% seconds."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_1"  "Heal Tower 1"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_1_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_2"  "Heal Tower 2"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_2_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_3"  "Heal Tower 3"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_3_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_4"  "Heal Tower 4"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_4_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_5"  "Heal Tower 5"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_5_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_6"  "Heal Tower 6"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_6_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_7"  "Heal Tower 7"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_7_Description"	"Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_8"  "Heal Tower 8"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_8_Description"	"Repairs several adjacent buildings."
+
+		
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven"                                  "Darkness Aura Datadriven"
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven_Description"                      ""
 
 		"DOTA_Tooltip_modifier_darkness_datadriven"                                       "Darkness Datadriven"
 		"DOTA_Tooltip_modifier_darkness_datadriven_Description"                           ""
 
+		"DOTA_Tooltip_Ability_food_cost"													"Food (Cheese)"
+		"DOTA_Tooltip_Ability_food_cost_Description"										"Increases the maximum amount of food (cheese) by 50/100/300. Maximum 300 food (cheese)."
 
 		// ******************** ABILITIES ********************
 		"DOTA_Tooltip_ability_ability_building"                                           "Ability Building"
@@ -537,15 +677,15 @@
 		"DOTA_Tooltip_ability_build_flag_Description"                                     "TROLL DEBUFF WITHIN 600 RADIUS!<br>Allows you to block the base from other Elves.<br>You can only block 1 base.<br>You can allow other Elves to build on your base, BUT they will lose the block on their base."
 
 		"DOTA_Tooltip_ability_build_tent"                                                 "Build Tent"
-		"DOTA_Tooltip_ability_build_tent_Description"                                     "Build tent to gain gold every second. Can build only one. "
+		"DOTA_Tooltip_ability_build_tent_Description"                                     "Gives 50 food. "
 		"DOTA_Tooltip_ability_build_tent_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tent_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_2"                                          "Tent 2"
-		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent! X1:2 or X2:4 gold per/sec"
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent! Gives 100 food."
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Tent 3"
-		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent! X1:4 or X2:8 gold per/sec"
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent! Gives 300 food."
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Tent 4"
 		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent! X1:8 or X2:16 gold per/sec"
@@ -572,9 +712,20 @@
 		"DOTA_Tooltip_ability_gain_gold_Description"                                      "Gives certain amount of gold every second"
 
 		"DOTA_Tooltip_ability_build_rock_1"                                                 "Build Rock"
-		"DOTA_Tooltip_ability_build_rock_1_Description"                                     "Build rock. Use this to block troll's way from entering your base. Make sure to center it! "
+		"DOTA_Tooltip_ability_build_rock_1_Description"                                     "Build rock. Use this to block vamp's way from entering your base. Make sure to center it! "
 		"DOTA_Tooltip_ability_build_rock_1_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_build_rock_1_lumber_cost"                                     "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_rock_8"                                                 "Build Rock 8"
+		"DOTA_Tooltip_Ability_build_rock_8_Description"                                     "HP:75000<br>ARMOR:120<br>REGEN:350"
+		"DOTA_Tooltip_ability_build_rock_8_gold_cost"                                       "GOLD COST: "
+		"DOTA_Tooltip_ability_build_rock_8_lumber_cost"                                     "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_rock_9"                                                 "Build Rock 9"
+		"DOTA_Tooltip_Ability_build_rock_9_Description"                                     "HP:200000<br>ARMOR:135<br>REGEN:1000"
+		"DOTA_Tooltip_ability_build_rock_9_gold_cost"                                       "GOLD COST: "
+		"DOTA_Tooltip_ability_build_rock_9_lumber_cost"                                     "LUMBER COST: "
+		
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_2"                                          "Rock 2"
 		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Upgrade your rock!<br>HP:1750<br>ARMOR:30<br>REGEN:10"
@@ -610,40 +761,40 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_12_Description"                      "Upgrade your demonic wall!<br>HP:20480<br>ARMOR:7<br>REGEN:8000"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_13"                                  "Meat Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_13_Description"                      "Upgrade your Meat Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_13_Description"                      "Upgrade your Meat Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Reduce damage by 8000."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_14"                                  "Tree Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_14_Description"                      "Upgrade your Tree wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:240000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_14_Description"                      "Upgrade your Tree wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:240000<br>Regeneration +30000."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_15"                                  "Spiked Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_15_Description"                      "Upgrade your Spiked wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_15_Description"                      "Upgrade your Spiked wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Returns 25% damage."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_16"                                   "Shaman Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_16_Description"                       "Upgrade your Shaman wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_16_Description"                       "Upgrade your Shaman wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Throws a net."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_17"                                   "Snowman Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_17_Description"                       "Upgrade your Snowman wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_17_Description"                       "Upgrade your Snowman wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>+25 armor. Slows movement/attack speed."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_18"                              "Golden Dragon Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_18_Description"                  "Upgrade your dragon wall!<br>HP:2400000<br>ARMOR:300<br>REGEN:16000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_18_Description"                  "Upgrade your dragon wall!<br>HP:2400000<br>ARMOR:300<br>REGEN:16000<br>A very strong wall, but if it is broken, the Vampire will get a lot of gold."
 		
 		"DOTA_Tooltip_ability_upgrade_to_rock_19"                              "Crystal Golem Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_19_Description"                  "Upgrade your Crystal wall!<br>HP:1600000<br>ARMOR:550<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_19_Description"                  "Upgrade your Crystal wall!<br>HP:1600000<br>ARMOR:550<br>REGEN:8000<br>Shadow Wave."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_20"                              "Water Dragon Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_20_Description"                  "Upgrade your dragon wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_20_Description"                  "Upgrade your dragon wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Smoke 50% miss chance."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_21"                              "Wisp Wall Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_21_Description"                  "Upgrade your Wisp Golem Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_21_Description"                  "Upgrade your Wisp Golem Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Chance to freeze his attacker and deal damage to him."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_22"                              "Dark Golem Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_22_Description"                  "Upgrade your Dark Golem Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_22_Description"                  "Upgrade your Dark Golem Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Heal building all map."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_23"                              "Fire Dragon Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_23_Description"                  "Upgrade your Fire Dragon Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_23_Description"                  "Upgrade your Fire Dragon Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Shallow Grave."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_24"                              "Immunity Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_24_Description"                  "Upgrade your Immunity Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_24_Description"                  "Upgrade your Immunity Wall!<br>HP:1600000<br>ARMOR:200<br>REGEN:8000<br>Immunity from magic."
 
 		"DOTA_Tooltip_Ability_buy_reveal_area_bear"								"Buy Reveal Area for Bear"
 		"DOTA_Tooltip_Ability_buy_reveal_area_bear_Description"					""
@@ -665,32 +816,135 @@
 		"DOTA_Tooltip_ability_build_tower_1_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tower_1_lumber_cost"                                  "LUMBER COST: "
 
+		"DOTA_Tooltip_Ability_build_slayers_taverna"                                              "Build Slayer Tavern"
+		"DOTA_Tooltip_Ability_build_slayers_taverna_Description"                                  "Creates a hero that will help you protect your buildings."
+		"DOTA_Tooltip_Ability_build_slayers_taverna_gold_cost"                                    "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_slayers_taverna_lumber_cost"                                  "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_human_box_fake"                                              "Build Fake Human Box"
+		"DOTA_Tooltip_Ability_build_human_box_fake_Description"                                  "Create bait for Vampires."
+		"DOTA_Tooltip_Ability_build_human_box_fake_gold_cost"                                    "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_human_box_fake_lumber_cost"                                  "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_human_box"                                              "Build Human Box"
+		"DOTA_Tooltip_Ability_build_human_box_Description"                                  "If the Vampire is very weak, then you can make a sacrifice to him."
+		"DOTA_Tooltip_Ability_build_human_box_gold_cost"                                    "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_human_box_lumber_cost"                                  "LUMBER COST: "
+
+		
+		"DOTA_Tooltip_Ability_build_tower_10"                                                 "Build Tower 10"
+		"DOTA_Tooltip_Ability_build_tower_10_Description"                                     "Damage: 3501"
+		"DOTA_Tooltip_Ability_build_tower_10_gold_cost"                                       "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_tower_10_lumber_cost"                                     "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_true_sight_tower"                                                 "Build True Sight Tower"
+		"DOTA_Tooltip_Ability_build_true_sight_tower_Description"                                     "Build your true sight tower, which reveals invisible units around itself.. "
+		"DOTA_Tooltip_Ability_build_true_sight_tower_gold_cost"                                       "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_true_sight_tower_lumber_cost"                                     "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_build_buff_tower_1"                                                 "Build Heal Tower"
+		"DOTA_Tooltip_Ability_build_buff_tower_1_Description"                                     "Creates a building that can repair other buildings."
+		"DOTA_Tooltip_Ability_build_buff_tower_1_gold_cost"                                       "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_buff_tower_1_lumber_cost"                                     "LUMBER COST: "
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_1"                                         "Heal Tower 1"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_1_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_2"                                         "Heal Tower 2"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_2_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_3"                                         "Heal Tower 3"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_3_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_4"                                         "Heal Tower 4"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_4_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_5"                                         "Heal Tower 5"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_5_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_6"                                         "Heal Tower 6"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_6_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_7"                                         "Heal Tower 7"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_7_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_8"                                         "Heal Tower 8"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_8_Description"                             "Repairs several adjacent buildings."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_1"                                    "Mana Tower 1"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_1_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_2"                                    "Mana Tower 2"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_2_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_3"                                    "Mana Tower 3"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_3_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_4"                                    "Mana Tower 4"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_4_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_5"                                    "Mana Tower 5"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_5_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_6"                                    "Mana Tower 6"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_6_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_7"                                    "Mana Tower 7"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_7_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_8"                                    "Mana Tower 8"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_mana_8_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_1"                                    "Faerie Tower 1"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_1_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_2"                                    "Faerie Tower 2"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_2_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_3"                                    "Faerie Tower 3"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_3_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_4"                                    "Faerie Tower 4"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_4_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_5"                                    "Faerie Tower 5"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_5_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_6"                                    "Faerie Tower 6"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_6_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_7"                                    "Faerie Tower 7"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_7_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_8"                                    "Faerie Tower 8"
+		"DOTA_Tooltip_ability_upgrade_to_buff_tower_fire_8_Description"                        "Reduces a target enemy unit's armor and gives vision of that unit."
+
 		"DOTA_Tooltip_ability_upgrade_to_tower_2"                                         "Tower 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 2"
+		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 81"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_3"                                         "Tower 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 4"
+		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 201"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_4"                                         "Tower 4"
-		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 8"
+		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 381"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_5"                                         "Tower 5"
-		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 16"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 701"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_6"                                         "Tower 6"
-		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 32"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1201"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_7"                                         "Tower 7"
-		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 64"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 876"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_8"                                         "Tower 8"
-		"DOTA_Tooltip_ability_upgrade_to_tower_8_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 128"
+		"DOTA_Tooltip_ability_upgrade_to_tower_8_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1751"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_9"                                         "Tower 9"
-		"DOTA_Tooltip_ability_upgrade_to_tower_9_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1024-2048"
+		"DOTA_Tooltip_ability_upgrade_to_tower_9_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 2626"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_10"                                        "Tower 10 lvl 1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 2048-4096"
+		"DOTA_Tooltip_ability_upgrade_to_tower_10"                                        "Tower 10"
+		"DOTA_Tooltip_ability_upgrade_to_tower_10_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 3501"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_10_1"                                        "Tower 10 lvl 2"
 		"DOTA_Tooltip_ability_upgrade_to_tower_10_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 512-10240"
@@ -701,8 +955,8 @@
 		"DOTA_Tooltip_ability_upgrade_to_tower_10_3"                                        "Tower 10 lvl 4"
 		"DOTA_Tooltip_ability_upgrade_to_tower_10_3_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 20480-40960"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_11"                                        "Tower 11 lvl 1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 40960"
+		"DOTA_Tooltip_ability_upgrade_to_tower_11"                                        "Tower 11"
+		"DOTA_Tooltip_ability_upgrade_to_tower_11_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 4376"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_11_1"                                        "Tower 11 lvl 2"
 		"DOTA_Tooltip_ability_upgrade_to_tower_11_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 256000"
@@ -710,8 +964,8 @@
 		"DOTA_Tooltip_ability_upgrade_to_tower_11_2"                                        "Tower 11 lvl 3"
 		"DOTA_Tooltip_ability_upgrade_to_tower_11_2_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_12"                                        "Tower 12 lvl 1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 81920"
+		"DOTA_Tooltip_ability_upgrade_to_tower_12"                                        "Tower 12"
+		"DOTA_Tooltip_ability_upgrade_to_tower_12_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 13751"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_12_1"                                        "Tower 12 lvl 2"
 		"DOTA_Tooltip_ability_upgrade_to_tower_12_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 256000"
@@ -720,28 +974,28 @@
 		"DOTA_Tooltip_ability_upgrade_to_tower_12_2_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_13"                                        "Tower 13"
-		"DOTA_Tooltip_ability_upgrade_to_tower_13_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 500100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_13_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 27501"
 		
 		"DOTA_Tooltip_ability_upgrade_to_tower_14"                                        "Tower 14"
-		"DOTA_Tooltip_ability_upgrade_to_tower_14_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 600100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_14_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 41251"
 		
-		"DOTA_Tooltip_ability_upgrade_to_tower_15"                                        "Tower 15 lvl  1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 700100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_15"                                        "Tower 15"
+		"DOTA_Tooltip_ability_upgrade_to_tower_15_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 55001"
 		
 		"DOTA_Tooltip_ability_upgrade_to_tower_15_1"                                      "Tower 15 lvl  2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_1_Description"                          "Upgrade your tower to improve your defence!<br>Damage: 700100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_15_1_Description"                          "Upgrade your tower to improve your defence!<br>Damage: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_15_2"                                      "Tower 15 lvl  3"
 		"DOTA_Tooltip_ability_upgrade_to_tower_15_2_Description"                          "Upgrade your tower to improve your defence!<br>Damage: 999999"
 		
 		"DOTA_Tooltip_ability_upgrade_to_tower_16"                                        "Tower 16"
-		"DOTA_Tooltip_ability_upgrade_to_tower_16_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 800100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_16_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 68751"
 		
 		"DOTA_Tooltip_ability_upgrade_to_tower_17"                                        "Tower 17"
-		"DOTA_Tooltip_ability_upgrade_to_tower_17_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 900100"
+		"DOTA_Tooltip_ability_upgrade_to_tower_17_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 137501"
 		
 		"DOTA_Tooltip_ability_upgrade_to_tower_18"                                        "Tower 18"
-		"DOTA_Tooltip_ability_upgrade_to_tower_18_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999"
+		"DOTA_Tooltip_ability_upgrade_to_tower_18_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 275001"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_19"                                        "Tower 19 lvl 1 (3 minutes to build). The troll will receive a strong buff! NO DAMAGE!!!"
 		"DOTA_Tooltip_ability_upgrade_to_tower_19_Description"                            "Upgrade your tower to anger the Troll!<br>NO DAMAGE!!!<br>The troll will receive a strong buff!"
@@ -764,6 +1018,20 @@
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower"                                "True Sight Tower"
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "
 
+		"DOTA_Tooltip_Ability_build_house"                                             "Slayers Vault"
+		"DOTA_Tooltip_Ability_build_house_Description"                                 "Creates a shop with purchasable items."
+		"DOTA_Tooltip_Ability_build_house_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_house_lumber_cost"                                 "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_upgrade_to_house_2"                                         "Upgrade to Slayers Vault 2"
+		"DOTA_Tooltip_Ability_upgrade_to_house_2_Description"                             ""
+
+		"DOTA_Tooltip_Ability_upgrade_to_house_3"                                         "Upgrade to Slayers Vault 3"
+		"DOTA_Tooltip_Ability_upgrade_to_house_3_Description"                             ""
+
+		"DOTA_Tooltip_Ability_upgrade_to_house_4"                                         "Upgrade to Slayers Vault 4"
+		"DOTA_Tooltip_Ability_upgrade_to_house_4_Description"                             ""
+
 		"DOTA_Tooltip_ability_build_trader_1"                                             "Build Trader 1"
 		"DOTA_Tooltip_ability_build_trader_1_Description"                                 "Build Trader to exchange lumber-gold! "
 		"DOTA_Tooltip_ability_build_trader_1_gold_cost"                                   "GOLD COST: "
@@ -775,10 +1043,22 @@
 		"DOTA_Tooltip_ability_upgrade_to_trader_3"                                        "Trader 3"
 		"DOTA_Tooltip_ability_upgrade_to_trader_3_Description"                            "Improve your trader! "
 
-		"DOTA_Tooltip_ability_build_workers_guild"                                        "Build Workers Guild"
+		"DOTA_Tooltip_ability_build_workers_guild"                                        "Build House of Workers"
 		"DOTA_Tooltip_ability_build_workers_guild_Description"                            "You can hire workers here! "
 		"DOTA_Tooltip_ability_build_workers_guild_gold_cost"                              "GOLD COST: "
 		"DOTA_Tooltip_ability_build_workers_guild_lumber_cost"                            "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_2"                                    "Upgrade to House of Workers 2"
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_2_Description"                         ""
+
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_3"                                    "Upgrade to House of Workers 3"
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_3_Description"                         ""
+
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_4"                                    "Upgrade to House of Workers 4"
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_4_Description"                         ""
+
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_5"                                    "Upgrade to House of Workers 5"
+		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_5_Description"                         ""
 
 		"DOTA_Tooltip_ability_build_mother_of_nature"                                                  "Build Mother of Nature"
 		"DOTA_Tooltip_ability_build_mother_of_nature_Description"                                      "Mother of nature produces wisps which can harvest trees! "
@@ -1084,6 +1364,65 @@
 		"DOTA_Tooltip_ability_gather_lumber_1296_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
 		"DOTA_Tooltip_ability_gather_lumber_1296_lumber_interval"                            "LUMBER INTERVAL: "
 		
+
+		"DOTA_Tooltip_Ability_train_wood_worker_1"                                             "Train Wood Worker 1"
+		"DOTA_Tooltip_Ability_train_wood_worker_1_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_wood_worker_2"                                             "Train Wood Worker 2"
+		"DOTA_Tooltip_Ability_train_wood_worker_2_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_2_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_2_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_2_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_2_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_wood_worker_3"                                             "Train Wood Worker 3"
+		"DOTA_Tooltip_Ability_train_wood_worker_3_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_3_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_3_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_3_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_3_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_wood_worker_4"                                             "Train Wood Worker 4"
+		"DOTA_Tooltip_Ability_train_wood_worker_4_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_4_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_4_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_4_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_4_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_wood_worker_5"                                             "Train Wood Worker 5"
+		"DOTA_Tooltip_Ability_train_wood_worker_5_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_5_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_wood_worker_5"                                             "Train Wood Worker 5"
+		"DOTA_Tooltip_Ability_train_wood_worker_5_Description"                                 "Train worker. Workers extract wood/lumber."
+		"DOTA_Tooltip_Ability_train_wood_worker_5_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_wood_worker_5_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_build_worker_1"                                             "Additional builder 1"
+		"DOTA_Tooltip_Ability_train_build_worker_1_Description"                                 "Construction of additional buildings."
+		"DOTA_Tooltip_Ability_train_build_worker_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_Ability_train_build_worker_2"                                             "Additional builder 2"
+		"DOTA_Tooltip_Ability_train_build_worker_2_Description"                                 "Construction of additional buildings."
+		"DOTA_Tooltip_Ability_train_build_worker_2_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_2_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_2_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_Ability_train_build_worker_2_unit_count"                                  "UNIT COUNT: "
+
+		
+
 		"DOTA_Tooltip_ability_train_worker_1"                                             "Train Worker 1"
 		"DOTA_Tooltip_ability_train_worker_1_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
 		"DOTA_Tooltip_ability_train_worker_1_gold_cost"                                   "GOLD COST: "
@@ -1399,6 +1738,7 @@
 		
 		"DOTA_Tooltip_ability_gold_mine_ability"                                          "Gold Mine Ability"
 		"DOTA_Tooltip_ability_gold_mine_ability_Description"                              ""
+		"DOTA_Tooltip_ability_gold_mine_ability_gold_interval"                            "GOLD INTERVAL: "
 
 		"DOTA_Tooltip_ability_upgrade_to_troll_hut_2"                                     "Troll Hut 2"
 		"DOTA_Tooltip_ability_upgrade_to_troll_hut_2_Description"                         ""
@@ -2174,13 +2514,13 @@
 		"DOTA_Tooltip_ability_item_disable_repair_2_lumber_cost"                                    "LUMBER COST: "
 	
 		"DOTA_Tooltip_Ability_smoke_screen_datadriven"												"Smoke"
-		"DOTA_Tooltip_Ability_smoke_screen_datadriven_Description"                               	"Grants a -35 slow for 10 seconds. Wolves have a 99% miss chance."
+		"DOTA_Tooltip_Ability_smoke_screen_datadriven_Description"                               	"Grants a -50 slow for 20 seconds. 50% miss chance."
 
 		"DOTA_Tooltip_Ability_vengefulspirit_wave_of_terror_datadriven"												"Armor Reduction"
 		"DOTA_Tooltip_Ability_vengefulspirit_wave_of_terror_datadriven_Description"                               	"-1000 armor for 7 seconds. 10000 pure damage."
 		
 		"DOTA_Tooltip_Ability_ability_ensnare"												"Net"
-		"DOTA_Tooltip_Ability_ability_ensnare_Description"                               	"Throws a net for 1.5 seconds."
+		"DOTA_Tooltip_Ability_ability_ensnare_Description"                               	"Throws a net for 5 seconds."
 
 		"DOTA_Tooltip_Ability_ability_crystal_nova"												"Nova"
 		"DOTA_Tooltip_Ability_ability_crystal_nova_Description"                               	"Attack delay by -250. -75 run speed slow. 10000 pure damage."

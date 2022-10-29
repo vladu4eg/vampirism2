@@ -1239,13 +1239,10 @@
 		"BaseClass"						"item_datadriven"
 		"ID"                            "2004"
 		"AbilityTextureName"			"item_glyph"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastPoint"				"0"
 		"AbilityCastRange"				"600"
 		"AbilityCooldown"				"300"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
-		
 		"ItemDroppable" 				"0"
 		"ItemPurchasable" 				"0"
 		"ItemSellable"					"0"
@@ -1348,8 +1345,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"              "0"
 		"AbilityCastPoint"              "0.0"
-		"AbilityCooldown"               "35"
-		"AbilityManaCost"               "0"
+		"AbilityCooldown"               "3"
+		"AbilityManaCost"               "1"
 		"ItemSellable"					"0"
 		"ItemDisplayCharges"			"0"
 		"ItemDroppable"					"0"
@@ -1363,7 +1360,7 @@
 			"01"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"max_blink_range"               "1200"
+				"max_blink_range"               "999999"
 			}
 		}
 		

@@ -15,11 +15,12 @@ function GainGoldCreate(event)
 		if not hero then
 			return
 		end
+		local goldInterval = GetUnitKV(caster:GetUnitName(), "GoldInterval")
 		local level = caster:GetLevel()
 		local amountPerSecond = 2^(level-1) * GameRules.MapSpeed
 		hero.goldPerSecond = hero.goldPerSecond + amountPerSecond
 		local playerID = caster:GetPlayerOwnerID()
-		local dataTable = { entityIndex = caster:GetEntityIndex(), amount = amountPerSecond, interval = 1, statusAnim = GameRules.PlayersFPS[playerID] }
+		local dataTable = { entityIndex = caster:GetEntityIndex(), amount = amountPerSecond, interval = goldInterval, statusAnim = GameRules.PlayersFPS[playerID] }
 		CustomGameEventManager:Send_ServerToTeam(caster:GetTeamNumber(), "gold_gain_start", dataTable)
 	end
 end
@@ -867,14 +868,16 @@ function GoldMineCreate(keys)
 		local playerID = caster:GetPlayerOwnerID()
 		local amountPerSecond = GetUnitKV(caster:GetUnitName()).GoldAmount * GameRules.MapSpeed
 		local maxGold = GetUnitKV(caster:GetUnitName(),"MaxGold") or 2000000
-		hero.goldPerSecond = hero.goldPerSecond + amountPerSecond
+		local goldInterval = GetUnitKV(caster:GetUnitName(), "GoldInterval")
+		ModifyGoldPerSecond(hero, amountPerSecond, goldInterval)
 		local secondsToLive = maxGold/amountPerSecond;
 		keys.ability:StartCooldown(secondsToLive)
+		
 		caster.destroyTimer = Timers:CreateTimer(secondsToLive,
 			function()
 				caster:ForceKill(false)
 			end)
-			local dataTable = { entityIndex = caster:GetEntityIndex(), amount = amountPerSecond, interval = 1, statusAnim = GameRules.PlayersFPS[playerID] }
+			local dataTable = { entityIndex = caster:GetEntityIndex(), amount = amountPerSecond, interval = goldInterval, statusAnim = GameRules.PlayersFPS[playerID] }
 			local player = hero:GetPlayerOwner()
 			if player then
 				CustomGameEventManager:Send_ServerToPlayer(player, "gold_gain_start", dataTable)
@@ -887,7 +890,8 @@ function GoldMineDestroy(keys)
 		local caster = keys.caster
 		local hero = caster:GetOwner()
 		local amountPerSecond = GetUnitKV(caster:GetUnitName()).GoldAmount * GameRules.MapSpeed
-		hero.goldPerSecond = hero.goldPerSecond - amountPerSecond
+		local goldInterval = GetUnitKV(caster:GetUnitName(), "GoldInterval")
+		ModifyGoldPerSecond(hero, -amountPerSecond, goldInterval)
 		Timers:RemoveTimer(caster.destroyTimer)
 		local dataTable = { entityIndex = caster:GetEntityIndex() }
 		local player = hero:GetPlayerOwner()
@@ -895,6 +899,10 @@ function GoldMineDestroy(keys)
 			CustomGameEventManager:Send_ServerToPlayer(player, "gold_gain_stop", dataTable)
 		end
 	end
+end
+
+function ModifyGoldPerSecond(hero, amount, interval) 
+	hero.goldPerSecond = hero.goldPerSecond + (amount/interval)
 end
 
 function HpRegenModifier(keys)
@@ -912,6 +920,20 @@ function HpRegenModifier(keys)
 	if caster and caster.hpReg then
 		caster.hpReg = caster.hpReg + keys.Amount
 		CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(caster.hpReg-caster.hpRegDebuff,0)),unit=caster:GetEntityIndex() })
+	end
+	if not caster:IsRealHero() then
+		Timers:CreateTimer(function()
+            if caster:IsNull() then return end
+            local rate = FrameTime()
+            local fullHpReg = math.max(caster.hpReg - caster.hpRegDebuff, 0)
+            if fullHpReg > 0 and caster:IsAlive() then
+                local optimalRate = 1 / fullHpReg
+                rate = optimalRate > rate and optimalRate or rate
+                local ratedHpReg = fullHpReg * rate
+                caster:SetHealth(caster:GetHealth() + ratedHpReg)
+            end
+            return rate
+        end)
 	end
 	end)
 end
@@ -1201,7 +1223,7 @@ end
 
 function CommitSuicide(event)
 	local caster = event.caster
-	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , 1500 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , 64 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
 	local playerID = caster:GetMainControllingPlayer()
 	if #units > 0 then
 		SendErrorMessage(playerID, "error_enemy_nearby")

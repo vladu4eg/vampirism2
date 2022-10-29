@@ -21,6 +21,7 @@
 				<Label id = "description" html = "true"/>
 				<Label id = "requirements" html = "true"/>
 				<Label id = "gold_gain" html = "true"/>
+				<Label id = "gold_interval" html = "true"/>
 				<Label id = "item_stats" html = "true"/>
 				<Label id = "item_gold" html = "true"/>
 				<Label id = "item_lumber" html = "true"/>

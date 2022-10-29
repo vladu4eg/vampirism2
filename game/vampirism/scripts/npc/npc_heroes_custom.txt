@@ -10,15 +10,15 @@
 		"Ability1" 					"build_tent"
 		"Ability2" 					"build_rock_1"
 		"Ability3" 					"build_tower_1"
-		"Ability4" 					"build_trader_1"
+		"Ability4" 					"build_house"
 		"Ability5" 					"build_workers_guild"
-		"Ability6"					"build_mother_of_nature"
+		"Ability6"					"build_slayers_taverna"
 		"Ability7" 					"build_research_lab"
-		"Ability8" 					"attack_tree_skill"
-		"Ability9"					"build_tree"
-		"Ability10"					"build_flag"
-		"Ability11"					"repair"
-		"Ability12"					""
+		"Ability8" 					"build_gold_mine_1"
+		"Ability9"					"attack_tree_skill"
+		"Ability10"					"build_tree"
+		"Ability11"					"build_flag"
+		"Ability12"					"repair"
 		"Ability13"					""
 		"Ability14"   	    		"attribute_antibonuses"
 		"Ability15"   	    		"antiblock"
@@ -53,10 +53,10 @@
 	    "MovementSpeed"       "360"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "1"                 // Base health.
+	    "StatusHealth"        "5000"                 // Base health.
 	    "StatusHealthRegen"     "0.0"                 // Health regeneration rate.
-	    "StatusMana"        "200"                   // Base mana.
-	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
+	    "StatusMana"        "10"                   // Base mana.
+	    "StatusManaRegen"     "1"                 // Mana regeneration rate.
 	
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.

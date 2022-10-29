@@ -292,6 +292,9 @@ function BuildingHelper:ParseKV()
                 if info['GoldAmount'] then
                     values.gold_gain = info['GoldAmount']
                 end
+                if info['GoldInterval'] then
+                    values.gold_interval = info['GoldInterval']
+                end
                 CustomNetTables:SetTableValue("buildings", name, values)
                 
                 elseif isBuildingAbility then

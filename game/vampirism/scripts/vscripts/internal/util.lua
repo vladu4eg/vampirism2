@@ -116,3 +116,46 @@ function CDOTA_Item:Use()
         end
     end
 end
+
+function GetMoveToTreePosition( unit, target )
+  local origin = unit:GetAbsOrigin()
+  local building_pos = target:GetAbsOrigin()
+  local distance = 120
+  return building_pos + (origin - building_pos):Normalized() * distance
+end
+
+function CDOTA_BaseNPC:ManaBurn(hCaster, hAbility, fManaAmount, fDamagePerMana, iDamageType, bAffectedByManaLossReduction)
+	if bAffectedByManaLossReduction then
+		fManaAmount = fManaAmount * (100 - self:GetManaLossReductionPercentage()) * 0.01
+	end
+
+	local fCurrentMana = self:GetMana()
+	if fCurrentMana < fManaAmount then
+		fManaAmount = fCurrentMana
+	end
+
+	self:ReduceMana(fManaAmount)
+	if fDamagePerMana and iDamageType then
+		local fDamageToDeal = fManaAmount * fDamagePerMana
+		ApplyDamage({ victim = self, attacker = hCaster, damage = fDamageToDeal, damage_type = iDamageType, ability = hAbility })
+	end 
+end
+
+function CDOTA_BaseNPC:GetManaLossReductionPercentage()
+	local mana_loss_reduction = 0
+	local mana_loss_reduction_unique = 0
+	for _, parent_modifier in pairs(self:FindAllModifiers()) do
+
+		if parent_modifier.GetCustomManaLossReductionPercentageUnique then
+			mana_loss_reduction_unique = math.max(mana_loss_reduction_unique, parent_modifier:GetCustomManaLossReductionPercentageUnique())
+		end
+
+		if parent_modifier.GetCustomManaLossReductionPercentage then
+			mana_loss_reduction = mana_loss_reduction + parent_modifier:GetCustomManaLossReductionPercentage()
+		end
+	end
+
+	mana_loss_reduction = mana_loss_reduction + mana_loss_reduction_unique
+
+	return mana_loss_reduction
+end

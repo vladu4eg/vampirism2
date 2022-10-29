@@ -50,10 +50,11 @@
 
 #CheeseText{
 	color: #c1b400;
+	font-size: 16px;
 }
 
 #CheeseIcon {	
-	width:26px; 
+	width:20px; 
 }
 
 #LumberPriceIcon{

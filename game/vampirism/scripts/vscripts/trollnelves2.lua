@@ -31,6 +31,7 @@ require('libraries/popups')
 require('libraries/team')
 require('libraries/player')
 require('libraries/entity')
+require('libraries/animations')
 
 require('internal/trollnelves2')
 
@@ -49,6 +50,7 @@ require('flag')
 require('filter')
 require('speech_bubble/speech_bubble_class')
 require('libraries/worldpanels')
+require('PseudoRandom')
 
 function trollnelves2:PostLoadPrecache()
     Pets:Init()
@@ -297,10 +299,10 @@ function InitializeBuilder(hero)
     end
     hero:SetRespawnsDisabled(true)
     
-    hero:AddItemByName("item_root_ability")
-    hero:AddItemByName("item_silence_ability")
-    hero:AddItemByName("item_glyph_ability")
-    hero:AddItemByName("item_night_ability")
+    --hero:AddItemByName("item_root_ability")
+    --hero:AddItemByName("item_silence_ability")
+    --hero:AddItemByName("item_glyph_ability")
+    --hero:AddItemByName("item_night_ability")
     hero:AddItemByName("item_blink_datadriven")
     if GameRules.MapSpeed == 4 then
         hero:AddItemByName("item_max_move")
