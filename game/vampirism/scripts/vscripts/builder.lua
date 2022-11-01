@@ -214,6 +214,12 @@ function Build( event )
            hero:AddNewModifier(hero, hero, "modifier_all_vision", {Duration=10})
            hero:AddNewModifier(hero, hero, "modifier_creep_slow", {Duration=10})
         end
+
+        if building_name == "slayerstaverna_1" and hero.slayer then
+            local ability = unit:FindAbilityByName("train_npc_dota_hero_templar_assassin")
+            --ability:SetHidden(true)
+        end
+
         if not BuildingHelper:IsInsideBaseArea(building, building, NewBuildingName, true) and not string.match(NewBuildingName,"troll_hut") then
             CancelBuilding(event)
             SendErrorMessage(playerID, "error_not_upgrade_flag_base")
@@ -654,9 +660,9 @@ function UpgradeBuilding( event )
             newItem:LaunchLootInitialHeight( false, 0, 250, 0.5, randRadius ) 
         end
     end
-    if (GameRules.scores[playerID].elf + GameRules.scores[playerID].troll) == 0 and not string.match(newBuildingName,"tower") then
-        PlayerResource:ModifyGold(hero, (2 * (math.floor(GameRules:GetGameTime()/60)+1)))
-    end
+    --if (GameRules.scores[playerID].elf + GameRules.scores[playerID].troll) == 0 and not string.match(newBuildingName,"tower") then
+    --    PlayerResource:ModifyGold(hero, (2 * (math.floor(GameRules:GetGameTime()/60)+1)))
+    --end
     Timers:CreateTimer(buildTime,function()
         if newBuilding:IsNull() or not newBuilding:IsAlive() then
             return

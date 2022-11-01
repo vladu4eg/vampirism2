@@ -159,3 +159,19 @@ function CDOTA_BaseNPC:GetManaLossReductionPercentage()
 
 	return mana_loss_reduction
 end
+
+function ConvertToTime( value )
+  local value = tonumber( value )
+
+if value <= 0 then
+  return "00:00:00";
+else
+    hours = string.format( "%02.f", math.floor( value / 3600 ) );
+    mins = string.format( "%02.f", math.floor( value / 60 - ( hours * 60 ) ) );
+    secs = string.format( "%02.f", math.floor( value - hours * 3600 - mins * 60 ) );
+    if math.floor( value / 3600 ) == 0 then
+      return mins .. ":" .. secs
+    end
+    return hours .. ":" .. mins .. ":" .. secs
+end
+end

@@ -1650,7 +1650,7 @@
 	//=================================================================================
 	// Building: HOUSE
 	//=================================================================================	
-	"slayers_taverna"
+	"slayerstaverna_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -1666,7 +1666,7 @@
 		"PlayerCanControl"			"1"
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
-		"Limit"						"20"
+		"Limit"						"5"
 		"StartingBuilding"          "1"
 		
 	    // Stats
@@ -1674,14 +1674,14 @@
 	    "Level"                     "1"
 	    "BuildTime"                 "2"
 		"Requirements"{
-		
+			"workersguild_1"			"1"
 		}
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""
-		"Ability2"					"spell_immunity"
+		"Ability1"					"spell_immunity"
+		"Ability2"					"train_npc_dota_hero_templar_assassin"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
@@ -1719,7 +1719,7 @@
 	//=================================================================================
 	// Building: HOUSE
 	//=================================================================================	
-	"house"
+	"house_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -1735,7 +1735,7 @@
 		"PlayerCanControl"			"1"
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
-		"Limit"						"20"
+		"Limit"						"3"
 		"StartingBuilding"          "1"
 		
 	    // Stats
@@ -1752,7 +1752,8 @@
 			}
 	    }
 		"Requirements"{
-		
+			"workersguild_1"				"1"
+			"slayerstaverna_1"			    "1"
 		}
 		
 		// Abilities
@@ -2035,7 +2036,7 @@
 	        "1"{
 				"unit_name"			"tent_2"
 				"gold_cost"			"0"
-				"lumber_cost"		"0"
+				"lumber_cost"		"500"
 			}
 	    }
 		"Requirements"{
@@ -2109,7 +2110,7 @@
 	        "1"{
 				"unit_name"			"tent_3"
 				"gold_cost"			"0"
-				"lumber_cost"		"0"
+				"lumber_cost"		"5000"
 			}
 	    }
 		"Requirements"{
@@ -2238,7 +2239,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"4"
+		"Limit"						"8"
 		"StartingBuilding"          "1"
 
 	    // Stats
@@ -4141,6 +4142,7 @@
 	    }
 		
 		"Requirements"{
+			"house_2"                 "1"
 		}
 
 		"Creature"
@@ -4454,6 +4456,8 @@
 	    }
 		
 		"Requirements"{
+			"research_lab_1"                 "1"
+			"house_3"                 "1"
 		}
 
 		"Creature"
@@ -4555,6 +4559,8 @@
 	    }
 		
 		"Requirements"{
+			"house_4"                 "1"
+			"research_lab_2"                 "1"
 		}
 
 		"Creature"
@@ -4844,6 +4850,7 @@
 	    }
 		
 		"Requirements"{
+			"house_2"                 "1"
 		}
 
 		"Creature"
@@ -5050,6 +5057,7 @@
 	    }
 		
 		"Requirements"{
+			"house_3"                 "1"
 		}
 
 		"Creature"
@@ -5245,6 +5253,7 @@
 
 		
 		"Requirements"{
+			"house_4"                 "1"
 		}
 
 		"Creature"
@@ -5348,6 +5357,7 @@
 	    }
 		
 		"Requirements"{
+			"house_2"                 "1"
 		}
 
 		"Creature"
@@ -5552,6 +5562,7 @@
 	    }
 		
 		"Requirements"{
+			"house_3"                 "1"
 		}
 
 		"Creature"
@@ -5756,6 +5767,7 @@
 	    }
 		
 		"Requirements"{
+			"house_4"                 "1"
 		}
 
 		"Creature"
@@ -5846,6 +5858,7 @@
 	    "BuildTime"                 "3"
 		
 		"Requirements"{
+			"house_4"                 "1"
 		}
 
 		"Creature"
@@ -6089,7 +6102,7 @@
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"30"
+		"Limit"						"45"
 
 	    // Stats
 	    //----------------------------- 
@@ -7657,6 +7670,8 @@
 	    }
 		
 		"Requirements"{
+			"workersguild_5"				"1"
+			"house_4"			"1"
 		}
 		
 	    "Upgrades"
@@ -7760,8 +7775,13 @@
 		
 	    "Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 	        "1"{
+				"unit_name"			"tower_21"
+				"gold_cost"			"2000"
+				"lumber_cost"		"750000"
+			}
+			"2"{
 				"unit_name"			"tower_20"
 				"gold_cost"			"250000"
 				"lumber_cost"		"0"
@@ -7857,24 +7877,28 @@
 	    }
 		
 		"Requirements"{
-			"research_lab_3" 	"1"
 		}
 		
 		"Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 	        "1"{
 				"unit_name"			"tower_22"
-				"gold_cost"			"999999"
-				"lumber_cost"		"999999"
+				"gold_cost"			"8795"
+				"lumber_cost"		"200000"
+			}
+			"2"{
+				"unit_name"			"tower_20"
+				"gold_cost"			"250000"
+				"lumber_cost"		"0"
 			}
 	    }
 
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"tower_atk_spd"
-		"Ability2"					"ursa_fury_swipes2_datadriven"
+		"Ability1"					""
+		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
@@ -7888,7 +7912,7 @@
 		"AttackRate"				"1.00"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRange"				"1500"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_hoodwink/hoodwink_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 		"SoundSet"					"Hero_Hoodwink"
@@ -7896,8 +7920,8 @@
 		"VoiceFile"					"soundevents/voscripts/game_sounds_vo_hoodwink.vsndevts"
 		
 	
-		"AttackDamageMin"			"999999"		// Damage range min.
-		"AttackDamageMax"			"999999"		// Damage range max.
+		"AttackDamageMin"			"550001"		// Damage range min.
+		"AttackDamageMax"			"550001"		// Damage range max.
 	    "ArmorPhysical"             "128"
 		"StatusHealth"              "45000"
 	    "StatusHealthRegen"         "0"
@@ -7919,6 +7943,9 @@
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+		"BountyXP"            "3000"                 // Experience earn.
+		"BountyGoldMin"       "3000"                   // Gold earned min.
+		"BountyGoldMax"       "3000"                   // Gold earned max.
 	}
 
 	"tower_22"
@@ -7959,13 +7986,22 @@
 		"Requirements"{
 		}
 		
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"tower_20"
+				"gold_cost"			"250000"
+				"lumber_cost"		"0"
+			}
+	    }
 		
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"tower_atk_spd"
-		"Ability2"					"clink_fury_swipes2_datadriven"
+		"Ability1"					"monkey_king"
+		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
@@ -7979,14 +8015,14 @@
 		"AttackRate"				"1.00"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRange"				"1500"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 		"SoundSet"					"Hero_Clinkz"
 		
 	
-		"AttackDamageMin"			"999999"		// Damage range min.
-		"AttackDamageMax"			"999999"		// Damage range max.
+		"AttackDamageMin"			"550001"		// Damage range min.
+		"AttackDamageMax"			"550001"		// Damage range max.
 	    "ArmorPhysical"             "128"
 		"StatusHealth"              "95000"
 	    "StatusHealthRegen"         "0"
@@ -8008,6 +8044,9 @@
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+		"BountyXP"            "3000"                 // Experience earn.
+		"BountyGoldMin"       "3000"                   // Gold earned min.
+		"BountyGoldMax"       "3000"                   // Gold earned max.
 	}
 
 	"tower_23"
@@ -8134,11 +8173,6 @@
 	    }
 		
 		"Requirements"{
-		"barracks_3"				"1"
-		"rock_19"					"1"
-		"trader_3"					"1"
-		"research_lab_5_1"			"1"
-		"tower_21"					"1"
 		}
 		"Upgrades"
 	    {
@@ -8229,11 +8263,6 @@
 	    }
 		
 		"Requirements"{
-		"barracks_3"				"1"
-		"rock_19"		"1"
-		"trader_3"					"1"
-		"research_lab_5_1"			"1"
-		"tower_21"					"1"
 		}
 		"Upgrades"
 	    {
@@ -8324,11 +8353,7 @@
 	    }
 		
 		"Requirements"{
-			"barracks_3"				"1"
-			"rock_19"					"1"
-			"trader_3"					"1"
-			"research_lab_5_1"			"1"
-			"tower_21"					"1"
+
 		}
 		"Upgrades"
 	    {
@@ -8485,8 +8510,7 @@
 	    "Level"                     "2"
 	    "BuildTime"                 "2"
 		"Requirements"{
-			"research_lab"			"1"
-			"barracks_3"			"1"
+			"research_lab_1"			"1"
 		}
 		// Abilities
 		//----------------------------------------------------------------
@@ -8531,7 +8555,7 @@
 	//=================================================================================
 	// Building: Clockwerk
 	//=================================================================================	
-	"workers_guild"
+	"workersguild_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8564,7 +8588,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"workers_guild_2"
+				"unit_name"			"workersguild_2"
 				"gold_cost"			"0"
 				"lumber_cost"		"3000"
 			}
@@ -8621,7 +8645,7 @@
 	  	"BountyGoldMin"				"5"		// Gold earned min.
 	  	"BountyGoldMax"				"5"		// Gold earned max.
 	}
-	"workers_guild_2"
+	"workersguild_2"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8657,13 +8681,14 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"workers_guild_3"
+				"unit_name"			"workersguild_3"
 				"gold_cost"			"0"
 				"lumber_cost"		"10000"
 			}
 	    }
-		"Requirements"{
-		
+		"Requirements"
+		{
+			"house_1"						"1"
 		}
 		
 		// Abilities
@@ -8704,7 +8729,7 @@
 	  	"BountyGoldMin"				"80"		// Gold earned min.
 	  	"BountyGoldMax"				"80"		// Gold earned max.
 	}
-	"workers_guild_3"
+	"workersguild_3"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8734,19 +8759,19 @@
 		
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "2"
+	    "Level"                     "3"
 	    "BuildTime"                 "1"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"workers_guild_4"
+				"unit_name"			"workersguild_4"
 				"gold_cost"			"20"
 				"lumber_cost"		"10000"
 			}
 	    }
 		"Requirements"{
-		
+			"house_2"				"1"
 		}
 		
 		// Abilities
@@ -8787,7 +8812,7 @@
 	  	"BountyGoldMin"				"200"		// Gold earned min.
 	  	"BountyGoldMax"				"200"		// Gold earned max.
 	}
-	"workers_guild_4"
+	"workersguild_4"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8816,19 +8841,19 @@
 		
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "2"
+	    "Level"                     "4"
 	    "BuildTime"                 "1"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"workers_guild_5"
+				"unit_name"			"workersguild_5"
 				"gold_cost"			"200"
 				"lumber_cost"		"100000"
 			}
 	    }
 		"Requirements"{
-		
+				"house_3"				"1"
 		}
 		
 		// Abilities
@@ -8869,7 +8894,7 @@
 	  	"BountyGoldMin"				"400"		// Gold earned min.
 	  	"BountyGoldMax"				"400"		// Gold earned max.
 	}
-	"workers_guild_5"
+	"workersguild_5"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8899,10 +8924,10 @@
 		
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "2"
+	    "Level"                     "5"
 	    "BuildTime"                 "1"
 		"Requirements"{
-		
+			"house_4"				"1"
 		}
 		
 		// Abilities
@@ -8949,7 +8974,7 @@
 	//=================================================================================
 	// Building: Research Lab
 	//=================================================================================	
-	"research_lab"
+	"research_lab_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -8966,7 +8991,7 @@
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"3"
+		"Limit"						"5"
 		"Creature"
 	    {
 	        "AttachWearables" // Dark wood set
@@ -8994,7 +9019,7 @@
 			}
 	    }			
 		"Requirements"{
-			"trader_3"				"1"
+			"workersguild_1"			"1"
 		}
 		
 		// Abilities
@@ -9070,7 +9095,8 @@
 	        }
 	    }			
 		"Requirements"{
-
+			//"house_1"						"1"
+			"workersguild_1"				"1"
 		}
 		
 	    // Stats
@@ -9150,7 +9176,7 @@
 		"Ability4"								"build_tower_10"
 		"Ability5"								"build_true_sight_tower"
 		"Ability6"								"build_buff_tower_1"
-		"Ability7"								"build_slayers_taverna"
+		"Ability7"								"build_slayerstaverna_1"
 		"Ability8"								"build_human_box_fake"
 		"Ability9"								"build_human_box"
 		"Ability10"								"build_trader_1"
@@ -9229,7 +9255,7 @@
 		"AbilityLayout"							"13"
 		"Ability1" 								"build_gold_mine_4"
 		"Ability2"								"build_gold_mine_5"
-		"Ability3"								"build_house"
+		"Ability3"								"build_house_1"
 		"Ability4"								"build_tower_10"
 		"Ability5"								"build_rock_9"
 		"Ability6"								"build_true_sight_tower"
@@ -9388,7 +9414,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"900"
-		"Limit"						"1"
+		"Limit"						"30"
 	    // Stats
 	    //-----------------------------
 	    "Level"                     "1"
@@ -9459,7 +9485,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"7200"
-		"Limit"						"2"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9533,7 +9559,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"15360"
-		"Limit"						"5"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9607,7 +9633,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"61440"
-		"Limit"						"5"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9673,6 +9699,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"245760"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9692,7 +9719,6 @@
 		"Ability10"					""
 		"MineCost"                  "1"
 		"GoldAmount"				"20"
-		"Limit"						"5"
 		"GoldInterval"				"8"
 	    // General
 	    //-----------------------------
@@ -9739,7 +9765,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"2000000"
-		"Limit"						"10"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9807,7 +9833,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"3000000"
-		"Limit"						"10"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -9875,6 +9901,7 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"3500000"
+		"Limit"						"30"
 		"precache"
 		{
 			"model"                     "models/props_gameplay/gold_bag.vmdl"
@@ -11308,6 +11335,108 @@
 	  {
 	    "DisableClumpingBehavior"  "1"
 	  }
+	}
+
+  "worker_1"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/omniknight/omniknight.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/omniknight/omniknight.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "5"
+		"AttackDamageMax"                       "5"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"2"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "100"
+		"BountyGoldMax"                         "25"
+		"BountyGoldMin"                         "25"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		//"FoodCost"                              "50"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "500"
+		"StatusHealthRegen"                     "1"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	           "Wearable1" {"ItemDef" "4266"}//arms("Armguards of the Stalwart")
+		"Wearable2" {"ItemDef" "4268"}//("Hammer of the Stalwart Soul")
+		"Wearable3" {"ItemDef" "4269"}//head("Coiffure of the Stalwart Soul")
+		"Wearable4" {"ItemDef" "4267"}//back("Plate of the Stalwart Soul")
+		"Wearable5" {"ItemDef" "20036"}//shoulder("Pauldrons of the Stalwart Soul")
+		"Wearable6" {"ItemDef" "45"}//shoulder("Pauldrons of the Stalwart Soul")
+	        }
+	    }
 	}
 
 }

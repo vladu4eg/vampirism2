@@ -532,6 +532,10 @@ function SpawnUnitOnSpellStart(event)
             end
             end
         end
+		if unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
+			SendErrorMessage(playerID, "error_not_slayers_many")
+			return false
+		end
 		if tonumber(string.match(unit_name,"%d+")) ~= nil then
 			if tonumber(string.match(unit_name,"%d+")) >= 1 and tonumber(string.match(unit_name,"%d+")) <= 6 and string.match(unit_name,"%a+") == "wisp" and (GameRules:GetGameTime() - GameRules.startTime) > NO_CREATE_WISP/GameRules.MapSpeed then
 				SendErrorMessage(playerID, "error_not_create_wisp")
@@ -550,6 +554,25 @@ function SpawnUnitOnChannelSucceeded(event)
 		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 		local unit_name = GetAbilityKV(ability:GetAbilityName()).UnitName
 		local unit_count = ability:GetSpecialValueFor("unit_count")
+		if unit_name == "npc_dota_hero_templar_assassin" and not hero.slayer then
+			local slayer = CreateUnitByName("npc_dota_hero_templar_assassin", caster:GetAbsOrigin() , true, nil, nil, hero:GetTeamNumber())
+			hero.slayer=slayer
+			FindClearSpaceForUnit(slayer, caster:GetOrigin(), false)
+			slayer:SetControllableByPlayer(playerID,true)
+			slayer:SetOwner(player)
+			--ability:SetHidden(true)
+			local playername = PlayerResource:GetPlayerName(playerID)
+			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
+			return true
+		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
+			hero.slayer:SetRespawnPosition(caster:GetAbsOrigin())
+			hero.slayer:RespawnHero(false,false)
+			hero.slayer:SetRespawnsDisabled(false)
+			return true
+		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
+			SendErrorMessage(playerID, "error_not_slayers_many")
+			return true
+		end
 		
 		for a = 1,unit_count do
 			local unit = CreateUnitByName(unit_name, caster:GetAbsOrigin() , true, nil, nil, hero:GetTeamNumber())
@@ -988,6 +1011,10 @@ function BuyItem(event)
 		return	
 	end
 	
+	if PlayerResource:GetSelectedHeroName(playerID) == "npc_dota_hero_wisp" then
+		SendErrorMessage(playerID, "#error_no_buy_wisp")
+		return false
+	end	
 	
 	PlayerResource:ModifyLumber(hero,-lumber_cost)
 	PlayerResource:ModifyGold(hero,-gold_cost)
@@ -1451,7 +1478,7 @@ end
 
 function GlyphItem(keys)
 	local caster = keys.caster
-	local target = keys.target
+	local target = caster
 	local ability = keys.ability
 	local time = keys.Modifier
 	local playerID = caster:GetPlayerID()

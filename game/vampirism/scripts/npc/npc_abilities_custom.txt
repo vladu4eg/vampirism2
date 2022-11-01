@@ -4945,7 +4945,7 @@
 	}
 	
 
-"build_slayers_taverna"{
+"build_slayerstaverna_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityTextureName"	"build_slayer_tavern"
@@ -4953,7 +4953,7 @@
 		"Building"				"1"
 		"BuildTime"				"2.0"
 		"Scale"					"1"
-		"UnitName"				"slayers_taverna"
+		"UnitName"				"slayerstaverna_1"
 		"MaxLevel"				"1"
 		"AbilitySpecial"
 		{
@@ -4984,7 +4984,7 @@
 		}
 	}
 
-	"build_house"{
+	"build_house_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityTextureName"	"build_house"
@@ -4992,7 +4992,7 @@
 		"Building"				"1"
 		"BuildTime"				"2.0"
 		"Scale"					"1"
-		"UnitName"				"house"
+		"UnitName"				"house_1"
 		"MaxLevel"				"1"
 		"AbilitySpecial"
 		{
@@ -7487,7 +7487,7 @@
 			}
 		}
 	}
-	"build_workers_guild"{
+	"build_workersguild_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityTextureName"	"build_workers_guild"
@@ -7495,7 +7495,7 @@
 		"Building"				"1"
 		"BuildTime"				"2.0"
 		"Scale"					"1"
-		"UnitName"				"workers_guild"
+		"UnitName"				"workersguild_1"
 		"MaxLevel"				"1"
 		"AbilitySpecial"
 		{
@@ -7525,7 +7525,7 @@
 			}
 		}
 	}
-	"upgrade_to_workers_guild_2"
+	"upgrade_to_workersguild_2"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"build_trader_2"
@@ -7540,11 +7540,11 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"workers_guild_2"
+				"NewName"		"workersguild_2"
 			}
 		}
 	}
-	"upgrade_to_workers_guild_3"
+	"upgrade_to_workersguild_3"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"build_trader_33"
@@ -7559,11 +7559,11 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"workers_guild_3"
+				"NewName"		"workersguild_3"
 			}
 		}
 	}
-	"upgrade_to_workers_guild_4"
+	"upgrade_to_workersguild_4"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"build_mon"
@@ -7578,11 +7578,11 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"workers_guild_4"
+				"NewName"		"workersguild_4"
 			}
 		}
 	}
-	"upgrade_to_workers_guild_5"
+	"upgrade_to_workersguild_5"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"train_worker_5"
@@ -7597,12 +7597,12 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"workers_guild_5"
+				"NewName"		"workersguild_5"
 			}
 		}
 	}
 	
-	"build_research_lab"{
+	"build_research_lab_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityTextureName"	"build_research_lab"
@@ -7610,7 +7610,7 @@
 		"Building"				"1"
 		"BuildTime"				"6.0"
 		"Scale"					"1"
-		"UnitName"				"research_lab"
+		"UnitName"				"research_lab_1"
 		"MaxLevel"				"1"
 		"AbilitySpecial"
 		{
@@ -8695,6 +8695,68 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"food_cost"			"5"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"3"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+
+	"train_npc_dota_hero_templar_assassin"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"npc_dota_hero_templar_assassin"
+		"MaxLevel"					"1"
+		"UnitName"					"npc_dota_hero_templar_assassin"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"0"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"4000"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
 			}	
 			"04"
 			{
@@ -15873,4 +15935,530 @@
 			}
 		}
 	}
+
+	"slayer_blink"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"antimage_blink"
+	"MaxLevel"						"20"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
+		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"5.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"150 500 1000 1500 2000 2500 3500 4000 4500 5000 5500 6000 6500 7000 7500 8000 8500 9000 9500 10000"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_blink_range"		"50"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/heroes/hero_antimage/blink.lua"
+			"Function"		"Blink"
+			"Target"		"POINT"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Antimage.Blink_out"
+			"Target"		"CASTER"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Antimage.Blink_in"
+			"Target"		"CASTER"
+		}
+
+		"AttachEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
+			"Target"		"CASTER"
+			"EffectAttachType"	"follow_origin"
+		}
+	}
+	}
+
+	//================================================================================= /
+  	// Slayer Summon Tracker
+  	//================================================================================= /
+  	"slayer_summon_tracker"
+  	{
+	    "BaseClass"               "ability_datadriven"
+	    "AbilityTextureName"      "/rubick/harlequin_icons/rubick_null_field"
+	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "MaxLevel"                "20"
+	    "AbilityManaCost"         "500"
+	    "AbilityCastPoint"        "0.3"
+	    "AbilityCooldown"        "200"
+	    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_6"
+		"AbilitySpecial"
+    	{
+      		"01"
+      		{
+        		"var_type"      "FIELD_FLOAT"
+        		"duration"    "10.0 20.0 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200"
+      		}
+			"02"
+      		{
+        		"var_type"      "FIELD_FLOAT"
+        		"count"    "1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5"
+      		}
+    	}
+	    "OnSpellStart"
+	    {
+	      "RunScript"
+	      {
+	        "ScriptFile"  "abilities/slayer.lua"
+	        "Target"  "POINT"
+	        "Function"  "SlayerSummonTracker"
+			"InvulRadius"          "%duration"
+			"CountWorkers"         "%count"
+	      }
+	    }
+  	}
+	//================================================================================= /
+  // Slayer Esnare
+  //================================================================================= /
+  "slayer_ensnare"
+  {
+    "BaseClass"                 "ability_datadriven"
+    "AbilityTextureName"      "naga_siren_ensnare"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+    "MaxLevel"                  "20"
+    "AbilityManaCost"           "1000"
+    "AbilityCooldown"        "200 195 185 180 175 170 165 160 155 150 145 140 135 130 125 120 115 110 100 90"
+    "AbilityCastRange"        "400 450 500 550 600 650 700 750 800 850 900 950 1000 1050 1100 1150 1200 1250 1300 1350"
+    "AbilityCastPoint"        "0.3"
+    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+
+    "precache"
+    {
+      "soundfile"         "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+      "particle"          "particles/units/heroes/hero_siren/siren_net.vpcf"
+      "particle"          "particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+    }
+
+    "OnSpellStart"
+    {
+      "TrackingProjectile"
+      {
+        "Target"        "TARGET"
+        "EffectName"      "particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+        "Dodgeable"       "1"
+        "ProvidesVision"    "1"
+        "VisionRadius"      "0"
+        "MoveSpeed"       "1500"
+        "SourceAttachment"    "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+      }
+
+      "FireSound"
+      {
+        "EffectName"      "Hero_NagaSiren.Ensnare.Cast"
+        "Target"        "CASTER"
+      }
+    }
+
+    "OnProjectileHitUnit"
+    {
+      "DeleteOnHit" "1"
+
+      "FireSound"
+      {
+        "EffectName"      "Hero_NagaSiren.Ensnare.Target"
+        "Target"        "TARGET"
+      }
+
+      "ApplyModifier"
+      {
+        "Target"        "TARGET"
+        "ModifierName"      "modifier_ensnare_datadriven"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_ensnare_datadriven"
+      {
+        "IsHidden"    "0"
+        "IsDebuff"    "1"
+        "IsPurgable"  "0"
+
+        "Duration"    "5.0"
+
+        "States"
+        {
+          "MODIFIER_STATE_ROOTED"   "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+        }
+
+        "EffectName"      "particles/units/heroes/hero_siren/siren_net.vpcf"
+        "EffectAttachType"    "follow_origin"
+      }
+
+      "modifier_ensnare_fake_datadriven"
+      {
+        "IsHidden"      "1"
+        "OverrideAnimation" "ACT_DOTA_CAST_ABILITY_1"
+      }
+    }
+  }
+  //================================================================================= /
+  // Slayer Building Protection
+  //================================================================================= /
+  "slayer_building_protection"
+  {
+    "BaseClass"                  "ability_datadriven"
+    "MaxLevel"                   "20"
+    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+    "AbilityTextureName"         "omniknight_guardian_angel"
+
+
+    "AbilityManaCost"            "1000"
+    "AbilityCooldown"            "300"
+    "AbilityChannelTime"         "3 4 5.0 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22"
+
+
+    "precache"
+    {
+      "particle"  "particles/items3_fx/lotus_orb_shield.vpcf"
+      "soundfile" "sounds/weapons/hero/abaddon/shield_loop.vsnd"
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "area"      "100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000"
+      }
+      "02"
+      {
+        "var_type"      "FIELD_FLOAT"
+        "duration"    "3 4 5.0 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22"
+      }
+    }
+
+    "OnSpellStart"
+    {
+      "RunScript"
+      {
+        "ScriptFile"    "scripts/vscripts/abilities/slayer.lua"
+        "Function"      "SlayerBuildingProtection"
+        "InvulRadius"          "%area"
+      }
+    }
+    "OnChannelInterrupted"
+    {
+       "RunScript"
+      {
+        "ScriptFile"    "scripts/vscripts/abilities/slayer.lua"
+        "Function"      "SlayerBuildingProtectionEnd"
+        "InvulRadius"          "%area"
+      }
+    }
+
+    "OnChannelFinish"
+    {
+      "RunScript"
+      {
+        "ScriptFile"    "scripts/vscripts/abilities/slayer.lua"
+        "Function"      "SlayerBuildingProtectionEnd"
+        "InvulRadius"          "%area"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_building_invulnerable"
+      {
+
+        "Passive"      "0"
+        "IsHidden"      "0"
+        "IsDebuff"      "0"
+        "Duration"      "%duration"
+
+        "EffectName"    "particles/items3_fx/lotus_orb_shield.vpcf"
+        "EffectAttachType"  "follow_origin"
+
+        "States"
+        {
+          "MODIFIER_STATE_INVULNERABLE"    "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_NO_HEALTH_BAR"  "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+    }
+  }
+
+  //================================================================================= /
+  // Slayer Avatar
+  //================================================================================= /
+  "slayer_avatar"
+  {
+    "BaseClass"                  "ability_datadriven"
+    "MaxLevel"                   "1"
+    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+    "RequiredLevel"               "30"
+    "AbilityTextureName"          "invoker_ghost_walk"
+
+
+    "AbilityManaCost"            "1000"
+    "AbilityCooldown"            "80"
+
+    "precache"
+    {
+      "particle"  "particles/items_fx/black_king_bar_avatar.vpcf"
+      "soundfile" "sounds/vo/zuus/game_sounds_zuus.vsndevts"
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_FLOAT"
+        "bonus_hp"    "75000"
+      }
+      "02"
+      {
+        "var_type"      "FIELD_FLOAT"
+        "duration"    "12"
+      }
+      "03"
+      {
+        "var_type"      "FIELD_FLOAT"
+        "modelscale"    "25"
+      }
+      "04"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "bonus_damage"      "15000"
+      }
+	  "05"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "bonus_armor"      "150"
+      }
+    }
+
+    "OnSpellStart"
+    {
+        "ApplyModifier"
+        {
+          "Target"          "CASTER"
+          "ModifierName"    "modifier_slayer_avatar"
+        }
+        "RunScript"
+        {
+          "ScriptFile"  "abilities/slayer.lua"
+          "Function"    "SlayerAvatarStart"
+          "Modelscale"  "%modelscale"
+        }
+        "FireSound"
+      {
+        "EffectName"      "zuus_zuus_spawn_01"
+        "Target"        "CASTER"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_slayer_avatar"
+      {
+        "Passive"       "0"
+        "IsHidden"      "0"
+        "IsDebuff"      "0"
+        "Duration"      "%duration"
+
+        "EffectName"    "particles/items_fx/black_king_bar_avatar.vpcf"
+        "EffectAttachType"  "follow_origin"
+
+        "States"
+        {
+          "MODIFIER_STATE_MAGIC_IMMUNE"    "MODIFIER_STATE_VALUE_ENABLED"
+        }
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+          "MODIFIER_PROPERTY_HEALTH_BONUS"              "%bonus_hp"
+		  "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%bonus_armor"
+        }
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+          "ScriptFile"  "abilities/slayer.lua"
+          "Function"    "SlayerAvatarEnd"
+          "Modelscale"  "%modelscale"
+          }
+        }
+      }
+    }
+  }
+  "hero_ui"
+  {
+      "BaseClass"                     "ability_datadriven"
+      "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE |  DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+      "MaxLevel"                      "1"
+
+      "DisplayAdditionalHeroes"      "1"
+  }
+  //Start of file attribute_bonus.txt
+	"attribute_bonuses"
+	 {
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilityTextureName"   "attribute_bonus"
+	  "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"	"ability_datadriven" 
+	
+	  "MaxLevel"               "20"
+	  "RequiredLevel"          "10"
+	  
+	  // Special
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	   "01"
+	   {
+	    "var_type"      "FIELD_FLOAT"
+	    "attribute_bonus_per_level"  "20 40 60 80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380 400"
+	   }
+	  }
+		"Modifiers"
+		{
+			"modifier_attribute_bonuses"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%attribute_bonus_per_level"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%attribute_bonus_per_level"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%attribute_bonus_per_level"
+				}
+			}
+		}
+	 }
+
+	 "pick_stalker"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityTextureName"            "pick_stalker"
+        "MaxLevel"                      "1"
+
+        "AbilityCooldown"               "999999"
+        "AbilityManaCost"               "0"
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/heroes/pick_abilities.lua"
+                "Function"          "pickstalker"
+            }
+        }
+    }
+
+	"pick_doom"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityTextureName"            "pick_stalker"
+        "MaxLevel"                      "1"
+
+        "AbilityCooldown"               "999999"
+        "AbilityManaCost"               "0"
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/heroes/pick_abilities.lua"
+                "Function"          "pickdoom"
+            }
+        }
+    }
+	"pick_lifestealer"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityTextureName"            "pick_stalker"
+        "MaxLevel"                      "1"
+
+        "AbilityCooldown"               "999999"
+        "AbilityManaCost"               "0"
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/heroes/pick_abilities.lua"
+                "Function"          "picklifestealer"
+            }
+        }
+    }
+	"pick_sladar"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityTextureName"            "pick_stalker"
+        "MaxLevel"                      "1"
+
+        "AbilityCooldown"               "999999"
+        "AbilityManaCost"               "0"
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/heroes/pick_abilities.lua"
+                "Function"          "picksladar"
+            }
+        }
+    }
 }

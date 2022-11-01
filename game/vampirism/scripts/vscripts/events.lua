@@ -336,7 +336,7 @@ function trollnelves2:OnEntityKilled(keys)
                 return
             end
             Pets.DeletePet(info)
-            elseif killed:IsTroll() then
+        elseif killed:IsTroll() then
             GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 2
             killed:SetTimeUntilRespawn(9999999)
             for pID = 0, DOTA_MAX_TEAM_PLAYERS do
@@ -353,7 +353,7 @@ function trollnelves2:OnEntityKilled(keys)
                 end  
             end)
             GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
-            elseif killed:IsWolf() then
+        elseif killed:IsWolf() then
             bounty = math.max(killed:GetNetworth() * 0.70,
             GameRules:GetGameTime())
             killed:SetRespawnPosition(Vector(0, -640, 256))
@@ -363,7 +363,7 @@ function trollnelves2:OnEntityKilled(keys)
                 GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
             end
            Pets.DeletePet(info)
-            elseif killed:IsAngel() then
+        elseif killed:IsAngel() then
             bounty = math.max(PlayerResource:GetGold(killedPlayerID),
             GameRules:GetGameTime()) / 4
             PlayerResource:SetGold(killed, 0)
@@ -398,7 +398,10 @@ function trollnelves2:OnEntityKilled(keys)
             "</font> gold!"
             GameRules:SendCustomMessage(message, attackerPlayerID, 0)
         end
-        else
+        if killed:GetUnitName() == "npc_dota_hero_templar_assassin" then
+            killed:SetRespawnsDisabled(true)
+        end
+    else
         local hero = PlayerResource:GetSelectedHeroEntity(killedPlayerID)
         if string.match(killed:GetUnitName(),"troll_hut") then
             hero = GameRules.trollHero
@@ -413,6 +416,7 @@ function trollnelves2:OnEntityKilled(keys)
             GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 300
             PlayerResource:ModifyFood(hero, 0)
         end
+        
         if hero and hero.units and hero.alive then -- hero.units can contain other units besides buildings
             for i = #hero.units, 1, -1 do
                 if not hero.units[i]:IsNull() then
@@ -661,8 +665,8 @@ function ChooseHelpSide(eventSourceIndex, event)
         elseif team == DOTA_TEAM_BADGUYS then
         newHeroName = WOLF_HERO[i]
         message = "%s1 has joined the dark side and now will help " ..
-        GetModifiedName(TROLL_HERO) .. ". %s1 is now a" ..
-        GetModifiedName(WOLF_HERO[i])
+        GetModifiedName(TROLL_HERO[i]) .. ". %s1 is now a" ..
+        GetModifiedName(WOLF_HERO)
         timer = 1
         pos = Vector(0, -640, 256)
     end
@@ -726,4 +730,21 @@ function Halloween(npc)
             UpdateModel(npc, "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl", 1)  
         end
     end 
+end
+
+function trollnelves2:OnPlayerLevelUp(keys)
+    DebugPrint('[BAREBONES] OnPlayerLevelUp')
+    DebugPrintTable(keys)
+    
+    --PrintTable(keys)
+    
+    local player = PlayerResource:GetPlayer(keys.player_id) --EntIndexToHScript(keys.player)
+    local level = keys.level
+    local hero = player:GetAssignedHero()  
+    
+    --времменый фикс вольво пока они сука не вернут всё как было
+    if level > 20 and level < 126 then
+        hero:SetAbilityPoints(hero:GetAbilityPoints() + 1)
+    end
+    --
 end

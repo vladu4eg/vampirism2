@@ -276,7 +276,7 @@ function FindClosestResourceDeposit( caster )
 	local buildings = Entities:FindAllByClassname("npc_dota_creature*") 
 	local sawmills = {}
 	for _,building in pairs(buildings) do
-		if building:GetUnitName() == "workers_guild" or building:GetUnitName() == "workers_guild_2" or building:GetUnitName() == "workers_guild_3"  or building:GetUnitName() == "workers_guild_4" or building:GetUnitName() == "workers_guild_5"  then
+		if building:GetUnitName() == "workersguild_1" or building:GetUnitName() == "workersguild_2" or building:GetUnitName() == "workersguild_3"  or building:GetUnitName() == "workersguild_4" or building:GetUnitName() == "workersguild_5"  then
 			table.insert(sawmills, building)
 		end
 	end

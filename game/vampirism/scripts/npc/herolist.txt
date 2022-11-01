@@ -5,15 +5,15 @@
 
 "CustomHeroList"
 {
-  "npc_dota_hero_crystal_maiden" "-1"
-  "npc_dota_hero_dark_willow" "-1"
-  "npc_dota_hero_lycan" "-1"
   "npc_dota_hero_night_stalker" "-1"
-  "npc_dota_hero_treant" "-1"
-  "npc_dota_hero_troll_warlord" "1"
   "npc_dota_hero_doom_bringer"  "-1"
-  "npc_dota_hero_phantom_assassin" "-1"
-  "npc_dota_hero_tidehunter" "-1"
-  "npc_dota_hero_lina"      "-1"
+  "npc_dota_hero_life_stealer"      "-1"
+  "npc_dota_hero_slardar"      "-1"
+  "npc_dota_hero_wisp" "-1"
+
+  "npc_dota_hero_lycan" "-1"
+  
+  "npc_dota_hero_omniknight" "-1"
+  "npc_dota_hero_templar_assassin"      "-1"
   
 }

@@ -66,6 +66,7 @@ function trollnelves2:_Inittrollnelves2()
   ListenToGameEvent("player_disconnect", Dynamic_Wrap(trollnelves2, 'OnDisconnect'), self)
   ListenToGameEvent('player_chat', Dynamic_Wrap(chatcommand, 'OnPlayerChat'), self)
   ListenToGameEvent('dota_item_picked_up', Dynamic_Wrap(trollnelves2, 'OnItemPickedUp'), self)
+  ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(trollnelves2, 'OnPlayerLevelUp'), self)
   -- ListenToGameEvent('dota_inventory_item_added', Dynamic_Wrap(trollnelves2, 'OnItemAddedInv'), self)
   
   

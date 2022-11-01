@@ -1246,6 +1246,7 @@
 		"ItemDroppable" 				"0"
 		"ItemPurchasable" 				"0"
 		"ItemSellable"					"0"
+		"AbilityManaCost"				"10"
 		
 		"AbilitySpecial"
 		{
@@ -1345,7 +1346,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"              "0"
 		"AbilityCastPoint"              "0.0"
-		"AbilityCooldown"               "3"
+		"AbilityCooldown"               "1"
 		"AbilityManaCost"               "1"
 		"ItemSellable"					"0"
 		"ItemDisplayCharges"			"0"
@@ -1360,7 +1361,7 @@
 			"01"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"max_blink_range"               "999999"
+				"max_blink_range"               "3300"
 			}
 		}
 		

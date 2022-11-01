@@ -17,6 +17,8 @@ LinkLuaModifier("modifier_innate_controller",
     "libraries/modifiers/modifier_innate_controller.lua",
 LUA_MODIFIER_MOTION_NONE)
 
+LinkLuaModifier("modifier_hp_wood_worker", "modifiers/modifier_hp_wood_worker.lua",LUA_MODIFIER_MOTION_NONE)
+
 if trollnelves2 == nil then
     DebugPrint('[TROLLNELVES2] creating trollnelves2 game mode')
     _G.trollnelves2 = class({})
@@ -34,7 +36,7 @@ require('libraries/entity')
 require('libraries/animations')
 
 require('internal/trollnelves2')
-
+require('trigger/slayersUpLVL')
 require('top')
 require('settings')
 require('events')
@@ -62,7 +64,7 @@ function OnPlayerTeamChoose(eventSourceIndex, args)
     local vote = args["team"]
     GameRules.playerTeamChoices[playerID] = vote
 end
-
+trollPlayerID = {}
 function trollnelves2:GameSetup()
     if IsServer() then
         for pID = 0, DOTA_MAX_TEAM_PLAYERS do
@@ -118,70 +120,83 @@ function SelectHeroes()
         if PlayerResource:IsValidPlayerID(pID) then
             table.insert(allPlayersIDs, pID)
             local playerSelection = GameRules.playerTeamChoices[pID]
-            if playerSelection == "troll" and PlayerResource:GetConnectionState(pID) == 2 then
+            if playerSelection == "troll" and
+                PlayerResource:GetConnectionState(pID) == 2 then
                 table.insert(wannabeTrollIDs, pID)
             end
             PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
         end
     end
-    local trollPlayerID = -1
-    local sumChance = 0
+    local countTroll = 0
+    
+    if GameRules.PlayersCount >= 1 and GameRules.PlayersCount <= 6 then
+        countTroll = 1
+    else
+        countTroll = 2
+    end
+    DebugPrint("First countTroll " .. countTroll)  
     if #wannabeTrollIDs > 0 then
         if #GameRules.BonusTrollIDs > 0 then
             DebugPrint("Count Donate: " .. #GameRules.BonusTrollIDs)
-            table.sort(GameRules.BonusTrollIDs, mySort)
-            for _, bonus in ipairs(GameRules.BonusTrollIDs) do
+            for i, bonus in ipairs(GameRules.BonusTrollIDs) do
                 local playerID, chance = unpack(bonus)
                 for j = 1, #wannabeTrollIDs do
                     if playerID == wannabeTrollIDs[j] then
+                        DebugPrint("Do table.remove(wannabeTrollIDs, j)" .. #wannabeTrollIDs)
                         table.insert(donateTroll, {playerID, chance})
-                        sumChance = sumChance + tonumber(chance)
+                        table.remove(wannabeTrollIDs, j)
+                        DebugPrint("Posle table.remove(wannabeTrollIDs, j)" .. #wannabeTrollIDs)
                     end
                 end
             end
-            if #donateTroll > 1 then
-                table.sort(donateTroll, mySort)
-                sumChance = sumChance/100
-                local roll_chance = RandomFloat(0, 100)
-                local check_chance_max = 0
-                local check_chance_min = 0
-                for _, bonus in ipairs(donateTroll) do
-                    local playerID, chance = unpack(bonus)
-                    check_chance_max = check_chance_max + (tonumber(chance)/sumChance)
-                    if chance == 100 then
-                        trollPlayerID = playerID
-                        break
-                    end
-                    if check_chance_max > roll_chance and check_chance_min <= roll_chance then
-                        trollPlayerID = playerID
-                        break
-                    else 
-                        check_chance_min = check_chance_max  
-                    end
-                end
-            elseif #donateTroll == 1 then 
-                for _, donate in ipairs(donateTroll) do
-                    local playerID, chance = unpack(donate)
-                    trollPlayerID = playerID
-                end
-            end
-        end
-        if #wannabeTrollIDs > 0 and (trollPlayerID == -1 or trollPlayerID == nil) then
-            trollPlayerID = wannabeTrollIDs[math.random(#wannabeTrollIDs)]
-            if PlayerResource:GetConnectionState(trollPlayerID) ~= 2 then
-                trollPlayerID = allPlayersIDs[math.random(#allPlayersIDs)]
-            end
-        end
-        else
-        trollPlayerID = allPlayersIDs[math.random(#allPlayersIDs)]
-        if PlayerResource:GetConnectionState(trollPlayerID) ~= 2 then
-            trollPlayerID = allPlayersIDs[math.random(#allPlayersIDs)]
         end
     end
-    
+    if #donateTroll >= 1 then
+        for i, donate in ipairs(donateTroll) do
+            local playerID, chance = unpack(donate)
+            if countTroll > 0 then
+                trollPlayerID[#trollPlayerID+1] = playerID
+                DebugPrint("donateTroll >= 1 countTrol " .. countTroll) 
+                DebugPrint("donateTroll >= 1 playerID " .. playerID) 
+                table.remove(allPlayersIDs, i)	
+                countTroll = countTroll - 1
+            end
+        end
+    end
+    if #wannabeTrollIDs > 0 and countTroll > 0 then
+        for i, playerID in ipairs(wannabeTrollIDs) do
+            if countTroll > 0 then
+                trollPlayerID[#trollPlayerID+1] = playerID
+                DebugPrint("#wannabeTrollIDs > 0 countTrol " .. countTroll) 
+                DebugPrint("donateTroll >= 1 playerID " .. playerID) 
+                table.remove(allPlayersIDs, i)
+                countTroll = countTroll - 1
+            end
+        end
+    end
+    if countTroll > 0 then
+        DebugPrint("countTroll " .. countTroll)
+        DebugPrint("wannabeTrollIDs " .. #wannabeTrollIDs)
+        DebugPrint("allPlayersIDs " .. #allPlayersIDs)
+        DebugPrint("BonusTrollIDs " .. #GameRules.BonusTrollIDs)
+        for i, pID in ipairs(allPlayersIDs) do
+            if countTroll > 0 then
+                DebugPrint("in countTroll > 0 pID " .. pID)
+                trollPlayerID[#trollPlayerID+1] = pID
+                table.remove(allPlayersIDs, i)
+                countTroll = countTroll - 1
+            end
+        end
+    end    
     if not GameRules.test then
-        PlayerResource:SetCustomTeamAssignment(trollPlayerID, DOTA_TEAM_BADGUYS)
-        PlayerResource:SetSelectedHero(trollPlayerID, TROLL_HERO)
+        DebugPrint("not GameRules.test countTroll " .. countTroll)
+        DebugPrint("not GameRules.test #trollPlayerID " .. #trollPlayerID)
+        GameRules.TrollCount = #trollPlayerID
+		for i=1, #trollPlayerID do
+            DebugPrint("trollPlayerID[i] " .. trollPlayerID[i])
+			PlayerResource:SetCustomTeamAssignment(trollPlayerID[i] , DOTA_TEAM_BADGUYS)
+			PlayerResource:SetSelectedHero(trollPlayerID[i], TROLL_HERO[1])
+        end
     end
     local elfCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
     for i = 1, elfCount do
@@ -203,7 +218,7 @@ function trollnelves2:OnHeroInGame(hero)
     
     if hero:IsElf() then
         InitializeBuilder(hero)
-        elseif hero:IsTroll() then
+        elseif hero:IsTroll() or PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_wisp" then
         InitializeTroll(hero)
         elseif hero:IsAngel() then
         InitializeAngel(hero)
@@ -238,12 +253,17 @@ function InitializeHero(hero)
         end
     hero:ClearInventory()
     -- Learn all abilities (this isn't necessary on creatures)
-    for i = 0, hero:GetAbilityCount() - 1 do
-        local ability = hero:GetAbilityByIndex(i)
-        if ability then ability:SetLevel(ability:GetMaxLevel()) end
+    
+    if hero:IsElf() then
+        -- Learn all abilities (this isn't necessary on creatures)
+        for i = 0, hero:GetAbilityCount() - 1 do
+            local ability = hero:GetAbilityByIndex(i)
+            if ability then ability:SetLevel(ability:GetMaxLevel()) end
+        end
+        hero:SetAbilityPoints(0)
+        hero:SetStashEnabled(false)
+        hero:AddNewModifier(hero, nil, "modifier_hp_wood_worker", {}):IncrementStackCount()
     end
-    hero:SetAbilityPoints(0)
-    hero:SetStashEnabled(false)
     
     hero:SetDeathXP(0)
     PlayerResource:NewSelection(hero:GetPlayerOwnerID(), PlayerResource:GetSelectedHeroEntity(hero:GetPlayerOwnerID()))
@@ -251,6 +271,7 @@ end
 
 function InitializeBadHero(hero)
     DebugPrint("Initialize bad hero")
+    local playerID = hero:GetPlayerOwnerID()
     local status, nextCall = Error_debug.ErrorCheck(function() 
         hero.hpReg = 0
         hero.hpRegDebuff = 0
@@ -277,6 +298,42 @@ function InitializeBadHero(hero)
         end
         return 0.1
     end)
+    if PlayerResource:GetSelectedHeroName(playerID) ~= "npc_dota_hero_wisp" then
+        Timers:CreateTimer(BUFF_XP1_TIME, function() 
+            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+            local abil = hero:FindAbilityByName("reveal_area")
+            abil:EndCooldown()
+            hero:CalculateStatBonus(true)
+        end)  
+        Timers:CreateTimer(BUFF_XP2_TIME, function() 
+            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+            hero:CalculateStatBonus(true)
+        end)  
+        Timers:CreateTimer(BUFF_XP3_TIME, function() 
+            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+            hero:CalculateStatBonus(true)
+        end) 
+        local abil2 = hero:FindAbilityByName("reveal_area")
+        abil2:StartCooldown(BUFF_XP1_TIME)
+        abil2:SetLevel(abil2:GetMaxLevel())
+        abil2 = hero:FindAbilityByName("treewrecker")
+        abil2:StartCooldown(BUFF_XP1_TIME)
+        abil2:SetLevel(abil2:GetMaxLevel())
+        abil2 = hero:FindAbilityByName("attack_tree_skill")
+        abil2:SetLevel(abil2:GetMaxLevel())
+        abil2 = hero:FindAbilityByName("troll_teleport")
+        abil2:SetLevel(abil2:GetMaxLevel())
+        hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
+        else    
+        local abil = hero:FindAbilityByName("pick_sladar")
+        abil:SetLevel(abil:GetMaxLevel())
+        abil = hero:FindAbilityByName("pick_doom")
+        abil:SetLevel(abil:GetMaxLevel())
+        abil = hero:FindAbilityByName("pick_stalker")
+        abil:SetLevel(abil:GetMaxLevel())
+        abil = hero:FindAbilityByName("pick_lifestealer")
+        abil:SetLevel(abil:GetMaxLevel())
+        end
     --hero:SetStashEnabled(false)
 end
 
@@ -301,7 +358,7 @@ function InitializeBuilder(hero)
     
     --hero:AddItemByName("item_root_ability")
     --hero:AddItemByName("item_silence_ability")
-    --hero:AddItemByName("item_glyph_ability")
+    hero:AddItemByName("item_glyph_ability")
     --hero:AddItemByName("item_night_ability")
     hero:AddItemByName("item_blink_datadriven")
     if GameRules.MapSpeed == 4 then
@@ -577,7 +634,7 @@ function trollnelves2:PreStart()
                         duration = 1
                     })
                     GameRules.startTime = GameRules:GetGameTime()
-                    
+                    SlayerPool()
                     -- Unstun the elves
                     local elfCount = PlayerResource:GetPlayerCountForTeam(
                     DOTA_TEAM_GOODGUYS)
@@ -723,13 +780,16 @@ function SetResourceValues()
 end
 
 function GetModifiedName(orgName)
-    if string.match(orgName, TROLL_HERO) then
-        return "<font color='#FF0000'>The Mighty Troll</font>"
-        elseif string.match(orgName, ELF_HERO) then
-        return "<font color='#00CC00'>Elf</font>"
-        elseif string.match(orgName, WOLF_HERO[1]) or string.match(orgName, WOLF_HERO[2]) then
+    for i = 1, #TROLL_HERO do
+        if string.match(orgName, TROLL_HERO[i]) then
+            return "<font color='#FF0000'>The Mighty Vampire</font>"
+        end
+    end
+        if string.match(orgName, ELF_HERO) then
+        return "<font color='#00CC00'>Human</font>"
+        elseif string.match(orgName, WOLF_HERO) then
         return "<font color='#800000'>Wolf</font>"
-        elseif string.match(orgName, ANGEL_HERO[1]) or string.match(orgName, ANGEL_HERO[2]) then 
+        elseif string.match(orgName, ANGEL_HERO) then 
         return "<font color='#0099FF'>Angel</font>"
         else
         return "?"
@@ -868,11 +928,26 @@ function GetClass(unitName)
         return "tent"
         elseif string.match(unitName, "trader") then
         return "trader"
-        elseif string.match(unitName, "workers_guild") then
-        return "workers_guild"
+        elseif string.match(unitName, "workersguild") then
+        return "workersguild"
         elseif string.match(unitName, "mother_of_nature") then
         return "mother_of_nature"
         elseif string.match(unitName, "research_lab") then
         return "research_lab"
+        elseif string.match(unitName, "slayerstaverna") then
+        return "slayerstaverna"
+        elseif string.match(unitName, "house") then
+        return "house"
     end
+end
+
+Slayers = {}
+function SlayerPool()
+    Timers:CreateTimer(function()
+        if Slayers ~= nil then
+            for key, value in pairs(Slayers) do
+                value:HeroLevelUp(true)
+            end
+        end
+    return 60 end)
 end

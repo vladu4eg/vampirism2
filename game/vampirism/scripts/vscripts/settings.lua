@@ -1,10 +1,12 @@
 MAXIMUM_ATTACK_SPEED = 600
 MINIMUM_ATTACK_SPEED = 20
 
-TROLL_HERO = "npc_dota_hero_lycan"
-ELF_HERO = "npc_dota_hero_treant"
-ANGEL_HERO = {"npc_dota_hero_crystal_maiden","npc_dota_hero_dark_willow"}
-WOLF_HERO = {"npc_dota_hero_lycan","npc_dota_hero_night_stalker"} 
+TROLL_HERO = {"npc_dota_hero_wisp","npc_dota_hero_night_stalker","npc_dota_hero_doom_bringer","npc_dota_hero_life_stealer","npc_dota_hero_slardar"}
+WOLF_HERO = "npc_dota_hero_lycan"
+
+ELF_HERO = "npc_dota_hero_omniknight"
+ANGEL_HERO = "npc_dota_hero_crystal_maiden"
+
 BEAR_HERO = "npc_dota_hero_bear"
 
 TEAM_CHOICE_TIME = 30
@@ -27,7 +29,7 @@ MINIMUM_LUMBER_PRICE = 10
 STARTING_MAX_FOOD = 15
 
 STARTING_MAX_WISP = 15
-STARTING_MAX_MINE = 20
+STARTING_MAX_MINE = 100
 
 TIME_LIFE_WISP1_6 = 2400
 TIME_LIFE_GOLD_WISP = 300
@@ -54,6 +56,13 @@ SEASON_ITEM = "item_autumn"           --  "item_winter_1" item_spring;  item_sum
 CHANCE_DROP_LUMBER = 2
 RESPAWN_TREE_TIME_MIN = 20
 RESPAWN_TREE_TIME_MAX = 60
+
+BUFF_XP1_TIME = 1230
+BUFF_XP1_SUM = 2000
+BUFF_XP2_TIME = 1830
+BUFF_XP2_SUM = 3000
+BUFF_XP3_TIME = 2130
+BUFF_XP3_SUM = 8000
 
 PLAYER_COLORS = {
     {0, 102, 255}, -- синий

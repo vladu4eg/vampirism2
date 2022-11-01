@@ -4,14 +4,14 @@ end
 require('settings')
 item_drop = {
 	--{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
-	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_treant"} },
-	{items = {"item_get_gem"}, limit = 10, chance = 10, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_treant"} },
-	{items = {SEASON_ITEM}, limit = 15, chance = 500, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_treant"} },
+	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
+	{items = {"item_get_gem"}, limit = 10, chance = 10, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
+	{items = {SEASON_ITEM}, limit = 15, chance = 500, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
 	
 	{items = {"item_get_gold"}, limit = 1, chance = 5, units = {"event_line_boss_halloween"} },
 	{items = {"item_event_birthday"}, limit = 1, chance = 400, units = {"event_line_boss_halloween"} },
 	
-	-- {items = {"item_get_gold"}, limit = 1, chance = 5, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_treant","npc_dota_hero_lina","event_line_boss_halloween"} },
+	-- {items = {"item_get_gold"}, limit = 1, chance = 5, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight","npc_dota_hero_lina","event_line_boss_halloween"} },
 	{items = {"item_get_gold"}, limit = 1, chance = 50, units = {"npc_dota_hero_doom_bringer","npc_dota_hero_phantom_assassin","npc_dota_hero_tidehunter","npc_dota_hero_lina"} },
 	--{items = {"item_get_gold"}, limit = 1, chance = 5, units = {"barracks_3"} },
 

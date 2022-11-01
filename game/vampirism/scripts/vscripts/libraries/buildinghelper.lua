@@ -212,6 +212,9 @@ for requirementName, requirementCount in pairs(requirements) do
     local currentRequirementClassData =
     allBuildingRequirementClasses[unitName][requirementClass]
     local currentRequirementClassLevel = currentRequirementClassData and currentRequirementClassData.level or 0
+    DebugPrint(requirementName)
+    DebugPrint(unitName)
+    DebugPrint("12310000000")
     if requirementLevel > currentRequirementClassLevel then
         allBuildingRequirementClasses[unitName][requirementClass] =
         {level = requirementLevel, unitName = requirementName}
@@ -880,7 +883,7 @@ function BuildingHelper:OrderFilter(order)
             local unit_name = shop:GetUnitName()
             if string.match(unit_name, "shop") or string.match(unit_name, "troll_hut") then
                 shop.buyer = issuerID
-                if string.match(unit_name, "troll_hut") and string.match(EntIndexToHScript(abilityIndex):GetAbilityName(),"upgrade_to") and PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO and GameRules.test2 == false then
+                if string.match(unit_name, "troll_hut") and string.match(EntIndexToHScript(abilityIndex):GetAbilityName(),"upgrade_to") and PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[1] and GameRules.test2 == false then
                     SendErrorMessage(issuerID, "error_only_troll_can_upgrade")
                     return false
                 end
@@ -2715,7 +2718,7 @@ function BuildingHelper:AddToQueue(builder, location, bQueued)
     local pathing_size = buildingTable:GetVal("BlockGridNavSize", "number")
     local callbacks = playerTable.activeCallbacks
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-    ---local unit = CreateUnitByName("npc_dota_hero_treant", location , true, player, player, player:GetTeamNumber())
+    ---local unit = CreateUnitByName("npc_dota_hero_omniknight", location , true, player, player, player:GetTeamNumber())
 
    -- unit:NextMovePeer()
     if BuildingHelper:IdBaseAreaBlock(location) ~= nil then 

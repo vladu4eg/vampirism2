@@ -6,7 +6,7 @@
 		"addon_game_name"			"Troll vs Elves 3"
 		
 		// ******************** HEROES ********************
-		"npc_dota_hero_treant"                                                  "Elf"
+		"npc_dota_hero_omniknight"                                                  "Elf"
 		"npc_dota_hero_troll_warlord"                                                     "Troll"
 		"npc_dota_hero_lycan"                                                             "Wolf"
 		"npc_dota_hero_crystal_maiden"                                                    "Angel"
@@ -16,7 +16,7 @@
 
 		// ******************** UNITS ********************
 
-		"house"                                                                            "Slayers Vault"
+		"house_1"                                                                            "Slayers Vault"
 		"house_2"                                                                            "Slayers Vault 2"
 		"house_3"                                                                            "Slayers Vault 3"
 		"house_4"                                                                            "Slayers Vault 4"
@@ -96,12 +96,12 @@
 		"trader_1"                                                                        "Trader 1"
 		"trader_2"                                                                        "Trader 2"
 		"trader_3"                                                                        "Trader 3"
-		"workers_guild"                                                                   "House of Workers"
-		"workers_guild_2"                                                                   "House of Workers 2"
-		"workers_guild_3"                                                                   "House of Workers 3"
-		"workers_guild_4"                                                                   "House of Workers 4"
-		"workers_guild_5"                                                                   "House of Workers 5"
-		"slayers_taverna"																"Slayer Tavern"
+		"workersguild_1"                                                                   "House of Workers"
+		"workersguild_2"                                                                   "House of Workers 2"
+		"workersguild_3"                                                                   "House of Workers 3"
+		"workersguild_4"                                                                   "House of Workers 4"
+		"workersguild_5"                                                                   "House of Workers 5"
+		"slayerstaverna_1"																"Slayer Tavern"
 
 		"buff_tower_1"                                                                   "Heal Tower"
 		"buff_tower_2"                                                                   "Heal Tower 2"
@@ -130,7 +130,7 @@
 		"buff_tower_fire_7"                                                              "Faerie Tower 7"
 		
 		"mother_of_nature"                                                                "Mother Of Nature"
-		"research_lab"                                                                    "Research Lab 1"
+		"research_lab_1"                                                                    "Research Lab 1"
 		"research_lab_2"                                                                  "Research Lab 2"
 		"research_lab_3"                                                                  "Research Lab 3"
 		
@@ -450,6 +450,8 @@
 		"DOTA_Tooltip_ability_witch_doctor_frost_armor_manacost_scepter"	"STAFF MANACOST:"
 		"DOTA_Tooltip_ability_witch_doctor_frost_armor_aghanim_description" "Increases bonus armor and duration, but also increases manacost."
 
+		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+20 to all attributes."
 		
 		"DOTA_Tooltip_Ability_tower_15_return25"                                        "Spiked armor"
 		"DOTA_Tooltip_Ability_tower_15_return25_Description"                            "Returns 25% damage to the attacker."
@@ -816,10 +818,10 @@
 		"DOTA_Tooltip_ability_build_tower_1_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tower_1_lumber_cost"                                  "LUMBER COST: "
 
-		"DOTA_Tooltip_Ability_build_slayers_taverna"                                              "Build Slayer Tavern"
-		"DOTA_Tooltip_Ability_build_slayers_taverna_Description"                                  "Creates a hero that will help you protect your buildings."
-		"DOTA_Tooltip_Ability_build_slayers_taverna_gold_cost"                                    "GOLD COST: "
-		"DOTA_Tooltip_Ability_build_slayers_taverna_lumber_cost"                                  "LUMBER COST: "
+		"DOTA_Tooltip_Ability_build_slayerstaverna_1"                                              "Build Slayer Tavern"
+		"DOTA_Tooltip_Ability_build_slayerstaverna_1_Description"                                  "Creates a hero that will help you protect your buildings."
+		"DOTA_Tooltip_Ability_build_slayerstaverna_1_gold_cost"                                    "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_slayerstaverna_1_lumber_cost"                                  "LUMBER COST: "
 
 		"DOTA_Tooltip_Ability_build_human_box_fake"                                              "Build Fake Human Box"
 		"DOTA_Tooltip_Ability_build_human_box_fake_Description"                                  "Create bait for Vampires."
@@ -1018,10 +1020,10 @@
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower"                                "True Sight Tower"
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "
 
-		"DOTA_Tooltip_Ability_build_house"                                             "Slayers Vault"
-		"DOTA_Tooltip_Ability_build_house_Description"                                 "Creates a shop with purchasable items."
-		"DOTA_Tooltip_Ability_build_house_gold_cost"                                   "GOLD COST: "
-		"DOTA_Tooltip_Ability_build_house_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_Ability_build_house_1"                                             "Slayers Vault"
+		"DOTA_Tooltip_Ability_build_house_1_Description"                                 "Creates a shop with purchasable items."
+		"DOTA_Tooltip_Ability_build_house_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_Ability_build_house_1_lumber_cost"                                 "LUMBER COST: "
 
 		"DOTA_Tooltip_Ability_upgrade_to_house_2"                                         "Upgrade to Slayers Vault 2"
 		"DOTA_Tooltip_Ability_upgrade_to_house_2_Description"                             ""
@@ -1043,32 +1045,32 @@
 		"DOTA_Tooltip_ability_upgrade_to_trader_3"                                        "Trader 3"
 		"DOTA_Tooltip_ability_upgrade_to_trader_3_Description"                            "Improve your trader! "
 
-		"DOTA_Tooltip_ability_build_workers_guild"                                        "Build House of Workers"
-		"DOTA_Tooltip_ability_build_workers_guild_Description"                            "You can hire workers here! "
-		"DOTA_Tooltip_ability_build_workers_guild_gold_cost"                              "GOLD COST: "
-		"DOTA_Tooltip_ability_build_workers_guild_lumber_cost"                            "LUMBER COST: "
+		"DOTA_Tooltip_ability_build_workersguild_1"                                        "Build House of Workers"
+		"DOTA_Tooltip_ability_build_workersguild_1_Description"                            "You can hire workers here! "
+		"DOTA_Tooltip_ability_build_workersguild_1_gold_cost"                              "GOLD COST: "
+		"DOTA_Tooltip_ability_build_workersguild_1_lumber_cost"                            "LUMBER COST: "
 
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_2"                                    "Upgrade to House of Workers 2"
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_2_Description"                         ""
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_2"                                    "Upgrade to House of Workers 2"
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_2_Description"                         ""
 
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_3"                                    "Upgrade to House of Workers 3"
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_3_Description"                         ""
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_3"                                    "Upgrade to House of Workers 3"
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_3_Description"                         ""
 
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_4"                                    "Upgrade to House of Workers 4"
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_4_Description"                         ""
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_4"                                    "Upgrade to House of Workers 4"
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_4_Description"                         ""
 
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_5"                                    "Upgrade to House of Workers 5"
-		"DOTA_Tooltip_Ability_upgrade_to_workers_guild_5_Description"                         ""
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_5"                                    "Upgrade to House of Workers 5"
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_5_Description"                         ""
 
 		"DOTA_Tooltip_ability_build_mother_of_nature"                                                  "Build Mother of Nature"
 		"DOTA_Tooltip_ability_build_mother_of_nature_Description"                                      "Mother of nature produces wisps which can harvest trees! "
 		"DOTA_Tooltip_ability_build_mother_of_nature_gold_cost"                                        "GOLD COST: "
 		"DOTA_Tooltip_ability_build_mother_of_nature_lumber_cost"                                      "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_build_research_lab"                                         "Build Research Lab 1"
-		"DOTA_Tooltip_ability_build_research_lab_Description"                             "Build research laboratory. It is necessary to improve your towers to a better level! "
-		"DOTA_Tooltip_ability_build_research_lab_gold_cost"                               "GOLD COST: "
-		"DOTA_Tooltip_ability_build_research_lab_lumber_cost"                             "LUMBER COST: "
+		"DOTA_Tooltip_ability_build_research_lab_1"                                         "Build Research Lab 1"
+		"DOTA_Tooltip_ability_build_research_lab_1_Description"                             "Build research laboratory. It is necessary to improve your towers to a better level! "
+		"DOTA_Tooltip_ability_build_research_lab_1_gold_cost"                               "GOLD COST: "
+		"DOTA_Tooltip_ability_build_research_lab_1_lumber_cost"                             "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_2"                                         "Upgrade Research Lab 2"
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_2_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
@@ -1123,6 +1125,38 @@
 		
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_7_1"                                         "Upgrade Research Lab 7"
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_7_1_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
+		
+		"DOTA_Tooltip_Ability_slayer_blink"								"Blink"
+		"DOTA_Tooltip_Ability_slayer_blink_Description"					"A universal blink"
+		"DOTA_Tooltip_Ability_slayer_ensnare"								"Ensnare"
+		"DOTA_Tooltip_Ability_slayer_ensnare_Description"					"Binds a vampire with a blessed net so that it cannot move for 3 seconds"
+		"DOTA_Tooltip_modifier_slayer_avatar"                                             "Slayer Avatar"
+		"DOTA_Tooltip_modifier_slayer_avatar_Description"                                 ""
+		"DOTA_Tooltip_ability_slayer_summon_tracker"                                      "Slayer Summon Tracker"
+		"DOTA_Tooltip_ability_slayer_summon_tracker_Description"                          ""
+
+		"DOTA_Tooltip_ability_slayer_tracker_truesight"                                   "Slayer Tracker Truesight"
+		"DOTA_Tooltip_ability_slayer_tracker_truesight_Description"                       ""
+
+		"DOTA_Tooltip_ability_slayer_tracker_timer"                                       "Slayer Tracker Timer"
+		"DOTA_Tooltip_ability_slayer_tracker_timer_Description"                           ""
+
+		"DOTA_Tooltip_ability_slayer_building_protection"                                 "Slayer Building Protection"
+		"DOTA_Tooltip_ability_slayer_building_protection_Description"                     "Turns all nearby buildings owned by you invulnerable for a few seconds"
+		"DOTA_Tooltip_ability_slayer_building_protection_area"                            "AREA:"
+		"DOTA_Tooltip_ability_slayer_building_protection_duration"                        "DURATION:"
+
+		"DOTA_Tooltip_ability_slayer_avatar"                                              "Slayer Avatar"
+		"DOTA_Tooltip_ability_slayer_avatar_Description"                                  "Become magic immune and gain bonuses"
+		"DOTA_Tooltip_ability_slayer_avatar_bonus_hp"                                     "BONUS HP:"
+		"DOTA_Tooltip_ability_slayer_avatar_duration"                                     "DURATION:"
+		"DOTA_Tooltip_ability_slayer_avatar_bonus_damage"                                 "BONUS DAMAGE:"
+
+		"DOTA_Tooltip_ability_slayer_ensnare"                                             "Slayer Ensnare"
+		"DOTA_Tooltip_ability_slayer_ensnare_Description"                                 "Binds a vampire with a blessed net so that it cannot move for 3 seconds"
+		"DOTA_Tooltip_modifier_ensnare_datadriven"                                        "Ensnare Datadriven"
+		"DOTA_Tooltip_modifier_ensnare_datadriven_Description"                            ""                 
+		"DOTA_Tooltip_ability_slayer_blink_blink_range"                                   "BLINK RANGE:"
 		
 		"DOTA_Tooltip_ability_true_sight_ability"                                         "True Sight Ability"
 		"DOTA_Tooltip_ability_true_sight_ability_Description"                             "Gives true sight around. Ability radius 1100."
@@ -1308,7 +1342,7 @@
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_datadriven_Description"		"At night the hero is in his element: he attacks and moves with increased speed.<br>Gives +1 to evasion."
 		
 		"DOTA_Tooltip_ability_monkey_king"											"True strike"
-		"DOTA_Tooltip_ability_monkey_king_Description"  							"Ignores Angel Evasion."
+		"DOTA_Tooltip_ability_monkey_king_Description"  							"Ignores Evasion."
 		
 		"DOTA_Tooltip_ability_treant_debuff"											"Treant Protector"
 		"DOTA_Tooltip_ability_treant_debuff_Description"  								"You were supposed to fight the evil, not become one of them!!! You were cursed by the mighty Treant Protector and your health regeneration does not work."

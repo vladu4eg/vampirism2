@@ -23,7 +23,7 @@
 				</Panel>
 				<Image id="border_hero" class="opacity_border" src="file://{images}/custom_game/choose/border.png" />
 				<Panel class="ChooseRole_troll" onactivate="ChooseTeam('troll', 'border_hero')">
-					<DOTAScenePanel id="HeroTroll" class="HeroModelScene" unit="npc_dota_hero_lycan" drawbackground="0" antialias="true"  particleonly="false" />
+					<DOTAScenePanel id="HeroTroll" class="HeroModelScene" unit="npc_dota_hero_night_stalker" drawbackground="0" antialias="true"  particleonly="false" />
 				</Panel>
 			</Panel>
 			<Label id="TeamChoiceTimer" text="#custom_game_team_select_timer" />
