@@ -262,7 +262,7 @@ function InitializeHero(hero)
         end
         hero:SetAbilityPoints(0)
         hero:SetStashEnabled(false)
-        hero:AddNewModifier(hero, nil, "modifier_hp_wood_worker", {}):IncrementStackCount()
+        --hero:AddNewModifier(hero, nil, "modifier_hp_wood_worker", {}):IncrementStackCount()
     end
     
     hero:SetDeathXP(0)
@@ -299,32 +299,13 @@ function InitializeBadHero(hero)
         return 0.1
     end)
     if PlayerResource:GetSelectedHeroName(playerID) ~= "npc_dota_hero_wisp" then
-        Timers:CreateTimer(BUFF_XP1_TIME, function() 
-            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-            local abil = hero:FindAbilityByName("reveal_area")
-            abil:EndCooldown()
-            hero:CalculateStatBonus(true)
-        end)  
-        Timers:CreateTimer(BUFF_XP2_TIME, function() 
-            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-            hero:CalculateStatBonus(true)
-        end)  
-        Timers:CreateTimer(BUFF_XP3_TIME, function() 
-            hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-            hero:CalculateStatBonus(true)
-        end) 
-        local abil2 = hero:FindAbilityByName("reveal_area")
-        abil2:StartCooldown(BUFF_XP1_TIME)
+        local abil2 = hero:FindAbilityByName("attack_tree_skill")
         abil2:SetLevel(abil2:GetMaxLevel())
-        abil2 = hero:FindAbilityByName("treewrecker")
-        abil2:StartCooldown(BUFF_XP1_TIME)
+        abil2 = hero:FindAbilityByName("reveal_area")
         abil2:SetLevel(abil2:GetMaxLevel())
-        abil2 = hero:FindAbilityByName("attack_tree_skill")
-        abil2:SetLevel(abil2:GetMaxLevel())
-        abil2 = hero:FindAbilityByName("troll_teleport")
-        abil2:SetLevel(abil2:GetMaxLevel())
-        hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
-        else    
+        hero:HeroLevelUp(false)
+        hero:HeroLevelUp(false)
+    else    
         local abil = hero:FindAbilityByName("pick_sladar")
         abil:SetLevel(abil:GetMaxLevel())
         abil = hero:FindAbilityByName("pick_doom")
@@ -461,7 +442,7 @@ function InitializeTroll(hero)
         local unit_name = unit:GetUnitName();
         if string.match(unit_name, "shop") or
             string.match(unit_name, "troll_hut") then
-            unit:SetOwner(hero)
+            --unit:SetOwner(hero)
             unit:SetControllableByPlayer(playerID, true)
             unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
             unit:AddNewModifier(unit, nil, "modifier_phased", {})
@@ -560,7 +541,7 @@ function trollnelves2:ControlUnitForTroll(hero)
         if string.match(unit_name, "shop") or
             string.match(unit_name, "troll_hut") then
             DebugPrint("in3")
-            unit:SetOwner(hero)
+            --unit:SetOwner(hero)
             unit:SetControllableByPlayer(playerID, true)
         end
     end
@@ -635,6 +616,7 @@ function trollnelves2:PreStart()
                     })
                     GameRules.startTime = GameRules:GetGameTime()
                     SlayerPool()
+                    BuffGold()
                     -- Unstun the elves
                     local elfCount = PlayerResource:GetPlayerCountForTeam(
                     DOTA_TEAM_GOODGUYS)
@@ -950,4 +932,29 @@ function SlayerPool()
             end
         end
     return 60 end)
+end
+local countBuffGold = 1
+function BuffGold()
+    Timers:CreateTimer(BUFF_GOLD_TIME, function()
+        for pID=0,DOTA_MAX_TEAM_PLAYERS do
+            if PlayerResource:IsValidPlayerID(pID) then
+                local hero = PlayerResource:GetSelectedHeroEntity(pID)
+                if hero then
+                    local team = hero:GetTeamNumber()
+                    if team ~= nil then
+                        if team == DOTA_TEAM_BADGUYS then
+                            PlayerResource:ModifyGold(hero, BUFF_GOLD_SUM_TROLL[countBuffGold], true) 
+                        else
+                            PlayerResource:ModifyGold(hero, BUFF_GOLD_SUM_ELF[countBuffGold], true) 
+                        end
+                    end
+                end
+            end
+        end
+        if countBuffGold <= 10 then
+            countBuffGold = countBuffGold + 1
+        else
+            countBuffGold = 10
+        end   
+    return BUFF_GOLD_TIME end)
 end

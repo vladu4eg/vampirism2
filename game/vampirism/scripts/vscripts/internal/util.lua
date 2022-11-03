@@ -175,3 +175,7 @@ else
     return hours .. ":" .. mins .. ":" .. secs
 end
 end
+
+function DistanceBetweenPoints(v1,v2)
+	return math.sqrt(math.pow(v2.x - v1.x,2) + math.pow(v2.y - v1.y,2) + math.pow(v2.z - v1.z,2))
+end

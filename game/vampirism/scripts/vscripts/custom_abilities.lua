@@ -1615,8 +1615,10 @@ end
 function GiveWoodGoldForAttackTree (event)
 	if IsServer() then
 		local caster = event.caster
-		PlayerResource:ModifyGold(caster, tonumber(event.Gold))
-		PlayerResource:ModifyLumber(caster, tonumber(event.Wood))
+		if caster:IsElf() then
+			PlayerResource:ModifyGold(caster, tonumber(event.Gold))
+			PlayerResource:ModifyLumber(caster, tonumber(event.Wood))
+		end
 	end	
 end
 

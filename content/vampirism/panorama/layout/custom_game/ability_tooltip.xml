@@ -16,6 +16,7 @@
 					<Label id = "AbilityName" text="testt"/>
 					<Label id = "costs" text = "test" html="true"/>
 				</Panel>
+				<Panel class="DarkTheme Cards z-index1" id="Specials" />
 			</Panel>
 			<Panel id="AbilityCoreDetails">
 				<Label id = "description" html = "true"/>

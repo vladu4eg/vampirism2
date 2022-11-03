@@ -114,7 +114,7 @@ function UpdateHpRegLabel() {
 }
 
 function UpdateTooltips() {
-    UpdateItemTooltips();
+    //UpdateItemTooltips();
     UpdateAbilityTooltips();
 }
 
@@ -267,7 +267,7 @@ function UpdateItemTooltips() {
 }
 
 function UpdateItemTooltipsAndAbilityCustomHotkeys() {
-    UpdateItemTooltips();
+    //UpdateItemTooltips();
     UpdateAbilityCustomHotkeys();
 }
 
