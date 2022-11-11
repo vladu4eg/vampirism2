@@ -194,13 +194,63 @@ function UpdateAbilityTooltips() {
             var buttonWell = abilityPanel.FindChildTraverse("ButtonWell");
             abilityPanel.SetPanelEvent("onmouseover", (function (index, tooltipParent) {
                 return function () {
-                    $.DispatchEvent("UIShowCustomLayoutParametersTooltip", tooltipParent, "AbilityTooltip",
-                        "file://{resources}/layout/custom_game/ability_tooltip.xml", "entityIndex=" + selectedUnit + "&abilityName=" + abilityName);
+                    var base = $.GetContextPanel().GetParent().GetParent().GetParent();
+                    var tooltipManager = base.FindChildTraverse('Tooltips');
+                    var upgradedUnitName = CustomNetTables.GetTableValue("buildings", abilityName) && CustomNetTables.GetTableValue("buildings", abilityName).upgradeUnitName || "";
+                    var requirementsObject = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", (Players.GetLocalPlayer() + upgradedUnitName)) || {};
+                    var requirementKeys = Object.keys(requirementsObject);
+                    var reqText = "";
+                    if (requirementKeys.length > 0) {
+                        reqText = reqText + "Requirements:";
+                    }
+                    for (var requirementKey of requirementKeys) {
+                        reqText = reqText + "<br>" + $.Localize("#" + requirementsObject[requirementKey]);
+                    }
+                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = reqText != "" ? "visible" : "collapse";
+                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#FFA500";
+                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
+                    tooltipManager.FindChildTraverse('AbilityExtraDescription').text = reqText;
+                    
+                    var repair = (abilityName && (abilityName.indexOf("repair") > -1 || abilityName.indexOf("train") > -1)) && (CustomNetTables.GetTableValue("abilities", Entities.GetUnitName(selectedUnit)) || abilityName && CustomNetTables.GetTableValue("abilities", abilityName.substr(6)));
+                    var repair_speed = repair && repair.speed || 0;
+                    if (repair_speed > 0 )
+                    {
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = repair_speed > 0 ? "visible" : "collapse";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#A52A2A";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').text = "Repair speed: " + repair_speed || "";
+                    }
+                    
+                    var gold_gain = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", upgradedUnitName) && CustomNetTables.GetTableValue("buildings", upgradedUnitName).gold_gain || 0;
+                    var gold_interval = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", upgradedUnitName) && CustomNetTables.GetTableValue("buildings", upgradedUnitName).gold_interval || 0;
+                    var textGold = "Gold interval: " + gold_interval || "" ;
+                    textGold = textGold + "<br>Gold amount: " + gold_gain || "";
+                    if (gold_gain > 0 )
+                    {
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = gold_gain > 0 ? "visible" : "collapse";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#FFFF00";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').text = textGold;
+                    }
+                    var harvestAbility = (selectedUnit && CustomNetTables.GetTableValue("abilities", Entities.GetUnitName(selectedUnit))) || (abilityName && CustomNetTables.GetTableValue("abilities", abilityName.substr(6)));
+                    var lumber_interval = harvestAbility && harvestAbility.lumber_interval || 0;
+                    var lumber_amount = harvestAbility && harvestAbility.amount || 0;
+                    var textLumer = "Gather interval: " + lumber_interval || "" ;
+                    textLumer = textLumer + "<br>Lumber amount: " + lumber_amount || "";
+                    if (lumber_interval > 0)
+                    {
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = lumber_interval > 0 ? "visible" : "collapse";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#008000";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').text = textLumer;
+                    }
                 }
             })(abilitySlot, buttonWell));
             abilityPanel.SetPanelEvent("onmouseout",
                 function () {
-                    $.DispatchEvent("UIHideCustomLayoutTooltip", "AbilityTooltip");
+                    var base = $.GetContextPanel().GetParent().GetParent().GetParent();
+                    var tooltipManager = base.FindChildTraverse('Tooltips');
+                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = "collapse";
                 });
             var buttonSize = buttonWell.FindChildTraverse("ButtonSize");
 
@@ -232,7 +282,7 @@ function UpdateAbilityTooltips() {
             manaCostElement.style.fontSize = "14px";
             manaCostElement.text = lumber_cost;
             manaCostElement.style.textShadow = "1px 1px 1px 3.0 #000000";
-
+            
             if (abilitySlot > 5) {
                 UpdateAbilityCustomHotkey(selectedUnit, abilitySlot, abilityPanel, x);
             }

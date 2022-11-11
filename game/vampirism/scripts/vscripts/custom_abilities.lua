@@ -8,6 +8,7 @@ require('error_debug')
 --LUA_MODIFIER_MOTION_NONE)
 
 --Ability for tents to give gold
+
 function GainGoldCreate(event)
 	if IsServer() then
 		local caster = event.caster
@@ -323,7 +324,6 @@ function RevealAreaItem( event )
 	event.Radius = event.Radius/GameRules.MapSpeed
 	RevealArea(event)
 	local item = event.ability
-	item:Use()
 end
 
 function RevealArea( event )
@@ -480,6 +480,75 @@ function ExchangeLumber(event)
 		end
 	end
 end
+function SkillOnSpellStart(event)
+	if IsServer() then
+		local caster = event.caster
+		local playerID = caster:GetMainControllingPlayer()
+		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+		local ability = event.ability
+		local skill_name = GetAbilityKV(ability:GetAbilityName()).SkillName
+		local levelAbil = ability:GetLevel()
+		if hero:FindModifierByName(skill_name) then
+			if hero:FindModifierByName(skill_name):GetStackCount()+1 ~= levelAbil then
+				ability:SetLevel(hero:FindModifierByName(skill_name):GetStackCount()+1)
+			end	
+		end
+		local gold_cost = ability:GetSpecialValueFor("gold_cost")
+		local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
+		levelAbil = ability:GetLevel()
+
+		
+		
+		PlayerResource:ModifyGold(hero,-gold_cost)
+		PlayerResource:ModifyLumber(hero,-lumber_cost)
+
+		if PlayerResource:GetGold(playerID) < 0 then
+			SendErrorMessage(playerID, "error_not_enough_gold")
+			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
+			return false
+		end
+		if PlayerResource:GetLumber(playerID) < 0 then
+			SendErrorMessage(playerID, "error_not_enough_lumber")
+			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
+			return false
+		end
+
+		if levelAbil > ability:GetMaxLevel() then
+			SendErrorMessage(playerID, "error_max_level")
+			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
+			return false
+		end
+	end
+end
+
+function SkillOnChannelSucceeded(event)
+	if IsServer() then
+		local caster = event.caster
+		local ability = event.ability
+		local playerID = caster:GetPlayerOwnerID()
+		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+		local skill_name = GetAbilityKV(ability:GetAbilityName()).SkillName
+		local stack = ability:GetLevel()
+		hero:RemoveModifierByName(skill_name)
+		Timers:CreateTimer(0.5,function()
+			hero:AddNewModifier(hero, nil, skill_name, {}):SetStackCount(stack)
+		end)
+		ability:SetLevel(stack+1)
+	end
+end
+
+function SkillOnChannelInterrupted(event)
+	if IsServer() then
+		local caster = event.caster
+		local playerID = caster:GetPlayerOwnerID()
+		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+		local ability = event.ability
+		local gold_cost = ability:GetSpecialValueFor("gold_cost")
+		local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
+		PlayerResource:ModifyGold(hero,gold_cost,true)
+		PlayerResource:ModifyLumber(hero,lumber_cost,true)
+	end
+end
 
 function SpawnUnitOnSpellStart(event)
 	if IsServer() then
@@ -533,8 +602,11 @@ function SpawnUnitOnSpellStart(event)
             end
         end
 		if unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
-			SendErrorMessage(playerID, "error_not_slayers_many")
-			return false
+			if not hero.slayer:GetRespawnsDisabled() then
+				SendErrorMessage(playerID, "error_not_slayers_many")
+				caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
+				return false
+			end
 		end
 		if tonumber(string.match(unit_name,"%d+")) ~= nil then
 			if tonumber(string.match(unit_name,"%d+")) >= 1 and tonumber(string.match(unit_name,"%d+")) <= 6 and string.match(unit_name,"%a+") == "wisp" and (GameRules:GetGameTime() - GameRules.startTime) > NO_CREATE_WISP/GameRules.MapSpeed then
@@ -555,11 +627,11 @@ function SpawnUnitOnChannelSucceeded(event)
 		local unit_name = GetAbilityKV(ability:GetAbilityName()).UnitName
 		local unit_count = ability:GetSpecialValueFor("unit_count")
 		if unit_name == "npc_dota_hero_templar_assassin" and not hero.slayer then
-			local slayer = CreateUnitByName("npc_dota_hero_templar_assassin", caster:GetAbsOrigin() , true, nil, nil, hero:GetTeamNumber())
+			local slayer = CreateUnitByName("npc_dota_hero_templar_assassin", caster:GetAbsOrigin() , true, hero, hero, hero:GetTeamNumber())
 			hero.slayer=slayer
 			FindClearSpaceForUnit(slayer, caster:GetOrigin(), false)
+			slayer:SetOwner(hero)
 			slayer:SetControllableByPlayer(playerID,true)
-			slayer:SetOwner(player)
 			--ability:SetHidden(true)
 			local playername = PlayerResource:GetPlayerName(playerID)
 			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
@@ -1136,36 +1208,26 @@ function FountainRegen(event)
 	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , radius , DOTA_UNIT_TARGET_TEAM_FRIENDLY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
 	for _,unit in pairs(units) do
 		unit:SetHealth(unit:GetHealth() + unit:GetMaxHealth() * 0.004)
+		unit:SetMana(unit:GetMana() + unit:GetMaxMana() * 0.004)
 	end
 end
 
 function BuyLumberTroll(event)
 	local caster = event.caster
-	local playerID = caster.buyer
+	local playerID = caster:GetPlayerOwnerID()
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 	local amount = event.Amount
-	local price = amount * 64000
-	local distance = (caster:GetAbsOrigin() - hero:GetAbsOrigin()):Length()
-	local noDistance = false
-	local units = Entities:FindAllByClassname("npc_dota_creature")
-	for _,unit in pairs(units) do
-		local unit_name = unit:GetUnitName();
-		if unit_name == "troll_hut_6" or unit_name == "troll_hut_7" then
-			noDistance = true
-		end
-	end
-	
-	if distance > 1000 and not noDistance then
-		SendErrorMessage(playerID, "error_shop_out_of_range")
+	local price = amount * 8000
+	if GameRules:GetGameTime() - GameRules.startTime < 180 then
+		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_time_3_min")
 		return false
-	end	
-	
+	end
 	if amount > 0 then
 		if price > PlayerResource:GetGold(playerID) then
 			SendErrorMessage(playerID, "error_not_enough_gold")
 			return false
 		end
-		else
+	else
 		if -amount > PlayerResource:GetLumber(playerID) then
 			SendErrorMessage(playerID, "error_not_enough_lumber")
 			return false
@@ -1173,7 +1235,26 @@ function BuyLumberTroll(event)
 	end
 	PlayerResource:ModifyGold(hero,-price)
 	PlayerResource:ModifyLumber(hero,amount)
-	
+end
+
+function BuyGoldTroll(event)
+	local caster = event.caster
+	local playerID = caster:GetPlayerOwnerID()
+	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	local amount = event.Amount
+	local price = amount * 8000
+	if GameRules:GetGameTime() - GameRules.startTime < 180 then
+		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_time_3_min")
+		return false
+	end
+	if amount > 0 then
+		if price > PlayerResource:GetLumber(playerID) then
+			SendErrorMessage(playerID, "error_not_enough_lumber")
+			return false
+		end
+	end
+	PlayerResource:ModifyGold(hero,amount)
+	PlayerResource:ModifyLumber(hero,-price)
 end
 
 function StealGold(event)
@@ -1250,18 +1331,18 @@ end
 
 function CommitSuicide(event)
 	local caster = event.caster
-	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , 64 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+	--local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , 64 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
 	local playerID = caster:GetMainControllingPlayer()
-	if #units > 0 then
-		SendErrorMessage(playerID, "error_enemy_nearby")
-	else
+	--if #units > 0 then
+	--	SendErrorMessage(playerID, "error_enemy_nearby")
+	--else
 		PlayerResource:RemoveFromSelection(playerID, caster)
 		BuildingHelper:ClearQueue(caster)
 		caster:ForceKill(true) --This will call RemoveBuilding
 		Timers:CreateTimer(10,function()
 			UTIL_Remove(caster)
 		end)
-	end
+	--end
 end
 
 function ItemBlink(keys)
@@ -1283,6 +1364,47 @@ function ItemBlink(keys)
 	
 	ParticleManager:CreateParticle("particles/items_fx/blink_dagger_end.vpcf", PATTACH_ABSORIGIN, keys.caster)
 end
+
+function ItemBlinkDoom(keys)
+	
+	local origin_point = keys.caster:GetAbsOrigin()
+	local target_point = keys.target_points[1]
+	local difference_vector = target_point - origin_point
+	local block = false
+	if difference_vector:Length2D() > keys.MaxBlinkRange then  --Clamp the target point to the MaxBlinkRange range in the same direction.
+		target_point = origin_point + (target_point - origin_point):Normalized() * keys.MaxBlinkRange
+	end
+	if not GridNav:IsTraversable(target_point) or GridNav:IsBlocked(target_point) or GridNav:IsNearbyTree(target_point, 35, true) or not GridNav:CanFindPath(origin_point, target_point)  then
+		block = true
+	end
+	local units = FindUnitsInRadius(keys.caster:GetTeamNumber(), target_point , nil, 65 , DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL  , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
+	for _,unit in pairs(units) do
+		if unit ~= nil then
+			DebugPrint(unit:GetUnitName())
+			block = true
+			break
+		end
+	end
+
+	if not block then
+		local hull = keys.caster:GetHullRadius()
+		ProjectileManager:ProjectileDodge(keys.caster)  --Disjoints disjointable incoming projectiles.
+
+		ParticleManager:CreateParticle("particles/items_fx/blink_dagger_start.vpcf", PATTACH_ABSORIGIN, keys.caster)
+		keys.caster:EmitSound("DOTA_Item.BlinkDagger.Activate")
+
+		keys.caster:SetAbsOrigin(target_point)
+		FindClearSpaceForUnit(keys.caster, target_point, true)
+	
+		ParticleManager:CreateParticle("particles/items_fx/blink_dagger_end.vpcf", PATTACH_ABSORIGIN, keys.caster)
+	else
+		keys.ability:EndCooldown()
+	end
+	
+end
+
+
+
 
 function TowerAttackSpeed( keys )
 	local caster = keys.caster
@@ -1491,6 +1613,18 @@ function GlyphItem(keys)
 	if target then
 		target:AddNewModifier(target, target, "modifier_fountain_glyph", {Duration = time})
 		FlagItem(keys)
+	end
+end
+
+function PickAxe(keys)
+	local caster = keys.caster
+	local target = caster
+	local ability = keys.ability
+	local time = keys.Modifier
+	local playerID = caster:GetPlayerID()
+
+	if string.match(target:GetUnitName(), "gold_mine") then
+		ApplyDamage({victim = target, attacker = caster, damage = 999999, damage_type = DAMAGE_TYPE_PHYSICAL }) 
 	end
 end
 

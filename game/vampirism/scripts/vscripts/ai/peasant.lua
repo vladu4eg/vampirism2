@@ -1,4 +1,4 @@
-LUMBER_STACK_T1 = 10
+LUMBER_STACK_T1 = 20
 LUMBER_STACK_T2 = 160
 LUMBER_STACK_T3 = 480
 LUMBER_STACK_T4 = 1920
@@ -121,30 +121,14 @@ function GatherLumber( event )
 	if caster == nil then
 		return
 	end
+	local lumberGain = tonumber(GetUnitKV(caster:GetUnitName(), "LumberAmount") * GameRules.MapSpeed) 
+	local lumberInterval = tonumber(GetUnitKV(caster:GetUnitName(), "LumberInterval")) 
 
-	local max_lumber_carried = LUMBER_STACK_T1 * 5
-	local single_chop = LUMBER_STACK_T1
-
-	if caster:GetUnitName() == "wood_worker_2" then 
-		max_lumber_carried = LUMBER_STACK_T2 * 5
-		single_chop = LUMBER_STACK_T2
-	end
-
-	if caster:GetUnitName() == "wood_worker_3" then 
-		max_lumber_carried = LUMBER_STACK_T3 * 5
-		single_chop = LUMBER_STACK_T3
-	end
+	local max_lumber_carried = lumberGain / lumberInterval
+	local single_chop = lumberGain
 	
-	if caster:GetUnitName() == "wood_worker_4" then 
-		max_lumber_carried = LUMBER_STACK_T4 * 5
-		single_chop = LUMBER_STACK_T4
-	end
-
-	if caster:GetUnitName() == "wood_worker_5" then 
-		max_lumber_carried = LUMBER_STACK_T5 * 5
-		single_chop = LUMBER_STACK_T5
-	end
 	
+
 	local return_ability = caster:FindAbilityByName("return_resources")
 
 	caster.lumber_gathered = caster.lumber_gathered + single_chop

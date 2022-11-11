@@ -6,7 +6,7 @@ function item_lia_fire_gloves:GetAbilityTextureName()
 	if self:GetCaster():HasModifier("modifier_fire_gloves_immolation") then
 		return self.BaseClass.GetAbilityTextureName(self)
 	else
-		return "custom/lia_fire_gloves_disabled"
+		return "lia_fire_gloves_disabled"
 	end
 end
 

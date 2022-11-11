@@ -9,6 +9,10 @@ LinkLuaModifier("modifier_movespeed_x2",
     "libraries/modifiers/modifier_movespeed_x2.lua",
 LUA_MODIFIER_MOTION_NONE)
 
+LinkLuaModifier("modifier_anti_hp_mana_regen",
+    "modifiers/modifier_anti_hp_mana_regen.lua",
+LUA_MODIFIER_MOTION_NONE)
+
 LinkLuaModifier("modifier_antiblock",
     "libraries/modifiers/modifier_antiblock.lua",
 LUA_MODIFIER_MOTION_NONE)
@@ -17,7 +21,14 @@ LinkLuaModifier("modifier_innate_controller",
     "libraries/modifiers/modifier_innate_controller.lua",
 LUA_MODIFIER_MOTION_NONE)
 
-LinkLuaModifier("modifier_hp_wood_worker", "modifiers/modifier_hp_wood_worker.lua",LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_walls_proc", "modifiers/modifier_hp_walls_proc.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_wood_worker", "modifiers/modifier_hp_wood_worker.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_range_tower", "modifiers/modifier_range_tower.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_regen_walls_proc", "modifiers/modifier_regen_walls_proc.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_mana_buffwalls", "modifiers/modifier_mana_buffwalls.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_slayers_low", "modifiers/modifier_slayers_low.lua", LUA_MODIFIER_MOTION_NONE)
+
+
 
 if trollnelves2 == nil then
     DebugPrint('[TROLLNELVES2] creating trollnelves2 game mode')
@@ -262,7 +273,6 @@ function InitializeHero(hero)
         end
         hero:SetAbilityPoints(0)
         hero:SetStashEnabled(false)
-        --hero:AddNewModifier(hero, nil, "modifier_hp_wood_worker", {}):IncrementStackCount()
     end
     
     hero:SetDeathXP(0)
@@ -299,12 +309,21 @@ function InitializeBadHero(hero)
         return 0.1
     end)
     if PlayerResource:GetSelectedHeroName(playerID) ~= "npc_dota_hero_wisp" then
-        local abil2 = hero:FindAbilityByName("attack_tree_skill")
+        local abil2 = hero:FindAbilityByName("reveal_area")
         abil2:SetLevel(abil2:GetMaxLevel())
-        abil2 = hero:FindAbilityByName("reveal_area")
-        abil2:SetLevel(abil2:GetMaxLevel())
+        --abil2 = hero:FindAbilityByName("antiblock")
+        --abil2:SetLevel(abil2:GetMaxLevel())
+        --abil2 = hero:FindAbilityByName("attribute_antibonuses")
+        --abil2:SetLevel(abil2:GetMaxLevel())
+        hero:SetBaseManaRegen(0.1)
         hero:HeroLevelUp(false)
         hero:HeroLevelUp(false)
+        hero:CalculateStatBonus(true)
+        GameRules.maxFood[playerID] = STARTING_MAX_FOOD
+        hero.food = 0
+        PlayerResource:ModifyFood(hero, 0)
+        hero:AddNewModifier(hero, nil, "modifier_anti_hp_mana_regen", {})
+        
     else    
         local abil = hero:FindAbilityByName("pick_sladar")
         abil:SetLevel(abil:GetMaxLevel())
@@ -491,7 +510,7 @@ function InitializeTroll(hero)
                 end
             else
                 if not hero:HasModifier("modifier_antiblock") then
-                    hero:AddNewModifier(hero, nil, "modifier_antiblock", {})
+                    --hero:AddNewModifier(hero, nil, "modifier_antiblock", {})
                 end
             end
             
@@ -904,6 +923,8 @@ end
 function GetClass(unitName)
     if string.match(unitName, "rock") or string.match(unitName, "wall") then
         return "wall"
+        elseif string.match(unitName, "buff") then
+        return "buff"
         elseif string.match(unitName, "tower") then
         return "tower"
         elseif string.match(unitName, "tent") or string.match(unitName, "barrack") then

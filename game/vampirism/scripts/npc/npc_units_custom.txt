@@ -2057,9 +2057,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"food_cost"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"sell_lumber_1"
+		"Ability2"					"sell_lumber_8"
+		"Ability3"					"food_cost"
 		"Ability4"					""
 		"Ability10"					""
 	    
@@ -2121,7 +2121,7 @@
 	        "1"{
 				"unit_name"			"tent_3"
 				"gold_cost"			"0"
-				"lumber_cost"		"5000"
+				"lumber_cost"		"1000"
 			}
 	    }
 		"Requirements"{
@@ -2130,9 +2130,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"food_cost"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"sell_lumber_1"
+		"Ability2"					"sell_lumber_8"
+		"Ability3"					"food_cost"
 		"Ability4"					""
 		"Ability10"					""
 	    
@@ -2194,9 +2194,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"food_cost"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"sell_lumber_1"
+		"Ability2"					"sell_lumber_8"
+		"Ability3"					"food_cost"
 		"Ability4"					""
 		"Ability10"					""
 	    
@@ -3283,11 +3283,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"regen_30k_active"
+		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
-		"Ability10"					"regen_8k"
+		"Ability10"					"regen_16k"
 	    
 	    // General
 	    //-----------------------------
@@ -4003,7 +4003,7 @@
 		"BountyGoldMax"       "3000"                   // Gold earned max.
 	}
 
-	"buff_tower_1"
+	"buff_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4030,22 +4030,22 @@
 	    {
 	        "Count"     "4"
 	        "1"{
-				"unit_name"			"buff_tower_2"
+				"unit_name"			"buff_2"
 				"gold_cost"			"0"
 				"lumber_cost"		"30000"
 			}
 			"2"{
-				"unit_name"			"buff_tower_6"
+				"unit_name"			"buff_6"
 				"gold_cost"			"20"
 				"lumber_cost"		"480000"
 			}
 			"3"{
-				"unit_name"			"buff_tower_mana_1"
+				"unit_name"			"buff_mana_1"
 				"gold_cost"			"20"
 				"lumber_cost"		"240000"
 			}
 			"4"{
-				"unit_name"			"buff_tower_fire_1"
+				"unit_name"			"buff_fire_1"
 				"gold_cost"			"20"
 				"lumber_cost"		"240000"
 			}
@@ -4097,7 +4097,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4119,7 +4119,7 @@
 		"BountyGoldMax"       "20"                   // Gold earned max.
 	}
 
-	"buff_tower_2"
+	"buff_2"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4146,7 +4146,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_3"
+				"unit_name"			"buff_3"
 				"gold_cost"			"0"
 				"lumber_cost"		"60000"
 			}
@@ -4199,7 +4199,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4221,7 +4221,7 @@
 		"BountyGoldMax"       "40"                   // Gold earned max.
 	}
 
-	"buff_tower_3"
+	"buff_3"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4248,7 +4248,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_4"
+				"unit_name"			"buff_4"
 				"gold_cost"			"0"
 				"lumber_cost"		"120000"
 			}
@@ -4300,7 +4300,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4322,7 +4322,7 @@
 		"BountyGoldMax"       "80"                   // Gold earned max.
 	}
 
-	"buff_tower_4"
+	"buff_4"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4349,7 +4349,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_5"
+				"unit_name"			"buff_5"
 				"gold_cost"			"0"
 				"lumber_cost"		"240000"
 			}
@@ -4401,7 +4401,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4423,7 +4423,7 @@
 		"BountyGoldMax"       "160"                   // Gold earned max.
 	}
 
-	"buff_tower_5"
+	"buff_5"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4450,17 +4450,17 @@
 	    {
 	        "Count"     "3"
 	        "1"{
-				"unit_name"			"buff_tower_6"
+				"unit_name"			"buff_6"
 				"gold_cost"			"20"
 				"lumber_cost"		"480000"
 			}
 			"2"{
-				"unit_name"			"buff_tower_mana_1"
+				"unit_name"			"buff_mana_1"
 				"gold_cost"			"20"
 				"lumber_cost"		"240000"
 			}
 			"3"{
-				"unit_name"			"buff_tower_fire_1"
+				"unit_name"			"buff_fire_1"
 				"gold_cost"			"20"
 				"lumber_cost"		"240000"
 			}
@@ -4514,7 +4514,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4536,7 +4536,7 @@
 		"BountyGoldMax"       "320"                   // Gold earned max.
 	}
 
-	"buff_tower_6"
+	"buff_6"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4563,7 +4563,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_7"
+				"unit_name"			"buff_7"
 				"gold_cost"			"50"
 				"lumber_cost"		"240000"
 			}
@@ -4617,7 +4617,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4639,7 +4639,7 @@
 		"BountyGoldMax"       "400"                   // Gold earned max.
 	}
 
-	"buff_tower_7"
+	"buff_7"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4680,7 +4680,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_8"
+				"unit_name"			"buff_8"
 				"gold_cost"			"500"
 				"lumber_cost"		"240000"
 			}
@@ -4715,7 +4715,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4737,7 +4737,7 @@
 		"BountyGoldMax"       "500"                   // Gold earned max.
 	}
 
-	"buff_tower_8"
+	"buff_8"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4804,7 +4804,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4826,7 +4826,7 @@
 		"BountyGoldMax"       "600"                   // Gold earned max.
 	}
 
-	"buff_tower_mana_1"
+	"buff_mana_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4853,7 +4853,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_mana_2"
+				"unit_name"			"buff_mana_2"
 				"gold_cost"			"40"
 				"lumber_cost"		"240000"
 			}
@@ -4909,7 +4909,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -4930,7 +4930,7 @@
 		"BountyGoldMin"       "100"                   // Gold earned min.
 		"BountyGoldMax"       "100"                   // Gold earned max.
 	}
-	"buff_tower_mana_2"
+	"buff_mana_2"
 	{
 	    // Visual
 	    //-----------------------------
@@ -4957,7 +4957,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_mana_3"
+				"unit_name"			"buff_mana_3"
 				"gold_cost"			"80"
 				"lumber_cost"		"240000"
 			}
@@ -5012,7 +5012,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5033,7 +5033,7 @@
 		"BountyGoldMin"       "200"                   // Gold earned min.
 		"BountyGoldMax"       "200"                   // Gold earned max.
 	}
-	"buff_tower_mana_3"
+	"buff_mana_3"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5060,7 +5060,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_mana_4"
+				"unit_name"			"buff_mana_4"
 				"gold_cost"			"160"
 				"lumber_cost"		"240000"
 			}
@@ -5116,7 +5116,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5137,7 +5137,7 @@
 		"BountyGoldMin"       "300"                   // Gold earned min.
 		"BountyGoldMax"       "300"                   // Gold earned max.
 	}
-	"buff_tower_mana_4"
+	"buff_mana_4"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5164,7 +5164,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_mana_5"
+				"unit_name"			"buff_mana_5"
 				"gold_cost"			"320"
 				"lumber_cost"		"240000"
 			}
@@ -5219,7 +5219,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5240,7 +5240,7 @@
 		"BountyGoldMin"       "400"                   // Gold earned min.
 		"BountyGoldMax"       "400"                   // Gold earned max.
 	}
-	"buff_tower_mana_5"
+	"buff_mana_5"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5312,7 +5312,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5333,7 +5333,7 @@
 		"BountyGoldMin"       "500"                   // Gold earned min.
 		"BountyGoldMax"       "500"                   // Gold earned max.
 	}		
-	"buff_tower_fire_1"
+	"buff_fire_1"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5360,7 +5360,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_fire_2"
+				"unit_name"			"buff_fire_2"
 				"gold_cost"			"50"
 				"lumber_cost"		"240000"
 			}
@@ -5415,7 +5415,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5436,7 +5436,7 @@
 		"BountyGoldMin"       "100"                   // Gold earned min.
 		"BountyGoldMax"       "100"                   // Gold earned max.
 	}
-	"buff_tower_fire_2"
+	"buff_fire_2"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5463,7 +5463,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_fire_3"
+				"unit_name"			"buff_fire_3"
 				"gold_cost"			"100"
 				"lumber_cost"		"240000"
 			}
@@ -5517,7 +5517,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5538,7 +5538,7 @@
 		"BountyGoldMin"       "200"                   // Gold earned min.
 		"BountyGoldMax"       "200"                   // Gold earned max.
 	}
-	"buff_tower_fire_3"
+	"buff_fire_3"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5565,7 +5565,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_fire_4"
+				"unit_name"			"buff_fire_4"
 				"gold_cost"			"300"
 				"lumber_cost"		"240000"
 			}
@@ -5620,7 +5620,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5641,7 +5641,7 @@
 		"BountyGoldMin"       "300"                   // Gold earned min.
 		"BountyGoldMax"       "300"                   // Gold earned max.
 	}
-	"buff_tower_fire_4"
+	"buff_fire_4"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5668,7 +5668,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_fire_5"
+				"unit_name"			"buff_fire_5"
 				"gold_cost"			"600"
 				"lumber_cost"		"240000"
 			}
@@ -5722,7 +5722,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5743,7 +5743,7 @@
 		"BountyGoldMin"       "400"                   // Gold earned min.
 		"BountyGoldMax"       "400"                   // Gold earned max.
 	}
-	"buff_tower_fire_5"
+	"buff_fire_5"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5770,7 +5770,7 @@
 	    {
 	        "Count"     "1"
 	        "1"{
-				"unit_name"			"buff_tower_fire_6"
+				"unit_name"			"buff_fire_6"
 				"gold_cost"			"1000"
 				"lumber_cost"		"240000"
 			}
@@ -5825,7 +5825,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -5846,7 +5846,7 @@
 		"BountyGoldMin"       "500"                   // Gold earned min.
 		"BountyGoldMax"       "500"                   // Gold earned max.
 	}
-	"buff_tower_fire_6"
+	"buff_fire_6"
 	{
 	    // Visual
 	    //-----------------------------
@@ -5916,7 +5916,7 @@
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1000"
-	    "StatusManaRegen"           "1"
+	    "StatusManaRegen"           "0.5"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -6130,11 +6130,11 @@
 			}
 			"2"{
 				"unit_name"			"tower_6"
-				"gold_cost"			"0"
-				"lumber_cost"		"35000"
+				"gold_cost"			"6"
+				"lumber_cost"		"45000"
 			}
 			"3"{
-				"unit_name"			"buff_tower_1"
+				"unit_name"			"buff_1"
 				"gold_cost"			"0"
 				"lumber_cost"		"15000"
 			}
@@ -6142,6 +6142,121 @@
 				"unit_name"			"true_sight_tower"
 				"gold_cost"			"0"
 				"lumber_cost"		"50000"
+			}
+	    }
+		
+		"Requirements"{
+		
+		}
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"6"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"		// Damage range min.
+		"AttackDamageMax"			"1"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_mirana/mirana_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Hero_Mirana"
+	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		
+		
+		
+	    "ArmorPhysical"             "0"
+		"StatusHealth"              "12"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"        "900"  
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementTurnRate"      	"1.0" 
+	    "MovementSpeed"             "0"
+
+		"BountyXP"            "10"                 // Experience earn.
+		"BountyGoldMin"       "10"                   // Gold earned min.
+		"BountyGoldMax"       "10"                   // Gold earned max.
+	}
+	"tower_1_1"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/tower_1.vmdl"
+		"precache"
+		{
+			"model"     			"models/tower_1.vmdl"
+			"particle"     			"particles/units/heroes/hero_mirana/mirana_base_attack.vpcf"
+			"soundfile" 			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		}
+	    "ModelScale"				"0.4"
+	    "ModelRotation"				"90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"RequiresRepair"			"1"
+		"StartingBuilding"          "1"
+		"Limit"						"45"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"						"1"
+	    "BuildTime"					"1"
+		
+		"Upgrades"
+	    {
+	        "Count"     "5"
+	        "1"{
+				"unit_name"			"tower_12"
+				"gold_cost"			"50"
+				"lumber_cost"		"150000"
+			}
+			"2"{
+				"unit_name"			"tower_16"
+				"gold_cost"			"250"
+				"lumber_cost"		"750000"
+			}
+			"3"{
+				"unit_name"			"tower_10_1"
+				"gold_cost"			"120"
+				"lumber_cost"		"500000"
+			}
+			"4"{
+				"unit_name"			"buff_1"
+				"gold_cost"			"0"
+				"lumber_cost"		"15000"
+			}
+			"5"{
+				"unit_name"			"true_sight_tower"
+				"gold_cost"			"0"
+				"lumber_cost"		"50000" 
 			}
 	    }
 		
@@ -6416,7 +6531,7 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"5"
+				"gold_cost"			"4"
 				"lumber_cost"		"0"
 			}
 	    }
@@ -6503,10 +6618,10 @@
 		
 		"Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 	        "1"{
 				"unit_name"			"tower_6"
-				"gold_cost"			"10"
+				"gold_cost"			"6"
 				"lumber_cost"		"0"
 			}
 			"2"{
@@ -6601,8 +6716,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_7"
-				"gold_cost"			"0"
-				"lumber_cost"		"35000"
+				"gold_cost"			"8"
+				"lumber_cost"		"30000"
 			}
 	    }
 		
@@ -6692,7 +6807,7 @@
 	        "1"{
 				"unit_name"			"tower_8"
 				"gold_cost"			"10"
-				"lumber_cost"		"30000"
+				"lumber_cost"		"35000"
 			}
 	    }
 		
@@ -6723,8 +6838,8 @@
 	    "SoundSet"                  "Tower.Water"
 		
 	
-		"AttackDamageMin"			"876"		// Damage range min.
-		"AttackDamageMax"			"876"		// Damage range max.
+		"AttackDamageMin"			"1401"		// Damage range min.
+		"AttackDamageMax"			"1401"		// Damage range max.
 	    "ArmorPhysical"             "4"
 		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
@@ -7018,6 +7133,95 @@
 		"BountyXP"            "100"                 // Experience earn.
 		"BountyGoldMin"       "100"                   // Gold earned min.
 		"BountyGoldMax"       "100"                   // Gold earned max.
+	}
+
+	"tower_10_1"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/heroes/sniper/sniper.vmdl"
+	    "precache"
+		{
+			"model"						"models/heroes/sniper/sniper.vmdl"
+			"particle"     				"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
+	    }
+		"ModelScale"                "1"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "5"
+	    "BuildTime"                 "3"
+
+		"Requirements"{
+		}
+
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					"nevermore_dark_lord_datadriven" //""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+	    // General
+	    //-----------------------------
+
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.80"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Fire"
+
+
+		"AttackDamageMin"			"10000"//"1024"	//512	// Damage range min.
+		"AttackDamageMax"			"10000"//"20480"	//10240	// Damage range max.
+	    "ArmorPhysical"             "25"
+		"StatusHealth"              "10000"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"       "900"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "4698"}//head("Sharpshooter's Stache")
+		"Wearable2" {"ItemDef" "4699"}//("Killstealer")
+		"Wearable3" {"ItemDef" "4700"}//shoulder("Sharpshooter's Pauldrons")
+		"Wearable4" {"ItemDef" "4701"}//back("Sharpshooter's Cloak")
+		"Wearable5" {"ItemDef" "4793"}//arms("Sharpshooter's Bullet Bracers")
+	        }
+	    }
+		"BountyXP"            "200"                 // Experience earn.
+		"BountyGoldMin"       "200"                   // Gold earned min.
+		"BountyGoldMax"       "200"                   // Gold earned max.
 	}
 
 	//=================================================================================
@@ -7934,7 +8138,7 @@
 		"AttackDamageMin"			"550001"		// Damage range min.
 		"AttackDamageMax"			"550001"		// Damage range max.
 	    "ArmorPhysical"             "128"
-		"StatusHealth"              "45000"
+		"StatusHealth"              "60000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -8477,7 +8681,7 @@
 		"SoundSet"					"Hero_Phoenix"
 		
 	    "ArmorPhysical"             "128"
-		"StatusHealth"              "45000"
+		"StatusHealth"              "100000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -8571,12 +8775,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/rattletrap/rattletrap.vmdl"
+		"Model"						"models/heroes/treant_protector/treant_protector.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/rattletrap/rattletrap.vmdl"
+			"model"						"models/heroes/treant_protector/treant_protector.vmdl"
 	    }
-		"ModelScale"                "1.2"
+		"ModelScale"                "0.7"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -8588,10 +8792,10 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "1" { "ItemDef" "6481" } // Shoulders
-	            "2" { "ItemDef" "6482" } // Head
-	            "3" { "ItemDef" "6484" } // Weapon
-	            "4" { "ItemDef" "6485" } // Back
+	            "Wearable1" {"ItemDef" "8425"}//arms("Emberbark Arms")
+		"Wearable2" {"ItemDef" "8427"}//head("Emberbark Beard")
+		"Wearable3" {"ItemDef" "8428"}//legs("Emberbark Roots")
+		"Wearable4" {"ItemDef" "8429"}//shoulder("Emberbark Shoulders")
 	        }
 	    }
 		
@@ -9035,12 +9239,17 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
-		"Ability1"					"spell_immunity"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""
-		"Ability10"					""
+		"AbilityLayout"				"10"
+		"Ability1"					"train_skill_hp_wood"
+		"Ability2"					"train_skill_hp_walls_proc_20"
+		"Ability3"					"train_skill_range_towers"
+		"Ability4"					"train_skill_reg_walls_proc"
+		"Ability5"					"train_skill_mana_buffwalls"
+		"Ability6"					"train_skill_slayers_low"
+		"Ability7"					""
+		"Ability9"					""
+		"Ability9"					""
+		"Ability10"					"spell_immunity"
 	    
 	    // General
 	    //-----------------------------
@@ -9170,7 +9379,7 @@
 		}
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "0"
+		"ArmorPhysical"                         "3"
 		"MagicalResistance"                     "0"
 
 		// Attack
@@ -9183,10 +9392,10 @@
 		"AbilityLayout"							"14"
 		"Ability1" 								"build_gold_mine_2"
 		"Ability2"								"build_gold_mine_3"
-		"Ability3"								"build_rock_8"
-		"Ability4"								"build_tower_10"
+		"Ability3"								"build_rock_9"
+		"Ability4"								"build_tower_12"
 		"Ability5"								"build_true_sight_tower"
-		"Ability6"								"build_buff_tower_1"
+		"Ability6"								"build_buff_1"
 		"Ability7"								"build_slayerstaverna_1"
 		"Ability8"								"build_human_box_fake"
 		"Ability9"								"build_human_box"
@@ -9219,8 +9428,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "10"
-		"StatusHealthRegen"                     "0.0"
+		"StatusHealth"                          "8000"
+		"StatusHealthRegen"                     "1"
 		"StatusMana"                            "0"
 		"StatusManaRegen"                       "0"
 
@@ -9253,7 +9462,7 @@
 		}
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "0"
+		"ArmorPhysical"                         "3"
 		"MagicalResistance"                     "0"
 
 		// Attack
@@ -9267,15 +9476,15 @@
 		"Ability1" 								"build_gold_mine_4"
 		"Ability2"								"build_gold_mine_5"
 		"Ability3"								"build_house_1"
-		"Ability4"								"build_tower_10"
-		"Ability5"								"build_rock_9"
-		"Ability6"								"build_true_sight_tower"
-		"Ability7"								"build_buff_tower_1"
-		"Ability8"								"build_human_box_fake"
-		"Ability9"								"build_human_box"
-		"Ability10"								"attack_tree_skill"
-		"Ability11"								"build_tree"
-		"Ability12"								"commit_suicide"
+		"Ability4"								"build_rock_10"
+		"Ability5"								"build_tower_1_1"
+		"Ability6"								"build_trader_1"
+		"Ability7"								"build_human_box_fake"
+		"Ability8"								"build_human_box"
+		"Ability9"								"attack_tree_skill"
+		"Ability10"								"build_tree"
+		"Ability11"								"slayer_blink"
+		"Ability12"								"commit_suicide" 
 		"Ability13"								"repair"
 		"RepairAbility"							"repair"
 		"FixedRepair"							"0"
@@ -9302,8 +9511,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "10"
-		"StatusHealthRegen"                     "0.0"
+		"StatusHealth"                          "16000"
+		"StatusHealthRegen"                     "1"
 		"StatusMana"                            "0"
 		"StatusManaRegen"                       "0"
 
@@ -9478,6 +9687,7 @@
 		"BountyXP"					"30"		// Experience earn.
 	  	"BountyGoldMin"				"30"		// Gold earned min.
 	  	"BountyGoldMax"				"30"		// Gold earned max.
+
 		
 	}
 	//=================================================================================
@@ -9553,6 +9763,7 @@
 		"BountyXP"					"60"		// Experience earn.
 	  	"BountyGoldMin"				"60"		// Gold earned min.
 	  	"BountyGoldMax"				"60"		// Gold earned max.
+
 	}
 	//=================================================================================
 	// Building: Gold Mine 3
@@ -9627,6 +9838,7 @@
 		"BountyXP"					"90"		// Experience earn.
 	  	"BountyGoldMin"				"90"		// Gold earned min.
 	  	"BountyGoldMax"				"90"		// Gold earned max.
+
 	}
 	//=================================================================================
 	// Building: Gold Mine 4
@@ -10102,10 +10314,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"
+		"Model"						"models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"
 	    "precache"
 		{
-			"model"						"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"
+			"model"						"models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"
 	    }
 		"ModelScale"                "1.2"
 	    "ModelRotation"             "90"
@@ -10169,10 +10381,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_spawn_a/n_creep_satyr_spawn_b.vmdl"
+		"Model"						"models/items/warlock/golem/greevil_master_greevil_golem/greevil_master_greevil_golem.vmdl"
 	    "precache"
 		{
-			"model"						"models/creeps/neutral_creeps/n_creep_satyr_spawn_a/n_creep_satyr_spawn_b.vmdl"
+			"model"						"models/items/warlock/golem/greevil_master_greevil_golem/greevil_master_greevil_golem.vmdl"
 	    }
 		"ModelScale"                "1.2"
 	    "ModelRotation"             "90"
@@ -10236,10 +10448,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"
+		"Model"						"models/items/undying/flesh_golem/incurable_pestilence_golem/incurable_pestilence_golem.vmdl"
 	    "precache"
 		{
-			"model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"
+			"model"						"models/items/undying/flesh_golem/incurable_pestilence_golem/incurable_pestilence_golem.vmdl"
 	    }
 		"ModelScale"                "1.2"
 	    "ModelRotation"             "90"
@@ -10259,11 +10471,346 @@
 		"Ability4"					"buy_item_mirage_50"
 		"Ability5"					"buy_"
 		"Ability6"					"buy_"
-		"Ability7"					"buy_item_clock_invis"
-		"Ability8"					"buy_"
+		"Ability7"					"buy_item_clock_invis" 
+		"Ability8"					"buy_item_lia_poleaxe_of_rage"
 		"Ability9"					"buy_"
 		"Ability10"					"buy_"
 		"Ability11"					"buy_"
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		//"Ability16"					"buy_item_dmg_16"
+		//"Ability17"					"buy_item_dmg_17"
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "250"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "1"
+	    "BlockPathingSize"          "1"
+		"CollisionSize"				"32"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_BADGUYS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"demonic_shop"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/items/warlock/golem/grimoires_pitlord_ultimate/grimoires_pitlord_ultimate.vmdl"
+	    "precache"
+		{
+			"model"						"models/items/warlock/golem/grimoires_pitlord_ultimate/grimoires_pitlord_ultimate.vmdl"
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"17"
+		"Ability1"					"buy_item_golden_hand"
+		"Ability2"					"buy_item_pulse_staff"
+		"Ability3"					"buy_item_immunity_shield"
+		"Ability4"					"buy_item_reveal"
+		"Ability5"					"buy_item_troll_teleport"
+		"Ability6"					"buy_item_demonic_remains"
+		"Ability7"					"" 
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		//"Ability16"					"buy_item_dmg_16"
+		//"Ability17"					"buy_item_dmg_17"
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "250"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "1"
+	    "BlockPathingSize"          "1"
+		"CollisionSize"				"32"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_BADGUYS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"gate_shop"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/items/warlock/golem/ti_8_warlock_darkness_apostate_golem/ti_8_warlock_darkness_apostate_golem.vmdl"
+	    "precache"
+		{
+			"model"						"models/items/warlock/golem/ti_8_warlock_darkness_apostate_golem/ti_8_warlock_darkness_apostate_golem.vmdl"
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"17"
+		"Ability1"					"buy_item_mask_undeath"
+		"Ability2"					"buy_item_quelling_blade"
+		"Ability3"					"buy_item_doom_armor"
+		"Ability4"					""
+		"Ability5"					"buy_item_heart_blood"
+		"Ability6"					"buy_item_gaunlets"
+		"Ability7"					"buy_item_retardation" 
+		"Ability8"					"buy_item_kitty_claw"
+		"Ability9"					"buy_item_pick_axe"
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		//"Ability16"					"buy_item_dmg_16"
+		//"Ability17"					"buy_item_dmg_17"
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "250"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "1"
+	    "BlockPathingSize"          "1"
+		"CollisionSize"				"32"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_BADGUYS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"basic_shop"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/items/warlock/golem/the_torchbearer/the_torchbearer.vmdl"
+	    "precache"
+		{
+			"model"						"models/items/warlock/golem/the_torchbearer/the_torchbearer.vmdl"
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"17"
+		"Ability1"					"buy_item_armor_1"
+		"Ability2"					"buy_item_armor_2"
+		"Ability3"					"buy_item_armor_3"
+		"Ability4"					"buy_item_armor_4"
+		"Ability5"					"buy_item_block_1"
+		"Ability6"					"buy_item_block_2"
+		"Ability7"					"buy_item_block_3" 
+		"Ability8"					"buy_item_block_4"
+		"Ability9"					"buy_item_ward_observer"
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		//"Ability16"					"buy_item_dmg_16"
+		//"Ability17"					"buy_item_dmg_17"
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "250"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "1"
+	    "BlockPathingSize"          "1"
+		"CollisionSize"				"32"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_BADGUYS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"recipe_shop"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged_diretide/creep_radiant_ranged_diretide.vmdl"
+	    "precache"
+		{
+			"model"						"models/creeps/lane_creeps/creep_radiant_ranged_diretide/creep_radiant_ranged_diretide.vmdl"
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"17"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability7"					"" 
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		//"Ability16"					"buy_item_dmg_16"
+		//"Ability17"					"buy_item_dmg_17"
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "250"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "1"
+	    "BlockPathingSize"          "1"
+		"CollisionSize"				"32"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_BADGUYS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"research_shop"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
+	    "precache"
+		{
+			"model"						"models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"17"
+		"Ability1"					"buy_item_tome_of_knowledge_lvl"
+		"Ability2"					"buy_item_book_of_strength"
+		"Ability3"					"buy_item_book_of_agility"
+		"Ability4"					"buy_item_book_of_intelligence" 
+		"Ability5"					"buy_item_book_of_all_stats" 
+		"Ability6"					"buy_item_book_of_damage_health"
+		"Ability7"					"buy_item_book_of_damage_stats" 
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
 		"Ability12"					""
 		"Ability13"					""
 		"Ability14"					""
@@ -10737,10 +11284,10 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"buy_item_book_of_strength"
-		"Ability2"					"buy_item_book_of_agility"
-		"Ability3"					"buy_item_book_of_intelligence"
-		"Ability4"					"buy_item_satanic"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
 
 
 
@@ -11289,7 +11836,7 @@
 	"wood_worker_1"
 	{
 	  "BaseClass"     "npc_dota_creature"
-	  "Model"      "models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl"
+	  "Model"      "models/heroes/kunkka/kunkka.vmdl"
 	  "ModelScale"    "0.8"
 	  "Level"      "1"
 	  "HealthBarOffset"    "140"
@@ -11303,7 +11850,7 @@
 	  "Ability4"     ""
 	  "Ability5"     "return_resources"
 
-	  "ArmorPhysical"    "0"
+	  "ArmorPhysical"    "3"
 	  "MagicalResistance"   "0"
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
@@ -11318,12 +11865,14 @@
 	  "FormationRank"    "4"
 	  "WispCost" 						"1"
 	  "FoodCost" 						"5"
+	  "LumberInterval"			"5"
+	 "LumberAmount"				"100"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
 	
-	  "StatusHealth"    "10"
-	  "StatusHealthRegen"   "0.20"
+	  "StatusHealth"    "100"
+	  "StatusHealthRegen"   "1"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
@@ -11334,16 +11883,25 @@
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
 	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
 	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		
-	  "Creature"
-	  {
-	    "DisableClumpingBehavior"  "1"
-	  }
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	            "Wearable1" {"ItemDef" "5250"}//legs("Black Boots of the Voyager")
+		"Wearable2" {"ItemDef" "5251"}//gloves("Green Sleeves of the Voyager")
+		"Wearable3" {"ItemDef" "5252"}//head("Ernest Do of the Voyager")
+		"Wearable4" {"ItemDef" "5253"}//neck("Button Down of the Voyager")
+		"Wearable5" {"ItemDef" "5254"}//back("Firebreather of the Voyager")
+		"Wearable6" {"ItemDef" "5255"}//shoulder("Blue Stone Shoulder of the Voyager")
+		"Wearable7" {"ItemDef" "5256"}//("Compass Edge of the Voyager")
+	        }
+	    }
+	  
 	}
 	"wood_worker_2"
 	{
 	  "BaseClass"     "npc_dota_creature"
-	  "Model"      "models/creeps/neutral_creeps/n_creep_furbolg/n_creep_furbolg_disrupter.vmdl"
+	  "Model"      "models/heroes/lone_druid/true_form.vmdl"
 	  "ModelScale"    "0.8"
 	  "Level"      "1"
 	  "HealthBarOffset"    "140"
@@ -11357,7 +11915,7 @@
 	  "Ability4"     ""
 	  "Ability5"     "return_resources"
 	
-	  "ArmorPhysical"    "0"
+	  "ArmorPhysical"    "5"
 	  "MagicalResistance"   "0"
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
@@ -11372,12 +11930,14 @@
 	  "FormationRank"    "4"
 	"WispCost" 						"1"
 	"FoodCost" 						"20"
+	"LumberInterval"			"5"
+		"LumberAmount"				"800"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
 	
-	  "StatusHealth"    "10"
-	  "StatusHealthRegen"   "0.20"
+	  "StatusHealth"    "2000"
+	  "StatusHealthRegen"   "1"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
@@ -11411,7 +11971,7 @@
 	  "Ability4"     ""
 	  "Ability5"     "return_resources"
 	
-	  "ArmorPhysical"    "0"
+	  "ArmorPhysical"    "20"
 	  "MagicalResistance"   "0"
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
@@ -11428,8 +11988,10 @@
 	  "MovementTurnRate"   "0.6"
 	"WispCost" 						"1"
 	"FoodCost" 						"30"
-	  "StatusHealth"    "6"
-	  "StatusHealthRegen"   "0.25"
+	"LumberInterval"			"5"
+		"LumberAmount"				"2400"
+	  "StatusHealth"    "10000"
+	  "StatusHealthRegen"   "1"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
@@ -11464,7 +12026,9 @@
 	  "Ability5"     "return_resources"
 	"WispCost" 						"1"
 	"FoodCost" 						"40"
-	  "ArmorPhysical"    "0"
+	"LumberInterval"			"5"
+		"LumberAmount"				"9600"
+	  "ArmorPhysical"    "100"
 	  "MagicalResistance"   "0"
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
@@ -11480,8 +12044,8 @@
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
 	
-	  "StatusHealth"    "6"
-	  "StatusHealthRegen"   "0.25"
+	  "StatusHealth"    "30000"
+	  "StatusHealthRegen"   "1"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
@@ -11516,7 +12080,7 @@
 	  "Ability4"     ""
 	  "Ability5"     "return_resources"
 	
-	  "ArmorPhysical"    "0"
+	  "ArmorPhysical"    "100"
 	  "MagicalResistance"   "0"
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
@@ -11529,12 +12093,14 @@
 	  "RingRadius"    "40"
 		"WispCost" 						"1"
 		"FoodCost" 						"90"
+		"LumberInterval"			"5"
+		"LumberAmount"				"38400"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
 	
-	  "StatusHealth"    "6"
-	  "StatusHealthRegen"   "0.25"
+	  "StatusHealth"    "80000"
+	  "StatusHealthRegen"   "1"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
@@ -11568,7 +12134,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "2"
+		"ArmorPhysical"                         "3"
 		"MagicalResistance"                     "0"
 
 		// Attack
@@ -11760,7 +12326,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "4"
+		"ArmorPhysical"                         "8"
 		"MagicalResistance"                     "0"
 
 		
@@ -11769,8 +12335,8 @@
 		//----------------------------------------------------------------
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"450"		// Damage range min.
-		"AttackDamageMax"			"500"		// Damage range max.
+		"AttackDamageMin"			"1201"		// Damage range min.
+		"AttackDamageMax"			"1201"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
@@ -11818,7 +12384,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "1100"
+		"StatusHealth"                          "11250"
 		"StatusHealthRegen"                     "4"
 		"StatusMana"                            "400"
 		"StatusManaRegen"                       "1"
@@ -11852,7 +12418,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "4"
+		"ArmorPhysical"                         "35"
 		"MagicalResistance"                     "0"
 
 		
@@ -11861,8 +12427,8 @@
 		//----------------------------------------------------------------
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"450"		// Damage range min.
-		"AttackDamageMax"			"500"		// Damage range max.
+		"AttackDamageMin"			"5001"		// Damage range min.
+		"AttackDamageMax"			"5012"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
@@ -11910,7 +12476,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "1100"
+		"StatusHealth"                          "22000"
 		"StatusHealthRegen"                     "4"
 		"StatusMana"                            "400"
 		"StatusManaRegen"                       "1"
@@ -11927,5 +12493,91 @@
 		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+	"trader_1"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/heroes/lone_druid/lone_druid.vmdl"
+		"precache"
+		{
+			"model"     "models/heroes/lone_druid/lone_druid.vmdl"
+		}
+	    "ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"RequiresRepair"			"1"
+		"StartingBuilding"          "1"
+		"Limit"						"2"
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	            "1" { "ItemDef" "6635" } //shoulder
+	            "2" { "ItemDef" "6634" } //face
+	            "3" { "ItemDef" "6633" } //bracers
+	            "4" { "ItemDef" "6636" } //body
+	            "4" { "ItemDef" "6637" } //back
+	        }
+	    }
+		//"Creature" 
+	   // {
+	       // "AttachWearables" // Dark wood set
+	       // {
+	       //     "1" { "ItemDef" "8865" } //shoulder
+	       //     "2" { "ItemDef" "8863" } //face
+	       //     "3" { "ItemDef" "8866" } //bracers
+	       //     "4" { "ItemDef" "8869" } //body
+	       //     "4" { "ItemDef" "8870" } //back
+	       // }
+	  //  }
+
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "5"
+		"Requirements"{
+
+		}
+
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					"sell_lumber_1"
+		"Ability2"					"sell_lumber_8"
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability10"					""
+
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "0"
+		"StatusHealth"              "40"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "4"
+	    "BlockPathingSize"          "4"
+		"CollisionSize"				"128"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "450" //"900"
+	    "VisionNighttimeRange"      "450" //"600"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+	
 
 }

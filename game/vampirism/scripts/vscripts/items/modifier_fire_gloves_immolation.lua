@@ -21,6 +21,7 @@ if IsServer() then
 	function modifier_fire_gloves_immolation:OnCreated(kv)
 		self.tick = 0.25
 		self.damage = self:GetAbility():GetSpecialValueFor("damage_per_second")*self.tick
+		self.manaCost = self:GetAbility():GetSpecialValueFor("mana_cost_per_second")*self.tick
 		self.radius = self:GetAbility():GetSpecialValueFor("radius")
 
 		self:StartIntervalThink(self.tick)
@@ -34,6 +35,9 @@ if IsServer() then
 			self:Destroy()
 			return
 		end
+
+		if caster:GetMana() >= self.manaCost then
+			caster:SpendMana( self.manaCost, ability)
 
 			local targets =  FindUnitsInRadius(caster:GetTeamNumber(),
 					caster:GetAbsOrigin(),
@@ -49,8 +53,14 @@ if IsServer() then
 			-- Deal damage to all targets passed
 			for _,unit in pairs(targets) do
 				damageTable.victim = unit
-				ApplyDamage(damageTable)
+				if not unit.state = "complete" then
+					ApplyDamage(damageTable)
+				end
+				
 			end
+		else
+			ability:ToggleAbility()
+		end
 	end
 
 end

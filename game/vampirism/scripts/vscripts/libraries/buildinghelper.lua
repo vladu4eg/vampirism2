@@ -322,6 +322,7 @@ function BuildingHelper:ParseKV()
                 elseif info["BuyItem"] then
                 local itemName = info["ItemName"]
                 local bonus_attr
+                DebugPrint(itemName)
                 if GetItemKV(itemName)["AbilitySpecial"]["01"] then
                     for key, value in pairs(
                         GetItemKV(itemName)["AbilitySpecial"]["01"]) do
@@ -329,23 +330,18 @@ function BuildingHelper:ParseKV()
                             bonus_attr = key
                         end
                     end
-                    local bonus_values =
-                    GetItemKV(itemName)["AbilitySpecial"]["01"][bonus_attr]
-                    local gold =
-                    GetItemKV(itemName)["AbilitySpecial"]["02"]["gold_cost"]
-                    local lumber =
-                    GetItemKV(itemName)["AbilitySpecial"]["03"]["lumber_cost"]
+                    local bonus_values = GetItemKV(itemName)["AbilitySpecial"]["01"][bonus_attr]
+                    local gold = GetItemKV(itemName)["AbilitySpecial"]["02"]["gold_cost"]
+                    local lumber = GetItemKV(itemName)["AbilitySpecial"]["03"]["lumber_cost"]
                     CustomNetTables:SetTableValue("items", name, {
                         bonus_stats = bonus_attr,
                         bonus_value = bonus_values,
                         gold_cost = gold,
                         lumber_cost = lumber
                     })
-                    else
-                    local gold =
-                    GetItemKV(itemName)["AbilitySpecial"]["02"]["gold_cost"]
-                    local lumber =
-                    GetItemKV(itemName)["AbilitySpecial"]["03"]["lumber_cost"]
+                else
+                    local gold = GetItemKV(itemName)["AbilitySpecial"]["02"]["gold_cost"]
+                    local lumber = GetItemKV(itemName)["AbilitySpecial"]["03"]["lumber_cost"]
                     CustomNetTables:SetTableValue("items", name, {
                         gold_cost = gold,
                         lumber_cost = lumber
@@ -2502,7 +2498,7 @@ function BuildingHelper:ValidPosition(size, location, unit, callbacks)
         end
     end
     if BuildingHelper:EnemyIsInsideBuildingArea(hero:GetAbsOrigin(), location,size) and buildingName ~= "tent" and
-        (GameRules:GetGameTime() - GameRules.startTime > (1200 / GameRules.MapSpeed)) then -- остальное
+        (GameRules:GetGameTime() - GameRules.startTime > (120000 / GameRules.MapSpeed)) then -- остальное
         local baseIndex = BuildingHelper:IdBaseArea(unit)
         if baseIndex ~= nil and GameRules.PlayersBase[playerID] ~= nil then
             if baseIndex == GameRules.PlayersBase[playerID] then

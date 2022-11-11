@@ -34,8 +34,10 @@
 				<Label id = "CheeseText" class="Texts" text="" html="true"/>
 			</Panel>
 			<Panel class="ResourcePanels" id = "LumberPricePanel">
+				<!--
 				<Image id="LumberPriceIcon" src="file://{images}/custom_game/lumberprice_icon.png" />
 				<Label id = "LumberPriceText" class="Texts" text="" html="true"/>
+				-->
 			</Panel>
 		</Panel> 
 	</Panel>

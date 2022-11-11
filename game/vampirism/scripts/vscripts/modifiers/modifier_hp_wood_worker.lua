@@ -18,8 +18,12 @@ function modifier_hp_wood_worker:IsPurgable()
     return false
 end
 
+function modifier_hp_wood_worker:IsStackable()
+    return true
+end
+
 function modifier_hp_wood_worker:IsPermanent()
-	return true
+	return false
 end
 
 function modifier_hp_wood_worker:GetAuraSearchType()
@@ -41,21 +45,7 @@ end
 function modifier_hp_wood_worker:GetModifierAura()
 	return "modifier_hp_wood_worker_aura"
 end
-function modifier_hp_wood_worker:DeclareFunctions()
-	return { MODIFIER_PROPERTY_HEALTH_BONUS}
-end
 
-function modifier_hp_wood_worker:GetModifierHealthBonus()
-	local caster = self:GetCaster()
-	local target = self:GetParent()
-	if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() then
-		return 250 --self:GetStackCount() * 
-	end
-	
-	return 551
-
-	
-end
 --------------------------------------------------------------------------------
 modifier_hp_wood_worker_aura = class({})
 
@@ -72,37 +62,40 @@ function modifier_hp_wood_worker_aura:IsPurgable()
 end
 
 function modifier_hp_wood_worker_aura:IsPermanent()
-	return true
+	return false
 end
 
-function modifier_hp_wood_worker_aura:DeclareFunctions()
-	return { MODIFIER_PROPERTY_HEALTH_BONUS,
-			 MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS}
-end
-
-function modifier_hp_wood_worker_aura:GetModifierHealthBonus()
-	local caster = self:GetCaster()
-	local target = self:GetParent()
-	target:SetMaxHealth(target:GetBaseMaxHealth()+1300)
-	target:SetHealth(target:GetBaseMaxHealth()+1300)
-	if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() then
-		return 250 --self:GetStackCount() * 
+function modifier_hp_wood_worker_aura:OnCreated( kv )
+	if IsServer() then
+		Timers:CreateTimer(0.5,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then
+				local countStack = caster:FindModifierByName("modifier_hp_wood_worker"):GetStackCount()
+				print(countStack)
+				target:SetMaxHealth(target:GetMaxHealth() + (350 * countStack))
+				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + (350 * countStack) )
+				target:SetHealth(target:GetHealth() + (350 * countStack))
+				--target:SetBaseDamageMin(target:GetBaseDamageMin() * dmg)	
+				--target:SetBaseDamageMax(target:GetBaseDamageMax() * dmg) 
+			end
+		end)
+		
 	end
-	
-	return 551
-
-	
 end
 
-function modifier_hp_wood_worker_aura:GetModifierPhysicalArmorBonus()
-	local caster = self:GetCaster()
-	local target = self:GetParent()
-	if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() then
-		return 250 --self:GetStackCount() * 
+function modifier_hp_wood_worker_aura:OnRemoved(kv)
+	if IsServer() then
+		local caster = self:GetCaster()
+		local target = self:GetParent()
+		if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then
+			local hp = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealth")) 
+			target:SetMaxHealth(hp)
+			target:SetBaseMaxHealth(hp)
+			target:SetHealth(hp)
+		end
 	end
-	
-	return 551
-
-	
 end
+
+
 

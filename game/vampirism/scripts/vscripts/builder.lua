@@ -220,12 +220,6 @@ function Build( event )
             --ability:SetHidden(true)
         end
 
-        if not BuildingHelper:IsInsideBaseArea(building, building, NewBuildingName, true) and not string.match(NewBuildingName,"troll_hut") then
-            CancelBuilding(event)
-            SendErrorMessage(playerID, "error_not_upgrade_flag_base")
-            return false
-        end
-
     end)
     
     -- These callbacks will only fire when the state between below half health/above half health changes.

@@ -15,6 +15,10 @@ LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_death_mana",
     "libraries/modifiers/modifier_death_mana.lua",
 LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_demonic_remains_killer",
+    "modifiers/modifier_demonic_remains_killer.lua",
+LUA_MODIFIER_MOTION_NONE)
+
 
 function trollnelves2:OnGameRulesStateChange()
     DebugPrint("GameRulesStateChange ******************")
@@ -304,6 +308,7 @@ function trollnelves2:OnEntityKilled(keys)
     if IsBuilder(killed) then BuildingHelper:ClearQueue(killed) end
     if killed:IsRealHero() then
         local bounty = -1
+        
         if killed:IsElf() and killed.alive then
             for pID = 0, DOTA_MAX_TEAM_PLAYERS do
                 if PlayerResource:IsValidPlayerID(pID) then
@@ -401,6 +406,13 @@ function trollnelves2:OnEntityKilled(keys)
         if killed:GetUnitName() == "npc_dota_hero_templar_assassin" then
             killed:SetRespawnsDisabled(true)
         end
+        if attacker and attacker:HasModifier("modifier_item_demonic_remains") then
+            if  not attacker:HasModifier("modifier_demonic_remains_killer") then
+                attacker:AddNewModifier(attacker, nil, "modifier_demonic_remains_killer", {}):IncrementStackCount()
+            else
+                attacker:FindModifierByName("modifier_demonic_remains_killer"):IncrementStackCount()
+            end
+        end
     else
         local hero = PlayerResource:GetSelectedHeroEntity(killedPlayerID)
         if string.match(killed:GetUnitName(),"troll_hut") then
@@ -415,6 +427,14 @@ function trollnelves2:OnEntityKilled(keys)
         elseif killed:GetUnitName() == "tent_3" then
             GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 300
             PlayerResource:ModifyFood(hero, 0)
+        end
+
+        if attacker and attacker:HasModifier("modifier_item_demonic_remains") then
+            if  not attacker:HasModifier("modifier_demonic_remains_killer") then
+                attacker:AddNewModifier(attacker, nil, "modifier_demonic_remains_killer", {}):IncrementStackCount()
+            else
+                attacker:FindModifierByName("modifier_demonic_remains_killer"):IncrementStackCount()
+            end
         end
         
         if hero and hero.units and hero.alive then -- hero.units can contain other units besides buildings
@@ -532,28 +552,9 @@ function ElfKilled(killed)
         return bounty
     end 
 
-    if GameRules:GetGameTime() - GameRules.startTime >= WOLF_START_SPAWN_TIME then
-        local orgPlayer = killed:GetPlayerOwner()
-        if orgPlayer then
-            CustomGameEventManager:Send_ServerToPlayer(orgPlayer,
-            "show_helper_options", {})
-            Timers:CreateTimer(40, function()
-                if killed and killed.legitChooser then
-                    local args = {}
-                    args.team = DOTA_TEAM_GOODGUYS
-                    args.playerID = killedID
-                    ChooseHelpSide(killedID, args)
-                end
-            end)
-            else
-            GameRules.dcedChoosers[killedID] = true
-        end
-        else
-        local args = {}
-        args.team = DOTA_TEAM_GOODGUYS
-        args.playerID = killedID
-        ChooseHelpSide(killedID, args)
-    end
+    args.team = DOTA_TEAM_BADGUYS
+    args.playerID = killedID
+    ChooseHelpSide(killedID, args)
     
     return bounty
 end
@@ -649,27 +650,9 @@ function ChooseHelpSide(eventSourceIndex, event)
     hero.legitChooser = false
     
     local newHeroName
-    local message
-    local timer
-    local pos
-    local i = 1
-    local roll_chance = RandomFloat(0, 100)
-    if roll_chance <= CHANCE_NEW_PERSON then
-        i = 2
-    end
-    if team == DOTA_TEAM_GOODGUYS then
-        newHeroName = ANGEL_HERO[i]
-        message = "%s1 will keep helping elves and now is an " .. GetModifiedName(ANGEL_HERO[i])
-        timer = ANGEL_RESPAWN_TIME
-        pos = RandomAngelLocation()
-        elseif team == DOTA_TEAM_BADGUYS then
-        newHeroName = WOLF_HERO[i]
-        message = "%s1 has joined the dark side and now will help " ..
-        GetModifiedName(TROLL_HERO[i]) .. ". %s1 is now a" ..
-        GetModifiedName(WOLF_HERO)
-        timer = 1
-        pos = Vector(0, -640, 256)
-    end
+    local message = "%s1 has joined the dark side and now will help " .. GetModifiedName(TROLL_HERO[1]) .. ". %s1 is now a" .. GetModifiedName(WOLF_HERO)
+    local timer = 1
+    local pos = Vector(0, -640, 256)
     PlayerResource:SetCustomTeamAssignment(playerID, team)
     Timers:CreateTimer(function()
         GameRules:SendCustomMessage(message, playerID, 0)

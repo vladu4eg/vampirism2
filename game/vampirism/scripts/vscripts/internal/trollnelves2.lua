@@ -46,12 +46,29 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetStashPurchasingDisabled(true)
   mode:SetNeutralStashEnabled(false)
   mode:SetSendToStashEnabled(false)
-  
+  mode:SetInnateMeleeDamageBlockAmount(0)
+	mode:SetInnateMeleeDamageBlockPercent(0)
+	mode:SetInnateMeleeDamageBlockPerLevelAmount(0)
   mode:SetMinimumAttackSpeed(MINIMUM_ATTACK_SPEED)
   mode:SetMaximumAttackSpeed(MAXIMUM_ATTACK_SPEED)
   
   mode:SetUseCustomHeroLevels ( true )
   mode:SetCameraDistanceOverride(1400)
+    
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_DAMAGE,1)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_DAMAGE,1)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_DAMAGE,1)
+
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP, 120)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN, 0.0) 
+
+
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,1)
+
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 20)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,  0.0)
+
 
   LinkLuaModifier("modifier_custom_armor", "libraries/modifiers/modifier_custom_armor.lua", LUA_MODIFIER_MOTION_NONE)
   LinkLuaModifier("modifier_generic_invisibility", "modifiers/modifier_generic_invisibility.lua", LUA_MODIFIER_MOTION_NONE)
@@ -102,25 +119,7 @@ function trollnelves2:_Inittrollnelves2()
   -- mode:SetDamageFilter( Dynamic_Wrap( trollnelves2, "DamageFilter" ), self ) 
   
  -- mode:SetItemAddedToInventoryFilter(Dynamic_Wrap(trollnelves2, "ItemPickFilter"), self)
-  
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_DAMAGE,1)
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_DAMAGE,1)
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_DAMAGE,1)
-    -- mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_STATUS_RESISTANCE_PERCENT,0)
 
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP,120)
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN,0.003)
-    --mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_STATUS_RESISTANCE_PERCENT,0)
-
-
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR,0)
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,1)
-    -- mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_MOVE_SPEED_PERCENT,0)
-
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA,12)
-    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,0.015)
-    --mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_SPELL_AMP_PERCENT,0)
-    -- mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MAGIC_RESISTANCE_PERCENT,0) 
 
   -- Debugging setup
   local spew = 0
@@ -178,8 +177,14 @@ end
 function trollnelves2:GoldFilter( kv )
   local hero = PlayerResource:GetSelectedHeroEntity(kv.player_id_const)
   if hero:IsTroll() then
+        if hero:HasModifier("modifier_item_golden_hand") then
+          local rand = RandomFloat( 0, 100 )
+          if rand <= 25 then
+            kv.gold = kv.gold + 20
+          end
+        end
         PlayerResource:ModifyGold(hero,kv.gold)
-        SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, hero, kv.gold, nil )
+        --SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, hero, kv.gold, nil )
   end
   return true
 end

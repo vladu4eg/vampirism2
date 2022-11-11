@@ -7,12 +7,12 @@
 		"SoundSet"					"Hero_Omniknight"
 		"UnitLabel"					"builder"
 		"AbilityLayout"				"15"
-		"Ability1" 					"build_tent"
-		"Ability2" 					"build_rock_1"
-		"Ability3" 					"build_tower_1"
-		"Ability4" 					"build_house_1"
-		"Ability5" 					"build_workersguild_1"
-		"Ability6"					"build_slayerstaverna_1"
+		"Ability1" 					"build_workersguild_1"
+		"Ability2" 					"build_tent"
+		"Ability3" 					"build_rock_1"
+		"Ability4" 					"build_tower_1"
+		"Ability5" 					"build_slayerstaverna_1"
+		"Ability6"					"build_house_1"
 		"Ability7" 					"build_research_lab_1"
 		"Ability8" 					"build_gold_mine_1"
 		"Ability9"					"attack_tree_skill"
@@ -54,9 +54,9 @@
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
 	    "StatusHealth"        "5000"                 // Base health.
-	    "StatusHealthRegen"     "0.0"                 // Health regeneration rate.
+	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "10"                   // Base mana.
-	    "StatusManaRegen"     "1"                 // Mana regeneration rate.
+	    "StatusManaRegen"     "0.5"                 // Mana regeneration rate.
 	
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
@@ -154,7 +154,7 @@
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "68000"                 // Base health.
-		"StatusHealthRegen"     "0.0"                 // Health regeneration rate.
+		"StatusHealthRegen"     "0"                 // Health regeneration rate.
 		"StatusMana"        "4000"                   // Base mana.
 		"StatusManaRegen"     "0"                 // Mana regeneration rate.
 		
@@ -224,26 +224,27 @@
 	}
 	
 	"npc_dota_hero_night_stalker"{
-		"override_hero"     "npc_dota_hero_night_stalker"
 		"SoundSet"			"Hero_NightStalker"
 		"Model"				"models/heroes/nightstalker/nightstalker_night.vmdl"
 		"AbilityLayout"     "16"
 		"Ability1" 			"reveal_area"
-		"Ability2" 			"attack_tree_skill"
-		"Ability3" 			"lord_of_lightning_chain_lightning"
-		"Ability4" 			"shadow_wave_datadriven_vimpire"
-		"Ability5"    	    "vampire_stomp"
-		"Ability6"    	    "vampire_crit"
+		"Ability2" 			"lord_of_lightning_chain_lightning"
+		"Ability3" 			"shadow_wave_datadriven_vimpire"
+		"Ability4" 			"vampire_stomp"
+		"Ability5"    	    "vampire_crit"
+		"Ability6"    	    ""
 		"Ability7"    	    ""
-		"Ability8"    	    ""
+		"Ability8"    	    "antiblock"
 		"Ability9"    	    ""
 		"Ability10"   	    ""
 		"Ability11"   	    ""
 		"Ability12"   	    ""
 		"Ability13"   	    ""
 		"Ability14"   	    ""
-		"Ability15"   	    "attribute_antibonuses"
-		"Ability16"   	    "antiblock"
+		"Ability15"   	    ""
+		"Ability16"   	    ""
+		"Ability17"   	    ""
+		"Ability18"   	    "attribute_antibonuses"
 		
 		"ArmorPhysical"       "24"                 // Physical protection.
 		"MagicalResistance"       "30"                 // Magical protection (percentage).
@@ -274,8 +275,8 @@
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "68000"                 // Base health.
-		"StatusHealthRegen"     "0.0"                 // Health regeneration rate.
-		"StatusMana"        "4000"                   // Base mana.
+		"StatusHealthRegen"     "0"                 // Health regeneration rate.
+		"StatusMana"        "0"                   // Base mana.
 		"StatusManaRegen"     "0"                 // Mana regeneration rate.
 		
 		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
@@ -438,17 +439,17 @@
 
     // Armor
     //-------------------------------------------------------------------------------------------------------------
-    "ArmorPhysical"       "2.2" // Physical protection.
+    "ArmorPhysical"       "23" // Physical protection.
 
     // Attack
     //-------------------------------------------------------------------------------------------------------------
     "AttackCapabilities"    "DOTA_UNIT_CAP_RANGED_ATTACK"
-    "AttackDamageMin"       "32" // Damage range min.
-    "AttackDamageMax"     "40" // Damage range max.
-    "AttackRate"        "1" // Speed of attack.
+    "AttackDamageMin"       "250" // Damage range min.
+    "AttackDamageMax"     "258" // Damage range max.
+    "AttackRate"        "0.5" // Speed of attack.
     "AttackAnimationPoint"    "0.3" // Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"  "600" // Range within a target can be acquired.
-    "AttackRange"         "180" // Range within a target can be attacked.
+    "AttackRange"         "1200" // Range within a target can be attacked.
     "ProjectileModel"       "" // Particle system model for projectile.
     "ProjectileSpeed"       "1000" // Speed of projectile.
 
@@ -456,11 +457,11 @@
     //-------------------------------------------------------------------------------------------------------------
     "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
     "AttributeBaseStrength"   "48" // Base strength
-    "AttributeStrengthGain"   "3" // Strength bonus per level.
+    "AttributeStrengthGain"   "48" // Strength bonus per level.
     "AttributeBaseIntelligence" "48" // Base intelligence
-    "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
+    "AttributeIntelligenceGain" "48" // Intelligence bonus per level.
     "AttributeBaseAgility"    "48" // Base agility
-    "AttributeAgilityGain"    "3" // Agility bonus per level.
+    "AttributeAgilityGain"    "48" // Agility bonus per level.
 
     // Movement
     //-------------------------------------------------------------------------------------------------------------
