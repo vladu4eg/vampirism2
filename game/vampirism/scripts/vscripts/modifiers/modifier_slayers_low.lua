@@ -69,31 +69,24 @@ function  modifier_slayers_low_aura:DeclareFunctions()
 	local funcs = {
         MODIFIER_PROPERTY_ATTACK_RANGE_BONUS,
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+		MODIFIER_PROPERTY_HEALTH_BONUS,
     }
     return funcs
 end
 
 
 function modifier_slayers_low_aura:GetModifierPreAttack_BonusDamage()
-	local target = self:GetParent()
-	
-	if target.atkdamage then
-		return target.atkdamage
-	else
-		return 0
-	end
+	return 100 + 300 * self:GetStackCount()
 end
 
-function  modifier_slayers_low_aura:GetModifierAttackRangeBonus()
-	local target = self:GetParent()
-	
-	if target.atkspeed then
-		return target.atkspeed
-	else
-		return 0
-	end
-	
+function modifier_slayers_low_aura:GetModifierAttackRangeBonus()
+	return 150 + 300 * self:GetStackCount()
 end
+
+function modifier_slayers_low_aura:GetModifierHealthBonus()
+	return 1000 + 3000 * self:GetStackCount()
+end
+
 
 
 function modifier_slayers_low_aura:OnCreated( kv )
@@ -107,29 +100,23 @@ function modifier_slayers_low_aura:OnCreated( kv )
 			print(target:GetUnitName())
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
 				local countStack = caster:FindModifierByName("modifier_slayers_low"):GetStackCount()
-				target.atkspeed = 150 + 300 * (countStack-1)
-				target:SetMaxHealth(target:GetMaxHealth() + (1000 + 3000 * (countStack-1)))
-				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + (1000 + 3000 * (countStack-1)))
-				target:SetHealth(target:GetHealth() + (1000 + 3000 * (countStack-1)))
-				target.atkdamage = 100 + 300 * (countStack-1)
-				
+				self:SetStackCount(countStack)
+				target:CalculateStatBonus(true)
+				self:ForceRefresh()
+				self:SendBuffRefreshToClients()
+				target:CalculateStatBonus(true)
+				self:StartIntervalThink( 1 )
+				self:OnIntervalThink()
 			end
 		end)
 		
 	end
 end
 
-function modifier_slayers_low_aura:OnRemoved(kv)
-	if IsServer() then
-		local caster = self:GetCaster()
-		local target = self:GetParent()
-		if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
-			local hp = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealth")) 
-			target:SetMaxHealth(hp)
-			target:SetBaseMaxHealth(hp)
-			target:SetHealth(hp)
-		end
-	end
+function modifier_slayers_low_aura:OnIntervalThink()
+	local target = self:GetParent()
+	target:CalculateStatBonus(true)
+	self:ForceRefresh()
+	self:SendBuffRefreshToClients()
+	target:CalculateStatBonus(true)
 end
-
-

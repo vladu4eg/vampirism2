@@ -200,16 +200,6 @@ function UpdateAbilityTooltips() {
                     var requirementsObject = upgradedUnitName.length > 0 && CustomNetTables.GetTableValue("buildings", (Players.GetLocalPlayer() + upgradedUnitName)) || {};
                     var requirementKeys = Object.keys(requirementsObject);
                     var reqText = "";
-                    if (requirementKeys.length > 0) {
-                        reqText = reqText + "Requirements:";
-                    }
-                    for (var requirementKey of requirementKeys) {
-                        reqText = reqText + "<br>" + $.Localize("#" + requirementsObject[requirementKey]);
-                    }
-                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = reqText != "" ? "visible" : "collapse";
-                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#FFA500";
-                    tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
-                    tooltipManager.FindChildTraverse('AbilityExtraDescription').text = reqText;
                     
                     var repair = (abilityName && (abilityName.indexOf("repair") > -1 || abilityName.indexOf("train") > -1)) && (CustomNetTables.GetTableValue("abilities", Entities.GetUnitName(selectedUnit)) || abilityName && CustomNetTables.GetTableValue("abilities", abilityName.substr(6)));
                     var repair_speed = repair && repair.speed || 0;
@@ -244,6 +234,22 @@ function UpdateAbilityTooltips() {
                         tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
                         tooltipManager.FindChildTraverse('AbilityExtraDescription').text = textLumer;
                     }
+
+                    if (requirementKeys.length > 0) {
+                        reqText = reqText + "Requirements:";
+                    }
+                    for (var requirementKey of requirementKeys) {
+                        reqText = reqText + "<br>" + $.Localize("#" + requirementsObject[requirementKey]);
+                    } 
+                    if (reqText != "")
+                    {
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.visibility = reqText != "" ? "visible" : "collapse";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.color = "#FFA500";
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').style.fontSize = '18px';
+                        tooltipManager.FindChildTraverse('AbilityExtraDescription').text = reqText;
+                    }
+                    tooltipManager.FindChildTraverse('SellPriceLabel').style.visibility = "collapse";
+                    tooltipManager.FindChildTraverse('SellPriceTimeLabel').style.visibility = "collapse";
                 }
             })(abilitySlot, buttonWell));
             abilityPanel.SetPanelEvent("onmouseout",

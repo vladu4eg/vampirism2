@@ -531,7 +531,7 @@ function SkillOnChannelSucceeded(event)
 		local stack = ability:GetLevel()
 		hero:RemoveModifierByName(skill_name)
 		Timers:CreateTimer(0.5,function()
-			hero:AddNewModifier(hero, nil, skill_name, {}):SetStackCount(stack)
+			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
 		end)
 		ability:SetLevel(stack+1)
 	end
@@ -634,6 +634,8 @@ function SpawnUnitOnChannelSucceeded(event)
 			slayer:SetControllableByPlayer(playerID,true)
 			--ability:SetHidden(true)
 			local playername = PlayerResource:GetPlayerName(playerID)
+			local abil2 = slayer:FindAbilityByName("slayer_blink")
+        	abil2:SetLevel(abil2:GetMaxLevel())
 			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
@@ -1041,6 +1043,55 @@ function HpRegenDestroy(keys)
 end
 
 
+
+function BuyItemSlayer(event)
+	local ability = event.ability
+	local caster = event.caster
+	local item_name = GetAbilityKV(ability:GetAbilityName()).ItemName
+	local gold_cost = GetItemKV(item_name)["AbilitySpecial"]["02"]["gold_cost"];
+	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
+	local playerID = caster:GetMainControllingPlayer()
+	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+
+	if not hero.slayer then
+		SendErrorMessage(playerID, "error_need_create_slayer")
+		ability:EndCooldown()
+		return
+	end
+
+	local origin_point = caster:GetAbsOrigin()
+	local target_point = hero.slayer:GetAbsOrigin()
+	local difference_vector = target_point - origin_point
+	
+	if difference_vector:Length2D() > 600 then  --Clamp the target point to the MaxBlinkRange range in the same direction.
+		SendErrorMessage(playerID, "error_not_shop_area")
+		ability:EndCooldown()
+		return
+	end
+
+	if gold_cost > PlayerResource:GetGold(playerID) then
+		SendErrorMessage(playerID, "error_not_enough_gold")
+		ability:EndCooldown()
+		return
+	end
+	if lumber_cost > PlayerResource:GetLumber(playerID) then
+		SendErrorMessage(playerID, "error_not_enough_lumber")
+		ability:EndCooldown()
+		return
+	end
+	if hero:GetNumItemsInInventory() >= 9 then
+	--	hero:DropStash()
+		SendErrorMessage(playerID, "error_full_inventory")
+		ability:EndCooldown()
+		return		
+	end
+	
+	PlayerResource:ModifyLumber(hero,-lumber_cost)
+	PlayerResource:ModifyGold(hero,-gold_cost)
+	local item = CreateItem(item_name, hero.slayer, hero.slayer)
+	
+	hero.slayer:AddItem(item)
+end
 
 function BuyItem(event)
 	local ability = event.ability
@@ -1625,6 +1676,8 @@ function PickAxe(keys)
 
 	if string.match(target:GetUnitName(), "gold_mine") then
 		ApplyDamage({victim = target, attacker = caster, damage = 999999, damage_type = DAMAGE_TYPE_PHYSICAL }) 
+	else
+		ability:EndCooldown()
 	end
 end
 

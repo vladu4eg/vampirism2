@@ -1,6 +1,7 @@
 
 local time = 60 
 function OnTelescope(event)
+	time = 60 
 	Timers:CreateTimer(time, function()
 	    local hero = event.caster
         if hero and time then
@@ -12,5 +13,5 @@ function OnTelescope(event)
 end
 
 function OnUnequip(event)
-	time = false
+	time = nil
 end

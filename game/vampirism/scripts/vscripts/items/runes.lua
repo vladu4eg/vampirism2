@@ -33,12 +33,13 @@ end
 
 function RuneGold(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
-	local value = 0
+	local value
 	if hero:IsElf() then
-		value = 5000 * math.ceil(GameRules:GetGameTime()/60)
+		value = RandomInt(1,3)
 	else
-		value = 75 * math.ceil(GameRules:GetGameTime()/60)
+		value = RandomInt(3,5)
 	end
+
 	PlayerResource:ModifyGold(hero, value, true)
 	SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, event.caster, value, nil )
 end

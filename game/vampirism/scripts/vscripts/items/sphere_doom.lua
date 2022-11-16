@@ -1,6 +1,7 @@
 LinkLuaModifier("modifier_hero_killer", "items/sphere_doom.lua",LUA_MODIFIER_MOTION_NONE)
 local time = 5 
 function OnEquipSphereDoom(event)
+    time = 5 
 	Timers:CreateTimer(time, function()
 		for pID=0,DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
@@ -27,7 +28,7 @@ function OnEquipSphereDoom(event)
 end
 
 function OnUnequip(event)
-	time = false
+	time = nil
 end
 
 modifier_hero_killer = class({})

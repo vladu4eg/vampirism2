@@ -6,19 +6,31 @@
 		"addon_game_name"			"VAMPIRISM 2"
 		
 		// ******************** HEROES ********************
-		"npc_dota_hero_omniknight"                                                  "Elf"
-		"npc_dota_hero_night_stalker"                                                   "VAMPIRE"
-		"npc_dota_hero_doom_bringer"                                                    "VAMPIRE"
-		"npc_dota_hero_life_stealer"                                                    "VAMPIRE"
-		"npc_dota_hero_slardar"                                                     	"VAMPIRE"
+		"npc_dota_hero_omniknight"                                                  	"Human"
+		"npc_dota_hero_night_stalker"                                                   "Vampire"
+		"npc_dota_hero_doom_bringer"                                                    "Vampire"
+		"npc_dota_hero_life_stealer"                                                    "Vampire"
+		"npc_dota_hero_slardar"                                                     	"Vampire"
 		
 		"npc_dota_hero_lycan"                                                             "Wolf"
 		"npc_dota_hero_crystal_maiden"                                                    "Angel"
 		"npc_dota_hero_dark_willow"                                                       "Forest Fairy"
 		"npc_dota_hero_bear"                                                    		  "Baby Bear"
 		"npc_dota_hero_night_stalker"                                                     "Night Hunter"
+		"npc_dota_hero_templar_assassin"                                                  "Slayer"
+		
 
 		// ******************** UNITS ********************
+		"blood_shop"																		"Blood Shop"
+		"summon_shop"																		"Summon Shop"
+		"black_shop"																		"Black Shop"
+		"demonic_shop"																		"Demonic Shop"
+		"gate_shop"																			"Imperial Shop"
+		"basic_shop"																		"Basic Shop"
+		"recipe_shop"																		"Recipe Shop"
+		"research_shop"																		"Book Store"
+
+
 
 		"house_1"                                                                            "Slayers Vault"
 		"house_2"                                                                            "Slayers Vault 2"
@@ -164,8 +176,8 @@
 		"wood_worker_4"                                                                        "Wood Worker 4"
 		"wood_worker_5"                                                                        "Wood Worker 5"
 
-		"build_worker_1"                                                                        "Build Worker 1"
-		"build_worker_2"                                                                        "Build Worker 2"
+		"build_worker_1"                                                                        "Build Worker Troll"
+		"build_worker_2"                                                                        "Build Worker Goblin"
 
 		"worker_1"                                                                        "Worker 1"
 		"worker_2"                                                                        "Worker 2"
@@ -597,12 +609,273 @@
 
 		// ******************** ITEM MODIFIERS ********************
 		"DOTA_Tooltip_ability_item_lia_hammer"	"Hammer"
-		"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>Passive: Mini-Bash</h1> Each attack has a %minibash_chance%%% chance to minibash and deal %bash_damage% damage."
-		"DOTA_Tooltip_ability_item_lia_hammer_bonus_damage"	"+$damage"
-		"DOTA_Tooltip_ability_item_lia_hammer_bonus_health"	"+$health"
-		"DOTA_Tooltip_ability_item_lia_hammer_bonus_strength"	"+$str"		
-		"DOTA_Tooltip_ability_item_lia_hammer_bonus_intelligence"	"+$int"	
+		"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>Passive: Mini-Bash</h1> Each attack has a %minibash_chance%%% chance to minibash."
+		"DOTA_Tooltip_ability_item_lia_hammer_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_lia_hammer_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_lia_hammer"	"Hammer"
+		"DOTA_Tooltip_ability_buy_item_lia_hammer_Description" "<h1>Passive: Mini-Bash</h1> Each attack has a %minibash_chance%%% chance to minibash."
+		"DOTA_Tooltip_ability_buy_item_lia_hammer_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_lia_hammer_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_golem_fire"				"Summon Golem 1"
+		"DOTA_Tooltip_Ability_item_golem_fire_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_fire_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_golem_fire_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_golem_fire"				"Summon Golem 1"
+		"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_fire_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_golem_fire_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_golem_stone"				"Summon Golem 2"
+		"DOTA_Tooltip_Ability_item_golem_stone_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_stone_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_golem_stone_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 		
+		"DOTA_Tooltip_Ability_buy_item_golem_stone"				"Summon Golem 2"
+		"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_stone_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_golem_stone_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_golem_flesh"				"Summon Golem 3"
+		"DOTA_Tooltip_Ability_item_golem_flesh_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_flesh_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_golem_flesh_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh"				"Summon Golem 3"
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_mirage_10"												 "Mirage LVL 1"
+		"DOTA_Tooltip_Ability_item_mirage_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_10_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_10_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_buy_item_mirage_10"												 "Mirage LVL 1"
+		"DOTA_Tooltip_Ability_buy_item_mirage_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_10_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_10_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_item_mirage_20"												 "Mirage LVL 2"
+		"DOTA_Tooltip_Ability_item_mirage_20_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_20_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_20_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_buy_item_mirage_20"												 "Mirage LVL 2"
+		"DOTA_Tooltip_Ability_buy_item_mirage_20_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_20_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_20_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_item_mirage_35"												 "Mirage LVL 3"
+		"DOTA_Tooltip_Ability_item_mirage_35_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_35_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_35_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_buy_item_mirage_35"												 "Mirage LVL 3"
+		"DOTA_Tooltip_Ability_buy_item_mirage_35_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_35_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_35_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_item_mirage_50"												 "Mirage LVL 4"
+		"DOTA_Tooltip_Ability_item_mirage_50_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_50_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_mirage_50_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_buy_item_mirage_50"												 "Mirage LVL 4"
+		"DOTA_Tooltip_Ability_buy_item_mirage_50_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_50_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mirage_50_bonus_evasion"										"%+$evasion"
+
+		"DOTA_Tooltip_Ability_item_clock_invis"												 "Cloak of invisibility"
+		"DOTA_Tooltip_Ability_item_clock_invis_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_clock_invis_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_clock_invis"												 "Cloak of invisibility"
+		"DOTA_Tooltip_Ability_buy_item_clock_invis_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_clock_invis_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage"					"Mask of Life and Death"
+		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description"	"<h1>Active: Berserk</h1> Gives bonus %berserk_bonus_movement_speed_percentage%%% movement speed and %berserk_bonus_attack_speed% attack speed, but the caster takes %berserk_extra_incoming_damage_percentage%%% extra damage. Increases damage by %bonus_damage% times. Lasts %berserk_duration% seconds. Owner takes %burn_damage% every second. The owner can die from the item.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%% chance to deal %crit_mult%%% additional damage."
+		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_lia_poleaxe_of_rage_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_lia_poleaxe_of_rage_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage"					"Mask of Life and Death"
+		"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_Description"	"<h1>Active: Berserk</h1> Gives bonus %berserk_bonus_movement_speed_percentage%%% movement speed and %berserk_bonus_attack_speed% attack speed, but the caster takes %berserk_extra_incoming_damage_percentage%%% extra damage. Increases damage by %bonus_damage% times. Lasts %berserk_duration% seconds. Owner takes %burn_damage% every second. The owner can die from the item.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%% chance to deal %crit_mult%%% additional damage."
+		"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_lia_poleaxe_of_rage_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_lia_poleaxe_of_rage_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_item_heart_blood"					"Human Heart"
+		"DOTA_Tooltip_ability_item_heart_blood_Description"	"<h1>Active: Berserk</h1> Gives bonus %berserk_bonus_movement_speed_percentage%%% movement speed and %berserk_bonus_attack_speed% attack speed, but the caster takes %berserk_extra_incoming_damage_percentage%%% extra damage. Increases damage by %bonus_damage% times. Lasts %berserk_duration% seconds. Owner takes %burn_damage% every second. The owner can die from the item.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%% chance to deal %crit_mult%%% additional damage."
+		"DOTA_Tooltip_ability_item_heart_blood_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_heart_blood_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_heart_blood_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_heart_blood"					"Human Heart"
+		"DOTA_Tooltip_ability_buy_item_heart_blood_Description"	"<h1>Active: Berserk</h1> Gives bonus %berserk_bonus_movement_speed_percentage%%% movement speed and %berserk_bonus_attack_speed% attack speed, but the caster takes %berserk_extra_incoming_damage_percentage%%% extra damage. Increases damage by %bonus_damage% times. Lasts %berserk_duration% seconds. Owner takes %burn_damage% every second. The owner can die from the item.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%% chance to deal %crit_mult%%% additional damage."
+		"DOTA_Tooltip_ability_buy_item_heart_blood_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_heart_blood_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_heart_blood_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_Ability_item_golden_hand"												 "Golden Hand"
+		"DOTA_Tooltip_Ability_item_golden_hand_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_golden_hand_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_golden_hand_Description" 		"With a 20% chance, you can get an additional 20 gold."
+
+		"DOTA_Tooltip_Ability_buy_item_golden_hand"												 "Golden Hand"
+		"DOTA_Tooltip_Ability_buy_item_golden_hand_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_golden_hand_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_golden_hand_Description" 		"With a 20% chance, you can get an additional 20 gold."
+
+		"DOTA_Tooltip_Ability_item_pulse_staff"				"Pulse Staff"
+		"DOTA_Tooltip_Ability_item_pulse_staff_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_item_pulse_staff_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_pulse_staff_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_pulse_staff_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff"				"Pulse Staff"
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_burst_gem"				"Fiery Comet"
+		"DOTA_Tooltip_Ability_item_burst_gem_Description"	"<h1>Active: Fireball</h1> Sends a fire blast at any unit without magic immunity."
+		"DOTA_Tooltip_Ability_item_burst_gem_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_burst_gem_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_burst_gem_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_burst_gem"				"Fiery Comet"
+		"DOTA_Tooltip_Ability_buy_item_burst_gem_Description"	"<h1>Active: Fireball</h1> Sends a fire blast at any unit without magic immunity."
+		"DOTA_Tooltip_Ability_buy_item_burst_gem_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_burst_gem_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_burst_gem_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_roketa"				"Death Rocket"
+		"DOTA_Tooltip_Ability_item_roketa_Description"	"<h1>Active: Missile</h1> Kills any unit without magic immunity. ONE TIME USE."
+		"DOTA_Tooltip_Ability_item_roketa_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_roketa_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_roketa_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_roketa"				"Death Rocket"
+		"DOTA_Tooltip_Ability_buy_item_roketa_Description"	"<h1>Active: Missile</h1> Kills any unit without magic immunity. ONE TIME USE."
+		"DOTA_Tooltip_Ability_buy_item_roketa_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_roketa_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_roketa_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+
+		"DOTA_Tooltip_Ability_item_immunity_shield"												 "Magic Immunity Shied"
+		"DOTA_Tooltip_Ability_item_immunity_shield_Description"										"The shield gives the wearer protection from magic."
+		"DOTA_Tooltip_Ability_item_immunity_shield_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_immunity_shield_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield"												 "Magic Immunity Shied"
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description"										"The shield gives the wearer protection from magic."
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_troll_teleport"												 "Blade of Teleport"
+		"DOTA_Tooltip_Ability_item_troll_teleport_Description"										"Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_item_troll_teleport_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_troll_teleport_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_troll_teleport"												 "Blade of Teleport"
+		"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description"										"Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_buy_item_troll_teleport_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_troll_teleport_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_item_demonic_remains"	"Necklace of Blood"
+		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Each unit killed gives you +10 to all stats."
+		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_demonic_remains_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_demonic_remains_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_demonic_remains"	"Necklace of Blood"
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Each unit killed gives you +10 to all stats."
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_gaunlets"	"Hand of Strength"
+		"DOTA_Tooltip_Ability_item_gaunlets_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_gaunlets_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_gaunlets_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_gaunlets_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_gaunlets_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_gaunlets"	"Hand of Strength"
+		"DOTA_Tooltip_ability_buy_item_gaunlets_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_gaunlets_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_gaunlets_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_buy_item_gaunlets_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_gaunlets_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_retardation"	"Retarded Ring"
+		"DOTA_Tooltip_Ability_item_retardation_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_retardation_bonus_int"	"-$int"
+		"DOTA_Tooltip_Ability_item_retardation_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_retardation_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_retardation"	"Retarded Ring"
+		"DOTA_Tooltip_ability_buy_item_retardation_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_retardation_bonus_int"	"-$int"
+		"DOTA_Tooltip_ability_buy_item_retardation_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_retardation_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+
+		"DOTA_Tooltip_Ability_item_kitty_claw"	"Glove with Сlaws"
+		"DOTA_Tooltip_Ability_item_kitty_claw_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_kitty_claw_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_kitty_claw_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_kitty_claw_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_Ability_item_kitty_claw_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_kitty_claw_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_kitty_claw"	"Glove with Сlaws"
+		"DOTA_Tooltip_ability_buy_item_kitty_claw_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_kitty_claw_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_kitty_claw_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_kitty_claw_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_ability_buy_item_kitty_claw_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_kitty_claw_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_pick_axe"	"Long Axe (Anti GM)"
+		"DOTA_Tooltip_Ability_item_pick_axe_Description"	"A long ax allows you to reach the gold mines, which are located on a hill. Disposable axe. USE ONLY ON GOLD MINES!"
+		"DOTA_Tooltip_Ability_buy_item_pick_axe"	"Long Axe (Anti GM)"
+		"DOTA_Tooltip_Ability_buy_item_pick_axe_Description"	"A long ax allows you to reach the gold mines, which are located on a hill. Disposable axe. USE ONLY ON GOLD MINES!"
+			
+		"DOTA_Tooltip_Ability_item_mask_undeath"												 "Bull Mark"
+		"DOTA_Tooltip_Ability_item_mask_undeath_Description"									"Blocks %bonus_block% damage."
+		"DOTA_Tooltip_Ability_item_mask_undeath_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_mask_undeath_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_mask_undeath_bonus_evasion"										"%+$evasion"
+		"DOTA_Tooltip_Ability_item_mask_undeath_bonus_armor"										"+$armor"
+
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath"												 "Bull Mark"
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_Description"									"Blocks %bonus_block% damage."
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_bonus_evasion"										"%+$evasion"
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_bonus_armor"										"+$armor"
+
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2"				"Axe"
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description"	"<h1>Active: Tree Felling</h1>Cut down one tree. Disposable axe. Useful with Doom Orb.."
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2"				"Axe"
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description"	"<h1>Active: Tree Felling</h1>Cut down one tree. Disposable axe. Useful with Doom Orb.."
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven"                                  "Darkness Aura Datadriven"
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven_Description"                      ""
 
@@ -638,27 +911,6 @@
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Tent 3"
 		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent! Gives 300 food."
-
-		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Tent 4"
-		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent! X1:8 or X2:16 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_tent_5"                                          "Tent 5"
-		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Upgrade your tent! X1:16 or X2:32 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_tent_6"                                          "Tent 6"
-		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Upgrade your tent! X1:32 or X2:64 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_tent_7"                                          "Tent 7"
-		"DOTA_Tooltip_ability_upgrade_to_tent_7_Description"                              "Upgrade your tent! X1:64 or X2:128 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_barracks_1"                                      "Barracks 1"
-		"DOTA_Tooltip_ability_upgrade_to_barracks_1_Description"                          "Upgrade your tent! X1:128 or X2:256 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_barracks_2"                                      "Barracks 2"
-		"DOTA_Tooltip_ability_upgrade_to_barracks_2_Description"                          "Upgrade your barracks! X1:256 or X2:512 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_barracks_3"                                      "Barracks 3"
-		"DOTA_Tooltip_ability_upgrade_to_barracks_3_Description"                          "Upgrade your barracks! X1:512 or X2:1024 gold per/sec"
 
 		"DOTA_Tooltip_ability_gain_gold"                                                  "Gain Gold"
 		"DOTA_Tooltip_ability_gain_gold_Description"                                      "Gives certain amount of gold every second"
@@ -1101,57 +1353,6 @@
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_2"                                         "Upgrade Research Lab 2"
 		"DOTA_Tooltip_ability_upgrade_to_research_lab_2_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
 		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_3"                                         "Upgrade Research Lab 3"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_3_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_1"                                         "Upgrade Research Lab 4 LVL 1"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_1_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_2"                                         "Upgrade Research Lab 4 LVL 2"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_2_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_3"                                         "Upgrade Research Lab 4 LVL 3"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_3_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_4"                                         "Upgrade Research Lab 4 LVL 4"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_4_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_5"                                         "Upgrade Research Lab 4 LVL 5"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_4_5_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_1"                                         "Upgrade Research Lab 5 LVL 1"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_1_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_2"                                         "Upgrade Research Lab 5 LVL 2"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_2_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_3"                                         "Upgrade Research Lab 5 LVL 3"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_3_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_4"                                         "Upgrade Research Lab 5 LVL 4"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_4_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_5"                                         "Upgrade Research Lab 5 LVL 5"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_5_5_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_1"                                         "Upgrade Research Lab 6 LVL 1"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_1_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_2"                                         "Upgrade Research Lab 6 LVL 2"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_2_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_3"                                         "Upgrade Research Lab 6 LVL 3"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_3_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_4"                                         "Upgrade Research Lab 6 LVL 4"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_4_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_5"                                         "Upgrade Research Lab 6 LVL 5"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_6_5_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_7_1"                                         "Upgrade Research Lab 7"
-		"DOTA_Tooltip_ability_upgrade_to_research_lab_7_1_Description"                             "Upgrade research laboratory. It is necessary to improve your towers to a better level! "
-		
 		"DOTA_Tooltip_Ability_slayer_blink"								"Blink"
 		"DOTA_Tooltip_Ability_slayer_blink_Description"					"A universal blink"
 		"DOTA_Tooltip_Ability_slayer_ensnare"								"Ensnare"
@@ -1344,15 +1545,7 @@
 		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning_cooldown_scepter"	"STAFF COOLDOWN:"
 		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning_manacost_scepter"	"STAFF MANACOST:"
 		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning_aghanim_description"	"Increases number of target and damage growth and reduces cooldown, but also increases manacost."	
-
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn"	"Soul Burn"
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_Description"	"Wreaths an enemy unit in magical flames which cause damage over time, prevent the casting of spells, and reduce attack damage. Woven from Blood also gets his attack speed dramatically increased."
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_damage"	"DAMAGE PER SECOND:"		
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_damage_penalty_percentage"	"%DAMAGE REDUCTION:"						
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_bonus_attack_speed"	"BONUS ATTACK SPEED:"		
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_bonus_buff_duration"	"BUFF DURATION:"		
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_duration_hero"	"NEGATIVE EFFECT HERO DURATION:"						
-		"DOTA_Tooltip_ability_vowen_from_blood_soul_burn_duration_creep"	"NEGATIVE EFFECT CREEP DURATION:"				
+			
 
 		"DOTA_Tooltip_voven_from_blood_soul_burn_debuff"	"Soul Burn"
 		"DOTA_Tooltip_voven_from_blood_soul_burn_debuff_Description"	"This unit is silenced and he has his damage decreased."
@@ -1432,80 +1625,73 @@
 		"DOTA_Tooltip_Ability_gather_lumber_worker_Description"                                "Use this ability on a tree. Gives Lumber every 5 seconds.  "
 		"DOTA_Tooltip_Ability_gather_lumber_worker_lumber_interval"                            "LUMBER INTERVAL: "
 
-		"DOTA_Tooltip_ability_gather_lumber_8"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_8_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_8_lumber_interval"                            "LUMBER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_4"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_4_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_4_lumber_interval"                            "LUMBER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_2"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_2_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_2_lumber_interval"                            "LUMBER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_1"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_1_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_1_lumber_interval"                            "LUMBER INTERVAL: "
-		
-		"DOTA_Tooltip_ability_gather_lumber_6"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_6_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_6_lumber_interval"                            "LUMBER INTERVAL: "
-		
-		"DOTA_Tooltip_ability_gather_lumber_36"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_36_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_36_lumber_interval"                            "LUMBER INTERVAL: "
-		
-		"DOTA_Tooltip_ability_gather_lumber_216"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_216_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_216_lumber_interval"                            "LUMBER INTERVAL: "
-		
-		"DOTA_Tooltip_ability_gather_lumber_1296"                                            "Gather Lumber"
-		"DOTA_Tooltip_ability_gather_lumber_1296_Description"                                "Use this ability on a tree. Gives 'Lumber amount' every 'Gather interval' seconds. A tree can only be occupied by one Wisp! "
-		"DOTA_Tooltip_ability_gather_lumber_1296_lumber_interval"                            "LUMBER INTERVAL: "
-		
-		"DOTA_Tooltip_Ability_train_skill_hp_wood"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_hp_wood_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_hp_wood"                                             "Research HP for lumberjacks"
+		"DOTA_Tooltip_Ability_train_skill_hp_wood_Description"                                 "The increase in health will protect your lumberjacks from the magic skills of vampires."
 		"DOTA_Tooltip_Ability_train_skill_hp_wood_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_wood_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_wood_skill_count"                                   "WOOD WORKER HP: "
 	
-		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20"                                             "Research HP for Wall"
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_Description"                                 "Improve the characteristics of your wall to protect against Vampires. Stats are increased by 20% for each upgrade from the wall's base health."
 		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_skill_count"                                   "WALL HP%:  "
 
-		"DOTA_Tooltip_Ability_train_skill_range_towers"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_range_towers_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_range_towers"                                             "Research Range Attack for Wall"
+		"DOTA_Tooltip_Ability_train_skill_range_towers_Description"                                 "Learn to increase attack range for killing Vampires."
 		"DOTA_Tooltip_Ability_train_skill_range_towers_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_range_towers_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_range_towers_skill_count"                                   "TOWER RANGE:  "
 
-		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc"                                             "Research HP Regen for Wall"
+		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_Description"                                 "The upgrade works on walls that have regeneration above 1000 per second. Does not work on weak walls."
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_skill_count"                                   "REGEN ROCK:  "
+		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_skill_count"                                   "REGEN WALL:  "
 
-		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls"                                             "Research Mana Regen for Buff Tower"
+		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_Description"                                 "Increased mana regeneration for Buff Tower will allow you to use active skills more often."
 		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_skill_count"                                  "MANA REGEN:  "
 
-		"DOTA_Tooltip_Ability_train_skill_slayers_low"                                             "Train Wood Worker 121312"
-		"DOTA_Tooltip_Ability_train_skill_slayers_low_Description"                                 "Train3123123213 worker. Workers e312321321xtract wood/lumber."
+		"DOTA_Tooltip_Ability_train_skill_slayers_low"                                             "Slayer Training"
+		"DOTA_Tooltip_Ability_train_skill_slayers_low_Description"                                 "Increases the stats of your slayer."
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_damage"                                  		"DAMAGE:  "
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_health"                                  		"HEALTH:  "
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_attack_range"                                  "RANGE:  "
 		
+		"DOTA_Tooltip_Ability_train_skill_damage_tower"                                             "Research Damage for Tower"
+		"DOTA_Tooltip_Ability_train_skill_damage_tower_Description"                                 "You can improve the attack of your towers and kill the Vampire."
+		"DOTA_Tooltip_Ability_train_skill_damage_tower_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_damage_tower_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_damage_tower_skill_count"                                  "TOWER DAMAGE:  "
+
+		"DOTA_Tooltip_Ability_train_skill_armor_wall"                                             "Research Armor for Wall"
+		"DOTA_Tooltip_Ability_train_skill_armor_wall_Description"                                 "Upgrades wall armor by 20% of base armor value."
+		"DOTA_Tooltip_Ability_train_skill_armor_wall_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_armor_wall_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_armor_wall_skill_count"                                  "ARMOR WALL:  "
+
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower"                                             "Research HP/Regen for Tower"
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_Description"                                 "Strengthen your towers so that the Vampire cannot break them with his active skill."
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_health"                                  	"TOWER HEALTH:  "
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_regen"                                  		"TOWER REGEN:  "
+
+		"DOTA_Tooltip_Ability_train_skill_hp_elf"                                             "Human training"
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_Description"                                 "DON'T FORGET TO IMPROVE HUMAN HEALTH. This will save your life."
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_skill_count"                                  "HP HUMAN:  "
+
 
 		
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin"                                             "Train Slayer"
-		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_Description"                                 "The killer gains experience every minute at a certain location on the map. The killer can steal a gold coin from the Vampire or defend your base."
+		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_Description"                                 "The killer gains experience every minute at a certain location on the map. The killer can steal a gold coin from the Vampire or defend your base. You can resurrect Slayer at the Slayer Tavern."
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_food_cost"                                   "FOOD COST: "
@@ -1562,277 +1748,6 @@
 		"DOTA_Tooltip_Ability_train_build_worker_2_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_build_worker_2_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_Ability_train_build_worker_2_unit_count"                                  "UNIT COUNT: "
-
-		
-
-		"DOTA_Tooltip_ability_train_worker_1"                                             "Train Worker 1"
-		"DOTA_Tooltip_ability_train_worker_1_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_1_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_1_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_1_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_1_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_2"                                             "Train Worker 2"
-		"DOTA_Tooltip_ability_train_worker_2_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_2_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_2_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_2_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_2_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_3"                                             "Train Worker 3"
-		"DOTA_Tooltip_ability_train_worker_3_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_3_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_3_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_3_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_3_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_4"                                             "Train Worker 4"
-		"DOTA_Tooltip_ability_train_worker_4_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_4_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_4_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_4_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_4_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_5"                                             "Train Worker 5"
-		"DOTA_Tooltip_ability_train_worker_5_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_5_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_5_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_5_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_5_unit_count"                                  "UNIT COUNT: "
-		
-		"DOTA_Tooltip_ability_train_worker_6"                                             "Train Worker 6"
-		"DOTA_Tooltip_ability_train_worker_6_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_6_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_6_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_6_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_6_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_7"                                             "Train Worker 7"
-		"DOTA_Tooltip_ability_train_worker_7_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_7_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_7_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_7_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_7_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_8"                                             "Train Worker 8"
-		"DOTA_Tooltip_ability_train_worker_8_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_8_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_8_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_8_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_8_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_worker_9"                                             "Train Worker 9"
-		"DOTA_Tooltip_ability_train_worker_9_Description"                                 "Train worker. Workers are great for repairing buildings! Repair speed depends on worker's damage. "
-		"DOTA_Tooltip_ability_train_worker_9_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_9_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_worker_9_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_9_unit_count"                                  "UNIT COUNT: "
-
-
-		"DOTA_Tooltip_ability_train_attacker_1"                                             "Train Worker 1"
-		"DOTA_Tooltip_ability_train_attacker_1_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_1_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_1_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_1_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_1_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_2"                                             "Train Worker 2"
-		"DOTA_Tooltip_ability_train_attacker_2_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_2_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_2_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_2_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_2_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_3"                                             "Train Worker 3"
-		"DOTA_Tooltip_ability_train_attacker_3_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_3_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_3_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_3_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_3_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_4"                                             "Train Worker 4"
-		"DOTA_Tooltip_ability_train_attacker_4_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_4_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_4_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_4_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_4_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_5"                                             "Train Worker 5"
-		"DOTA_Tooltip_ability_train_attacker_5_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_5_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_5_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_5_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_5_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_6"                                             "Train Worker 6"
-		"DOTA_Tooltip_ability_train_attacker_6_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_6_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_6_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_6_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_6_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_7"                                             "Train Worker 7"
-		"DOTA_Tooltip_ability_train_attacker_7_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_7_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_7_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_7_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_7_unit_count"                                  "UNIT COUNT: "
-		
-		"DOTA_Tooltip_ability_train_attacker_8"                                             "Train Worker 8"
-		"DOTA_Tooltip_ability_train_attacker_8_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_8_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_8_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_8_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_8_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_9"                                             "Train Worker 9"
-		"DOTA_Tooltip_ability_train_attacker_9_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_9_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_9_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_9_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_9_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_10"                                             "Train Worker 10"
-		"DOTA_Tooltip_ability_train_attacker_10_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_10_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_10_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_10_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_10_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_11"                                             "Train Worker 11"
-		"DOTA_Tooltip_ability_train_attacker_11_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_11_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_11_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_11_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_11_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_attacker_12"                                             "Train Worker 12"
-		"DOTA_Tooltip_ability_train_attacker_12_Description"                                 "To battle!!! Death to enemy elves! The skin of the Vampire will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_12_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_12_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_attacker_12_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_12_unit_count"                                  "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_1"                                               "Train Son of Nature 1"
-		"DOTA_Tooltip_ability_train_wisp_1_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_1_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_1_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_1_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_1_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_2"                                               "Train Son of Nature 2"
-		"DOTA_Tooltip_ability_train_wisp_2_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_2_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_2_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_2_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_2_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_3"                                               "Train Son of Nature 3"
-		"DOTA_Tooltip_ability_train_wisp_3_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_3_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_3_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_3_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_3_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_4"                                               "Train Son of Nature 4"
-		"DOTA_Tooltip_ability_train_wisp_4_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_4_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_4_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_4_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_4_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_5"                                               "Train Son of Nature 5"
-		"DOTA_Tooltip_ability_train_wisp_5_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_5_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_5_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_5_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_5_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_6"                                               "Train Son of Nature 6"
-		"DOTA_Tooltip_ability_train_wisp_6_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_6_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_6_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_6_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_6_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_7"                                               "Train Son of Nature 7"
-		"DOTA_Tooltip_ability_train_wisp_7_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_7_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_7_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_7_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_7_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_8"                                               "Train Son of Nature 8"
-		"DOTA_Tooltip_ability_train_wisp_8_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_8_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_8_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_8_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_8_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_9"                                               "Upgrade WISP 9"
-		"DOTA_Tooltip_ability_train_wisp_9_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_9_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_9_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_9_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_9_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_10"                                               "Upgrade WISP 10"
-		"DOTA_Tooltip_ability_train_wisp_10_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_10_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_10_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_10_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_10_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_11"                                               "Upgrade WISP 11"
-		"DOTA_Tooltip_ability_train_wisp_11_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_11_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_11_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_11_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_11_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_12"                                               "Upgrade WISP 12"
-		"DOTA_Tooltip_ability_train_wisp_12_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_12_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_12_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_12_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_12_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_13"                                               "Upgrade WISP 13"
-		"DOTA_Tooltip_ability_train_wisp_13_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_13_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_13_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_13_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_13_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_14"                                               "Upgrade WISP 14"
-		"DOTA_Tooltip_ability_train_wisp_14_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_14_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_14_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_14_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_14_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_wisp_15"                                               "Upgrade WISP 15"
-		"DOTA_Tooltip_ability_train_wisp_15_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
-		"DOTA_Tooltip_ability_train_wisp_15_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_15_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_wisp_15_food_cost"                                     "FOOD COST: "
-		"DOTA_Tooltip_ability_train_wisp_15_unit_count"                                    "UNIT COUNT: "
-
-		"DOTA_Tooltip_ability_train_gold_wisp"                                            "Train Gold Wisp"
-		"DOTA_Tooltip_ability_train_gold_wisp_Description"                                "Train Gold Wisp. Gold Wisps are able to build additional gold mines, but sacrifice themselves in the process."
-		"DOTA_Tooltip_ability_train_gold_wisp_gold_cost"                                  "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_train_gold_wisp_lumber_cost"                                "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_ability_train_gold_wisp_food_cost"                                  "FOOD COST: "
-		"DOTA_Tooltip_ability_train_gold_wisp_unit_count"                                 "UNIT COUNT: "
 	
 		"DOTA_Tooltip_ability_reveal_area_radius"                                         "RADIUS: "
 		"DOTA_Tooltip_ability_reveal_area_duration"                                       "DURATION: "
@@ -1882,25 +1797,6 @@
 		"DOTA_Tooltip_ability_gold_mine_ability_Description"                              ""
 		"DOTA_Tooltip_ability_gold_mine_ability_gold_interval"                            "GOLD INTERVAL: "
 
-
-
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_2"                                     "Vampire Hut 2"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_2_Description"                         ""
-
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_3"                                     "Vampire Hut 3"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_3_Description"                         ""
-
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_4"                                     "Vampire Hut 4"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_4_Description"                         ""
-
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_5"                                     "Vampire Hut 5"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_5_Description"                         "Attack speed +600 and reveals the appearance of a Vampire."
-
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_6"                                     "Vampire Hut 6"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_6_Description"                         "Allows you to buy a lumber all over the map."
-		
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_7"                                     "Vampire Hut 7"
-		"DOTA_Tooltip_ability_upgrade_to_troll_hut_7_Description"                         "Allows you to create a Bear."
 
 		"DOTA_Tooltip_ability_build_gold_mine_1"                                          "Build Gold Mine 1"
 		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
@@ -1974,18 +1870,6 @@
 
 		"DOTA_Tooltip_ability_troll_range"                                                "Vampire Range"
 		"DOTA_Tooltip_ability_troll_range_Description"                                    ""
-		
-		"DOTA_Tooltip_ability_gather_lumber_36_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-		"DOTA_Tooltip_ability_gather_lumber_6_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-		"DOTA_Tooltip_ability_gather_lumber_216_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-		"DOTA_Tooltip_ability_gather_lumber_1296_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-		"DOTA_Tooltip_ability_gather_lumber_8_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_4_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_2_lumber_per_interval"                        "LUMBER PER INTERVAL: "
-
-		"DOTA_Tooltip_ability_gather_lumber_1_lumber_per_interval"                        "LUMBER PER INTERVAL: "
 
 		"DOTA_Tooltip_ability_buy_item_dmg_7"                                             "Buy Sword Lv 7"
 		"DOTA_Tooltip_ability_buy_item_dmg_7_Description"                                 ""
@@ -2022,141 +1906,28 @@
 
 		"DOTA_Tooltip_ability_buy_item_armor_1"                                           "Buy Armor Lv 1"
 		"DOTA_Tooltip_ability_buy_item_armor_1_Description"                               ""
+		"DOTA_Tooltip_ability_buy_item_armor_1_bonus_armor"								  "+$armor"
 
 		"DOTA_Tooltip_ability_buy_item_armor_2"                                           "Buy Armor Lv 2"
 		"DOTA_Tooltip_ability_buy_item_armor_2_Description"                               ""
+		"DOTA_Tooltip_ability_buy_item_armor_2_bonus_armor"								  "+$armor"
 
 		"DOTA_Tooltip_ability_buy_item_armor_3"                                           "Buy Armor Lv 3"
 		"DOTA_Tooltip_ability_buy_item_armor_3_Description"                               ""
+		"DOTA_Tooltip_ability_buy_item_armor_3_bonus_armor"								  "+$armor"
 
 		"DOTA_Tooltip_ability_buy_item_armor_4"                                           "Buy Armor Lv 4"
 		"DOTA_Tooltip_ability_buy_item_armor_4_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_5"                                           "Buy Armor Lv 5"
-		"DOTA_Tooltip_ability_buy_item_armor_5_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_6"                                           "Buy Armor Lv 6"
-		"DOTA_Tooltip_ability_buy_item_armor_6_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_7"                                           "Buy Armor Lv 7"
-		"DOTA_Tooltip_ability_buy_item_armor_7_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_8"                                           "Buy Armor Lv 8"
-		"DOTA_Tooltip_ability_buy_item_armor_8_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_9"                                           "Buy Armor Lv 9"
-		"DOTA_Tooltip_ability_buy_item_armor_9_Description"                               ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_10"                                          "Buy Armor Lv 10"
-		"DOTA_Tooltip_ability_buy_item_armor_10_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_11"                                          "Buy Armor Lv 11"
-		"DOTA_Tooltip_ability_buy_item_armor_11_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_12"                                          "Buy Armor Lv 12"
-		"DOTA_Tooltip_ability_buy_item_armor_12_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_armor_13"                                          "Buy Armor of God"
-		"DOTA_Tooltip_ability_buy_item_armor_13_Description"                              "HP: 199500<br>REGEN: 10000"
-
-		"DOTA_Tooltip_ability_buy_item_armor_14"                                          "Buy Master's Armor"
-		"DOTA_Tooltip_ability_buy_item_armor_14_Description"                              "HP: 249500<br>REGEN: 20000<br>MAGICAL RESIST: 50<br>"
-
-		"DOTA_Tooltip_ability_buy_item_hp_1"                                              "Buy HP  Lv 1"
-		"DOTA_Tooltip_ability_buy_item_hp_1_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_2"                                              "Buy HP  Lv 2"
-		"DOTA_Tooltip_ability_buy_item_hp_2_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_3"                                              "Buy HP  Lv 3"
-		"DOTA_Tooltip_ability_buy_item_hp_3_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_4"                                              "Buy HP  Lv 4"
-		"DOTA_Tooltip_ability_buy_item_hp_4_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_5"                                              "Buy HP  Lv 5"
-		"DOTA_Tooltip_ability_buy_item_hp_5_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_6"                                              "Buy HP  Lv 6"
-		"DOTA_Tooltip_ability_buy_item_hp_6_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_7"                                              "Buy HP  Lv 7"
-		"DOTA_Tooltip_ability_buy_item_hp_7_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_8"                                              "Buy HP  Lv 8"
-		"DOTA_Tooltip_ability_buy_item_hp_8_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_9"                                              "Buy HP  Lv 9"
-		"DOTA_Tooltip_ability_buy_item_hp_9_Description"                                  ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_10"                                             "Buy HP  Lv 10"
-		"DOTA_Tooltip_ability_buy_item_hp_10_Description"                                 ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_11"                                             "Buy HP  Lv 11"
-		"DOTA_Tooltip_ability_buy_item_hp_11_Description"                                 ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_12"                                             "Buy HP  Lv 12"
-		"DOTA_Tooltip_ability_buy_item_hp_12_Description"                                 ""   
-
-		"DOTA_Tooltip_ability_buy_item_hp_13"                                             "Buy HP  Lv 13"
-		"DOTA_Tooltip_ability_buy_item_hp_13_Description"                                 ""   
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_1"                                          "Buy HP Reg.  Lv 1"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_1_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_2"                                          "Buy HP Reg.  Lv 2"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_2_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_3"                                          "Buy HP Reg.  Lv 3"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_3_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_4"                                          "Buy HP Reg.  Lv 4"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_4_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy HP Reg.  Lv 5"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_5_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy HP Reg.  Lv 6"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_6_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_7"                                          "Buy HP Reg.  Lv 7"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_7_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_8"                                          "Buy HP Reg.  Lv 8"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_8_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_9"                                          "Buy HP Reg.  Lv 9"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_9_Description"                              ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_10"                                         "Buy HP Reg.  Lv 10"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_10_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_hp_reg_11"                                         "Buy HP Reg.  Lv 11"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_11_Description"                             ""
+		"DOTA_Tooltip_ability_buy_item_armor_4_bonus_armor"								  "+$armor"
 		
-		"DOTA_Tooltip_ability_buy_item_hp_reg_12"                                         "Buy HP Reg.  Lv 12"
-		"DOTA_Tooltip_ability_buy_item_hp_reg_12_Description"                             ""
 
-		"DOTA_Tooltip_ability_buy_item_atk_spd_1"                                         "Buy Atk. Speed Lv 1"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_1_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_atk_spd_2"                                         "Buy Atk. Speed Lv 2"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_2_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_atk_spd_3"                                         "Buy Atk. Speed Lv 3"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_3_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_atk_spd_4"                                         "Buy Atk. Speed Lv 4"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_4_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_atk_spd_5"                                         "Buy Atk. Speed Lv 5"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_5_Description"                             ""
-
-		"DOTA_Tooltip_ability_buy_item_atk_spd_6"                                         "Buy Atk. Speed Lv 6"
-		"DOTA_Tooltip_ability_buy_item_atk_spd_6_Description"                             ""
+		
 		
 		"DOTA_Tooltip_ability_buy_item_troll_boots"                                         "Buy Vampire Boots"
-		"DOTA_Tooltip_ability_buy_item_troll_boots_Description"                             ""
+		"DOTA_Tooltip_ability_buy_item_troll_boots_Description"                             "Increase running speed by %bonus_ms%%%"
+		"DOTA_Tooltip_ability_buy_item_troll_boots_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_troll_boots_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		
 		
 		"DOTA_Tooltip_Ability_buy_skill_bear_movespeed"                                         "Buy Bear Passive Skill Movespeed"
 		"DOTA_Tooltip_Ability_buy_skill_bear_movespeed_Description"                             "+150 to movement speed."
@@ -2188,7 +1959,119 @@
 		"DOTA_Tooltip_ability_sell_lumber_8"                                              "Sell 80000 Lumber"
 		"DOTA_Tooltip_ability_sell_lumber_8_Description"                                  "Sell 80000 lumber for 10 gold"
 
+		"item_lia_healing_ward_unit"	"Healing Ward"
+		"DOTA_Tooltip_ability_item_lia_healing_ward"	"Healing Wards"
+		"DOTA_Tooltip_ability_item_lia_healing_ward_Description"	"<h1>Use: </h1>Summons a ward that increases health regeneration of nearby allies by %heal_percent_tooltip%%%.<br>Lasts %duration% seconds."
+
+		"DOTA_Tooltip_ability_healing_ward_ability"  "Heal"
+		"DOTA_Tooltip_ability_healing_ward_ability_Description"	"Allies in a 500 radius gain bonus health regeneration. Regeneration is equal to 3%% of max health of a unit."
+
+		"DOTA_Tooltip_modifier_healing_ward_ability_effect"  "Heal"
+		"DOTA_Tooltip_modifier_healing_ward_ability_effect_Description"	"This unit has his regeneration increased."
+
+		"DOTA_Tooltip_ability_item_blood_soul_burn"	"Soul Burn"
+		"DOTA_Tooltip_ability_item_blood_soul_burn_Description"	"Wreaths an enemy unit in magical flames which cause damage over time, prevent the casting of spells, and reduce attack damage. Soul Burn also gets his attack speed dramatically increased."
+		"DOTA_Tooltip_ability_item_blood_soul_burn_damage"	"DAMAGE PER SECOND:"		
+		"DOTA_Tooltip_ability_item_blood_soul_burn_damage_penalty_percentage"	"%DAMAGE REDUCTION:"						
+		"DOTA_Tooltip_ability_item_blood_soul_burn_bonus_attack_speed"	"BONUS ATTACK SPEED:"		
+		"DOTA_Tooltip_ability_item_blood_soul_burn_bonus_buff_duration"	"BUFF DURATION:"		
+		"DOTA_Tooltip_ability_item_blood_soul_burn_duration_hero"	"NEGATIVE EFFECT HERO DURATION:"						
+		"DOTA_Tooltip_ability_item_blood_soul_burn_duration_creep"	"NEGATIVE EFFECT CREEP DURATION:"
+		"DOTA_Tooltip_Ability_item_blood_soul_burn_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_blood_soul_burn_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn"	"Soul Burn"
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_Description"	"Wreaths an enemy unit in magical flames which cause damage over time, prevent the casting of spells, and reduce attack damage. Soul Burn also gets his attack speed dramatically increased."
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_damage"	"DAMAGE PER SECOND:"		
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_damage_penalty_percentage"	"%DAMAGE REDUCTION:"						
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_bonus_attack_speed"	"BONUS ATTACK SPEED:"		
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_bonus_buff_duration"	"BUFF DURATION:"		
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_duration_hero"	"NEGATIVE EFFECT HERO DURATION:"						
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_duration_creep"	"NEGATIVE EFFECT CREEP DURATION:"
+		"DOTA_Tooltip_Ability_buy_item_blood_soul_burn_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_blood_soul_burn_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
 		
+
+		"DOTA_Tooltip_Ability_item_sphere_doom"										"Sphere of Doom"
+		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"An orb that gives 5 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
+		"DOTA_Tooltip_Ability_item_sphere_doom_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_sphere_doom_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_sphere_doom_max_blink_range"                     "RANGE BLINK:"
+
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom"										"Sphere of Doom"
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"An orb that gives 5 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_max_blink_range"                     "RANGE BLINK:"
+
+		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability"	"Potion of Invulnerability"
+		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability_Description"	"<h1>Use: Invulnerability</h1>Grants Invulnerability for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_lia_potion_of_invulnerability"	"Potion of Invulnerability"
+		"DOTA_Tooltip_Ability_buy_lia_potion_of_invulnerability_Description"	"<h1>Use: Invulnerability</h1>Grants Invulnerability for %duration% seconds."
+		"DOTA_Tooltip_Ability_buy_lia_potion_of_invulnerability_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_lia_potion_of_invulnerability_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_modifier_potion_of_invulnerability"	"Potion of Invulnerability"
+		"DOTA_Tooltip_modifier_potion_of_invulnerability_Description" "This unit is invulnerable."
+
+		
+		"DOTA_Tooltip_ability_item_lia_fire_gloves"	"Fire Gloves"
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_Description"	"<h1>Toggle: Immolation </h1>Engulfs the hero in flames, dealing %damage_per_second% damage per second to enemies in a %radius% radius. <br>Drains %mana_cost_per_second% mana per second."
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_bonus_attack_speed"	"+$attack"
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_bonus_mana"	"+$mana"	
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves"	"Fire Gloves"
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_Description"	"<h1>Toggle: Immolation </h1>Engulfs the hero in flames, dealing %damage_per_second% damage per second to enemies in a %radius% radius. <br>Drains %mana_cost_per_second% mana per second."
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_bonus_attack_speed"	"+$attack"
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_bonus_mana"	"+$mana"	
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_modifier_immolation"	"Fire Gloves"
+
+		"DOTA_Tooltip_ability_item_lia_magic_helm"	"Magic Helm"
+		"DOTA_Tooltip_ability_item_lia_magic_helm_Description"	""
+		"DOTA_Tooltip_ability_item_lia_magic_helm_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_item_lia_magic_helm_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_item_lia_magic_helm_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_item_lia_magic_helm_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_lia_magic_helm_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm"	"Magic Helm"
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_Description"	""
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_lia_magic_helm_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_item_doom_armor"						"Armor of the Devil."
+		"DOTA_Tooltip_ability_item_doom_armor_Description"	"HP: 1 200 000"
+		"DOTA_Tooltip_ability_item_doom_armor_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_item_doom_armor_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_item_doom_armor_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_item_doom_armor_bonus_hp"		"+$health"
+		"DOTA_Tooltip_ability_item_doom_armor_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_doom_armor_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_doom_armor"					"Armor of the Devil."
+		"DOTA_Tooltip_ability_buy_item_doom_armor_Description"	"HP: 1 200 000"
+		"DOTA_Tooltip_ability_buy_item_doom_armor_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_doom_armor_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_doom_armor_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_buy_item_doom_armor_bonus_hp"	"+$health"
+		"DOTA_Tooltip_ability_buy_item_doom_armor_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_doom_armor_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+
 		"DOTA_Tooltip_ability_steal_gold"                                                 "Steal Gold"
 		"DOTA_Tooltip_ability_steal_gold_Description"                                     "Steals gold from Vampire. Can be used only on Vampire's hut! Works after 5 minutes!"
 
@@ -2206,10 +2089,6 @@
 
 		"DOTA_Tooltip_ability_invul_ability"                                              "Invulnerability"
 		"DOTA_Tooltip_ability_invul_ability_Description"                                  "Makes this unit invulnerable. "
-		
-		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage"	"Poleaxe of Rage"
-		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description"	"<h1>Active: Berserk</h1> Gives bonus %berserk_bonus_movement_speed_percentage%%% movement speed and %berserk_bonus_attack_speed% attack speed, but the caster takes %berserk_extra_incoming_damage_percentage%%% extra damage. Lasts %berserk_duration% seconds.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%% chance to deal %crit_mult%%% additional damage."
-		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_bonus_damage"	"+$damage"	
 
 		// ***********************************************
 		// ******************** ITEMS ********************
@@ -2344,283 +2223,83 @@
 
 		"DOTA_Tooltip_ability_item_armor_1"                                               "Armor 1"
 		"DOTA_Tooltip_ability_item_armor_1_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_1_bonus_armor"                                   "BONUS ARMOR: "
 		"DOTA_Tooltip_ability_item_armor_1_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_item_armor_1_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_armor_1_bonus_armor"								  	  "+$armor"
 
 		"DOTA_Tooltip_ability_item_armor_2"                                               "Armor 2"
 		"DOTA_Tooltip_ability_item_armor_2_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_2_bonus_armor"                                   "BONUS ARMOR: "
 		"DOTA_Tooltip_ability_item_armor_2_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_item_armor_2_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_armor_2_bonus_armor"								  	  "+$armor"
 
 		"DOTA_Tooltip_ability_item_armor_3"                                               "Armor 3"
 		"DOTA_Tooltip_ability_item_armor_3_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_3_bonus_armor"                                   "BONUS ARMOR: "
 		"DOTA_Tooltip_ability_item_armor_3_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_item_armor_3_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_armor_3_bonus_armor"								  	  "+$armor"
 
 		"DOTA_Tooltip_ability_item_armor_4"                                               "Armor 4"
 		"DOTA_Tooltip_ability_item_armor_4_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_4_bonus_armor"                                   "BONUS ARMOR: "
 		"DOTA_Tooltip_ability_item_armor_4_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_item_armor_4_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_armor_4_bonus_armor"								  	  "+$armor"
 
-		"DOTA_Tooltip_ability_item_armor_5"                                               "Armor 5"
-		"DOTA_Tooltip_ability_item_armor_5_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_5_bonus_armor"                                   "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_5_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_5_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_1"                                               "Block Damage 1"
+		"DOTA_Tooltip_ability_item_block_1_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_block_1_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_1_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_6"                                               "Armor 6"
-		"DOTA_Tooltip_ability_item_armor_6_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_6_bonus_armor"                                   "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_6_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_6_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_2"                                               "Block Damage 2"
+		"DOTA_Tooltip_ability_item_block_2_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_block_2_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_2_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_7"                                               "Armor 7"
-		"DOTA_Tooltip_ability_item_armor_7_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_7_bonus_armor"                                   "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_7_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_7_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_3"                                               "Block Damage 3"
+		"DOTA_Tooltip_ability_item_block_3_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_block_3_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_3_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_8"                                               "Armor 8"
-		"DOTA_Tooltip_ability_item_armor_8_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_8_bonus_armor"                                   "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_8_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_8_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_4"                                               "Block Damage 4"
+		"DOTA_Tooltip_ability_item_block_4_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_block_4_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_item_block_4_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_9"                                               "Armor 9"
-		"DOTA_Tooltip_ability_item_armor_9_Description"                                   ""
-		"DOTA_Tooltip_ability_item_armor_9_bonus_armor"                                   "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_9_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_9_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_1"                                               "Block Damage 1"
+		"DOTA_Tooltip_ability_buy_item_block_1_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_1_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_1_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_10"                                              "Armor 10"
-		"DOTA_Tooltip_ability_item_armor_10_Description"                                  ""
-		"DOTA_Tooltip_ability_item_armor_10_bonus_armor"                                  "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_10_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_10_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_2"                                               "Block Damage 2"
+		"DOTA_Tooltip_ability_buy_item_block_2_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_2_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_2_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_11"                                              "Armor 11"
-		"DOTA_Tooltip_ability_item_armor_11_Description"                                  ""
-		"DOTA_Tooltip_ability_item_armor_11_bonus_armor"                                  "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_11_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_11_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_3"                                               "Block Damage 3"
+		"DOTA_Tooltip_ability_buy_item_block_3_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_3_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_3_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_12"                                              "Armor 12"
-		"DOTA_Tooltip_ability_item_armor_12_Description"                                  ""
-		"DOTA_Tooltip_ability_item_armor_12_bonus_armor"                                  "BONUS ARMOR: "
-		"DOTA_Tooltip_ability_item_armor_12_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_12_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_4"                                               "Block Damage 4"
+		"DOTA_Tooltip_ability_buy_item_block_4_gold_cost"                                     "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_4_lumber_cost"                                   "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_block_4_bonus_block"								  	  "BLOCK DAMAGE: "
 
-		"DOTA_Tooltip_ability_item_armor_13"                                              "Armor of God"
-		"DOTA_Tooltip_ability_item_armor_13_Description"                                  "HP: 199500<br>REGEN: 10000"
-		"DOTA_Tooltip_ability_item_armor_13_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_13_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_armor_14"                                              "Armor of God"
-		"DOTA_Tooltip_ability_item_armor_14_Description"                                  "HP: 249500<br>REGEN: 20000<br>MAGICAL RESIST: 50"
-		"DOTA_Tooltip_ability_item_armor_14_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_armor_14_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_1"                                                  "Hp 1"
-		"DOTA_Tooltip_ability_item_hp_1_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_1_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_1_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_1_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_2"                                                  "Hp 2"
-		"DOTA_Tooltip_ability_item_hp_2_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_2_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_2_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_2_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_3"                                                  "Hp 3"
-		"DOTA_Tooltip_ability_item_hp_3_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_3_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_3_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_3_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_4"                                                  "Hp 4"
-		"DOTA_Tooltip_ability_item_hp_4_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_4_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_4_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_4_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_5"                                                  "Hp 5"
-		"DOTA_Tooltip_ability_item_hp_5_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_5_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_5_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_5_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_6"                                                  "Hp 6"
-		"DOTA_Tooltip_ability_item_hp_6_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_6_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_6_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_6_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_7"                                                  "Hp 7"
-		"DOTA_Tooltip_ability_item_hp_7_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_7_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_7_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_7_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_8"                                                  "Hp 8"
-		"DOTA_Tooltip_ability_item_hp_8_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_8_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_8_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_8_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_9"                                                  "Hp 9"
-		"DOTA_Tooltip_ability_item_hp_9_Description"                                      ""
-		"DOTA_Tooltip_ability_item_hp_9_bonus_hp"                                         "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_9_gold_cost"                                        "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_9_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_10"                                                 "Hp 10"
-		"DOTA_Tooltip_ability_item_hp_10_Description"                                     ""
-		"DOTA_Tooltip_ability_item_hp_10_bonus_hp"                                        "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_10_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_11"                                                 "Hp 11"
-		"DOTA_Tooltip_ability_item_hp_11_Description"                                     ""
-		"DOTA_Tooltip_ability_item_hp_11_bonus_hp"                                        "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_11_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_11_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_12"                                                 "Hp 12"
-		"DOTA_Tooltip_ability_item_hp_12_Description"                                     ""
-		"DOTA_Tooltip_ability_item_hp_12_bonus_hp"                                        "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_12_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_12_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_13"                                                 "Hp 13"
-		"DOTA_Tooltip_ability_item_hp_13_Description"                                     ""
-		"DOTA_Tooltip_ability_item_hp_13_bonus_hp"                                        "BONUS HP: "
-		"DOTA_Tooltip_ability_item_hp_13_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_13_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_1"                                              "Hp Reg 1"
-		"DOTA_Tooltip_ability_item_hp_reg_1_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_1_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_1_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_1_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_2"                                              "Hp Reg 2"
-		"DOTA_Tooltip_ability_item_hp_reg_2_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_2_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_2_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_2_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_3"                                              "Hp Reg 3"
-		"DOTA_Tooltip_ability_item_hp_reg_3_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_3_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_3_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_3_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_4"                                              "Hp Reg 4"
-		"DOTA_Tooltip_ability_item_hp_reg_4_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_4_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_4_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_4_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_5"                                              "Hp Reg 5"
-		"DOTA_Tooltip_ability_item_hp_reg_5_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_5_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_5_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_5_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_6"                                              "Hp Reg 6"
-		"DOTA_Tooltip_ability_item_hp_reg_6_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_6_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_6_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_6_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_7"                                              "Hp Reg 7"
-		"DOTA_Tooltip_ability_item_hp_reg_7_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_7_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_7_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_7_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_8"                                              "Hp Reg 8"
-		"DOTA_Tooltip_ability_item_hp_reg_8_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_8_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_8_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_8_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_9"                                              "Hp Reg 9"
-		"DOTA_Tooltip_ability_item_hp_reg_9_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_9_bonus_hp_regen"                               "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_9_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_9_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_10"                                             "Hp Reg 10"
-		"DOTA_Tooltip_ability_item_hp_reg_10_Description"                                 ""
-		"DOTA_Tooltip_ability_item_hp_reg_10_bonus_hp_regen"                              "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_10_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_10_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_11"                                             "Hp Reg 11"
-		"DOTA_Tooltip_ability_item_hp_reg_11_Description"                                 ""
-		"DOTA_Tooltip_ability_item_hp_reg_11_bonus_hp_regen"                              "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_11_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_11_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_hp_reg_12"                                             "Hp Reg 12"
-		"DOTA_Tooltip_ability_item_hp_reg_12_Description"                                 ""
-		"DOTA_Tooltip_ability_item_hp_reg_12_bonus_hp_regen"                              "BONUS HP REGEN: "
-		"DOTA_Tooltip_ability_item_hp_reg_12_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_hp_reg_12_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_1"                                             "Atk Spd 1"
-		"DOTA_Tooltip_ability_item_atk_spd_1_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_1_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_1_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_1_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_2"                                             "Atk Spd 2"
-		"DOTA_Tooltip_ability_item_atk_spd_2_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_2_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_2_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_2_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_3"                                             "Atk Spd 3"
-		"DOTA_Tooltip_ability_item_atk_spd_3_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_3_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_3_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_3_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_4"                                             "Atk Spd 4"
-		"DOTA_Tooltip_ability_item_atk_spd_4_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_4_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_4_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_4_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_5"                                             "Atk Spd 5"
-		"DOTA_Tooltip_ability_item_atk_spd_5_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_5_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_5_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_5_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
-
-		"DOTA_Tooltip_ability_item_atk_spd_6"                                             "Atk Spd 6"
-		"DOTA_Tooltip_ability_item_atk_spd_6_Description"                                 ""
-		"DOTA_Tooltip_ability_item_atk_spd_6_bonus_atk_spd"                               "BONUS ATK SPD: "
-		"DOTA_Tooltip_ability_item_atk_spd_6_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_item_atk_spd_6_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		
-		"DOTA_Tooltip_ability_item_reveal"                                          	 "Telescope"
-		"DOTA_Tooltip_ability_item_reveal_Description"                              	 "Expands visibility in the area of ​​your choice, BUT disappears upon activation."
-		
-		"DOTA_Tooltip_ability_buy_item_reveal"                                          	 "Telescope"
-		"DOTA_Tooltip_ability_buy_item_reveal_Description"                              	 "Expands visibility in the area of ​​your choice, BUT disappears upon activation."
+		"DOTA_Tooltip_ability_item_reveal"                                          	 "Golden Telescope"
+		"DOTA_Tooltip_ability_item_reveal_Description"                              	 "The golden telescope reveals visibility within a radius of %radius% for %dur_time%. Every minute the owner receives 50 coins and 1000 wood."
+		"DOTA_Tooltip_ability_item_reveal_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_reveal_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_reveal"                                          	 "Golden Telescope"
+		"DOTA_Tooltip_ability_buy_item_reveal_Description"                              	 "The golden telescope reveals visibility within a radius of %radius% for %dur_time%. Every minute the owner receives 50 coins and 1000 wood."
+		"DOTA_Tooltip_ability_buy_item_reveal_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_reveal_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_item_troll_boots"                                           "Boots of Vampire"
-		"DOTA_Tooltip_ability_item_troll_boots_Description"                               "Provides bonus movement speed to the carrier. "
-		
-		"DOTA_Tooltip_ability_item_troll_boots_2"                                           "Boots of Vampire LVL 2"
-		"DOTA_Tooltip_ability_item_troll_boots_2_Description"                               "Provides bonus movement speed to the carrier. "
+		"DOTA_Tooltip_ability_item_troll_boots_Description"                               "Increase running speed by %bonus_ms%%%"
+		"DOTA_Tooltip_ability_item_troll_boots_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_troll_boots_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		
 		"DOTA_Tooltip_ability_item_vip"                                           	"Event Effect"
 		"DOTA_Tooltip_ability_item_vip_Description"                               	"Activate the item and get the season effect.<br>You can only activate from 10 people."
@@ -2646,6 +2325,44 @@
 		"DOTA_Tooltip_Ability_item_get_gold"											"TvE Coint Bag"
 		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Gives 10 TvE Coint.<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
 
+		"DOTA_Tooltip_ability_buy_item_ward_sentry"													 "Sentry Ward"
+		"DOTA_Tooltip_ability_buy_item_ward_sentry_Description"										""
+
+		"DOTA_Tooltip_Ability_buy_item_ward_observer"													 "Observe Ward"
+		"DOTA_Tooltip_Ability_buy_item_ward_observer_Description"										""
+
+
+		"DOTA_Tooltip_Ability_buy_item_tome_of_knowledge_lvl"													 "Book of Experience"
+		"DOTA_Tooltip_Ability_buy_item_tome_of_knowledge_lvl_Description"										"Gives +1 level to the hero."
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_strength"													 "Book of Strength"
+		"DOTA_Tooltip_Ability_buy_item_book_of_strength_bonus_str"											"+$str"
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_agility"													 "Book of Agility"
+		"DOTA_Tooltip_Ability_buy_item_book_of_agility_bonus_agi"											"+$agi"
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_intelligence"													 "Book of Intelligence"
+		"DOTA_Tooltip_Ability_buy_item_book_of_intelligence_bonus_int"											"+$int"
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_all_stats"													 "Book of All Stats"
+		"DOTA_Tooltip_Ability_buy_item_book_of_all_stats_bonus_str"												"+$str"
+		"DOTA_Tooltip_Ability_buy_item_book_of_all_stats_bonus_agi"												"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_book_of_all_stats_bonus_int"											"+$int"
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_health"													 "Book of Death"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_health_bonus_damage"										"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_health_bonus_hp"											"+$health"
+
+
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_stats"													 "Book of Death"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_stats_bonus_damage"										"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_stats_bonus_str"												"+$str"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_stats_bonus_agi"												"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_book_of_damage_stats_bonus_int"											"+$int"
+		
+
+		"DOTA_Tooltip_ability_item_lia_rune_gold"                                           "Coin"
+		"DOTA_Tooltip_ability_item_lia_rune_gold_Description"                               "Gives a random amount of gold. Take the coin with your Slayer."
 
 		"DOTA_Tooltip_ability_item_winter_stress"                                           "Event Item by stresS_"
 		"DOTA_Tooltip_ability_item_winter_stress_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
@@ -3137,7 +2854,9 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_limit_queue"																	"Building queue limit exceeded. Maximum 20 buildings."
 		"error_limit_queue_wisp"															"Building queue limit exceeded."
 		"error_take_normal_builder"															"The unit does not have this ability!<br>Choose the unit you want!"
-
+		"error_not_slayers_many"															"You can create only 1 Slayer!"
+		"error_max_level"																	"The maximum level has been reached!"
+		"error_not_time_3_min"																"The exchange is available after 3 minutes."
 		"trigs1"																			"There is never too much gold!"
 		"trigs2"																			"Waiting pays the cost!"
 		"trigs3"																			"But my brother and I could be Wangs..."
@@ -3181,7 +2900,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"loading_text"																		"&lt;=Click this for tips!<br>
 		                                                                                    Don't change your hotkeys after starting the game.
 		                                                                                    "
-		"loading_text_no_troll"																"Do not choose Troll if you are playing for the first time, please."
+		"loading_text_no_troll"																"Do not choose Vampire if you are playing for the first time, please."
 		"DOTA_Chat_PlayerKilled"                    ""
         "DOTA_Chat_PlayerKilledNearby"              ""
         "DOTA_Chat_PlayerKilledNearbySingle"        ""

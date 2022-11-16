@@ -1663,7 +1663,7 @@ function BuildingHelper:StartBuilding(builder)
         building:SetHealth(nInitialHealth)
         
         local bScale = buildingTable:GetVal("Scale", "bool") -- whether we should scale the building.
-        local fInitialModelScale = 0.5 -- initial size
+        local fInitialModelScale = 0.7 -- initial size
         local fMaxScale = building.overrideMaxScale or
         buildingTable:GetVal("MaxScale", "float") or 1 -- the amount to scale to
         local fScaleInterval = (fMaxScale - fInitialModelScale) /

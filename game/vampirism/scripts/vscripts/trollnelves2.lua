@@ -27,7 +27,10 @@ LinkLuaModifier("modifier_range_tower", "modifiers/modifier_range_tower.lua", LU
 LinkLuaModifier("modifier_regen_walls_proc", "modifiers/modifier_regen_walls_proc.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_mana_buffwalls", "modifiers/modifier_mana_buffwalls.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_slayers_low", "modifiers/modifier_slayers_low.lua", LUA_MODIFIER_MOTION_NONE)
-
+LinkLuaModifier("modifier_damage_tower", "modifiers/modifier_damage_tower.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_armor_wall", "modifiers/modifier_armor_wall.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_reg_tower", "modifiers/modifier_hp_reg_tower.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_elf", "modifiers/modifier_hp_elf.lua", LUA_MODIFIER_MOTION_NONE)
 
 
 if trollnelves2 == nil then
@@ -223,6 +226,11 @@ end
 
 function trollnelves2:OnHeroInGame(hero)
     DebugPrint("OnHeroInGame")
+    if hero:GetUnitName() == "npc_dota_hero_templar_assassin" then
+        return false
+    end
+
+    
     local team = hero:GetTeamNumber()
     InitializeHero(hero)
     if team == DOTA_TEAM_BADGUYS then InitializeBadHero(hero) end
@@ -941,6 +949,8 @@ function GetClass(unitName)
         return "slayerstaverna"
         elseif string.match(unitName, "house") then
         return "house"
+        elseif string.match(unitName, "gold_mine") then
+        return "gold_mine"
     end
 end
 

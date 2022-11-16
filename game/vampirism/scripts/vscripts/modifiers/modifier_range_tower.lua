@@ -73,15 +73,7 @@ function  modifier_range_tower_aura:DeclareFunctions()
 end
 
 function  modifier_range_tower_aura:GetModifierAttackRangeBonus()
-	local target = self:GetParent()
-	
-	if target.atkspeed then
-		print(target.atkspeed)
-		return target.atkspeed
-	else
-		return 0
-	end
-	
+	return 100 * self:GetStackCount()
 end
 
 
@@ -92,11 +84,23 @@ function modifier_range_tower_aura:OnCreated( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
 				local countStack = caster:FindModifierByName("modifier_range_tower"):GetStackCount()
-				target.atkspeed = 100 * countStack
+				self:SetStackCount(countStack)
+				target:CalculateGenericBonuses()
+				self:ForceRefresh()
+				self:SendBuffRefreshToClients()
+				target:CalculateGenericBonuses()
+				self:StartIntervalThink( 1 )
+				self:OnIntervalThink()
 			end
 		end)
 		
 	end
 end
 
-
+function modifier_range_tower_aura:OnIntervalThink()
+	local target = self:GetParent()
+	target:CalculateGenericBonuses()
+	self:ForceRefresh()
+	self:SendBuffRefreshToClients()
+	target:CalculateGenericBonuses()
+end

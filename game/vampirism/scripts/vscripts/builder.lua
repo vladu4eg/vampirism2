@@ -173,9 +173,9 @@ function Build( event )
         
         -- Give the unit their original attack capability
         unit:RemoveModifierByName("modifier_stunned")
-        --local itemBuildingDestroy = CreateItem("item_building_destroy", nil, nil)
+        local itemBuildingDestroy = CreateItem("item_building_destroy", nil, nil)
        -- if building_name ~= "flag"  then
-           -- unit:AddItem(itemBuildingDestroy)
+            unit:AddItem(itemBuildingDestroy)
             if building_name == "flag" then 
              --   unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
                 unit:AddNewModifier(unit, nil, "modifier_phased", {})
@@ -273,7 +273,7 @@ end
 
 function DestroyBuilding( keys )
     local building = keys.unit
-    local units = FindUnitsInRadius(building:GetTeamNumber() , building:GetAbsOrigin() , nil , 1500 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+    local units = FindUnitsInRadius(building:GetTeamNumber() , building:GetAbsOrigin() , nil , 1200 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
     local ownerID = building:GetPlayerOwnerID()
     local playerID = building:GetMainControllingPlayer()
     local hero = building:GetOwner()
@@ -664,8 +664,8 @@ function UpgradeBuilding( event )
         
         newBuilding:RemoveModifierByName("modifier_stunned")
         if not string.match(newBuildingName,"troll_hut") and newBuildingName ~= "tower_19" and newBuildingName ~= "tower_19_1" and newBuildingName ~= "tower_19_2" then
-            --local item = CreateItem("item_building_destroy", nil, nil)
-            --newBuilding:AddItem(item)
+            local item = CreateItem("item_building_destroy", nil, nil)
+            newBuilding:AddItem(item)
         end
         ModifyCompletedConstructionBuildingCount(hero, newBuildingName, 1)
         UpdateSpells(hero)

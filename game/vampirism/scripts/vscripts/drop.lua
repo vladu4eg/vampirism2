@@ -4,6 +4,13 @@ end
 require('settings')
 item_drop = {
 	--{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
+
+	{items = {"item_lia_rune_gold"}, limit = 9999, chance = 100, units = 
+	{"npc_dota_hero_lycan","npc_dota_hero_omniknight", "npc_dota_hero_night_stalker","npc_dota_hero_doom_bringer",
+	"npc_dota_hero_life_stealer","npc_dota_hero_slardar","wood_worker_1","wood_worker_2", "wood_worker_3","wood_worker_4",
+	"wood_worker_5","worker_1","worker_2"} },
+
+
 	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
 	{items = {"item_get_gem"}, limit = 10, chance = 10, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
 	{items = {SEASON_ITEM}, limit = 15, chance = 500, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
@@ -72,7 +79,6 @@ item_drop = {
 
 function drop:RollItemDrop(unit)
 	local unit_name = unit:GetUnitName()
-	if GameRules.PlayersCount >= MIN_RATING_PLAYER then
 		for _,drop in ipairs(item_drop) do
 			local items = drop.items or nil
 			local items_num = #items
@@ -82,7 +88,9 @@ function drop:RollItemDrop(unit)
 			local limit = drop.limit or nil -- лимит предметов
 			local item_name = items[1] -- название предмета
 			local roll_chance = RandomFloat(0, 500)
-			
+			if GameRules.PlayersCount < MIN_RATING_PLAYER and item_name ~= "item_lia_rune_gold" then
+				return false
+			end
 			if string.match(GetMapName(),"halloween") then 
 				chance = 100
 			end
@@ -127,7 +135,7 @@ function drop:RollItemDrop(unit)
 					newItem:SetContextThink( "KillLoot", function() return KillLoot( newItem, drop ) end, loot_duration )
 				end
 			end
-		end	
+
 		
 	end
 end
