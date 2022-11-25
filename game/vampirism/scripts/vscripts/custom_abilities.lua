@@ -530,7 +530,7 @@ function SkillOnChannelSucceeded(event)
 		local skill_name = GetAbilityKV(ability:GetAbilityName()).SkillName
 		local stack = ability:GetLevel()
 		hero:RemoveModifierByName(skill_name)
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
 		end)
 		ability:SetLevel(stack+1)
@@ -637,6 +637,7 @@ function SpawnUnitOnChannelSucceeded(event)
 			local abil2 = slayer:FindAbilityByName("slayer_blink")
         	abil2:SetLevel(abil2:GetMaxLevel())
 			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
+			slayer:AddNewModifier(slayer, nil, "modifier_anti_hp_mana_regen", {})
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
 			hero.slayer:SetRespawnPosition(caster:GetAbsOrigin())
@@ -1050,7 +1051,7 @@ function BuyItemSlayer(event)
 	local item_name = GetAbilityKV(ability:GetAbilityName()).ItemName
 	local gold_cost = GetItemKV(item_name)["AbilitySpecial"]["02"]["gold_cost"];
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
-	local playerID = caster:GetMainControllingPlayer()
+	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
 	if not hero.slayer then
@@ -1101,6 +1102,23 @@ function BuyItem(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	local unit_name = caster:GetUnitName()
+	if hero:IsElf() and not hero.slayer then
+		SendErrorMessage(playerID, "error_need_create_slayer")
+		ability:EndCooldown()
+		return
+	elseif hero.slayer then
+		hero = hero.slayer
+	end
+
+	if hero:GetUnitName() == "npc_dota_hero_templar_assassin" and (string.match(unit_name, "shop") or string.match(unit_name, "troll_hut")) then
+		SendErrorMessage(playerID, "error_its_shop_enemy")
+		ability:EndCooldown()
+		return
+	end
+
+
+	
 
 	if not IsInsideShopArea(hero) and item_name ~=  "item_book_of_agility" and item_name ~=  "item_book_of_strength" and item_name ~=  "item_book_of_intelligence" then
 		SendErrorMessage(playerID, "error_shop_out_of_range")
@@ -1290,17 +1308,29 @@ end
 
 function BuyGoldTroll(event)
 	local caster = event.caster
-	local playerID = caster:GetPlayerOwnerID()
+	-- local playerID = caster:GetPlayerOwnerID()
+	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 	local amount = event.Amount
 	local price = amount * 8000
+	local ability = event.ability
+	if hero:IsElf() and not hero.slayer then
+		SendErrorMessage(playerID, "error_need_create_slayer")
+		ability:EndCooldown()
+		return
+	elseif hero.slayer then
+		hero = hero.slayer
+	end
+
 	if GameRules:GetGameTime() - GameRules.startTime < 180 then
-		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_time_3_min")
+		SendErrorMessage(playerID, "error_not_time_3_min")
+		ability:EndCooldown()
 		return false
 	end
 	if amount > 0 then
 		if price > PlayerResource:GetLumber(playerID) then
 			SendErrorMessage(playerID, "error_not_enough_lumber")
+			ability:EndCooldown()
 			return false
 		end
 	end
@@ -1422,9 +1452,9 @@ function ItemBlinkDoom(keys)
 	local target_point = keys.target_points[1]
 	local difference_vector = target_point - origin_point
 	local block = false
-	if difference_vector:Length2D() > keys.MaxBlinkRange then  --Clamp the target point to the MaxBlinkRange range in the same direction.
+	--if difference_vector:Length2D() > keys.MaxBlinkRange then  --Clamp the target point to the MaxBlinkRange range in the same direction.
 		target_point = origin_point + (target_point - origin_point):Normalized() * keys.MaxBlinkRange
-	end
+	--end
 	if not GridNav:IsTraversable(target_point) or GridNav:IsBlocked(target_point) or GridNav:IsNearbyTree(target_point, 35, true) or not GridNav:CanFindPath(origin_point, target_point)  then
 		block = true
 	end
@@ -1438,16 +1468,19 @@ function ItemBlinkDoom(keys)
 	end
 
 	if not block then
-		local hull = keys.caster:GetHullRadius()
+		--local hull = keys.caster:GetHullRadius()
+		--keys.caster:SetHullRadius(1)
 		ProjectileManager:ProjectileDodge(keys.caster)  --Disjoints disjointable incoming projectiles.
 
 		ParticleManager:CreateParticle("particles/items_fx/blink_dagger_start.vpcf", PATTACH_ABSORIGIN, keys.caster)
 		keys.caster:EmitSound("DOTA_Item.BlinkDagger.Activate")
 
-		keys.caster:SetAbsOrigin(target_point)
+		--keys.caster:SetAbsOrigin(target_point)
 		FindClearSpaceForUnit(keys.caster, target_point, true)
-	
+		
 		ParticleManager:CreateParticle("particles/items_fx/blink_dagger_end.vpcf", PATTACH_ABSORIGIN, keys.caster)
+		--keys.caster:AddNewModifier(keys.caster,nil,"modifier_phased",{duration = 0.03})
+		--keys.caster:SetHullRadius(hull)
 	else
 		keys.ability:EndCooldown()
 	end
@@ -1669,7 +1702,7 @@ end
 
 function PickAxe(keys)
 	local caster = keys.caster
-	local target = caster
+	local target = keys.target
 	local ability = keys.ability
 	local time = keys.Modifier
 	local playerID = caster:GetPlayerID()

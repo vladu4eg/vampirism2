@@ -277,7 +277,13 @@ function DestroyBuilding( keys )
     local ownerID = building:GetPlayerOwnerID()
     local playerID = building:GetMainControllingPlayer()
     local hero = building:GetOwner()
-    if #units > 0 then
+    local heroDeleter = PlayerResource:GetSelectedHeroEntity(playerID)
+
+	local origin_point = heroDeleter:GetAbsOrigin()
+	local target_point = building:GetAbsOrigin()
+	local difference_vector = target_point - origin_point
+	
+    if #units > 0 and difference_vector:Length2D() > 600 then
         SendErrorMessage(playerID, "error_enemy_nearby")
     elseif PlayerResource:GetConnectionState(ownerID) == 3 then
         SendErrorMessage(playerID, "error_not_destroy_building")
@@ -361,11 +367,6 @@ function UpgradeBuilding( event )
     local gold_cost
     local lumber_cost
     local parts = CustomNetTables:GetTableValue("Particles_Tabel",tostring(building:GetPlayerOwnerID()))
-    
-    if string.match(building:GetUnitName(),"troll_hut") then
-        hero = GameRules.trollHero
-        playerID = GameRules.trollID
-    end
     
     -- I do it like this so you are able to have two buildings upgrade into the same upgraded building with different prices and only having one ability
     local count = tonumber(upgrades.Count)

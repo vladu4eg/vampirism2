@@ -447,8 +447,8 @@ function BuildingHelper:BlockBH()
 end
 
 function BuildingHelper:InitGNV()
-    local worldMin = Vector(-11000, -11000, 0)
-    local worldMax = Vector(11000, 11000, 0)
+    local worldMin = Vector(-12500, -12500, 0)
+    local worldMax = Vector(12500, 12500, 0)
     
     local boundX1 = GridNav:WorldToGridPosX(worldMin.x)
     local boundX2 = GridNav:WorldToGridPosX(worldMax.x)
@@ -877,7 +877,7 @@ function BuildingHelper:OrderFilter(order)
                 return false
             end
             local unit_name = shop:GetUnitName()
-            if string.match(unit_name, "shop") or string.match(unit_name, "troll_hut") then
+            if string.match(unit_name, "shop") or string.match(unit_name, "troll_hut") or string.match(unit_name, "elf_shp") then
                 shop.buyer = issuerID
                 if string.match(unit_name, "troll_hut") and string.match(EntIndexToHScript(abilityIndex):GetAbilityName(),"upgrade_to") and PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[1] and GameRules.test2 == false then
                     SendErrorMessage(issuerID, "error_only_troll_can_upgrade")
@@ -1657,17 +1657,13 @@ function BuildingHelper:StartBuilding(builder)
     local fInitialHealthFactor =
     BuildingHelper.Settings["INITIAL_HEALTH_FACTOR"]
     local nInitialHealth = math.floor(fInitialHealthFactor * (fMaxHealth))
-    local fUpdateHealthInterval = math.max(fserverFrameRate, buildTime /
-        math.floor(
-        fMaxHealth - nInitialHealth)) -- health tick interval
+    local fUpdateHealthInterval = math.max(fserverFrameRate, buildTime / math.floor(fMaxHealth - nInitialHealth)) -- health tick interval
         building:SetHealth(nInitialHealth)
         
         local bScale = buildingTable:GetVal("Scale", "bool") -- whether we should scale the building.
         local fInitialModelScale = 0.7 -- initial size
-        local fMaxScale = building.overrideMaxScale or
-        buildingTable:GetVal("MaxScale", "float") or 1 -- the amount to scale to
-        local fScaleInterval = (fMaxScale - fInitialModelScale) /
-        (buildTime / fserverFrameRate) -- scale to add every frame, distributed by build time
+        local fMaxScale = building.overrideMaxScale or buildingTable:GetVal("MaxScale", "float") or 1 -- the amount to scale to
+        local fScaleInterval = math.floor((fMaxScale - fInitialModelScale) / (buildTime / fserverFrameRate)) -- scale to add every frame, distributed by build time
         local fCurrentScale = fInitialModelScale -- start the building at the initial model scale
         local bScaling = false -- Keep tracking if we're currently model scaling.
         
@@ -1692,18 +1688,14 @@ function BuildingHelper:StartBuilding(builder)
             
             local fAddedHealth = 0
             local nHealthInterval = fMaxHealth / (buildTime / fserverFrameRate)
-            local fSmallHealthInterval = nHealthInterval -
-            math.floor(nHealthInterval) -- just the floating point component
+            local fSmallHealthInterval = nHealthInterval - math.floor(nHealthInterval) -- just the floating point component
             nHealthInterval = math.floor(nHealthInterval)
             local fHPAdjustment = 0
             
             building.updateHealthTimer = Timers:CreateTimer(
                 function()
                     if IsValidEntity(building) and building:IsAlive() then
-                        local timesUp = GameRules:GetGameTime() >=
-                        fTimeBuildingCompleted or
-                        building:GetHealth() ==
-                        building:GetMaxHealth()
+                        local timesUp = GameRules:GetGameTime() >= fTimeBuildingCompleted or building:GetHealth() == building:GetMaxHealth()
                         if not timesUp then
                             -- Use +1 every frame or float adjustment
                             local hpGain = 0
@@ -1727,23 +1719,16 @@ function BuildingHelper:StartBuilding(builder)
                             if hpGain > 0 then
                                 fAddedHealth = fAddedHealth + hpGain
                                 building:SetHealth(building:GetHealth() + hpGain)
-                                local fModelScale =
-                                (buildTime - fTimeBuildingCompleted +
-                                GameRules:GetGameTime()) / buildTime *
-                                (GetUnitKV(building:GetUnitName(),
-                                "ModelScale") or 1)
+                                local fModelScale = (buildTime - fTimeBuildingCompleted + GameRules:GetGameTime()) / buildTime * (GetUnitKV(building:GetUnitName(),  "ModelScale") or 1)
                                 -- DebugPrint(fModelScale)
                                 building:SetModelScale(fModelScale)
                             end
-                            else
-                            building:SetHealth(
-                                building:GetHealth() + fMaxHealth - fAddedHealth -
-                            nInitialHealth) -- round up the last little bit
+                        else
+                            building:SetHealth(building:GetHealth() + fMaxHealth - fAddedHealth - nInitialHealth) -- round up the last little bit
                             BuildingHelper:print(
                                 "Finished " .. building:GetUnitName() .. " in " ..
                                 math.floor(GameRules:GetGameTime() - startTime) ..
-                                " seconds. HP was off by " .. fMaxHealth -
-                            fAddedHealth - nInitialHealth)
+                                " seconds. HP was off by " .. fMaxHealth - fAddedHealth - nInitialHealth)
                             
                             -- completion: timesUp is true
                             if callbacks.onConstructionCompleted then

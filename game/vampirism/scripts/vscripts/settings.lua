@@ -1,17 +1,14 @@
 MAXIMUM_ATTACK_SPEED = 600
 MINIMUM_ATTACK_SPEED = 20
 
-TROLL_HERO = {"npc_dota_hero_wisp","npc_dota_hero_night_stalker","npc_dota_hero_doom_bringer","npc_dota_hero_life_stealer","npc_dota_hero_slardar"}
+TROLL_HERO = {"npc_dota_hero_night_stalker","npc_dota_hero_life_stealer"} -- ,"npc_dota_hero_doom_bringer","npc_dota_hero_slardar"
 WOLF_HERO = "npc_dota_hero_lycan"
 
 ELF_HERO = "npc_dota_hero_omniknight"
-ANGEL_HERO = "npc_dota_hero_crystal_maiden"
-
-BEAR_HERO = "npc_dota_hero_bear"
 
 TEAM_CHOICE_TIME = 30
 WOLF_START_SPAWN_TIME = 300 -- When the players will be able to choose wolf instead of auto chosen to angels. In seconds.
-TROLL_SPAWN_TIME = 30
+TROLL_SPAWN_TIME = 55
 PRE_GAME_TIME = 40
 
 ANGEL_RESPAWN_TIME = 10
@@ -36,7 +33,7 @@ TIME_LIFE_GOLD_WISP = 300
 
 NO_CREATE_WISP = 2400
 
-BUFF_ENIGMA_TIME = 7200
+BUFF_ENIGMA_TIME = 17200
 MIN_RATING_PLAYER = 10
 MIN_RATING_PLAYER_CW = 5
 PERC_KICK_PLAYER = 0.90
@@ -83,6 +80,6 @@ PLAYER_COLORS = {
 XP_PER_LEVEL_TABLE = {}
 XP_PER_LEVEL_TABLE[1] = 0
 for i = 2, 100 do
-    XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1] + i * 100 
+    XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1] + i * 75 
 end
   

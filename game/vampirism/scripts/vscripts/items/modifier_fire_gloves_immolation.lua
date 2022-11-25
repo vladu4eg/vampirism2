@@ -53,7 +53,7 @@ if IsServer() then
 			-- Deal damage to all targets passed
 			for _,unit in pairs(targets) do
 				damageTable.victim = unit
-				if not unit.state == "complete" then
+				if unit.state ~= "complete" then
 					ApplyDamage(damageTable)
 				end
 				

@@ -1,0 +1,274 @@
+"lang"
+{
+	"Language"		"schinese"
+	"Tokens"
+	{
+		"addon_game_name"			"VAMPIRISM 2"
+		
+"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>被动：迷你猛击</h1> 每次攻击都有 %minibash_chance%%% 的几率造成迷你猛击。"
+"DOTA_Tooltip_ability_buy_item_lia_hammer_Description" "<h1>被动：迷你猛击</h1> 每次攻击都有 %minibash_chance%%% 的几率造成迷你猛击。"
+"DOTA_Tooltip_Ability_item_golem_fire_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_item_golem_stone_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_item_golem_flesh_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" "无法杀死人类。<br>在 %duration% 秒内创建魔像。"
+"DOTA_Tooltip_Ability_item_shade_Description" "无法杀死人类。<br>伤害很小。<br>在 %duration% 秒内创造阴影。"
+"DOTA_Tooltip_Ability_buy_item_shade_Description" "无法杀死人类。<br>伤害很小。<br>创造一个阴影持续 %duration% 秒。"
+"DOTA_Tooltip_Ability_item_assasin_Description" "只能杀死伐木工人。<br>创建刺客持续 %duration% 秒。"
+"DOTA_Tooltip_Ability_buy_item_assasin_Description" "只能杀死伐木工人。<br>创建刺客持续 %duration% 秒。"
+"DOTA_Tooltip_Ability_item_fel_best_Description" "只能杀死修墙工。<br>在 %duration% 秒内制造邪能野兽。"
+"DOTA_Tooltip_Ability_buy_item_fel_best_Description" "只能杀死修墙工。<br>在 %duration% 秒内制造邪能野兽。"
+"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description" "<h1>主动：狂暴</h1> 提供额外的 %berserk_bonus_movement_speed_percentage%%% 移动速度和 %berserk_bonus_attack_speed% 攻击速度，但施法者会受到 %berserk_extra_incoming_damage_percentage%%% 的额外伤害。伤害增加 %bonus_damage% 倍。持续 %berserk_duration% 秒。拥有者每秒受到 %burn_damage%。拥有者可能死于该物品。\n<h1>被动：暴击</h1>使每次攻击有 %crit_chance%% 的机会造成 %crit_mult%% % 额外伤害。”
+"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_Description" "<h1>主动：狂暴</h1> 给予额外 %berserk_bonus_movement_speed_percentage%%% 移动速度和 %berserk_bonus_attack_speed% 攻击速度，但施法者承受 %berserk_extra_incoming_damage_percentage%%% 额外伤害。伤害增加 %bonus_damage 倍。持续 %berserk_duration% 秒。拥有者每秒受到 %burn_damage%。拥有者可能死于该物品。\n<h1>被动：暴击</h1>使每次攻击有 %crit_chance%% 的机会造成 %crit_mult%% % 额外伤害。”
+"DOTA_Tooltip_ability_item_heart_blood_Description" "<h1>主动：狂暴</h1> 提供额外的 %berserk_bonus_movement_speed_percentage%%% 移动速度和 %berserk_bonus_attack_speed% 攻击速度，但施法者会受到 %berserk_extra_incoming_damage_percentage%%% 的额外伤害。伤害增加 %bonus_damage% 倍。持续 %berserk_duration% 秒。拥有者每秒受到 %burn_damage%。拥有者可能死于该物品。\n<h1>被动：暴击</h1>使每次攻击有 %crit_chance%% 的机会造成 %crit_mult%% % 额外伤害。”
+"DOTA_Tooltip_ability_buy_item_heart_blood_Description" "<h1>主动：狂暴</h1> 提供额外的 %berserk_bonus_movement_speed_percentage%%% 移动速度和 %berserk_bonus_attack_speed% 攻击速度，但施法者会受到 %berserk_extra_incoming_damage_percentage%%% 的额外伤害。伤害增加 %bonus_damage% 倍。持续 %berserk_duration% 秒。拥有者每秒受到 %burn_damage%。拥有者可能死于该物品。\n<h1>被动：暴击</h1>使每次攻击有 %crit_chance%% 的机会造成 %crit_mult%% % 额外伤害。”
+"DOTA_Tooltip_Ability_item_golden_hand_Description" "有 20% 的几率，你可以获得额外的 20 金币。"
+"DOTA_Tooltip_Ability_buy_item_golden_hand_Description" "有 20% 的几率，你可以获得额外的 20 金币。"
+"DOTA_Tooltip_Ability_item_pulse_staff_Description" "<h1>主动：闪电链</h1>对链中的 %lightning_bounces% 个随机单位造成 %lightning_damage% 伤害。"
+"DOTA_Tooltip_Ability_buy_item_pulse_staff_Description" "<h1>主动：闪电链</h1>对链中的 %lightning_bounces% 个随机单位造成 %lightning_damage% 伤害。"
+"DOTA_Tooltip_Ability_item_burst_gem_Description" "<h1>主动：火球</h1> 向任何没有魔法免疫的单位发射火焰冲击波。"
+"DOTA_Tooltip_Ability_buy_item_burst_gem_Description" "<h1>主动：火球</h1> 向任何没有魔法免疫的单位发射火焰冲击波。"	
+		
+"DOTA_Tooltip_Ability_item_roketa_Description" "<h1>主动：导弹</h1> 杀死任何没有魔法免疫的单位。一次性使用。"
+"DOTA_Tooltip_Ability_buy_item_roketa_Description" "<h1>主动：导弹</h1> 杀死任何没有魔法免疫的单位。一次性使用。"
+"DOTA_Tooltip_Ability_item_immunity_shield_Description" "盾牌让佩戴者免受魔法伤害。"
+"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description" "盾牌让佩戴者免受魔法伤害。"
+"DOTA_Tooltip_Ability_item_troll_teleport_Description" "将英雄传送到友军单位。"
+"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description" "将英雄传送到友军单位。"
+"DOTA_Tooltip_Ability_item_spirit_Description" "每杀死一个单位，就会恢复 %heal_percentage%%% 的当前生命值。将英雄传送到一个友军单位。"
+"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description" "<h1>RECIPE</h1> 每杀死一个单位，就会恢复当前生命值的 %heal_percentage%%%。将英雄传送到一个友军单位。"
+"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description" "<h1>RECIPE</h1>"
+"DOTA_Tooltip_Ability_item_golden_greed_Description" "有 35% 的几率，你可以获得额外的 80 金币。"
+"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" "<h1>RECIPE</h1><br>有 35% 的几率，您可以获得额外的 80 金币。"
+"DOTA_Tooltip_Ability_item_clock_dracula_Description" "使英雄隐形。"
+"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" "<h1>RECIPE</h1>让英雄隐身。"
+"DOTA_Tooltip_ability_item_doom_frostbite_Description" "<h1>主动：冻伤</h1>冻结敌人 %stun_duration% 秒，并在 %stun_radius% 半径内造成 %stun_damage% 伤害。将你的护甲提高 %bonus_armor%。<br> 生命值：1 800 000 “
+"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description" "<h1>RECIPE<br>主动：冻伤</h1>冻结敌人 %stun_duration% 秒，并在 %stun_radius% 半径范围内造成 %stun_damage% 伤害。将你的护甲提高 %bonus_armor%。<br> HP : 1 800 000"
+"DOTA_Tooltip_Ability_item_pulse_ricochet_Description" "<h1>主动：闪电链</h1>对链中的 %lightning_bounces% 个随机单位造成 %lightning_damage% 伤害。"
+"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description" "<h1>RECIPE<br>主动：闪电链</h1>对链中的 %lightning_bounces% 个随机单位造成 %lightning_damage% 伤害。"
+"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description" "<h1>主动：幻觉</h1>创建一个目标单位的图像。幻觉会受到 %illusion_incoming_damage%%% 的伤害并造成 %illusion_outgoing_damage%%% 的伤害。<br>幻觉持续 %illusion_duration% 秒。 “
+"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description" "<h1>RECIPE<br>主动：幻觉</h1>创建一个目标单位的图像。幻觉会受到 %illusion_incoming_damage%%% 的伤害并造成 %illusion_outgoing_damage%%% 的伤害。<br>幻觉持续 % illusion_duration% 秒。”
+"DOTA_Tooltip_Ability_item_demonic_remains_Description" "每杀死一个单位，你的所有属性 +10。"
+"DOTA_Tooltip_ability_buy_item_demonic_remains_Description" "每杀死一个单位，你的所有属性 +10。"
+"DOTA_Tooltip_Ability_item_pick_axe_Description" "一把长斧头可以让你到达位于山上的金矿。一次性斧头。只能在金矿上使用！"
+"DOTA_Tooltip_Ability_buy_item_pick_axe_Description" "一把长斧头可以让你到达位于山上的金矿。一次性斧头。只能在金矿上使用！"
+"DOTA_Tooltip_Ability_item_mask_undeath_Description" "阻挡 %bonus_block% 伤害。"
+"DOTA_Tooltip_Ability_buy_item_mask_undeath_Description" "阻挡 %bonus_block% 伤害。"
+"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description" "<h1>主动：砍树</h1>砍倒一棵树。一次性斧头。对末日宝珠有用.."
+"DOTA_Tooltip_Ability_food_cost_Description" "食物（奶酪）的最大数量增加 50/100/300。最多 300 食物（奶酪）。"		
+"DOTA_Tooltip_ability_build_rock_1_Description" "建造岩石。用它来阻止吸血鬼进入你的基地。确保居中！"		
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_Description" "这项改进减少了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_Description" "这项改进减少了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_Description" "这项改进缩短了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_5_Description" "这项改进减少了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_6_Description" "这项改进缩短了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_7_Description" "改进缩短了金矿开采间隔或增加了金矿开采量。"
+"DOTA_Tooltip_Ability_upgrade_to_gold_mine_8_Description" "这项改进缩短了金矿开采间隔或增加了金矿开采量。"		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+"DOTA_Tooltip_Ability_item_get_gem_Description" "赠送 10 颗幸运宝石。<br>激活一个物品以将其据为己有。<br>未激活的物品不会在游戏结束时保留！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_Ability_item_get_gold_Description" "给予 10 个 TvE 硬币。<br>激活一个物品以将其据为己有。<br>未激活的物品不会在游戏结束时持续存在！<br>只能从 10 个人激活。"
+
+
+"DOTA_Tooltip_ability_item_vip_Description" "激活该物品并在下一场比赛中获得赛季效果。<br>只能由 10 人以上激活。"
+
+"DOTA_Tooltip_ability_item_event_Description" "激活一个物品，为自己索取该物品。<br>非激活物品不会在游戏结束时持续存在！<br>只能由 10 人以上激活。"
+
+"DOTA_Tooltip_ability_item_autumnt_Description" "激活一个物品为自己拿走该物品。<br>非激活物品不会在游戏结束时持续存在！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_winter_1_Description" "激活一个物品为自己索取该物品。<br>游戏结束时不保存未激活的物品！<br>只能由 10 人以上激活。"
+
+"DOTA_Tooltip_ability_item_spring_Description" "激活一个物品以将其据为己有。<br>游戏结束时不会保存未激活的物品！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_summer_Description" "激活一个物品以将其据为己有。<br>未激活的物品不会在游戏结束时持续存在！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_ghosttown_Description" "激活一个物品以将其据为己有。<br>游戏结束时不保存未激活的物品！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_winter_tree_1_Description" "激活一个物品以将其据为己有。<br>未激活的物品不会在游戏结束时持续存在！<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_winter_end_Description" "你越来越近了！"
+
+"DOTA_Tooltip_ability_item_event_winter_Description" "激活一个物品，为自己索取该物品。<br>未激活的物品不会在游戏结束时藏起来！<br>冬季 2 效果已发布。<br>只能激活 10 人以上。"
+
+"DOTA_Tooltip_ability_item_event_helheim_Description" "激活一个物品，为自己索取该物品。<br>游戏结束时不激活的物品不会持续存在！<br>产生捐赠 10 效果。<br>只能从 10 个人激活。"
+
+"DOTA_Tooltip_ability_item_event_birthday_Description" "TvE3 社区已经成立 2 周岁了！<br>感谢您的积极支持！<br>感谢您的帮助！<br>激活物品以自己领取物品。<br>不活动的物品不会同步在游戏结束时！<br>生日效果。<br>只能激活10个人。
+
+"DOTA_Tooltip_ability_drop_gift_Description" "感谢您完成任务！<br>诅咒宝箱会随机为您提供 25 到 200 件活动物品。"
+
+"DOTA_Tooltip_ability_item_max_move_Description" "获得 +190 奔跑速度，持续 20 秒。"
+
+"DOTA_Tooltip_ability_item_event_Description" "激活一个物品，为自己索取该物品。<br>非激活物品不会在游戏结束时持续存在！<br>只能由 10 人以上激活。"
+
+"DOTA_Tooltip_ability_item_event_desert_Description" "激活一个物品，为自己索取该物品。<br>未激活的物品不会在游戏结束时持续存在！<br>提供分散效果。<br>只能由 10 人以上激活。"
+
+		"buy_currency"						"买下 Vamp Coint"
+		"shop_button"	"淘宝店"
+
+		"shop_main"		"首页"
+		"shop_items"		"产品"
+		"shop_pets"		"宠物"
+		"shop_particles"		"粒子"
+
+		"shop_gem"		"宝石的物品"
+	
+		"shop_recomended"		"折扣项目"
+	
+		"shop_all"		"全部"
+		"shop_subscribe"		"订阅"
+		"shop_currency"		"货币"
+
+		"ads_name_1"		"购买战斗通行证"
+		"ads_name_2"		"购买胸部"
+
+		"shop_bought"		"购买的"
+		"shop_gold"			"在胸部"
+		"shop_event" "事件"
+		"shop_buy" "购买"
+		"shop_activate" "开启"
+		"shop_deactivate" "关闭"
+
+		"shop_trollchance" "成为巨魔的几率："
+		"shop_bonusrate" "评级奖金："
+		"shop_controllchance_date" "有效期至："
+		"shop_bonusrate_date" "有效期至："
+		"shop_no_money" "你的账户里没有足够的钱！"
+		"shop_nice_buy" "一个购买请求已被发送。如果捐款没有在下一个游戏中发出，请与开发商联系! 谢谢你的支持！"
+		"shop_error_label" "您的账户中没有足够的资金！"
+
+		"shop_inventory" "库存"
+		"shop_chests" "胸部"
+
+		"shop_chest_count" "数量"
+		"shop_open" "open"
+		"shop_accept" "接受"
+
+		"shop_chance" "掉队的几率："
+		"shop_currency_count" "Vamp硬币的数量"
+
+		"Pet_description" "每次购买只发放一个宠物。用硬币购买的宠物是永久性的。宝石将被发放1个月。达到前1-10名、参加活动等也会获得一些宠物。在Discord上观看活动，获得免费奖品。"
+		"skin_description" "每次购买只赠送一个皮肤。用金币购买的皮肤是永久性的。宝石的皮肤发放时间为1个月。一些皮肤将被给予前1-10名、参与活动等的奖励。在Discord上关注活动，获得免费奖品。"
+		"particle_description" "每次购买只能得到一个效果。用硬币购买的效果是永久性的。宝石的效果是在1个月内发出的。一些效果也被授予Top1-10，参与活动等等。在Discord上关注活动，获得免费奖品。"
+		"cheap_description" "这个箱子是永久发行的。箱子里的物品会永远送出去。有些物品从箱子里买会更便宜。"
+		"subscribe_description" "巨魔的机会，奖励评级和其他订阅是购买1个月的。再次购买会增加1个月的有效期"
+		"sounds_description" "用硬币购买的声音和喷雾剂是永久发行的。要激活声音或喷雾，请按L键"
+		"spray_description" "用硬币购买的声音和喷雾是永久发行的。要激活声音或喷雾，请按L键"
+
+
+        "topptext"                                      									"综合排名中的最佳球员。 "
+        "topwtext"                                      									"人的最佳球员。" 
+        "tophtext"                                      									"吸血鬼的最佳球员。"
+		"topetext"																			"最佳球员。 "
+		
+		"leaderboard_name"                                      									"排行榜"
+        "leaderboard_1"                                      									"最佳球员（综合排名）"
+        "leaderboard_2"                                      									"更好的人"
+		"leaderboard_3"                                      									"最好的吸血鬼"
+		"leaderboard_event"                                      									"活动的领导人"
+		"leaderboard_button"                                      									"领导人"
+
+		"subscribe_1_description" "将获得吸血鬼的几率提高 25%。持续 1 个月。<br>重新购买机会可将几率的持续时间延长 1 个月。"
+"subscribe_2_description" "将获得吸血鬼的几率提高 50%。持续 1 个月。<br>重新购买机会可将机会的持续时间延长 1 个月。"
+"subscribe_3_description" "将获得吸血鬼的几率提高 75%。持续 1 个月。<br>重新购买机会可将几率的持续时间延长 1 个月。"
+"subscribe_4_description" "将游戏中所有玩家的奖励等级提高 10%。"
+
+
+
+//每天的任务
+//基本上，按任务进行本地化
+"troll_quest_title" "每日任务"
+"quest_closed""不可用"
+"quest_need_battlepass" "需要战斗通行证"
+
+//奖励
+"troll_rewards_title" "每日奖励"
+"rewards_button" "奖励"
+"rewards_days" "天"
+"reward_recieved" "收到"
+"reward_receive" "奖励"
+
+//信息
+//基本上，本地化是根据你在js中写的
+"info_button" "信息"
+"Information_title" "信息"
+		
+		"error_not_enough_gold"																"钱还不够！ "
+		"error_not_enough_lumber"															"木材不够！ "
+		"error_not_buy_wolf"																"精灵狼无法升级帐篷！ "
+		"error_castable_only_on_troll_hut"													"只能对巨魔帐篷施放！ "
+		"error_not_enough_food"																"人口过多！ "
+		"error_not_enough_wisp"																"超过精灵限制！ "
+		"error_full_inventory"																"Full inventory! "
+		"error_shop_out_of_range"															"商店不在范围内！ "
+		"error_not_enough_resources"														"你没有足够的资源! "
+		"error_type_only_digits"															"只能输入数字! "
+		"error_select_only_your_allies"														"选择你的队友! "
+		"error_enemy_nearby"																"敌人在附近! "
+		"error_invalid_build_position"														"无法在此放置! "
+		"error_only_troll_can_upgrade"														"只有巨魔能升级帐篷! "
+		"error_no_radar"																	"Sadly scans in custom games don't count towards the community challenge! "
+		"error_not_night"																	"只在黑夜有用！ "
+		"error_item_not_sellable"															"物品无法出售"
+
+		"error_place_is_taken" "这个地方被另一个精灵占据了，或者没有旗子可以放在这里！"
+		"error_cant_build_flag" "你不能在这里插旗！"
+		"error_place_is_flag" "你不能在这里插旗！"
+		"team_choice_header" "你想成为一名巨魔吗？"
+		"error_need_put_flag" "你必须建立一个标志！"
+		"team_choice_yes" "yes"
+		"team_choice_no." "No."
+		"error_not_spam_votekick" "投票可以每1分钟进行一次！"
+
+		"error_not_destroy_building" "业主没有离开游戏。等到主人完全离开游戏。"
+		"error_enter_need_money" "不能转移少于100金或1棵树（木材）。"
+		"error_not_create_wisp" "在x1的40分钟、x2的20分钟、1x的10分钟后，无法创建1-6级的Wisp"
+		"error_no_bear_team" "需要创建Bear。"
+		"error_buy_skill_only_troll" "只有巨魔才能购买技能。"						
+		"error_bear_have_skill" "熊有这个技能。"
+		"error_limit_queue" "建立队列时超过了限制。最多可以建造20个建筑"
+
+		"error_limit_queue_wisp"															"已经超过了建筑队列的限制。"
+		"error_take_normal_builder"															"该单位没有这种能力！<br>选择正确的单位！<br>选择正确的单位！<br>选择正确的单位。"
+
+		
+		"donate1"																			"<font color='#58ACFA'>你可以在Patreon上支持这个游戏。</font>"
+		"donate2"																			"<font color='#58ACFA'>你可以通过在Patreon上支持我们的项目来增加你获得吸血鬼的机会，增加你获得的点数或获得其中一个独特的化妆品效果。</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
+		"donate5"																			"<font color='#58ACFA'>你可以在我们的Discord服务器上分享想法/错误/愿望!</font>"
+		"donate6"																			"<font color='#58ACFA'>感谢所有的测试者为定制化的发展做出了巨大的贡献! 谢谢你 ：*</font>"
+		"donate7"																			"<font color='#58ACFA'></font>"
+		"donate8"																			"<font color='#58ACFA'></font>"
+		"donate9"																			"<font color='#58ACFA'></font>"
+		"donate10"																			"<font color='#58ACFA'>如果你需要帮助，请在Discord上联系我: https://discord.gg/tve3</font>"
+		
+		"loading_text"																		"&lt;=点击这里获取提示!<br>
+		                                                                                    开始游戏后不要改变热键.
+		                                                                                    "
+		"loading_text_no_troll"																		"如果你是第一次玩，请不要选择吸血鬼."
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

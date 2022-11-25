@@ -239,13 +239,17 @@ function trollnelves2:OnItemPickedUp(keys)
     DeepPrintTable(keys)
     local hero = PlayerResource:GetSelectedHeroEntity(keys.PlayerID)
     local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
+    local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
     local player = PlayerResource:GetPlayer(keys.PlayerID)
     local itemname = keys.itemname
     
-    if (hero:IsAngel() or hero:IsElf()) and (string.match(itemname,"hp") or string.match(itemname,"armor") or string.match(itemname,"dmg") or string.match(itemname,"spd") or string.match(itemname,"boots")  or string.match(itemname,"repair")) then 
-        hero:RemoveItem(itemEntity)
+    if heroEntity:IsElf() and not string.match(itemname,"vip") and not string.match(itemname,"event") 
+        and not string.match(itemname,"autumn") and not string.match(itemname,"spring") and not string.match(itemname,"winter")  
+        and not string.match(itemname,"summer") and not string.match(itemname,"gold") and not string.match(itemname,"gem") then 
+            heroEntity:RemoveItem(itemEntity)
         return
     end  
+    itemEntity:SetPurchaser(heroEntity)
     --[[
     if hero:GetNumItemsInInventory() > 6 then
         local spawnPoint = hero:GetAbsOrigin() + RandomFloat(50, 100)
@@ -265,7 +269,9 @@ function trollnelves2:OnItemAddedInv(keys)
     local player = PlayerResource:GetPlayer(keys.inventory_player_id)
     local itemname = keys.itemname
     if hero ~= nil then
-        if (hero:IsAngel() or hero:IsElf()) and (string.match(itemname,"hp") or string.match(itemname,"armor") or string.match(itemname,"dmg") or string.match(itemname,"spd") or string.match(itemname,"boots")  or string.match(itemname,"repair")) then 
+        if (hero:IsAngel() or hero:IsElf()) and not string.match(itemname,"vip") and not string.match(itemname,"event") 
+        and not string.match(itemname,"autumn") and not string.match(itemname,"spring") and not string.match(itemname,"winter")  
+        and not string.match(itemname,"summer") and not string.match(itemname,"gold") and not string.match(itemname,"gem") then 
             hero:RemoveItem(itemEntity)
             return
         end  
@@ -301,7 +307,7 @@ function trollnelves2:OnEntityKilled(keys)
     info.PlayerID = killedPlayerID
     info.hero = killed
     
-    if killed ~= nil then
+    if killed ~= nil and killedPlayerID ~= attackerPlayerID then
         drop:RollItemDrop(killed)
     end
 
@@ -344,6 +350,18 @@ function trollnelves2:OnEntityKilled(keys)
         elseif killed:IsTroll() then
             GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 2
             killed:SetTimeUntilRespawn(9999999)
+            local endGame = 0
+            for pID=0,DOTA_MAX_TEAM_PLAYERS do
+                if PlayerResource:IsValidPlayerID(pID) then
+                    local hero = PlayerResource:GetSelectedHeroEntity(pID)
+                    if hero then
+                        if hero:IsTroll() and hero:IsAlive() then
+                            return        
+                        end
+                    end
+                end
+            end
+            
             for pID = 0, DOTA_MAX_TEAM_PLAYERS do
                 if PlayerResource:IsValidPlayerID(pID) then
                     PlayerResource:SetCameraTarget(pID, killed)
@@ -359,10 +377,8 @@ function trollnelves2:OnEntityKilled(keys)
             end)
             GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
         elseif killed:IsWolf() then
-            bounty = math.max(killed:GetNetworth() * 0.70,
-            GameRules:GetGameTime())
             killed:SetRespawnPosition(Vector(0, -640, 256))
-            killed:SetTimeUntilRespawn(WOLF_RESPAWN_TIME * PlayerResource:GetDeaths(killedPlayerID))
+            killed:SetTimeUntilRespawn(9999999999)
             killed:RemoveDesol2()
             if PlayerResource:GetDeaths(killedPlayerID) == 2 then
                 GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
@@ -551,7 +567,7 @@ function ElfKilled(killed)
         UTIL_Remove(killed)
         return bounty
     end 
-
+    local args = {}
     args.team = DOTA_TEAM_BADGUYS
     args.playerID = killedID
     ChooseHelpSide(killedID, args)
@@ -647,9 +663,10 @@ function ChooseHelpSide(eventSourceIndex, event)
     local team = event.team
     local playerID = event.playerID
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+    hero.slayer = nil
     hero.legitChooser = false
     
-    local newHeroName
+    local newHeroName = WOLF_HERO
     local message = "%s1 has joined the dark side and now will help " .. GetModifiedName(TROLL_HERO[1]) .. ". %s1 is now a" .. GetModifiedName(WOLF_HERO)
     local timer = 1
     local pos = Vector(0, -640, 256)

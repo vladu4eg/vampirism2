@@ -30,10 +30,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_anti_hp_mana_regen:OnIntervalThink()
-	if IsServer() then
+	--if IsServer() then
         local hero = self:GetParent()
 		hero:SetBaseHealthRegen(hero:GetStrength() * -0.1)
         hero:SetBaseManaRegen(hero:GetIntellect() * -0.05)
-	end
+		local target = self:GetParent()
+		hero:CalculateStatBonus(true)
+		self:ForceRefresh()
+		self:SendBuffRefreshToClients()
+		hero:CalculateStatBonus(true)
+	--end
 end
 ------------------------------------------------------------------------------------

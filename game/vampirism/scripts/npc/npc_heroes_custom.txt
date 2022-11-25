@@ -14,12 +14,12 @@
 		"Ability5" 					"build_slayerstaverna_1"
 		"Ability6"					"build_house_1"
 		"Ability7" 					"build_research_lab_1"
-		"Ability8" 					"build_gold_mine_1"
+		"Ability8" 					"build_gold_mine_1" //
 		"Ability9"					"attack_tree_skill"
 		"Ability10"					"build_tree"
 		"Ability11"					"build_flag"
-		"Ability12"					"repair"
-		"Ability13"					""
+		"Ability12"					""
+		"Ability13"					"repair"
 		"Ability14"   	    		"attribute_antibonuses"
 		"Ability15"   	    		"antiblock"
 		"RepairAbility"				"repair"
@@ -42,9 +42,9 @@
 	    "AttributeBaseAgility"    "0"                   // Base agility
 	    "AttributeAgilityGain"    "0"                   // Agility bonus per level.
 	
-	    "BountyXP"          "0"                 // Experience earn.
-	    "BountyGoldMin"       "0"                   // Gold earned min.
-	    "BountyGoldMax"       "0"                   // Gold earned max.
+	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "50"                   // Gold earned max.
 	
 	    //"BoundsHullName"      "DOTA_HULL_SIZE_SMALL"
 	    //"RingRadius"        "70"
@@ -56,7 +56,7 @@
 	    "StatusHealth"        "5000"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "10"                   // Base mana.
-	    "StatusManaRegen"     "0.5"                 // Mana regeneration rate.
+	    "StatusManaRegen"     "0.05"                 // Mana regeneration rate.
 	
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
@@ -65,172 +65,15 @@
 		"DisableWearables"         "1"
 	}
 
-	"npc_dota_hero_wisp"
-	{
-		"override_hero"				"npc_dota_hero_wisp"
-		"AbilityLayout"     "6"
-		"Ability1"				"pick_stalker"
-		"Ability2"				"pick_lifestealer"
-		"Ability3"				"pick_doom"
-		"Ability4"				"pick_sladar"
-		"Ability5"				""
-		"Ability6"				""
-		"Ability7"				""
-		"Ability8"				""
-		"Ability9"				""
-		"Ability10"				""
-		"Ability11"				""
-		"Ability12"				""
-		"Ability13"				""
-		"Ability14"   	    ""
-		"Ability15"   	    ""
-		"Ability16"   	    ""
-		
-		"AbilityLayout"                         "5"
-		"VisionNighttimeRange"			"200"
-		"VisionDaytimeRange"			"200"
-		"AttributeBaseStrength"			"50000"									// Base strength
-		"ArmorPhysical"					"999999.0"
-		"MagicalResistance"				"999999"
-
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
-
-		"HasInventory"				"1"
-		"CollisionSize"			"1"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"	
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-	}
-
-	"npc_dota_hero_life_stealer"{
-		"override_hero"     "npc_dota_hero_life_stealer"
-		"SoundSet"			"Hero_LifeStealer"
-		"Model"				"models/heroes/life_stealer/life_stealer.vmdl"
-		"AbilityLayout"     "16"
-		"Ability1" 			"reveal_area"
-		"Ability2" 			"attack_tree_skill"
-		"Ability3" 			""
-		"Ability4" 			""
-		"Ability5"    	    ""
-		"Ability6"    	    ""
-		"Ability7"    	    ""
-		"Ability8"    	    ""
-		"Ability9"    	    ""
-		"Ability10"   	    ""
-		"Ability11"   	    ""
-		"Ability12"   	    ""
-		"Ability13"   	    ""
-		"Ability14"   	    ""
-		"Ability15"   	    "attribute_antibonuses"
-		"Ability16"   	    "antiblock"
-		
-		"ArmorPhysical"       "24"                 // Physical protection.
-		"MagicalResistance"       "30"                 // Magical protection (percentage).
-		
-		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
-		"AttackDamageMin"     "71"                   // Damage range min.
-		"AttackDamageMax"     "71"                   // Damage range max.
-		
-		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "320"                   // Base strength
-		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "320"                   // Base intelligence
-		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "320"                   // Base agility
-		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
-		
-		"BountyXP"          "0"                 // Experience earn.
-		"BountyGoldMin"       "0"                   // Gold earned min.
-		"BountyGoldMax"       "0"                   // Gold earned max.
-		
-		"BoundsHullName"      "DOTA_HULL_SIZE_REGULAR"
-		//"RingRadius"        "70"
-		"CollisionSize"			"48"
-		
-		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "310"                 // Speed.
-		"MovementTurnRate"      "1.0"                 // Turning rate.
-		
-		"StatusHealth"        "68000"                 // Base health.
-		"StatusHealthRegen"     "0"                 // Health regeneration rate.
-		"StatusMana"        "4000"                   // Base mana.
-		"StatusManaRegen"     "0"                 // Mana regeneration rate.
-		
-		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
-		"DisableWearables"               "0"
-	}
-
-	"npc_dota_hero_slardar"{
-		"override_hero"     "npc_dota_hero_slardar"
-		"SoundSet"			"Hero_Slardar"
-		"Model"				"models/heroes/slardar/slardar.vmdl"
-		"AbilityLayout"     "16"
-		"Ability1" 			"reveal_area"
-		"Ability2" 			"attack_tree_skill"
-		"Ability3" 			""
-		"Ability4" 			""
-		"Ability5"    	    ""
-		"Ability6"    	    ""
-		"Ability7"    	    ""
-		"Ability8"    	    ""
-		"Ability9"    	    ""
-		"Ability10"   	    ""
-		"Ability11"   	    ""
-		"Ability12"   	    ""
-		"Ability13"   	    ""
-		"Ability14"   	    ""
-		"Ability15"   	    "attribute_antibonuses"
-		"Ability16"   	    "antiblock"
-		
-		"ArmorPhysical"       "24"                 // Physical protection.
-		"MagicalResistance"       "30"                 // Magical protection (percentage).
-		
-		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
-		"AttackDamageMin"     "71"                   // Damage range min.
-		"AttackDamageMax"     "71"                   // Damage range max.
-		
-		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "320"                   // Base strength
-		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "320"                   // Base intelligence
-		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "320"                   // Base agility
-		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
-		
-		"BountyXP"          "0"                 // Experience earn.
-		"BountyGoldMin"       "0"                   // Gold earned min.
-		"BountyGoldMax"       "0"                   // Gold earned max.
-		
-		"BoundsHullName"      "DOTA_HULL_SIZE_REGULAR"
-		//"RingRadius"        "70"
-		"CollisionSize"			"48"
-		
-		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "310"                 // Speed.
-		"MovementTurnRate"      "1.0"                 // Turning rate.
-		
-		"StatusHealth"        "68000"                 // Base health.
-		"StatusHealthRegen"     "0.0"                 // Health regeneration rate.
-		"StatusMana"        "4000"                   // Base mana.
-		"StatusManaRegen"     "0"                 // Mana regeneration rate.
-		
-		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
-		"DisableWearables"               "0"
-	}
-	
-	"npc_dota_hero_night_stalker"{
+	"npc_dota_hero_night_stalker"
+		{
 		"SoundSet"			"Hero_NightStalker"
 		"Model"				"models/heroes/nightstalker/nightstalker_night.vmdl"
 		"AbilityLayout"     "16"
 		"Ability1" 			"reveal_area"
 		"Ability2" 			"lord_of_lightning_chain_lightning"
 		"Ability3" 			"shadow_wave_datadriven_vimpire"
-		"Ability4" 			"vampire_stomp"
+		"Ability4" 			"earth_lord_split_earth"
 		"Ability5"    	    "vampire_crit"
 		"Ability6"    	    ""
 		"Ability7"    	    ""
@@ -271,7 +114,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "310"                 // Speed.
+		"MovementSpeed"       "500"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "68000"                 // Base health.
@@ -283,8 +126,133 @@
 		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
 		"DisableWearables"               "0"
 	}
+
+	"npc_dota_hero_life_stealer"
+	{
+		"override_hero"     "npc_dota_hero_life_stealer"
+		"SoundSet"			"Hero_LifeStealer"
+		"Model"				"models/heroes/life_stealer/life_stealer.vmdl"
+		"AbilityLayout"     "16"
+		"Ability1" 			"reveal_area"
+		"Ability2" 			"lord_of_lightning_chain_lightning"
+		"Ability3" 			"shadow_wave_datadriven_vimpire"
+		"Ability4" 			"earth_lord_split_earth"
+		"Ability5"    	    "vampire_crit"
+		"Ability6"    	    ""
+		"Ability7"    	    ""
+		"Ability8"    	    "antiblock"
+		"Ability9"    	    ""
+		"Ability10"   	    ""
+		"Ability11"   	    ""
+		"Ability12"   	    ""
+		"Ability13"   	    ""
+		"Ability14"   	    ""
+		"Ability15"   	    ""
+		"Ability16"   	    ""
+		"Ability17"   	    ""
+		"Ability18"   	    "attribute_antibonuses"
+		
+		"ArmorPhysical"       "24"                 // Physical protection.
+		"MagicalResistance"       "30"                 // Magical protection (percentage).
+		
+		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"			"64"
+		"AttackDamageMin"     "71"                   // Damage range min.
+		"AttackDamageMax"     "71"                   // Damage range max.
+		
+		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"   "350"                   // Base strength
+		"AttributeStrengthGain"   "60"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "350"                   // Base intelligence
+		"AttributeIntelligenceGain" "60"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "350"                   // Base agility
+		"AttributeAgilityGain"    "60"                   // Agility bonus per level.
+		
+		"BountyXP"          "0"                 // Experience earn.
+		"BountyGoldMin"       "0"                   // Gold earned min.
+		"BountyGoldMax"       "0"                   // Gold earned max.
+		
+		"BoundsHullName"      "DOTA_HULL_SIZE_REGULAR"
+		//"RingRadius"        "70"
+		"CollisionSize"			"48"
+
+		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"       "500"                 // Speed.
+		"MovementTurnRate"      "1.0"                 // Turning rate.
+		
+		"StatusHealth"        "68000"                 // Base health.
+		"StatusHealthRegen"     "0"                 // Health regeneration rate.
+		"StatusMana"        "0"                   // Base mana.
+		"StatusManaRegen"     "0"                 // Mana regeneration rate.
+		
+		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
+		"DisableWearables"               "0"
+	}
+
+	"npc_dota_hero_slardar"
+	{
+		"override_hero"     "npc_dota_hero_slardar"
+		"SoundSet"			"Hero_Slardar"
+		"Model"				"models/heroes/slardar/slardar.vmdl"
+		"AbilityLayout"     "16"
+		"Ability1" 			"reveal_area"
+		"Ability2" 			"attack_tree_skill"
+		"Ability3" 			""
+		"Ability4" 			""
+		"Ability5"    	    ""
+		"Ability6"    	    ""
+		"Ability7"    	    ""
+		"Ability8"    	    ""
+		"Ability9"    	    ""
+		"Ability10"   	    ""
+		"Ability11"   	    ""
+		"Ability12"   	    ""
+		"Ability13"   	    ""
+		"Ability14"   	    ""
+		"Ability15"   	    "attribute_antibonuses"
+		"Ability16"   	    "antiblock"
+		
+		"ArmorPhysical"       "24"                 // Physical protection.
+		"MagicalResistance"       "30"                 // Magical protection (percentage).
+		
+		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"			"64"
+		"AttackDamageMin"     "71"                   // Damage range min.
+		"AttackDamageMax"     "71"                   // Damage range max.
+		"AttackRate"		"0.20"
+		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"   "320"                   // Base strength
+		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "320"                   // Base intelligence
+		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "320"                   // Base agility
+		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
+		
+		"BountyXP"          "0"                 // Experience earn.
+		"BountyGoldMin"       "0"                   // Gold earned min.
+		"BountyGoldMax"       "0"                   // Gold earned max.
+		
+		"BoundsHullName"      "DOTA_HULL_SIZE_REGULAR"
+		//"RingRadius"        "70"
+		"CollisionSize"			"48"
+		
+		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"       "310"                 // Speed.
+		"MovementTurnRate"      "1.0"                 // Turning rate.
+		
+		"StatusHealth"        "68000"                 // Base health.
+		"StatusHealthRegen"     "0.0"                 // Health regeneration rate.
+		"StatusMana"        "4000"                   // Base mana.
+		"StatusManaRegen"     "0"                 // Mana regeneration rate.
+		
+		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
+		"DisableWearables"               "0"
+	}
 	
-	"npc_dota_hero_doom_bringer"{
+	"npc_dota_hero_doom_bringer"
+	{
 		"override_hero"     "npc_dota_hero_doom_bringer"
 		"Model"		"models/heroes/doom/doom.vmdl"
 		"SoundSet"		"Hero_DoomBringer"
@@ -317,12 +285,12 @@
 		"AttackDamageMax"     "71"                   // Damage range max.
 		
 		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "320"                   // Base strength
-		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "320"                   // Base intelligence
-		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "320"                   // Base agility
-		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
+		"AttributeBaseStrength"   "350"                   // Base strength
+		"AttributeStrengthGain"   "60"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "350"                   // Base intelligence
+		"AttributeIntelligenceGain" "60"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "350"                   // Base agility
+		"AttributeAgilityGain"    "60"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -345,36 +313,74 @@
 		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
 		"DisableWearables"               "0"
 	}
-	
+	"npc_dota_hero_wisp"
+	{
+		"override_hero"				"npc_dota_hero_wisp"
+		"AbilityLayout"     "6"
+		"Ability1"				"pick_stalker"
+		"Ability2"				"pick_lifestealer"
+		"Ability3"				"pick_doom"
+		"Ability4"				"pick_sladar"
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+		"Ability9"				""
+		"Ability10"				""
+		"Ability11"				""
+		"Ability12"				""
+		"Ability13"				""
+		"Ability14"   	    ""
+		"Ability15"   	    ""
+		"Ability16"   	    ""
+		
+		"AbilityLayout"                         "5"
+		"VisionNighttimeRange"			"200"
+		"VisionDaytimeRange"			"200"
+		"AttributeBaseStrength"			"50000"									// Base strength
+		"ArmorPhysical"					"999999.0"
+		"MagicalResistance"				"999999"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"HasInventory"				"1"
+		"CollisionSize"			"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+	}
 	"npc_dota_hero_lycan"{
 		"override_hero"     "npc_dota_hero_lycan"
 		"SoundSet"			"Hero_Lycan"
 		"Model"				"models/heroes/lycan/lycan_wolf.vmdl"
 		"AbilityLayout"     "16"
 		"Ability1" 			"reveal_area"
-		"Ability2" 			"attack_tree_skill"
-		"Ability3" 			""
-		"Ability4" 			""
-		"Ability5"    	    ""
+		"Ability2" 			"lord_of_lightning_chain_lightning"
+		"Ability3" 			"shadow_wave_datadriven_vimpire"
+		"Ability4" 			"earth_lord_split_earth"
+		"Ability5"    	    "vampire_crit"
 		"Ability6"    	    ""
 		"Ability7"    	    ""
-		"Ability8"    	    ""
+		"Ability8"    	    "antiblock"
 		"Ability9"    	    ""
 		"Ability10"   	    ""
 		"Ability11"   	    ""
 		"Ability12"   	    ""
 		"Ability13"   	    ""
 		"Ability14"   	    ""
-		"Ability15"   	    "attribute_antibonuses"
-		"Ability16"   	    "antiblock"
+		"Ability15"   	    ""
+		"Ability16"   	    ""
+		"Ability17"   	    ""
+		"Ability18"   	    "attribute_antibonuses"
 		
 		"ArmorPhysical"       "24"                 // Physical protection.
 		"MagicalResistance"       "30"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackRange"			"64"
-		"AttackDamageMin"     "50"                   // Damage range min.
-		"AttackDamageMax"     "50"                   // Damage range max.
+		"AttackDamageMin"     "71"                   // Damage range min.
+		"AttackDamageMax"     "71"                   // Damage range max.
 		
 		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"   "320"                   // Base strength
@@ -393,17 +399,17 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "310"                 // Speed.
+		"MovementSpeed"       "450"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
-		"StatusHealth"        "70000"                 // Base health.
-		"StatusHealthRegen"     "0.0"                 // Health regeneration rate.
-		"StatusMana"        "5000"                   // Base mana.
+		"StatusHealth"        "68000"                 // Base health.
+		"StatusHealthRegen"     "0"                 // Health regeneration rate.
+		"StatusMana"        "0"                   // Base mana.
 		"StatusManaRegen"     "0"                 // Mana regeneration rate.
 		
 		"VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
-		"DisableWearables"               "1"
+		"DisableWearables"               "0"
 	}
 
 	"human_slayer"
@@ -480,6 +486,9 @@
 
     "ProjectileModel"     "particles/units/heroes/hero_templar_assassin/templar_assassin_base_attack.vpcf"
     "ProjectileSpeed"     "1200"
+	"BountyXP"          "50"                 // Experience earn.
+	"BountyGoldMin"       "50"                   // Gold earned min.
+	"BountyGoldMax"       "50"                   // Gold earned max.
   }
 	
 }

@@ -1,0 +1,377 @@
+﻿"lang"
+{
+	"Language"		"russian"
+	"Tokens"
+	{
+		"addon_game_name"			"VAMPIRISM 2"
+		
+		"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>Пассив: мини-удар</h1> Каждая атака имеет шанс %minibash_chance%%% вызвать мини-удар."
+"DOTA_Tooltip_ability_buy_item_lia_hammer_Description" "<h1>Пассив: мини-удар</h1> Каждая атака имеет шанс %minibash_chance%%% вызвать мини-удар."
+"DOTA_Tooltip_Ability_item_golem_fire_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_item_golem_stone_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_item_golem_flesh_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
+"DOTA_Tooltip_Ability_item_shade_Description" "Невозможно убить человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_shade_Description" "Невозможно убить человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+"DOTA_Tooltip_Ability_item_assasin_Description" "Можно убивать ТОЛЬКО лесорубов.<br>Создает ассасина на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_assasin_Description" "Можно убивать ТОЛЬКО лесорубов.<br>Создает Убийцу на %duration% сек."
+"DOTA_Tooltip_Ability_item_fel_best_Description" "Можно убивать ТОЛЬКО ремонтников стен.<br>Создает зверя Скверны на %duration% сек."
+"DOTA_Tooltip_Ability_buy_item_fel_best_Description" "Можно убивать ТОЛЬКО ремонтников стен.<br>Создает чудовище Скверны на %duration% сек."
+"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description" "<h1>Активный: Берсерк</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, но заклинатель получает дополнительный урон в %berserk_extra_incoming_damage_percentage%%% раз. Увеличивает урон на %bonus_damage. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
+"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_Description" "<h1>Активный: Берсерк</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, но заклинатель получает дополнительный урон в %berserk_extra_incoming_damage_percentage%%% раз. Увеличивает урон на %bonus_%. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
+"DOTA_Tooltip_ability_item_heart_blood_Description" "<h1>Активный: Берсерк</h1> Дает бонус %berserk_bonus_movement_speed_percentage%%% скорости передвижения и %berserk_bonus_attack_speed% скорости атаки, но заклинатель получает %berserk_extra_incoming_damage_percentage%%% дополнительного урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
+"DOTA_Tooltip_ability_buy_item_heart_blood_Description" "<h1>Активный: Берсерк</h1> Дает бонус %berserk_bonus_movement_speed_percentage%%% скорости передвижения и %berserk_bonus_attack_speed% скорости атаки, но заклинатель получает %berserk_extra_incoming_damage_percentage%%% дополнительного урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
+"DOTA_Tooltip_Ability_item_golden_hand_Description" "С шансом 20% вы можете получить дополнительно 20 золотых."
+"DOTA_Tooltip_Ability_buy_item_golden_hand_Description" "С вероятностью 20% вы можете получить дополнительно 20 золотых."
+"DOTA_Tooltip_Ability_item_pulse_staff_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
+"DOTA_Tooltip_Ability_buy_item_pulse_staff_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам в цепи."
+"DOTA_Tooltip_Ability_item_burst_gem_Description" "<h1>Активация: Огненный шар</h1> Посылает огненный взрыв в любого юнита без иммунитета к магии."
+"DOTA_Tooltip_Ability_buy_item_burst_gem_Description" "<h1>Активация: Огненный шар</h1> Посылает огненный заряд в любого юнита без иммунитета к магии."
+"DOTA_Tooltip_Ability_item_roketa_Description" "<h1>Активный: Ракета</h1> Убивает любого юнита без иммунитета к магии. ОДИН РАЗ ИСПОЛЬЗУЕТСЯ."
+"DOTA_Tooltip_Ability_buy_item_roketa_Description" "<h1>Активный: Ракета</h1> Убивает любого юнита без иммунитета к магии. ОДИН РАЗ ИСПОЛЬЗУЕТСЯ."
+"DOTA_Tooltip_Ability_item_immunity_shield_Description" "Щит защищает владельца от магии."
+"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description" "Щит защищает владельца от магии."
+"DOTA_Tooltip_Ability_item_troll_teleport_Description" "Телепортирует героя к союзному юниту."
+"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description" "Телепортирует героя к союзному юниту."
+"DOTA_Tooltip_Ability_item_spirit_Description" "Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
+"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description" "<h1>РЕЦЕПТ</h1> Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
+"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description" "<h1>РЕЦЕПТ</h1>"
+"DOTA_Tooltip_Ability_item_golden_greed_Description" "С вероятностью 35% вы можете получить дополнительно 80 золотых."
+"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" "<h1>РЕЦЕПТ</h1><br>С вероятностью 35% вы можете получить дополнительно 80 золотых."
+"DOTA_Tooltip_Ability_item_clock_dracula_Description" "Делает героя невидимым."
+"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" "<h1>РЕЦЕПТ</h1>Дает герою невидимость."
+"DOTA_Tooltip_ability_item_doom_frostbite_Description" "<h1>Активный: Обморожение</h1>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP: 1 800 000 "
+"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description" "<h1>РЕЦЕПТ<br>Активен: Frostbite</h1>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP : 1 800 000"
+"DOTA_Tooltip_Ability_item_pulse_ricochet_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
+"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description" "<h1>РЕЦЕПТ<br>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
+"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description" "<h1>Активация: Иллюзия</h1> Создает изображение целевого юнита. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд. "
+"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description" "<h1>РЕЦЕПТ<br>Активный: Иллюзия</h1> Создает изображение целевого юнита. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится % иллюзия_длительность% секунд."
+"DOTA_Tooltip_Ability_item_demonic_remains_Description" "Каждый убитый юнит дает вам +10 ко всем характеристикам."
+"DOTA_Tooltip_ability_buy_item_demonic_remains_Description" "Каждый убитый юнит дает вам +10 ко всем характеристикам."
+"DOTA_Tooltip_Ability_item_pick_axe_Description" "Длинный топор позволяет добраться до золотых приисков, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ ПРИИСКАХ!"
+"DOTA_Tooltip_Ability_buy_item_pick_axe_Description" "Длинный топор позволяет добраться до золотых приисков, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ ПРИИСКАХ!"
+"DOTA_Tooltip_Ability_item_mask_undeath_Description" "Блокирует %bonus_block% урона."
+"DOTA_Tooltip_Ability_buy_item_mask_undeath_Description" "Блокирует %bonus_block% урона."
+"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description" "<h1>Активация: Срубка деревьев</h1>Срубить одно дерево. Одноразовый топор. Полезно со сферой рока.."
+"DOTA_Tooltip_Ability_food_cost_Description" "Увеличивает максимальное количество еды (сыр) на 50/100/300. Максимум 300 еды (сыр)."
+"DOTA_Tooltip_ability_build_rock_1_Description" "Стройте камень. Используйте его, чтобы заблокировать доступ вампира к вашей базе. Обязательно отцентрируйте его!"
+
+
+
+
+
+
+
+
+		"buy_currency"						"Покупка Vamp Coint."
+		"buy_currency_description"			"100 руб = 170 монет. Можно донатить через Сбер, Киви или Яндекс(Писать в Дискорде). Есть скидки за большое количество монет(Писать в Дискорде). При первой покупке от +50 монет выдается 100 монет бесплатно (Писать в Discord)."
+
+
+		"shop_button"	"Магазин"
+
+		"shop_main"		"Главная"
+		"shop_items"		"Товары"
+		"shop_pets"		"Питомцы"
+		"shop_particles"		"Эффекты"
+
+		"shop_gem"		"Предметы за Gem"
+	
+		"shop_recomended"		"Предметы со скидкой"
+	
+		"shop_all"		"Все"
+		"shop_subscribe"		"Подписка"
+		"shop_currency"		"Валюта"
+
+		"ads_name_1"		"Купить Battle Pass"
+		"ads_name_2"		"Купить Сундук"
+
+		"shop_bought"		"Куплен"
+		"shop_gold"			"В сундуке"
+		"shop_event"		"Ивент"
+		"shop_buy"			"Купить"
+		"shop_activate"		"Включить"
+		"shop_deactivate"	"Выключить"
+
+		"shop_trollchance"	"Шанс стать тролем: "
+		"shop_bonusrate"	"Бонус рейтинга: "
+		"shop_trollchance_date"			"Действует до: "
+		"shop_bonusrate_date"			"Действует до: "
+		"shop_no_money"						"Недостаточно средств на счету!"
+		"shop_nice_buy"						"Отправлен запрос на покупку. ЕСЛИ ДОНАТ НЕ БЫЛ ВЫДАН В СЛЕДУЮЩЕЙ ИГРЕ, ТО ОБРАТИТЕСЬ К РАЗРАБОТЧИКУ! Спасибо за поддержку!"
+		"shop_error_label"					"Недостаточно средств на счету!"
+
+		"BattlePass_button" "Пропуск"
+		"BattlePass_Name" 	"Battle Pass"
+		"battleshop_gives" "Получить"
+		"battleshop_locked" "Закрыто"
+		"battlepass_inbp" "В пропуске"
+		"battlepass_level" "Уровень"
+		"battlepass_free" "Бесплатно"
+		"battlepass_gives"	"ПОЛУЧЕНО"
+
+		"shop_inventory"	"Инвентарь"
+		"shop_chests"		"Сундуки"
+
+		"shop_chest_count" "Количество"
+		"shop_open"			"Открыть"
+		"shop_currency_gold"	"TvE Coint"
+		"shop_currency_gem"		"TvE Coint"
+		"shop_accept"			"Принять"
+
+		"shop_chance"	"Шанс выпадения: "
+		"shop_currency_count"	"Количество TvE Coint"
+		"shop_currency_count_from"	"от"
+		"shop_currency_count_to"	"до"
+
+		"pet_description"				"За одну покупку выдается только один Питомец. Питомцы, купленные за монеты, являются постоянными. Питомцы за самоцветы выдаются на 1 месяц. Некоторые Питомцы выдаются за ТОП1-10, участие в событиях и так далее. Следите за событиями на Discord для получения бесплатных призов."
+		"skin_description" 				"За одну покупку выдается только один Скин. Скины, купленные за монеты, являются постоянными. Скины за самоцветы выдаются на 1 месяц. Некоторые Скины выдаются за ТОП1-10, участие в мероприятиях и так далее. Следите за событиями на Discord для получения бесплатных призов."
+		"particle_description"			"За одну покупку выдается только один эффект. Эффекты, купленные за монеты, являются постоянными. Эффекты за самоцветы выдаются на 1 месяц. Некоторые эффекты выдаются за ТОП1-10, участие в событиях и так далее. Следите за событиями на Discord для получения бесплатных призов."
+		"chest_description"				"Сундук выдается навсегда. Предметы из сундука выдаются навсегда. Некоторые предметы дешевле покупать в сундуках."
+		"subscribe_description"			"Шанс тролля, бонусный рейтинг и другие подписки приобретаются на 1 месяц. Повторная покупка увеличивает срок действия на 1 месяц."
+		"sounds_description"			"Звуки и спреи, купленные за монеты, выдаются навсегда. Чтобы включить звук или спрей, нажмите клавишу L."
+		"spray_description"				"Звуки и спреи, купленные за монеты, выдаются навсегда. Чтобы включить звук или спрей, нажмите клавишу L."
+
+		"DOTA_Tooltip_Ability_item_get_gem_Description"								"Дает 10 Lucky Gem.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек."
+
+		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Дает 10 TvE Coint.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек."
+
+
+		"DOTA_Tooltip_ability_item_vip_Description"                               	"Активируйте предмет и получите эффект сезона в следующей игре.<br>Можно активаровать только от 10 человек."
+		
+		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		
+		"DOTA_Tooltip_ability_item_autumnt_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		
+		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		"DOTA_Tooltip_ability_item_spring_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		"DOTA_Tooltip_ability_item_summer_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		
+		"DOTA_Tooltip_ability_item_ghosttown_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		"DOTA_Tooltip_ability_item_winter_tree_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		
+		"DOTA_Tooltip_ability_item_winter_end_Description"                               "Вы уже близки к разгадке!"
+		
+		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Winter 2.<br>Можно активаровать только от 10 человек."
+
+		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Donater 10.<br>Можно активаровать только от 10 человек."
+
+		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "Сообществу ТвЕ3 исполнился 2 года!<br>Спасибо за активную поддержку!<br>Я ценю Вашу помощь!<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Birthday.<br>Можно активаровать только от 10 человек."
+
+		"DOTA_Tooltip_ability_drop_gift_Description"                               "Спасибо за прохождение квеста!<br>Сундук Проклятых выдаст вам от 25 до 200 ивент предметов в случайное время."
+
+		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Дает +190 к скорости бега на 20 секунд."
+
+		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		
+		"DOTA_Tooltip_ability_item_event_desert_Description"                               	"Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Disert.<br>Можно активаровать только от 10 человек."
+
+
+        "topptext"                                      									"Лучшие игроки в общем рейтинге: "
+        "topwtext"                                      									"Лучшие игроки за Эльфа: " 
+        "tophtext"                                      									"Лучшие игроки за Тролля: "
+		"topetext"																			"Лучшие игроки: "
+		
+		"leaderboard_name"                                      									"Таблица лидеров"
+        "leaderboard_1"                                      									"Лучшие игроки (общий рейтинг)"
+        "leaderboard_2"                                      									"Лучшие Эльфы"
+		"leaderboard_3"                                      									"Лучшие Тролли"
+		"leaderboard_event"                                      									"Лидеры Ивента"
+		"leaderboard_button"                                      									"Лидеры"
+		
+		"summer"                                          										"Выдается за участие в Summer event."
+		"patron7"                                          										"Level 7 Donation. Доступно донатеру седьмого уровня и выше."
+		"tester"                                          										"Эффект тестировщика."
+		"top"                                          											"Награждаются игроки за ТОП 1-10 сезона."
+		"top1"                                          										"Награждается игроки за ТОП 1 сезона."
+		"top2-3"                                          										"Награждаются игроки за ТОП 2-3 сезона."
+		"top2"                                          										"Награждаются игроки за ТОП 2 сезона."
+		"top3"                                          										"Награждаются игроки за ТОП 3 сезона."
+		"spring"                                          										"Выдается за участие в Spring event."
+		"developer2"                                          									"Эффект разработчика."
+		"moderator"                                          									"Эффект модератора."
+		"newyear"                                          										"Выдается за участие в New Year event."
+		"autumn"                                          										"Выдается за участие в Autumn event."
+		"patron1"                                          										"Level 1 Donation. Доступно донатеру первого уровня и выше."
+		"patron2"                                          										"Level 2 Donation. Доступно донатеру второго уровня и выше."
+		"patron3"                                          										"Level 3 Donation. Доступно донатеру третьего уровня и выше."
+		"patron4"                                          										"Level 4 Donation. Доступно донатеру четвертого уровня и выше."
+		"patron5"                                          										"Level 5 Donation. Доступно донатеру пятого уровня и выше."
+		"patron6"                                          										"Level 6 Donation. Доступно донатеру шестого уровня и выше."
+		"birthday"                                          									"Выдается за участие в Birthday event."	
+		"patron8"                                          										"Level 8 Donation. Доступно донатеру восьмого уровня и выше."
+		"patron9"                                          										"Level 9 Donation. Доступно донатеру девятого уровня и выше."
+		"patron10"                                          									"Level 10 Donation. Доступно донатеру десятого уровня и выше."
+		"patron11"                                          									"Level 11 Donation. Доступно донатеру десятого уровня и выше."
+		"patron12"                                          									"Level 12 Donation. Доступно донатеру десятого уровня и выше."
+		"coldfire"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
+		"winter2"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
+		"suprise"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
+		"winter3"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"spring2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"autumn2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"summer2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"dirt"																				    "Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"storm"																				 	"Выдается вместе с эффектом 10 уровня или в особых событиях."
+		"life"																				 	"Выдается вместе с эффектом 12 уровня или в особых событиях."
+		"toppatron"																				"Выдается за ТОП1-5 донатерам на Патреон."
+
+		"subscribe_1_description"					"Увеличивает шанс получения Тролля на 25%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
+		"subscribe_2_description"					"Увеличивает шанс получения Тролля на 50%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
+		"subscribe_3_description"					"Увеличивает шанс получения Тролля на 75%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
+		"subscribe_4_description"					"Увеличивает бонус рейтинг всех игроков в игре на 10%."
+
+
+
+//Ежедневные задания
+//В основном локализация по заданиям идет
+"troll_quest_title" 		"Ежедневные задания"
+"quest_closed"				"Недоступно"
+"quest_need_battlepass"		"Требуется BattlePass"
+
+//Награды
+"troll_rewards_title"		"Ежедневные награды"
+"rewards_button"			"Награды"
+"rewards_days"				"День"
+"reward_recieved"			"Получено"
+"reward_recieve"			"Забрать"
+
+//Информация
+//В основном локализация идет по тому что напишешь в js
+"info_button"			"Инфо"
+"Information_title"		"Информация"
+
+//Система кланов
+"clan_button"				"Клан"
+"Clan_title"    			"Система кланов"
+"clan_created"				"Создание клана"
+"clan_cancel"				"Отмена"
+"clan_created_button"				"Создать"
+"clan_invite_player" 		"Пригласить игрока в клан"
+"clan_back"					"Назад"
+"clan_default_error" 		"Произошла ошибка"
+"text_clan_name"			"Введите название клана"
+
+"clan_no_clan"				"У вас нет клана"
+"clan_no_clan_desc"			"Подождите пока кто-нибудь вас пригласит или создайте сами"
+"clan_create"				"Создать клан"
+"clan_invites"				"Приглашения"
+"clan_player_you_invite"	"приглашает вас в клан "
+"clan_players"				"Участники "
+"clan_player"				"Игрок"
+"clan_rating"				"Рейтинг"
+"clan_leave"				"Покинуть клан"
+"clan_kick"					"Выгнать"
+"clan_invite"				"Пригласить"
+"clan_delete"				"Удалить клан"
+"clan_player_invited"		"Приглашен"
+"clan_error_name"			"Введите название клана"
+
+
+
+		"block"																				 	"Эффект заблокирован до релиза события."
+		
+		"partnote"                                          									"Описание Эффекта"
+		"partname"                                          									"Название Эффекта"
+		
+		"petsnote"                                          									"Описание Питомцев"
+		"petsname"                                          									"Название Питомцев"
+		
+		"ptop1autumn"																			"Награждается игроки за ТОП 1 сезона."									
+		"ptop1winter"																			"Награждается игроки за ТОП 1 сезона."																				
+		"ptop1spring"																			"Награждается игроки за ТОП 1 сезона."																				
+		"ptop1summer"																			"Награждается игроки за ТОП 1 сезона."																				
+		"ppatron1"																				"Доступно донатеру первого уровня и выше. Питомцы не входят в донат эффектов."
+		"ppatron2"																				"Доступно донатеру второго уровня и выше. Питомцы не входят в донат эффектов."
+		"ppatron3"																				"Доступно донатеру третьего уровня и выше. Питомцы не входят в донат эффектов."
+		"ppatron4"																				"Доступно донатеру четвертого уровня и выше. Питомцы не входят в донат эффектов."
+		"ppatron5"																				"Доступно донатеру пятого уровня и выше. Питомцы не входят в донат эффектов."
+		"ppatron6"																				"Доступно донатеру шестого уровня и выше. Питомцы не входят в донат эффектов."
+		"peventdesert"																			"Выдается за участие в Desert event."
+		"peventwinter"																			"Выдается за участие в Winter event."
+		"peventspring"																			"Выдается за участие в Spring event."
+		"peventsummer"																			"Выдается за участие в Summer event."
+		"discordnitro"																			"Будет выдаваться за поддержку сообщества TvE3 в социальных сетях."
+		"grils"																					"Выдается нашим любимым, красивым и вечно прекрасным девушкам в Discord)))"
+		
+		"seveasdefault"																			"Сохранить по умолчанию"
+		
+		"patreonbuttontext"																	"Donate Patreon"
+		"patreonbuttontext1"																"Donate PayPal Page"
+		"patreonbuttontext2"																"Donate Yandex Page"
+		"patreontext"	"Если вы хотите поддержать проект и помочь в развитии,
+то вы можете сделать пожертвования с помощью сайта https://patreon.com/troll_vs_elves3 или https://paypal.me/elves3 или https://donate.stream/en/vladu4eg
+Полученные деньги будут потрачены на обслуживание серверов и улучшение качества контента.
+Обязательно укажите ссылку на профиль в Steam, ник в Discord/Steam.
+Пожалуйста, предоставьте как можно больше информации о себе, чтобы я мог поблагодарить вас за поддержку.
+Эффект выдается сроком на 1 год. Ваша поддержка помогает игре развиваться."
+		
+		"bonus_damage"																		"Bonus Damage"
+		"bonus_armor"																		"Bonus Armor"
+		"bonus_hp"																			"Bonus HP"
+		"bonus_hp_regen"																	"Bonus HP Regenaration"
+		"bonus_atk_spd"																		"Bonus Atk. Speed"
+		"bonus_ms"																			"Bonus Movement Speed"
+		"error_not_enough_gold"																"Мало золота! "
+		"error_not_enough_lumber"															"Мало дерева(lumber) "
+		"error_not_buy_wolf"																"Волк не может улучшать Troll Hut! "
+		"error_castable_only_on_troll_hut"													"Можно использовать только на Troll Hut!"
+		"error_not_enough_food"																"Закончилась еда! "
+		"error_not_enough_wisp"																"Превышен лимит Wisp! "
+		"error_not_enough_mine"																"Превышен лимит Gold"
+		"error_full_inventory"																"Полный инвентарь! "
+		"error_shop_out_of_range"															"Вы не в радиусе магазина! "
+		"error_not_enough_resources"														"Вам не хватает ресурсов! "
+		"error_type_only_digits"															"Введите только цифры! "
+		"error_select_only_your_allies"														"Выберите своего союзника! "
+		"error_enemy_nearby"																"Враг рядом! "
+		"error_invalid_build_position"														"Неверная позиция! "
+		"error_only_troll_can_upgrade"														"Только Тролль может улучшить Troll Hut! "
+		"error_no_radar"																	"К сожалению, сканирование в пользовательских играх не засчитывается в испытании сообщества! "
+		"error_not_night"																	"Работает только ночью! "
+		"error_item_not_sellable"															"Товар не продается!"
+		"error_not_time"																	"Украсть золото можно через 5 минут! "
+		"error_place_is_taken"																"Место занято другим Эльфом или тут нельзя ставить Флаг!"
+		"error_cant_build_flag"																"Тут нельзя ставить Флаг!"
+		"error_place_is_flag"																"Тут нельзя ставить флаг!"
+		"team_choice_header"                                                                "Ты хочешь быть Троллем?"
+		"error_need_put_flag"																"Нужно построить Флаг!"
+		"team_choice_yes"                                                                   "Да"
+		"team_choice_no"                                                                    "Нет"
+		"error_not_spam_votekick"															"Голосование можно проводить один раз в 1 минуту!"
+		"error_construction_for_yourself"													"Вы не можете строить сверху Эльфа после 10 (x2) и 20 (x1) минут!"
+		"error_need_buy_hut_7"																"Вам нужно улучшить  Troll Hut до 7 уровня!"	
+		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
+		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
+		"error_enter_need_money"															"Нельзя передать меньше 100 золота или 1 дерева(lumber)."
+		"error_not_create_wisp"																"Нельзя создать Wisp 1-6 уровня после 40 минуты в х1, 20 минуты - х2, 10 минуты - 1х"
+		"error_no_bear_team"																"Нужно создать Медведя."
+		"error_buy_skill_only_troll"														"Купить Скилл может только Тролль."						
+		"error_bear_have_skill"																"У Медведя есть данный Скилл. "
+		"error_limit_queue"																	"Превышен лимит очереди построек. Максимум 20 построек. "
+		"error_limit_queue_wisp"															"Превышен лимит очереди построек."
+		"error_take_normal_builder"															"У юнита нет этой способности!<br>Выберите нужного юнита!"
+
+		
+		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon.</font>"
+		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Тролля, увеличить количество получаемых очков или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
+		"donate5"																			"<font color='#58ACFA'>Вы можете поделиться идеями/багами/пожеланиями на нашем сервере Discord!</font>"
+		"donate6"																			"<font color='#58ACFA'>Спасибо всем  тестирам  за  такой значительный  вклад  в развитие кастомки! Спасибо:*</font>"
+		"donate7"																			"<font color='#58ACFA'>Открыта регистрация на Турнир 1x4 в Discord: https://discord.gg/tve3</font>"
+		"donate8"																			"<font color='#58ACFA'>За нарушение правил игры предусмотрено наказание! Информация в Discord: https://discord.gg/tve3</font>"
+		"donate9"																			"<font color='#58ACFA'>СТАВЬТЕ ФЛАГ ВОЗЛЕ СВОЕГО КАМНЯ!</font>"
+		"donate10"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/tve3</font>"
+		
+		"loading_text"																		"&lt;=Щелкните здесь, чтобы получить советы!<br>
+		                                                                                    Не меняйте горячие клавиши после запуска игры.
+		                                                                                    "
+		"loading_text_no_troll"																		"Не выбирайте Вампира,  если  играете в первый раз, пожалуйста."
+		
+	}
+}

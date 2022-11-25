@@ -347,9 +347,7 @@
             -- Insert the caster into the hit table
             table.insert(hit_table, caster)
             -- Heal the caster and do damage to the units around it
-            if caster.state == "complete" then
-                caster:Heal(heal, caster)
-            end
+            caster:Heal(heal, caster)
             
     
             local units_to_damage = FindUnitsInRadius(caster:GetTeam(), caster_location, nil, damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, ability:GetAbilityTargetType(), 0, 0, false)
@@ -367,10 +365,8 @@
         -- Mark the target as already hit
         table.insert(hit_table, target)
         -- Heal the initial target and do the damage to the units around it
-        
-        if target.state == "complete" then
-            target:Heal(heal, caster)
-        end
+
+        target:Heal(heal, caster)
         local units_to_damage = FindUnitsInRadius(caster:GetTeam(), target_location, nil, damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, ability:GetAbilityTargetType(), 0, 0, false)
     
         for _,v in pairs(units_to_damage) do
@@ -423,10 +419,8 @@
                         target_location = unit_location
     
                         -- Heal it and deal damage to enemy units around it
-                        
-                        if target.state == "complete" then
-                            target:Heal(heal, caster)
-                        end
+                
+                        target:Heal(heal, caster)
                         local units_to_damage = FindUnitsInRadius(caster:GetTeam(), target_location, nil, damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, ability:GetAbilityTargetType(), 0, 0, false)
     
                         for _,v in pairs(units_to_damage) do
@@ -539,9 +533,9 @@
                         target_location = unit_location
     
                         -- Heal it and deal damage to enemy units around it
-                        if target.state == "complete" then
+
                             target:Heal(heal, caster)
-                        end
+
                         local units_to_damage = FindUnitsInRadius(caster:GetTeam(), target_location, nil, damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, ability:GetAbilityTargetType(), 0, 0, false)
     
                         for _,v in pairs(units_to_damage) do
@@ -594,9 +588,9 @@
                         target_location = unit_location
     
                         -- Heal it and deal damage to enemy units around it
-                        if target.state == "complete" then
+
                             target:Heal(heal, caster)
-                        end
+
                         local units_to_damage = FindUnitsInRadius(caster:GetTeam(), target_location, nil, damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, ability:GetAbilityTargetType(), 0, 0, false)
     
                         for _,v in pairs(units_to_damage) do

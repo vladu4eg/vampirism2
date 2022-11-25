@@ -303,7 +303,7 @@ function CDOTA_BaseNPC:IsElf()
     return self:GetUnitName() == ELF_HERO
 end
 function CDOTA_BaseNPC:IsTroll()
-    for i = 2, #TROLL_HERO do
+    for i = 1, #TROLL_HERO do
 		if self:GetUnitName() == TROLL_HERO[i] then
 			return true
 		end

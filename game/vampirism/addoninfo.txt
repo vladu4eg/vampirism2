@@ -1,12 +1,12 @@
 "AddonInfo"
 {
   "TeamCount" "5"
-  "maps"      "autumn"
+  "maps"      "classic"
   "IsPlayable"  "1"
 
-  "autumn"
+  "classic"
   {
-    "MaxPlayers"                    "16"
+    "MaxPlayers"                    "12"
   }
   
   "Default_Keys"

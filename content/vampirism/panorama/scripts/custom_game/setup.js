@@ -151,7 +151,8 @@ function UseItemCommandCalled(data, hotkey, slot) {
     var itemID = Entities.GetItemInSlot(selectedUnitID, slot);
     var abilitySlot = unusedHotkeyAbilitySlots[hotkey];
     $.Msg("ItemID: ", itemID);
-    if (itemID !== -1) {
+    let itemName = Abilities.GetAbilityName(itemID);
+    if (itemID !== -1 && itemName != "item_full") {
         Abilities.ExecuteAbility(itemID, selectedUnitID, false);
     } else if (abilitySlot != null) {
         var abilityID = Entities.GetAbility(selectedUnitID, abilitySlot);
@@ -249,6 +250,11 @@ function UpdateAbilityTooltips() {
                         tooltipManager.FindChildTraverse('AbilityExtraDescription').text = reqText;
                     }
                     tooltipManager.FindChildTraverse('SellPriceLabel').style.visibility = "collapse";
+                    //if (tooltipManager.FindChildTraverse('SellPriceLabel').style.visibility == "visible")
+                    //{
+                    //    tooltipManager.FindChildTraverse('SellPriceLabel').text = $.Localize("#cost_money_sell_item");
+                    //}
+                    
                     tooltipManager.FindChildTraverse('SellPriceTimeLabel').style.visibility = "collapse";
                 }
             })(abilitySlot, buttonWell));
@@ -382,7 +388,15 @@ function UpdateAbilityCustomHotkey(selectedUnit, abilitySlot, abilityPanel, x) {
 }
 
 function IsHotkeyAvailable(selectedUnit, index) {
+    
     if (index === 0) {
+        return true;
+    }
+    let itemID = Entities.GetItemInSlot(selectedUnit, index - 1)
+    let itemName = Abilities.GetAbilityName(itemID);
+
+    if (itemName == "item_full")
+    {
         return true;
     }
     return Entities.GetItemInSlot(selectedUnit, index - 1) === -1;

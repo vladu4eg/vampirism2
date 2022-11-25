@@ -38,15 +38,8 @@ function Precache( context )
 	PrecacheUnitByNameSync(ELF_HERO, context)
 	PrecacheUnitByNameSync(TROLL_HERO[1], context)
 	PrecacheUnitByNameSync(TROLL_HERO[2], context)
-	PrecacheUnitByNameSync(TROLL_HERO[3], context)
-	PrecacheUnitByNameSync(TROLL_HERO[4], context)
 	PrecacheUnitByNameSync(WOLF_HERO, context)
-	PrecacheUnitByNameSync(ANGEL_HERO[1], context)
-	PrecacheUnitByNameSync(ANGEL_HERO[2], context)
-	PrecacheUnitByNameSync(BEAR_HERO, context)
-	PrecacheUnitByNameSync("npc_dota_hero_doom_bringer", context)
 	PrecacheUnitByNameSync("npc_dota_hero_phantom_assassin", context)
-	PrecacheUnitByNameSync("npc_dota_hero_tidehunter", context)
 	PrecacheUnitByNameSync("tent", context)
 	PrecacheUnitByNameSync("tent_2", context)
 	PrecacheUnitByNameSync("tent_3", context)
@@ -145,16 +138,8 @@ function Precache( context )
 	PrecacheUnitByNameSync("wisp_8", context)
 	PrecacheUnitByNameSync("gold_wisp", context)
 	PrecacheUnitByNameSync("troll_hut_1", context)
-	PrecacheUnitByNameSync("troll_hut_2", context)
-	PrecacheUnitByNameSync("troll_hut_3", context)
-	PrecacheUnitByNameSync("troll_hut_4", context)
-	PrecacheUnitByNameSync("troll_hut_5", context)
-	PrecacheUnitByNameSync("troll_hut_6", context)
-	PrecacheUnitByNameSync("weapon_shop", context)
-	PrecacheUnitByNameSync("armor_shop", context)
-	PrecacheUnitByNameSync("hp_shop", context)
-	PrecacheUnitByNameSync("hp_reg_shop", context)
-	PrecacheUnitByNameSync("atk_spd_shop", context)
+
+
 	
 	PrecacheResource("particle","particles/buildinghelper/square_overlay.vpcf", context)
 	PrecacheResource("particle","particles/buildinghelper/range_overlay.vpcf", context)
@@ -424,40 +409,7 @@ function Precache( context )
 	PrecacheResource("model", "models/items/ancient_apparition/extremely_cold_shackles_arms/extremely_cold_shackles_arms.vmdl", context)
 	PrecacheResource("model", "models/items/courier/green_jade_dragon/green_jade_dragon_flying.vmdl", context)
 	PrecacheResource("model", "models/items/wards/chinese_ward/chinese_ward.vmdl", context)
-	
 
-	--Halloween
---	PrecacheResource("model", "models/heroes/death_prophet/death_prophet.vmdl", context)
---	PrecacheResource("model", "models/items/death_prophet/drowned_siren_head/drowned_siren_head.vmdl", context)
-  --  PrecacheResource("model", "models/items/death_prophet/drowned_siren_drowned_siren_skirt/drowned_siren_drowned_siren_skirt.vmdl", context)
-  --  PrecacheResource("model", "models/items/death_prophet/drowned_siren_armor/drowned_siren_armor.vmdl", context)
-   -- PrecacheResource("model", "models/items/death_prophet/exorcism/drowned_siren_drowned_siren_crowned_fish/drowned_siren_drowned_siren_crowned_fish.vmdl", context)
-  --  PrecacheResource("model", "models/items/death_prophet/drowned_siren_misc/drowned_siren_misc.vmdl", context)
-	
---	PrecacheResource("model", "models/heroes/life_stealer/life_stealer.vmdl", context)
-	--PrecacheResource("model", "models/items/lifestealer/bloody_ripper_belt/bloody_ripper_belt.vmdl", context)
-  --  PrecacheResource("model", "models/items/lifestealer/promo_bloody_ripper_back/promo_bloody_ripper_back.vmdl", context)
-   -- PrecacheResource("model", "models/items/lifestealer/bloody_ripper_arms/bloody_ripper_arms.vmdl", context)       
-   -- PrecacheResource("model", "models/items/lifestealer/bloody_ripper_head/bloody_ripper_head.vmdl", context)  
-	
- --  PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_weapon.vmdl", context)
-  --  PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_arms.vmdl", context)
-  --  PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_shoulder.vmdl", context)
-  --  PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_armor.vmdl", context)
-   -- PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_back.vmdl", context)
-    --PrecacheResource("model", "models/items/wraith_king/arcana/wraith_king_arcana_head.vmdl", context)	
-	
-	--PrecacheResource("model", "models/heroes/pudge/pudge.vmdl", context)
-	--PrecacheResource("model", "models/items/pudge/blackdeath_offhand/blackdeath_offhand.vmdl", context)
-   -- PrecacheResource("model", "models/items/pudge/blackdeath_belt/blackdeath_belt.vmdl", context)
-    --PrecacheResource("model", "models/items/pudge/blackdeath_head/blackdeath_head.vmdl", context)
-    --PrecacheResource("model", "models/items/pudge/blackdeath_back/blackdeath_back.vmdl", context)
-   -- PrecacheResource("model", "models/items/pudge/blackdeath_weapon/blackdeath_weapon.vmdl", context)
-   -- PrecacheResource("model", "models/items/pudge/blackdeath_shoulder/blackdeath_shoulder.vmdl", context)
-	--PrecacheResource("model", "models/items/pudge/blackdeath_arms/blackdeath_arms.vmdl", context)
-	
-	--PrecacheResource("model", "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl", context)
-	-- End Halloween
 	
 	PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts",context)
     PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts",context)
@@ -512,8 +464,8 @@ function Activate()
 	GameRules.Score = {}
 	GameRules.PlayersBase = {}
 	GameRules.PlayersFPS = {}
-	GameRules.test = false
-	GameRules.test2 = false
+	GameRules.test = true
+	GameRules.test2 = true
 	GameRules.PlayersCount = 0
 	GameRules.KickList = {}
 	GameRules.MultiMapSpeed = 1

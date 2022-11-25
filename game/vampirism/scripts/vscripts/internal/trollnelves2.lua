@@ -60,14 +60,14 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_DAMAGE,1)
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP, 120)
-  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN, 0.0) 
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN, 0) 
 
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0)
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,1)
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 20)
-  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,  0.0)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,  0)
 
 
   LinkLuaModifier("modifier_custom_armor", "libraries/modifiers/modifier_custom_armor.lua", LUA_MODIFIER_MOTION_NONE)
@@ -85,7 +85,8 @@ function trollnelves2:_Inittrollnelves2()
   ListenToGameEvent('dota_item_picked_up', Dynamic_Wrap(trollnelves2, 'OnItemPickedUp'), self)
   ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(trollnelves2, 'OnPlayerLevelUp'), self)
   -- ListenToGameEvent('dota_inventory_item_added', Dynamic_Wrap(trollnelves2, 'OnItemAddedInv'), self)
-  
+  ListenToGameEvent('dota_hero_inventory_item_change', Dynamic_Wrap(trollnelves2, 'OnItemStateChanged'), self)
+
   
   -- Panorama event listeners
   CustomGameEventManager:RegisterListener("give_resources", GiveResources)
@@ -116,7 +117,7 @@ function trollnelves2:_Inittrollnelves2()
   
   mode:SetModifyExperienceFilter( Dynamic_Wrap( trollnelves2, "ExperienceFilter" ), self )
   mode:SetModifyGoldFilter( Dynamic_Wrap( trollnelves2, "GoldFilter" ), self ) 
-  -- mode:SetDamageFilter( Dynamic_Wrap( trollnelves2, "DamageFilter" ), self ) 
+  mode:SetDamageFilter( Dynamic_Wrap( trollnelves2, "DamageFilter" ), self ) 
   
  -- mode:SetItemAddedToInventoryFilter(Dynamic_Wrap(trollnelves2, "ItemPickFilter"), self)
 
@@ -166,10 +167,24 @@ function trollnelves2:DamageFilter( kv )
     local heroAttacker = EntIndexToHScript(kv.entindex_attacker_const)
     local heroKilled = EntIndexToHScript(kv.entindex_victim_const)
     local team = heroAttacker:GetTeamNumber()
-  
-    if (string.match(heroKilled:GetUnitName(), "gold_mine") or string.match(heroKilled:GetUnitName(), "wisp")) and team == DOTA_TEAM_BADGUYS then
-      kv.damage = 10
+
+    if string.match(heroAttacker:GetUnitName(), "assasin") and not string.match(heroKilled:GetUnitName(), "wood_worker") then
+      kv.damage = 0
     end
+
+    if string.match(heroAttacker:GetUnitName(), "fel_best") and not heroKilled:GetUnitName() == "worker_1" then
+      kv.damage = 0
+    end
+
+
+
+    if heroKilled:IsElf() and (not heroAttacker:IsTroll() and not heroAttacker:IsWolf()) then
+      kv.damage = 0
+    end
+
+   -- if (string.match(heroKilled:GetUnitName(), "gold_mine") or string.match(heroKilled:GetUnitName(), "wisp")) and team == DOTA_TEAM_BADGUYS then
+   --   kv.damage = 10
+   -- end
     return true
   end
 end
@@ -177,14 +192,34 @@ end
 function trollnelves2:GoldFilter( kv )
   local hero = PlayerResource:GetSelectedHeroEntity(kv.player_id_const)
   if hero:IsTroll() then
-        if hero:HasModifier("modifier_item_golden_hand") then
-          local rand = RandomFloat( 0, 100 )
+    local rand = RandomFloat( 0, 100 )
+        if hero:HasModifier("modifier_item_golden_hand") then     
           if rand <= 25 then
             kv.gold = kv.gold + 20
+          end
+        elseif hero:HasModifier("modifier_item_golden_greed") then
+          if rand <= 35 then
+            kv.gold = kv.gold + 80
           end
         end
         PlayerResource:ModifyGold(hero,kv.gold)
         --SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, hero, kv.gold, nil )
   end
   return true
+end
+
+function trollnelves2:OnItemStateChanged(event)
+  print ( '[BAREBONES] OnItemStateChanged' )
+
+    local item = EntIndexToHScript(event.item_entindex) ---@type CDOTA_Item
+    local hero = EntIndexToHScript(event.hero_entindex) ---@type CDOTA_BaseNPC_Hero
+    item:SetPurchaser(nil)
+      if not item or not hero then return end
+      local container = item:GetContainer()
+      if container then
+        if hero:IsElf() then
+          UTIL_Remove(container)
+          UTIL_Remove(item)
+        end     
+      end
 end

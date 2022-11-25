@@ -5,7 +5,17 @@
 ]]
 function Teleport( event )
 	local caster = event.caster
-	local point = event.target_points[1]
+	local playerID = caster:GetPlayerID()
+	local point = event.target:GetAbsOrigin()
+	if string.match(event.target:GetUnitName(), "ward") or 
+	   string.match(event.target:GetUnitName(), "assasin") or 
+	   string.match(event.target:GetUnitName(), "golem") or 
+	   string.match(event.target:GetUnitName(), "fel_best") then
+		
+		SendErrorMessage(playerID, "error_no_take_ward")
+		event.ability:EndCooldown()
+		return
+	end
 	caster:SetHullRadius(1) --160
 	if point == caster:GetAbsOrigin() then
 		local units = Entities:FindAllByClassname("npc_dota_creature")
@@ -24,7 +34,7 @@ end
 
 function CreateTeleportParticles( event )
 	local caster = event.caster
-	local point = event.target_points[1]
+	local point = event.target:GetAbsOrigin()
 	local particleName = "particles/econ/items/natures_prophet/natures_prophet_weapon_sufferwood/furion_teleport_end_sufferwood.vpcf"
 	caster.teleportParticle = ParticleManager:CreateParticle(particleName, PATTACH_WORLDORIGIN, caster)
 	ParticleManager:SetParticleControl(caster.teleportParticle, 1, point)	

@@ -21,14 +21,18 @@
 		
 
 		// ******************** UNITS ********************
-		"blood_shop"																		"Blood Shop"
-		"summon_shop"																		"Summon Shop"
-		"black_shop"																		"Black Shop"
-		"demonic_shop"																		"Demonic Shop"
-		"gate_shop"																			"Imperial Shop"
-		"basic_shop"																		"Basic Shop"
-		"recipe_shop"																		"Recipe Shop"
-		"research_shop"																		"Book Store"
+		"blood_shop_troll"																		"Blood Shop"
+		"summon_shop_troll"																		"Summon Shop"
+		"black_shop_troll"																		"Black Shop"
+		"demonic_shop_troll"																		"Demonic Shop"
+		"gate_shop_troll"																			"Imperial Shop"
+		"basic_shop_troll"																		"Basic Shop"
+		"recipe_shop_troll"																		"Recipe Shop"
+		"research_shop_troll"																		"Book Store"
+
+		"elf_shp_1"																				"Basic Human Shop"
+		"elf_shp_2"																				"Armor Human Shop"
+		"elf_shp_3"																				"Demonic Human Shop"
 
 
 
@@ -151,24 +155,6 @@
 		"research_lab_2"                                                                  "Research Lab 2"
 		"research_lab_3"                                                                  "Research Lab 3"
 		
-		"research_lab_4_1"                                                                "Research Lab 4 LVL 1"
-		"research_lab_4_2"                                                                "Research Lab 4 LVL 2"
-		"research_lab_4_3"                                                                "Research Lab 4 LVL 3"
-		"research_lab_4_4"                                                                "Research Lab 4 LVL 4"
-		"research_lab_4_5"                                                                "Research Lab 4 LVL 5"
-		
-		"research_lab_5_1"                                                                "Research Lab 5 LVL 1"
-		"research_lab_5_2"                                                                "Research Lab 5 LVL 2"
-		"research_lab_5_3"                                                                "Research Lab 5 LVL 3"
-		"research_lab_5_4"                                                                "Research Lab 5 LVL 4"
-		"research_lab_5_5"                                                                "Research Lab 5 LVL 5"
-		
-		"research_lab_6_1"                                                                "Research Lab 6 LVL 1"
-		"research_lab_6_2"                                                                "Research Lab 6 LVL 2"
-		"research_lab_6_3"                                                                "Research Lab 6 LVL 3"
-		"research_lab_6_4"                                                                "Research Lab 6 LVL 4"
-		"research_lab_6_5"                                                                "Research Lab 6 LVL 5"
-		
 		"research_lab_7_1"                                                                "Research Lab 7"
 		"wood_worker_1"                                                                        "Wood Worker 1"
 		"wood_worker_2"                                                                        "Wood Worker 2"
@@ -180,41 +166,7 @@
 		"build_worker_2"                                                                        "Build Worker Goblin"
 
 		"worker_1"                                                                        "Worker 1"
-		"worker_2"                                                                        "Worker 2"
-		"worker_3"                                                                        "Worker 3"
-		"worker_4"                                                                        "Worker 4"
-		"worker_5"                                                                        "Worker 5"
-		"worker_6"                                                                        "Worker 6"
-		"worker_7"                                                                        "Worker 7"
-		"worker_8"                                                                        "Worker 8"
-		"worker_9"                                                                        "Worker 9"
-		"attacker_1"                                                                      "Warrior 1"
-		"attacker_2"                                                                      "Warrior 2"
-		"attacker_3"                                                                      "Warrior 3"
-		"attacker_4"                                                                      "Warrior 4"
-		"attacker_5"                                                                      "Warrior 5"
-		"attacker_6"                                                                      "Warrior 6"
-		"attacker_7"                                                                      "Warrior 7"
-		"attacker_8"                                                                      "Warrior 8"
-		"attacker_9"                                                                      "Warrior 9"
-		"attacker_10"                                                                     "Warrior 10"
-		"attacker_11"                                                                     "Warrior 11"
-		"attacker_12"                                                                     "Warrior 12"
-		"wisp_1"                                                                          "Wisp 1"
-		"wisp_2"                                                                          "Wisp 2"
-		"wisp_3"                                                                          "Wisp 3"
-		"wisp_4"                                                                          "Wisp 4"
-		"wisp_5"                                                                          "Wisp 5"
-		"wisp_6"                                                                          "Wisp 6"
-		"wisp_7"                                                                          "Wisp 7"
-		"wisp_8"                                                                          "Wisp 8"
-		"wisp_9"                                                                          "Wisp 9"
-		"wisp_10"                                                                          "Wisp 10"
-		"wisp_11"                                                                          "Wisp 11"
-		"wisp_12"                                                                          "Wisp 12"
-		"wisp_13"                                                                          "Wisp 13"
-		"wisp_14"                                                                          "Wisp 14"
-		"wisp_15"                                                                          "Wisp 15"
+
 		"gold_wisp"                                                                       "Gold Wisp"
 		"gold_mine_1"                                                                     "Gold Mine 1"
 		"gold_mine_2"                                                                     "Gold Mine 2"
@@ -226,19 +178,8 @@
 		"gold_mine_8"                                                                     "Gold Mine 8"
 		"gold_mine_9"                                                                     "Gold Mine 9"
 		"gold_mine_10"                                                                     "Gold Mine 10"
-		"weapon_shop"                                                                     "Weapon Shop"
-		"armor_shop"                                                                      "Armor Shop"
-		"hp_shop"                                                                         "HP Shop"
-		"hp_reg_shop"                                                                     "HP Reg Shop"
-		"atk_spd_shop"                                                                    "Atk Spd Shop"
-		"bear_shop"                                                                   	  "Bear Skill Shop"
+
 		"troll_hut_1"                                                                     "VAMPIRE Hut 1"
-		"troll_hut_2"                                                                     "VAMPIRE Hut 2"
-		"troll_hut_3"                                                                     "VAMPIRE Hut 3"
-		"troll_hut_4"                                                                     "VAMPIRE Hut 4"
-		"troll_hut_5"                                                                     "VAMPIRE Hut 5"
-		"troll_hut_6"                                                                     "VAMPIRE Hut 6"
-		"troll_hut_7"                                                                     "VAMPIRE Hut 7"
 		"npc_dota_units_base_reveal"													 "Reveal"
 		
 		"flag"                                                                            "Flag"
@@ -332,7 +273,14 @@
 		"shop_error_label"					"Not enough money! "
 		"buy_currency"						"Purchase of TvE Coint."
 		"buy_currency_description"						"1 dollar = 100 coins. Write to Discord @vladu4eg for technical support. If you purchase a large number of coins, then you can request additional free coins in Discord. With the first purchase of 50 coins or more, 100 coins are issued for free (Write in Discord)."
-
+				"pet_description"											"Only one Pet is issued per purchase. Pets purchased with coins are permanent. Pets for gems are issued for 1 month. Some Pets are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
+		"skin_description"											"Only one Skin is issued per purchase. Skins purchased with coins are permanent. Skins for gems are issued for 1 month. Some Skins are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
+		"particle_description"											"Only one effect is issued per purchase. Effects purchased with coins are permanent. Effects for gems are issued for 1 month. Some effects are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
+		"chest_description"											"The chest is issued forever. Items from the chest are issued permanently. Some items are cheaper to buy in chests."
+		"subscribe_description"											"Troll chance, bonus rating and other subscriptions are purchased for 1 month. Repeated purchase increases the validity period by 1 month."
+		"sounds_description"											"Sounds and sprays purchased with coins are issued permanently. To turn on the sound or spray, press the L key."
+		"spray_description"											"Sounds and sprays purchased with coins are issued permanently. To turn on the sound or spray, press the L key."
+		
 		"pet_1"														"TOP1 AUTUMN"
 		"pet_2"														"TOP1 WINTER"
 		"pet_3"														"TOP1 SPRING"
@@ -619,34 +567,66 @@
 		"DOTA_Tooltip_ability_buy_item_lia_hammer_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_item_golem_fire"				"Summon Golem 1"
-		"DOTA_Tooltip_Ability_item_golem_fire_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_fire_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_item_golem_fire_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_golem_fire_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_buy_item_golem_fire"				"Summon Golem 1"
-		"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_buy_item_golem_fire_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_golem_fire_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_item_golem_stone"				"Summon Golem 2"
-		"DOTA_Tooltip_Ability_item_golem_stone_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_stone_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_item_golem_stone_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_golem_stone_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 		
 		"DOTA_Tooltip_Ability_buy_item_golem_stone"				"Summon Golem 2"
-		"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_buy_item_golem_stone_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_golem_stone_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_item_golem_flesh"				"Summon Golem 3"
-		"DOTA_Tooltip_Ability_item_golem_flesh_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_golem_flesh_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_item_golem_flesh_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_golem_flesh_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 		
 		"DOTA_Tooltip_Ability_buy_item_golem_flesh"				"Summon Golem 3"
-		"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" 		"Creates a Golem for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" 		"Cannot kill Human.<br>Creates a Golem for %duration%  sec."
 		"DOTA_Tooltip_Ability_buy_item_golem_flesh_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_golem_flesh_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_shade"				"Shade"
+		"DOTA_Tooltip_Ability_item_shade_Description" 		"Cannot kill Human.<br>Little damage.<br>Creates a Shade for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_shade_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_shade_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_shade"				"Shade"
+		"DOTA_Tooltip_Ability_buy_item_shade_Description" 		"Cannot kill Human.<br>Little damage.<br>Creates a Shade for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_shade_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_shade_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_assasin"				"Assasin"
+		"DOTA_Tooltip_Ability_item_assasin_Description" 		"Can ONLY kill lumberjacks.<br>Creates a Assasin for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_assasin_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_assasin_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_assasin"				"Assasin"
+		"DOTA_Tooltip_Ability_buy_item_assasin_Description" 		"Can ONLY kill lumberjacks.<br>Creates a Assasin for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_assasin_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_assasin_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_fel_best"				"Fel Beast"
+		"DOTA_Tooltip_Ability_item_fel_best_Description" 		"Can ONLY kill wall repairmen.<br>Creates a Fel Beast for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_fel_best_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_fel_best_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_fel_best"				"Fel Beast"
+		"DOTA_Tooltip_Ability_buy_item_fel_best_Description" 		"Can ONLY kill wall repairmen.<br>Creates a Fel Beast for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_fel_best_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_fel_best_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		
 
 		"DOTA_Tooltip_Ability_item_mirage_10"												 "Mirage LVL 1"
 		"DOTA_Tooltip_Ability_item_mirage_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
@@ -786,6 +766,121 @@
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description"										"Teleports the hero to an allied unit."
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+
+		"DOTA_Tooltip_Ability_item_spirit"												 "Blade of Teleport LVL 2"
+		"DOTA_Tooltip_Ability_item_spirit_Description"										"Recovers %heal_percentage%%% of current health for each unit killed. Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_item_spirit_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_spirit_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit"												 "RECIPE: Blade of Teleport LVL 2"
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description"									"<h1>RECIPE</h1> Recovers %heal_percentage%%% of current health for each unit killed. Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_tiger_claw"	"Glove with Сlaws"
+		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_tiger_claw_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_Ability_item_tiger_claw_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_tiger_claw_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw"	"Glove with Сlaws"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description"							"<h1>RECIPE</h1>"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_recipe_tiger_claw_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_golden_greed"												 "Golden Blade"
+		"DOTA_Tooltip_Ability_item_golden_greed_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_golden_greed_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_golden_greed_Description" 		"With a 35% chance, you can get an additional 80 gold."
+		"DOTA_Tooltip_Ability_item_golden_greed_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_golden_greed_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_golden_greed_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_golden_greed_crit"	"%CRITICAL DAMAGE:"
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed"												 "Golden Blade"
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" 		"<h1>RECIPE</h1><br>With a 35% chance, you can get an additional 80 gold."
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_crit"	"%CRITICAL DAMAGE:"
+
+		"DOTA_Tooltip_Ability_item_clock_dracula"												 "Dracula Cloak"
+		"DOTA_Tooltip_Ability_item_clock_dracula_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_clock_dracula_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_item_clock_dracula_Description" 		"Gives the hero invisibility."
+		"DOTA_Tooltip_Ability_item_clock_dracula_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_item_clock_dracula_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_item_clock_dracula_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_item_clock_dracula_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_Ability_item_clock_dracula_bonus_damage"	"DAMAGE:"
+
+		
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula"												 "Dracula Cloak"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" 		"<h1>RECIPE</h1>Gives the hero invisibility."
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_crit"	"%CRITICAL DAMAGE:"
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_damage"	"DAMAGE:"
+
+
+
+		"DOTA_Tooltip_ability_item_doom_frostbite"						"Armor of the Devil."
+		"DOTA_Tooltip_ability_item_doom_frostbite_Description"	"<h1>Active: Frostbite</h1>Freezes enemies for %stun_duration% seconds and deals %stun_damage% damage at a %stun_radius% radius. Increases your armor by %bonus_armor%.<br> HP: 1 800 000"
+		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_hp"		"+$health"
+		"DOTA_Tooltip_ability_item_doom_frostbite_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_doom_frostbite_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite"						"Armor of the Devil."
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description"	"<h1>RECIPE<br>Active: Frostbite</h1>Freezes enemies for %stun_duration% seconds and deals %stun_damage% damage at a %stun_radius% radius. Increases your armor by %bonus_armor%.<br> HP: 1 800 000"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_hp"		"+$health"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_pulse_ricochet"				"Mega Pulse Staff"
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet"				"Mega Pulse Staff"
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>RECIPE<br>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions"	"Staff of Illusions"
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description"	"<h1>Active: Illusion</h1> Creates an image of a target unit. The illusion takes %illusion_incoming_damage%%% damage and deals %illusion_outgoing_damage%%% damage.<br>Illusion lasts %illusion_duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_bonus_evasion"									"%+$evasion"
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_bonus_armor"										"+$armor"
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_bonus_block"										"BLOCK DAMAGE: "
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions"	"Staff of Illusions"
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description"	"<h1>RECIPE<br>Active: Illusion</h1> Creates an image of a target unit. The illusion takes %illusion_incoming_damage%%% damage and deals %illusion_outgoing_damage%%% damage.<br>Illusion lasts %illusion_duration% seconds."
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_evasion"									"%+$evasion"
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_armor"										"+$armor"
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_block"										"BLOCK DAMAGE: "
+
+		
+		
+
 		
 		"DOTA_Tooltip_Ability_item_demonic_remains"	"Necklace of Blood"
 		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Each unit killed gives you +10 to all stats."
@@ -1109,6 +1204,12 @@
 
 		"DOTA_Tooltip_Ability_shadow_wave_datadriven_8"  "Heal Tower 8"
 		"DOTA_Tooltip_Ability_shadow_wave_datadriven_8_Description"	"Repairs several adjacent buildings.<br>Heal 200000. Bounce 16"
+
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_vimpire"	"Blood Aid"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_vimpire_Description"	"<h1>Active: Healing Wave</h1> Successively heals up to %max_targets% allies by %damage% hit points."
+
+
+
 		"DOTA_Tooltip_Ability_build_buff_1"                                                 "Build Heal Tower"
 		"DOTA_Tooltip_Ability_build_buff_1_Description"                                     "Creates a building that can repair other buildings. Heal 3000. Bounce 4"
 		"DOTA_Tooltip_Ability_build_buff_1_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
@@ -1355,8 +1456,14 @@
 		
 		"DOTA_Tooltip_Ability_slayer_blink"								"Blink"
 		"DOTA_Tooltip_Ability_slayer_blink_Description"					"A universal blink"
+
+		"DOTA_Tooltip_Ability_worker_blink"								"Blink"
+		"DOTA_Tooltip_Ability_worker_blink_Description"					"A universal blink"
+
+		
 		"DOTA_Tooltip_Ability_slayer_ensnare"								"Ensnare"
 		"DOTA_Tooltip_Ability_slayer_ensnare_Description"					"Binds a vampire with a blessed net so that it cannot move for 3 seconds"
+		"DOTA_Tooltip_Ability_slayer_ensnare_duration"                        "DURATION:"
 		"DOTA_Tooltip_modifier_slayer_avatar"                                             "Slayer Avatar"
 		"DOTA_Tooltip_modifier_slayer_avatar_Description"                                 ""
 		"DOTA_Tooltip_ability_slayer_summon_tracker"                                      "Slayer Summon Tracker"
@@ -1529,11 +1636,11 @@
 		"DOTA_Tooltip_ability_vampire_crit_Description"	"Gives a %crit_chance%% chance to deal more damage on an attack."
 		"DOTA_Tooltip_ability_vampire_crit_multiplier"	"%CRITICAL DAMAGE:"	
 
-		"DOTA_Tooltip_ability_vampire_stomp"  "War Stomp"
-		"DOTA_Tooltip_ability_vampire_stomp_Description"  "Slams the ground, dealing damage to nearby enemy ground units and stunning them."
-		"DOTA_Tooltip_ability_vampire_stomp_stomp_damage"  "DAMAGE:"
-		"DOTA_Tooltip_ability_vampire_stomp_radius"  "RADIUS:"
-		"DOTA_Tooltip_ability_vampire_stomp_stun_duration"  "STUN DURATION:"
+		"DOTA_Tooltip_ability_earth_lord_split_earth"  "War Stomp"
+		"DOTA_Tooltip_ability_earth_lord_split_earth_Description"  "Slams the ground, dealing damage to nearby enemy ground units and stunning them."
+		"DOTA_Tooltip_ability_earth_lord_split_earth_stomp_damage"  "DAMAGE:"
+		"DOTA_Tooltip_ability_earth_lord_split_earth_radius"  "RADIUS:"
+		"DOTA_Tooltip_ability_earth_lord_split_earth_stun_duration"  "STUN DURATION:"
 
 		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning"	"Lightning"
 		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning_Description"	"Hurls a bolt of lightning that leaps through nearby enemy units dealing damage. The damage increases by with each jump."
@@ -1637,6 +1744,12 @@
 		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_skill_count"                                   "WALL HP%:  "
 
+		"DOTA_Tooltip_Ability_train_skill_hp_walls"                                             "Research HP for Heal Tower"
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_Description"                                 "Improve the characteristics of your wall to protect against Vampires. Stats are increased by 15000 for each upgrade from the tower heal base health."
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_skill_count"                                   "HEAL TOWER HP:  "
+
 		"DOTA_Tooltip_Ability_train_skill_range_towers"                                             "Research Range Attack for Wall"
 		"DOTA_Tooltip_Ability_train_skill_range_towers_Description"                                 "Learn to increase attack range for killing Vampires."
 		"DOTA_Tooltip_Ability_train_skill_range_towers_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
@@ -1662,6 +1775,15 @@
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_damage"                                  		"DAMAGE:  "
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_health"                                  		"HEALTH:  "
 		"DOTA_Tooltip_Ability_train_skill_slayers_low_attack_range"                                  "RANGE:  "
+
+		"DOTA_Tooltip_Ability_train_skill_slayers_max"                                             "Slayer Training LVL 2"
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_Description"                                 "Increases the stats of your slayer."
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_damage"                                  		"DAMAGE:  "
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_health"                                  		"HEALTH:  "
+
+		
 		
 		"DOTA_Tooltip_Ability_train_skill_damage_tower"                                             "Research Damage for Tower"
 		"DOTA_Tooltip_Ability_train_skill_damage_tower_Description"                                 "You can improve the attack of your towers and kill the Vampire."
@@ -1688,7 +1810,19 @@
 		"DOTA_Tooltip_Ability_train_skill_hp_elf_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_hp_elf_skill_count"                                  "HP HUMAN:  "
 
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2"                                             "Human training LVL 2 "
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_Description"                                 "DON'T FORGET TO IMPROVE HUMAN HEALTH. This will save your life."
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_skill_count"                                  "HP HUMAN:  "
 
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss"                                             "Accurate Shot"
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_Description"                                 "Level 17, 18 and 21 towers ignore Vampire evasion."
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_skill_count"                                  "HP HUMAN:  "
+
+		
 		
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin"                                             "Train Slayer"
 		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_Description"                                 "The killer gains experience every minute at a certain location on the map. The killer can steal a gold coin from the Vampire or defend your base. You can resurrect Slayer at the Slayer Tavern."
@@ -2895,6 +3029,10 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"rewards_days"				"Day"
 		"reward_recieved"			"Received"
 		"reward_recieve"			"Take"
+		"cost_money_sell_item"		"All items are sold for 50% of the total price"
+		"error_no_take_ward"		"You cannot teleport to this unit!"
+		"error_shop_enemy_shop"		"This is an enemy shop!"
+		"error_need_create_slayer"			"Only Slayer can buy items in the shop!"
 
 		
 		"loading_text"																		"&lt;=Click this for tips!<br>

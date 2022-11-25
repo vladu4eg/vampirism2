@@ -24,8 +24,10 @@ function ChainLightning( event )
 	ParticleManager:SetParticleControl(lightningBolt,1,Vector(target:GetAbsOrigin().x,target:GetAbsOrigin().y,target:GetAbsOrigin().z + target:GetBoundingMaxs().z ))	
 	--ParticleManager:SetParticleControlEnt(lightningBolt, 1, target, 1, "attach_hitloc", target:GetAbsOrigin(), true)
 
-	EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)	
-	ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+	EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)
+	if target.state ~= "complete" then
+		ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+	end
 	--PopupDamage(target,math.floor(damage))
 
 	-- Every target struck by the chain is added to a list of targets struck, And set a boolean inside its index to be sure we don't hit it twice.
@@ -95,7 +97,9 @@ function ChainLightning( event )
 			
 			-- damage and decay
 			damage = damage - (damage*decay)
-			ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+			if target.state ~= "complete" then
+				ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+			end
 			--PopupDamage(target,math.floor(damage))
 			print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
 

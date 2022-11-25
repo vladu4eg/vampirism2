@@ -224,17 +224,17 @@ function Knowledge(event)
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 	if not IsInsideShopArea(hero) then
-		SendErrorMessage(playerID, "#error_shop_out_of_range")
+		SendErrorMessage(playerID, "error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -261,12 +261,12 @@ function KnowledgeLVL(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -293,12 +293,12 @@ function DamageHealth(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -336,12 +336,12 @@ function DamageAllStats(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -375,12 +375,12 @@ function AllStats(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -408,12 +408,12 @@ function Agility(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -439,12 +439,12 @@ function Strength(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end
@@ -470,12 +470,12 @@ function Intelligence(event)
 		return
 	end
 	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_gold")
+		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
 		return
 	end
 	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "#error_not_enough_lumber")
+		SendErrorMessage(playerID, "error_not_enough_lumber")
 		ability:EndCooldown()
 		return
 	end

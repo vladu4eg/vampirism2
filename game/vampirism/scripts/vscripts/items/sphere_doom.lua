@@ -42,7 +42,7 @@ function modifier_hero_killer:IsHidden()
 end
 
 function modifier_hero_killer:IsPurgable()
-    return false
+    return true
 end
 
 function modifier_hero_killer:IsPermanent()

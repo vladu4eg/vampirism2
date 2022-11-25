@@ -8,7 +8,7 @@ item_drop = {
 	{items = {"item_lia_rune_gold"}, limit = 9999, chance = 100, units = 
 	{"npc_dota_hero_lycan","npc_dota_hero_omniknight", "npc_dota_hero_night_stalker","npc_dota_hero_doom_bringer",
 	"npc_dota_hero_life_stealer","npc_dota_hero_slardar","wood_worker_1","wood_worker_2", "wood_worker_3","wood_worker_4",
-	"wood_worker_5","worker_1","worker_2"} },
+	"wood_worker_5","build_worker_1","build_worker_2"} },
 
 
 	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
