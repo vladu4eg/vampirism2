@@ -44,8 +44,8 @@ var uiWaitingSchedules = [];
 
     centerBlock.FindChildTraverse("StatBranch").style.visibility = "collapse";
     newUI.FindChildTraverse("BuffContainer").style.visibility = "visible";
-    newUI.FindChildTraverse("BuffContainer").style.marginLeft = "-50px";
-
+    newUI.FindChildTraverse("BuffContainer").style.marginBottom = "75px";
+ 
 
     //you are not spawning the talent UI, fuck off (Disabling mouseover and onactivate)
     //We also don't want to crash, valve plz
@@ -77,7 +77,8 @@ var uiWaitingSchedules = [];
     var healthContainer = centerBlock.FindChildTraverse("HealthContainer");
     InitializeCustomHpRegenLabel(healthContainer);
     healthContainer.FindChildTraverse("HealthRegenLabel").style.visibility = "collapse";
-
+    var manaContainer = centerBlock.FindChildTraverse("ManaContainer");
+    manaContainer.FindChildTraverse("ManaRegenLabel").style.visibility = "collapse";
     SetupUnusedItemHotkeys();
 
     GameEvents.Subscribe("gameui_activated", UpdateUI);

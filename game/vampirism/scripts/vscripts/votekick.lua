@@ -65,23 +65,6 @@ function VoteKick(eventSourceIndex, event)
 	votes[ event.playerID1 ] = votes[ event.playerID1 ] + event.vote;
 	local hero = PlayerResource:GetSelectedHeroEntity(event.playerID1)
 	local team = hero:GetTeamNumber()
-	if votes[ event.playerID1 ] == 1 and team == DOTA_TEAM_BADGUYS 
-		and PlayerResource:GetSteamAccountID(event.playerID1) ~= 201083179 
-		and PlayerResource:GetSteamAccountID(event.playerID1) ~= 990264201 
-		and PlayerResource:GetSteamAccountID(event.playerID1) ~= 337000240 
-		and PlayerResource:GetSteamAccountID(event.playerID1) ~= 183899786 
-		and PlayerResource:GetSteamAccountID(event.playerID1) ~= 129697246 
-		then
-		hero:AddNewModifier(nil, nil, "modifier_stunned", nil)
-		hero:AddNewModifier(nil, nil, "modifier_invulnerable", nil)
-        hero:AddNewModifier(nil, nil, "modifier_phased", nil)
-
-		SendToServerConsole("kick " .. PlayerResource:GetPlayerName(event.playerID1))
-		votes[ event.playerID1 ] = 0
-		GameRules.KickList[event.playerID1] = 1
-		CheckWolfInTeam(hero)
-		return nil
-	end
 	if event.vote == 1 and (PlayerResource:GetSteamAccountID(event.casterID) == 201083179 or PlayerResource:GetSteamAccountID(event.casterID) == 990264201 
 		or PlayerResource:GetSteamAccountID(event.casterID) == 337000240 or PlayerResource:GetSteamAccountID(event.casterID) == 183899786) then
 		votes[ event.playerID1 ] = votes[ event.playerID1 ] + 3
@@ -112,10 +95,6 @@ function VoteKick(eventSourceIndex, event)
 						end
 					end
 				end
-				--PlayerResource:SetCustomTeamAssignment(event.playerID1, DOTA_TEAM_NOTEAM)
-				UTIL_Remove(hero)
-				SendToServerConsole("kick " .. PlayerResource:GetPlayerName(event.playerID1))
-				CheckWolfInTeam(hero)
 			end
 			votes[ event.playerID1 ] = 0
 			countVote[event.playerID1] = 0
@@ -124,29 +103,3 @@ function VoteKick(eventSourceIndex, event)
 end
 
 
-function CheckWolfInTeam(hero)
-	for pID=0,DOTA_MAX_TEAM_PLAYERS do
-		if PlayerResource:IsValidPlayerID(pID) then
-			local wolf = PlayerResource:GetSelectedHeroEntity(pID)
-			if wolf ~= nil and hero ~= wolf and wolf ~= GameRules.trollHero and GameRules.KickList[pID] == nil then
-				if wolf:IsWolf() then
-					DebugPrintTable(wolf)
-					DebugPrint("ControlUnitForTroll")
-					trollnelves2:ControlUnitForTroll(wolf)
-					return nil
-				end
-			end
-		end
-	end
-	hero = GameRules.trollHero
-	local playerID = GameRules.trollID
-	local units = Entities:FindAllByClassname("npc_dota_creature")
-	for _, unit in pairs(units) do
-		local unit_name = unit:GetUnitName();
-		if string.match(unit_name, "shop") or
-			string.match(unit_name, "troll_hut") then
-			unit:SetOwner(hero)
-			unit:SetControllableByPlayer(playerID, true)
-		end
-	end
-end

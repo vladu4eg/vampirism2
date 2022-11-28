@@ -11,7 +11,7 @@ function  modifier_slayers_max:IsAura()
 end
 
 function  modifier_slayers_max:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_slayers_max:IsPurgable()
@@ -54,7 +54,7 @@ function  modifier_slayers_max_aura:IsAura()
 end
 
 function  modifier_slayers_max_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_slayers_max_aura:IsPurgable()

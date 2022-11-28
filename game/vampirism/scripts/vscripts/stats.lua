@@ -98,17 +98,16 @@ function Stats.SubmitMatchData(winner,callback)
 				data.Score = 0
 				if hero then
 					data.Type = tostring(PlayerResource:GetType(pID) or "null")
-					if PlayerResource:GetConnectionState(pID) == 2 then
 						if PlayerResource:GetTeam(pID) == winner then
 							if hero:IsTroll() then
-								data.Score = tostring(math.floor(15/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-								if tonumber(data.Score) < math.floor(15/koeff) and sign == 1 then
-									data.Score = tostring(math.floor(15/koeff))
-								elseif tonumber(data.Score) < math.floor(15/koeff) and sign < 1 then 
+								data.Score = tostring(math.floor(25/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
+								if tonumber(data.Score) < math.floor(25/koeff) and sign == 1 then
+									data.Score = tostring(math.floor(25/koeff))
+								elseif tonumber(data.Score) < math.floor(25/koeff) and sign < 1 then 
 									data.Score = tostring(2)
 								end
-								elseif hero:IsElf() and PlayerResource:GetDeaths(pID) == 0 then 
-								data.Score = tostring(math.floor(15/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
+							elseif hero:IsElf() and PlayerResource:GetDeaths(pID) == 0 then 
+								data.Score = tostring(math.floor(25/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
 								if tonumber(data.Score) < 1  then
 									data.Score = tostring(1)
 								end
@@ -116,7 +115,7 @@ function Stats.SubmitMatchData(winner,callback)
 						elseif PlayerResource:GetTeam(pID) ~= winner then
 							if hero:IsTroll() then
 								data.Score = tostring( math.floor(debuffPoint - 10 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-								elseif hero:IsElf() then 
+							elseif hero:IsElf() then 
 								data.Score = tostring(math.floor(debuffPoint + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
 							end
 						end 
@@ -126,16 +125,7 @@ function Stats.SubmitMatchData(winner,callback)
 						elseif hero:IsElf() and PlayerResource:GetDeaths(pID) > 0 then 
 							data.Score = tostring(math.floor(-2 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
 						end
-						elseif PlayerResource:GetConnectionState(pID) ~= 2 and hero:IsTroll() and PlayerResource:GetTeam(pID) == winner then
-						data.Score = tostring(math.floor(10/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-						if tonumber(data.Score) < math.floor(10/koeff) then
-							data.Score = tostring(math.floor(10/koeff))
-						end
-						elseif PlayerResource:GetConnectionState(pID) ~= 2 then
-						data.Score = tostring(math.floor(-15 + tonumber(data.GetScoreBonus)))
-						data.Team = tostring(2)
-						data.Type = data.Type .. " LEAVE"
-					end
+					
 					if (GameRules.scores[pID].elf + GameRules.scores[pID].troll) == 0 and tonumber(data.Score) < 0 and hero:IsTroll() then
 						if PlayerResource:GetTeam(pID) == winner and PlayerResource:GetConnectionState(pID) == 2 then
 							data.Score = "1"
@@ -227,16 +217,16 @@ function Stats.RequestData(pId, callback)
 		if #obj > 0 then
 			if obj[1].score ~= nil and #obj == 1 then
 				if obj[1].team == "2" then 
-					message = nick .. " has a Elf score: " .. obj[1].score
+					message = nick .. " has a Human score: " .. obj[1].score
 					GameRules.scores[pId].elf = obj[1].score
 					GameRules.scores[pId].troll = 0
 					elseif obj[1].team == "3" then
-					message = nick .. " has a Troll score: " .. obj[1].score
+					message = nick .. " has a Vimpire score: " .. obj[1].score
 					GameRules.scores[pId].troll = obj[1].score
 					GameRules.scores[pId].elf = 0
 				end 
 				elseif  #obj == 2 then
-				message =  nick .. " has a Elf score: " .. obj[1].score .. "; Troll score: " .. obj[2].score 
+				message =  nick .. " has a Human score: " .. obj[1].score .. "; Vimpire score: " .. obj[2].score 
 				GameRules.scores[pId].elf = obj[1].score
 				GameRules.scores[pId].troll = obj[2].score
 			end

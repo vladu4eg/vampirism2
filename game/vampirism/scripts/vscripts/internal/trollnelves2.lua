@@ -66,10 +66,10 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0)
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,1)
 
-  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 20)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 0.2)
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,  0)
-
-
+  mode:SetBotThinkingEnabled( true )
+  
   LinkLuaModifier("modifier_custom_armor", "libraries/modifiers/modifier_custom_armor.lua", LUA_MODIFIER_MOTION_NONE)
   LinkLuaModifier("modifier_generic_invisibility", "modifiers/modifier_generic_invisibility.lua", LUA_MODIFIER_MOTION_NONE)
   LinkLuaModifier("part_mod", "modifiers/parts/part_mod", LUA_MODIFIER_MOTION_NONE )
@@ -162,11 +162,34 @@ function trollnelves2:ExperienceFilter( kv )
   return true
 end
 
+local trollCountStack = {}
+
 function trollnelves2:DamageFilter( kv )
   if kv.entindex_attacker_const ~= nil then
     local heroAttacker = EntIndexToHScript(kv.entindex_attacker_const)
     local heroKilled = EntIndexToHScript(kv.entindex_victim_const)
     local team = heroAttacker:GetTeamNumber()
+    local idAttacker = heroAttacker:GetPlayerOwnerID()
+
+    if heroAttacker:IsTroll() or heroAttacker:IsWolf() then
+      if trollCountStack[idAttacker] == nil then
+         trollCountStack[idAttacker] = 1
+      end
+      if heroAttacker:HasModifier("modifier_item_gold_axe") and math.fmod(trollCountStack[idAttacker], 10) == 0 then     
+          PlayerResource:ModifyGold(heroAttacker, 2)
+          heroAttacker:AddExperience(10, DOTA_ModifyXP_Unspecified, false,false)
+          PopupGoldGain(heroAttacker,2)
+      elseif heroAttacker:HasModifier("modifier_item_gold_staff") and math.fmod(trollCountStack[idAttacker], 10) == 0 then
+          PlayerResource:ModifyGold(heroAttacker, 10)
+          heroAttacker:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
+          PopupGoldGain(heroAttacker,10)
+      elseif heroAttacker:HasModifier("modifier_item_gold_blade") and math.fmod(trollCountStack[idAttacker], 10) == 0 then
+          PlayerResource:ModifyGold(heroAttacker, 20)
+          heroAttacker:AddExperience(100, DOTA_ModifyXP_Unspecified, false,false)
+          PopupGoldGain(heroAttacker,20)
+      end
+      trollCountStack[idAttacker] = trollCountStack[idAttacker] + 1 
+    end
 
     if string.match(heroAttacker:GetUnitName(), "assasin") and not string.match(heroKilled:GetUnitName(), "wood_worker") then
       kv.damage = 0
@@ -180,6 +203,10 @@ function trollnelves2:DamageFilter( kv )
 
     if heroKilled:IsElf() and (not heroAttacker:IsTroll() and not heroAttacker:IsWolf()) then
       kv.damage = 0
+    end
+
+    if heroAttacker:IsTroll() and heroKilled:IsWolf() then
+      kv.damage = 100000000
     end
 
    -- if (string.match(heroKilled:GetUnitName(), "gold_mine") or string.match(heroKilled:GetUnitName(), "wisp")) and team == DOTA_TEAM_BADGUYS then
@@ -218,8 +245,8 @@ function trollnelves2:OnItemStateChanged(event)
       local container = item:GetContainer()
       if container then
         if hero:IsElf() then
-          UTIL_Remove(container)
-          UTIL_Remove(item)
+        --  UTIL_Remove(container)
+        --  UTIL_Remove(item)
         end     
       end
 end

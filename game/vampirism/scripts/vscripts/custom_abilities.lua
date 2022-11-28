@@ -969,7 +969,7 @@ function GoldMineCreate(keys)
 		local goldInterval = GetUnitKV(caster:GetUnitName(), "GoldInterval")
 		ModifyGoldPerSecond(hero, amountPerSecond, goldInterval)
 		local secondsToLive = maxGold/amountPerSecond;
-		keys.ability:StartCooldown(secondsToLive)
+		--keys.ability:StartCooldown(secondsToLive)
 		
 		caster.destroyTimer = Timers:CreateTimer(secondsToLive,
 			function()
@@ -1051,7 +1051,7 @@ function BuyItemSlayer(event)
 	local item_name = GetAbilityKV(ability:GetAbilityName()).ItemName
 	local gold_cost = GetItemKV(item_name)["AbilitySpecial"]["02"]["gold_cost"];
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
-	local playerID = caster.buyer
+	local playerID = caster:GetPlayerOwnerID()
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
 	if not hero.slayer then
@@ -1080,7 +1080,7 @@ function BuyItemSlayer(event)
 		ability:EndCooldown()
 		return
 	end
-	if hero:GetNumItemsInInventory() >= 9 then
+	if hero.slayer:GetNumItemsInInventory() >= 6 then
 	--	hero:DropStash()
 		SendErrorMessage(playerID, "error_full_inventory")
 		ability:EndCooldown()
@@ -1274,7 +1274,7 @@ end
 function FountainRegen(event)
 	local caster = event.caster
 	local radius = event.Radius
-	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , radius , DOTA_UNIT_TARGET_TEAM_FRIENDLY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , radius , DOTA_UNIT_TARGET_TEAM_BOTH ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
 	for _,unit in pairs(units) do
 		unit:SetHealth(unit:GetHealth() + unit:GetMaxHealth() * 0.004)
 		unit:SetMana(unit:GetMana() + unit:GetMaxMana() * 0.004)
@@ -1320,6 +1320,12 @@ function BuyGoldTroll(event)
 		return
 	elseif hero.slayer then
 		hero = hero.slayer
+	end
+
+	if not IsInsideShopArea(hero)  then
+		SendErrorMessage(playerID, "error_shop_out_of_range")
+		ability:EndCooldown()
+		return
 	end
 
 	if GameRules:GetGameTime() - GameRules.startTime < 180 then

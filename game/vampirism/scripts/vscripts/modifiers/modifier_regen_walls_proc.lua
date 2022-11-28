@@ -11,7 +11,11 @@ function modifier_regen_walls_proc:IsAura()
 end
 
 function modifier_regen_walls_proc:IsHidden()
-    return false
+    return true
+end
+
+function modifier_regen_walls_proc:GetTexture()
+	return "addons_48_b"
 end
 
 function modifier_regen_walls_proc:IsPurgable()
@@ -54,7 +58,7 @@ function modifier_regen_walls_proc_aura:IsAura()
 end
 
 function modifier_regen_walls_proc_aura:IsHidden()
-    return false
+    return true
 end
 
 function modifier_regen_walls_proc_aura:IsPurgable()
@@ -67,13 +71,16 @@ end
 
 function modifier_regen_walls_proc_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
 				if target and target.hpReg then
 					target.hpReg = target.hpReg * 1.2
 					CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg-target.hpRegDebuff,0)),unit=target:GetEntityIndex() })
+				else
+					local countStack = caster:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
+					target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
 				end
 			end
 		end)
@@ -82,4 +89,14 @@ function modifier_regen_walls_proc_aura:OnCreated( kv )
 end
 
 
+function modifier_regen_walls_proc_aura:OnRemoved(kv)
+	if IsServer() then
+		local caster = self:GetCaster()
+		local target = self:GetParent()
+		if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
+			local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
+			target:SetBaseHealthRegen(regen)
+		end
+	end
+end
 

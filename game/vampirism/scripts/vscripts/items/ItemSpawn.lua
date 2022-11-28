@@ -2,15 +2,21 @@ function Spawn(event)
 	local caster = event.caster
 	local playerID = caster:GetPlayerID()
 	local duration = event.ability:GetSpecialValueFor("duration")
-
-	local fv = caster:GetForwardVector()
-    local origin = caster:GetAbsOrigin()
+    local food = event.ability:GetSpecialValueFor("food_cost")
+    PlayerResource:ModifyFood(caster,food)
+	if (caster.food > GameRules.maxFood[playerID] and food ~= 0) or caster.food > 15 then
+		SendErrorMessage(playerID, "error_not_enough_food")
+		PlayerResource:ModifyFood(caster,-food)
+		return false
+	end
     
-    local front_position = origin + fv * 220
-    
-    unit = CreateUnitByName(event.name_creep, front_position, true, caster, caster, caster:GetTeam())
+    unit = CreateUnitByName(event.name_creep, caster:GetAbsOrigin(), true, caster, caster, caster:GetTeam())
     unit:SetControllableByPlayer(playerID, true)
-    unit:AddNewModifier(caster, nil, "modifier_kill", {duration = duration})
-
-    ResolveNPCPositions(unit:GetAbsOrigin(),65)
+	if duration and duration >= 99999 then
+		unit:AddNewModifier(caster, nil, "modifier_kill", {duration = duration})
+	end
+    event.ability:SpendCharge()
+	unit:AddNewModifier(unit, nil, "modifier_phased", {Duration = 0.3})
+    -- ResolveNPCPositions(unit:GetAbsOrigin(),65)
 end
+		

@@ -11,7 +11,11 @@ function modifier_hp_wood_worker:IsAura()
 end
 
 function modifier_hp_wood_worker:IsHidden()
-    return false
+    return true
+end
+
+function modifier_hp_wood_worker:GetTexture()
+	return "WitchCraftIcons_114_b"
 end
 
 function modifier_hp_wood_worker:IsPurgable()
@@ -54,7 +58,7 @@ function modifier_hp_wood_worker_aura:IsAura()
 end
 
 function modifier_hp_wood_worker_aura:IsHidden()
-    return false
+    return true
 end
 
 function modifier_hp_wood_worker_aura:IsPurgable()
@@ -65,9 +69,13 @@ function modifier_hp_wood_worker_aura:IsPermanent()
 	return false
 end
 
+function modifier_hp_wood_worker_aura:GetTexture()
+	return "WitchCraftIcons_114_b"
+end
+
 function modifier_hp_wood_worker_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then

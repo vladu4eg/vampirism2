@@ -11,7 +11,11 @@ function  modifier_hp_walls_proc:IsAura()
 end
 
 function  modifier_hp_walls_proc:IsHidden()
-    return false
+    return true
+end
+
+function modifier_hp_walls_proc:GetTexture()
+	return "SGI_addons_184"
 end
 
 function  modifier_hp_walls_proc:IsPurgable()
@@ -54,7 +58,7 @@ function  modifier_hp_walls_proc_aura:IsAura()
 end
 
 function  modifier_hp_walls_proc_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_hp_walls_proc_aura:IsPurgable()
@@ -67,7 +71,7 @@ end
 
 function  modifier_hp_walls_proc_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
@@ -95,4 +99,8 @@ function  modifier_hp_walls_proc_aura:OnRemoved(kv)
 			target:SetHealth(hp)
 		end
 	end
+end
+
+function modifier_hp_walls_proc_aura:GetTexture()
+	return "SGI_addons_184"
 end

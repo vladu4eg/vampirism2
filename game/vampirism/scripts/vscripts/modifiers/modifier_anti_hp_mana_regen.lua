@@ -17,10 +17,10 @@ end
 
 function modifier_anti_hp_mana_regen:OnCreated( kv )
 
-	if IsServer() then
+	--if IsServer() then
 		self:OnIntervalThink()
 		self:StartIntervalThink(1)
-	end
+	--end
 end
 
 function modifier_anti_hp_mana_regen:IsPurgeException()
@@ -32,13 +32,15 @@ end
 function modifier_anti_hp_mana_regen:OnIntervalThink()
 	--if IsServer() then
         local hero = self:GetParent()
-		hero:SetBaseHealthRegen(hero:GetStrength() * -0.1)
-        hero:SetBaseManaRegen(hero:GetIntellect() * -0.05)
-		local target = self:GetParent()
-		hero:CalculateStatBonus(true)
-		self:ForceRefresh()
-		self:SendBuffRefreshToClients()
-		hero:CalculateStatBonus(true)
+		if hero then
+			hero:SetBaseHealthRegen(hero:GetStrength() * -0.9)
+        	hero:SetBaseManaRegen(hero:GetIntellect() * -0.05)
+			hero:CalculateStatBonus(true)
+			self:ForceRefresh()
+			self:SendBuffRefreshToClients()
+			hero:CalculateStatBonus(true)
+		end
+		
 	--end
 end
 ------------------------------------------------------------------------------------

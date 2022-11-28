@@ -43,11 +43,6 @@ function Shop.RequestVip(pID, steam, callback)
 			if tonumber(obj[id].num) == 8 then
 				GameRules.BonusPercent = GameRules.BonusPercent  + 0.5
 			end 	
-			if tonumber(obj[id].num) == 11 then
-				Timers:CreateTimer(120, function()
-					GameRules:SendCustomMessage("<font color='#00FFFF '>"  .. tostring(PlayerResource:GetPlayerName(pID)) .. " thank you for your support!" .. "</font>" ,  0, 0)
-				end);
-			end 
 		end
 		CustomNetTables:SetTableValue("Shop", tostring(pID), PoolTable)
 		return obj
@@ -233,9 +228,6 @@ function Shop.RequestBonus(pID, steam, callback)
 				GameRules.BonusPercent = GameRules.BonusPercent  + 0.1
 				PoolTable["3"]["0"] = 10
 				PoolTable["3"]["1"] = obj[1].srok
-				Timers:CreateTimer(60, function()
-					GameRules:SendCustomMessage("<font color='#00FFFF '>"  .. tostring(PlayerResource:GetPlayerName(pID)) .. " thanks for the rating bonus!" .. "</font>" ,  0, 0)
-				end);
 			end
 		end
 		CustomNetTables:SetTableValue("Shop", tostring(pID), PoolTable)
@@ -269,9 +261,7 @@ function Shop.RequestBonusTroll(pID, steam, callback)
 				local roll_chance = RandomFloat(0, 100)
 				DebugPrint("Donate Chance: ".. tonumber(obj[1].chance))
 				DebugPrint("Donate Random: ".. roll_chance)
-				GameRules:SendCustomMessage("<font color='#00FFFF '>"  .. tostring(PlayerResource:GetPlayerName(pID)) .. " thank you for your support! Your chance is increased by " .. obj[1].chance .. "%.".. "</font>" ,  0, 0)
 				if roll_chance <= tonumber(obj[1].chance) and PlayerResource:GetConnectionState(pID) == 2 then
-					GameRules:SendCustomMessage("<font color='#00FFFF '>"  .. tostring(PlayerResource:GetPlayerName(pID)) .. " you're in luck!" .. "</font>" ,  0, 0)
 					table.insert(GameRules.BonusTrollIDs, {pID, obj[1].chance})
 				end	
 			end

@@ -273,7 +273,7 @@ end
 
 function DestroyBuilding( keys )
     local building = keys.unit
-    local units = FindUnitsInRadius(building:GetTeamNumber() , building:GetAbsOrigin() , nil , 1200 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+    local units = FindUnitsInRadius(building:GetTeamNumber() , building:GetAbsOrigin() , nil , 600 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
     local ownerID = building:GetPlayerOwnerID()
     local playerID = building:GetMainControllingPlayer()
     local hero = building:GetOwner()
@@ -406,6 +406,15 @@ function UpgradeBuilding( event )
         GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 300 
         PlayerResource:ModifyFood(hero, 0)
     end
+    if string.match(NewBuildingName,"%d+") then
+        if string.match(NewBuildingName,"tower") and tonumber(string.match(NewBuildingName,"%d+")) >= 12 then
+            newBuilding:ReduceMana(1000)
+        end
+    end
+
+    
+
+    
     newBuilding.ancestors = building.ancestors
     table.insert(newBuilding.ancestors,building:GetUnitName())
     for _, ancestorUnitName in pairs(newBuilding.ancestors) do

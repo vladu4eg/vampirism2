@@ -11,7 +11,7 @@ function  modifier_mana_buffwalls:IsAura()
 end
 
 function  modifier_mana_buffwalls:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_mana_buffwalls:IsPurgable()
@@ -54,7 +54,7 @@ function  modifier_mana_buffwalls_aura:IsAura()
 end
 
 function  modifier_mana_buffwalls_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_mana_buffwalls_aura:IsPurgable()
@@ -67,7 +67,7 @@ end
 
 function  modifier_mana_buffwalls_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "buff")  then

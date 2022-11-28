@@ -11,7 +11,7 @@ function  modifier_damage_tower:IsAura()
 end
 
 function  modifier_damage_tower:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_damage_tower:IsPurgable()
@@ -56,7 +56,7 @@ function  modifier_damage_tower_aura:IsAura()
 end
 
 function  modifier_damage_tower_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_damage_tower_aura:IsPurgable()
@@ -81,7 +81,7 @@ end
 
 function modifier_damage_tower_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then

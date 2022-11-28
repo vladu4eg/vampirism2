@@ -11,7 +11,7 @@ function  modifier_armor_wall:IsAura()
 end
 
 function  modifier_armor_wall:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_armor_wall:IsPurgable()
@@ -54,7 +54,7 @@ function  modifier_armor_wall_aura:IsAura()
 end
 
 function  modifier_armor_wall_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_armor_wall_aura:IsPurgable()
@@ -79,7 +79,7 @@ end
 
 function modifier_armor_wall_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then

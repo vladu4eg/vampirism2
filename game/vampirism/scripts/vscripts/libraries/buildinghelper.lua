@@ -3476,7 +3476,7 @@ end
 end
 
 function CDOTA_BaseNPC:GetFollowRange(target)
-return self:GetHullRadius() + target:GetHullRadius() + 100
+return self:GetHullRadius() + target:GetHullRadius() + 300
 end
 
 function IsLumberHarvester(unit)

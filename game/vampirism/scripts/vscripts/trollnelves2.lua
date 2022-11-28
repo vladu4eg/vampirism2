@@ -256,6 +256,12 @@ function trollnelves2:OnHeroInGame(hero)
         return false
     end
 
+    if hero:GetUnitName() == "npc_dota_hero_wisp" then
+        local abil = hero:FindAbilityByName("dummy_passive")
+        abil:SetLevel(abil:GetMaxLevel())
+        return false
+    end 
+    
     
     local team = hero:GetTeamNumber()
     InitializeHero(hero)
@@ -263,7 +269,7 @@ function trollnelves2:OnHeroInGame(hero)
     
     if hero:IsElf() then
         InitializeBuilder(hero)
-        elseif hero:IsTroll() or PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_wisp" then
+        elseif hero:IsTroll() then
         InitializeTroll(hero)
         elseif hero:IsAngel() then
         InitializeAngel(hero)
@@ -367,17 +373,7 @@ function InitializeBadHero(hero)
         hero:AddNewModifier(hero, nil, "modifier_anti_hp_mana_regen", {})
         hero:AddNewModifier(hero, nil, "modifier_max_attackspeed", {})
         
-        
-    else    
-        local abil = hero:FindAbilityByName("pick_sladar")
-        abil:SetLevel(abil:GetMaxLevel())
-        abil = hero:FindAbilityByName("pick_doom")
-        abil:SetLevel(abil:GetMaxLevel())
-        abil = hero:FindAbilityByName("pick_stalker")
-        abil:SetLevel(abil:GetMaxLevel())
-        abil = hero:FindAbilityByName("pick_lifestealer")
-        abil:SetLevel(abil:GetMaxLevel())
-        end
+    end
     --hero:SetStashEnabled(false)
 end
 
@@ -583,7 +579,7 @@ function InitializeWolf(hero)
 end
 
 function trollnelves2:PreStart()
-    StartCreatingMinimapBuildings()
+   -- StartCreatingMinimapBuildings()
     local gameStartTimer = PRE_GAME_TIME
     ModifyLumberPrice(0)
     Timers:CreateTimer(function()
@@ -609,9 +605,12 @@ function trollnelves2:PreStart()
                         duration = 1
                     })
                     GameRules.startTime = GameRules:GetGameTime()
-                    SlayerPool()
-                    BuffGold()
-                    FakeHero()
+                    if IsServer() then
+                        SlayerPool()
+                        BuffGold()
+                        FakeHeroTroll()
+                        FakeHeroElf()
+                    end
                     -- Unstun the elves
                     local elfCount = PlayerResource:GetPlayerCountForTeam(
                     DOTA_TEAM_GOODGUYS)
@@ -684,27 +683,16 @@ function StartCreatingMinimapBuildings()
         -- Create minimap entities for buildings that are visible and don't already have a minimap entity
         local allEntities = Entities:FindAllByClassname("npc_dota_creature")
         for _, unit in pairs(allEntities) do
-            if not unit:IsNull() and IsCustomBuilding(unit) and
-                not unit.minimapEntity and unit:GetTeamNumber() ~=
-                DOTA_TEAM_BADGUYS and
-                IsLocationVisible(DOTA_TEAM_BADGUYS, unit:GetAbsOrigin()) then
-                unit.minimapEntity = CreateUnitByName("minimap_entity",
-                    unit:GetAbsOrigin(),
-                    false, unit:GetOwner(),
-                    unit:GetOwner(),
-                unit:GetTeamNumber())
-                unit.minimapEntity:AddNewModifier(unit.minimapEntity, nil,
-                "modifier_minimap", {})
+            if not unit:IsNull() and IsCustomBuilding(unit) and not unit.minimapEntity and unit:GetTeamNumber() ~= DOTA_TEAM_BADGUYS and IsLocationVisible(DOTA_TEAM_BADGUYS, unit:GetAbsOrigin()) then
+                unit.minimapEntity = CreateUnitByName("minimap_entity", unit:GetAbsOrigin(), false, unit:GetOwner(), unit:GetOwner(), unit:GetTeamNumber())
+                unit.minimapEntity:AddNewModifier(unit.minimapEntity, nil, "modifier_minimap", {})
                 unit.minimapEntity.correspondingEntity = unit
             end
         end
         -- Kill minimap entities of dead buildings when location is scouted
         local minimapEntities = Entities:FindAllByClassname("npc_dota_building")
         for k, minimapEntity in pairs(minimapEntities) do
-            if not minimapEntity:IsNull() and minimapEntity.correspondingEntity ==
-                "dead" and
-                IsLocationVisible(DOTA_TEAM_BADGUYS,
-                minimapEntity:GetAbsOrigin()) then
+            if not minimapEntity:IsNull() and minimapEntity.correspondingEntity == "dead" and IsLocationVisible(DOTA_TEAM_BADGUYS, minimapEntity:GetAbsOrigin()) then
                 minimapEntity.correspondingEntity = nil
                 minimapEntity:ForceKill(false)
                 UTIL_Remove(minimapEntity)
@@ -781,10 +769,8 @@ function SellItem(args)
         local lumber_cost = item:GetSpecialValueFor("lumber_cost")
         local hero = item:GetCaster()
         UTIL_Remove(item)
-        --PlayerResource:ModifyGold(hero, math.floor(gold_cost/2), true)
-        --PlayerResource:ModifyLumber(hero, math.floor(lumber_cost/2), true)
-        PlayerResource:ModifyGold(hero, gold_cost, true)
-        PlayerResource:ModifyLumber(hero, lumber_cost, true)
+        PlayerResource:ModifyGold(hero, math.floor(gold_cost/2), true)
+        PlayerResource:ModifyLumber(hero, math.floor(lumber_cost/2), true)
         local player = hero:GetPlayerOwner()
 
         EmitSoundOnEntityForPlayer("DOTA_Item.Hand_Of_Midas", hero, hero:GetPlayerOwnerID())
@@ -960,18 +946,15 @@ function BuffGold()
     return BUFF_GOLD_TIME end)
 end
 
-function FakeHero()
+function FakeHeroTroll()
     --local hero = CreateUnitByName("npc_dota_hero_omniknight", Vector(0,0,0) , true, nil, nil, DOTA_TEAM_GOODGUYS)
    --local hero = CreateHeroForPlayer("npc_dota_hero_night_stalker", nil)
-   local hero = GameRules:AddBotPlayerWithEntityScript("npc_dota_hero_omniknight", 'bot ' .. tostring(math.random(100)), DOTA_TEAM_GOODGUYS, nil, false)
-   
+    GameRules.shopTroll = GameRules:AddBotPlayerWithEntityScript("npc_dota_hero_wisp", "bot", DOTA_TEAM_BADGUYS, "", true)
     local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
         local unit_name = unit:GetUnitName();
         if string.match(unit_name, "elf_shp") or string.match(unit_name, "shop") or string.match(unit_name, "troll_hut") then
-            print("DebugPrint(hero:GetPlayerOwnerID())")
-            DebugPrint(hero:GetPlayerOwnerID())
-            unit:SetControllableByPlayer(hero:GetPlayerOwnerID(), true)
+            unit:SetControllableByPlayer(GameRules.shopTroll:GetPlayerOwnerID(), true)
             unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
             unit:AddNewModifier(unit, nil, "modifier_phased", {})
 
@@ -983,7 +966,14 @@ function FakeHero()
                 abil = unit:FindAbilityByName("buy_item_armor_3")
                 abil:StartCooldown(300)
                 abil = unit:FindAbilityByName("buy_item_armor_4")
-                abil:StartCooldown(300)    
+                abil:StartCooldown(300)
+                
+            elseif unit_name == "blood_shop_troll" then
+                local abil = unit:FindAbilityByName("buy_item_gold_blade")
+                abil:StartCooldown(600)
+                abil = unit:FindAbilityByName("buy_item_gold_staff")
+                abil:StartCooldown(240)
+                
             elseif unit_name == "black_shop_troll" then
                 local abil = unit:FindAbilityByName("buy_item_burst_gem")
                 abil:StartCooldown(300)
@@ -1001,7 +991,35 @@ function FakeHero()
                         ability:StartCooldown(600)
                     end
                 end
-            elseif unit_name == "elf_shp_1" then
+            elseif unit_name == "recipe_shop_troll" then
+                local abil = unit:FindAbilityByName("buy_item_recipe_end_game")
+                abil:StartCooldown(2700)
+            end
+
+        end
+    end
+    for pID=0,DOTA_MAX_TEAM_PLAYERS do
+        if PlayerResource:IsValidPlayerID(pID) and GameRules.shopTroll:GetPlayerID() ~= pID then
+            PlayerResource:SetUnitShareMaskForPlayer(GameRules.shopTroll:GetPlayerID(), pID, 2, true)
+        end
+    end 
+    
+   --GameRules:RemoveFakeClient(hero:GetPlayerOwnerID())
+   -- UTIL_Remove(hero) 
+end
+
+function FakeHeroElf()
+    --local hero = CreateUnitByName("npc_dota_hero_omniknight", Vector(0,0,0) , true, nil, nil, DOTA_TEAM_GOODGUYS)
+   --local hero = CreateHeroForPlayer("npc_dota_hero_night_stalker", nil)
+    GameRules.shopElf = GameRules:AddBotPlayerWithEntityScript("npc_dota_hero_wisp", "bot", DOTA_TEAM_GOODGUYS, "", true)
+    local units = Entities:FindAllByClassname("npc_dota_creature")
+    for _, unit in pairs(units) do
+        local unit_name = unit:GetUnitName();
+        if string.match(unit_name, "elf_shp") then
+            unit:SetControllableByPlayer(GameRules.shopElf:GetPlayerOwnerID(), true)
+            unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
+            unit:AddNewModifier(unit, nil, "modifier_phased", {})
+            if unit_name == "elf_shp_1" then
                 local abil = unit:FindAbilityByName("sell_lumber_1")
                 abil:StartCooldown(180)
                 abil = unit:FindAbilityByName("sell_lumber_8")
@@ -1025,15 +1043,14 @@ function FakeHero()
                 abil = unit:FindAbilityByName("sell_lumber_8")
                 abil:StartCooldown(180)
             end
-
         end
     end
     for pID=0,DOTA_MAX_TEAM_PLAYERS do
-        if PlayerResource:IsValidPlayerID(pID) then
-            PlayerResource:SetUnitShareMaskForPlayer(hero:GetPlayerID(), pID, 1, true)
+        if PlayerResource:IsValidPlayerID(pID) and GameRules.shopElf:GetPlayerID() ~= pID then
+            PlayerResource:SetUnitShareMaskForPlayer(GameRules.shopElf:GetPlayerID(), pID, 2, true)
         end
-    end  
-    GameRules:RemoveFakeClient(hero:GetPlayerOwnerID())
-    UTIL_Remove(hero) 
+    end 
+    
+   --GameRules:RemoveFakeClient(hero:GetPlayerOwnerID())
+   -- UTIL_Remove(hero) 
 end
-

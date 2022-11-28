@@ -11,7 +11,7 @@ function  modifier_hp_elf:IsAura()
 end
 
 function  modifier_hp_elf:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_hp_elf:IsPurgable()
@@ -38,7 +38,7 @@ end
 
 function modifier_hp_elf:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			local countStack = caster:FindModifierByName("modifier_hp_elf"):GetStackCount()

@@ -98,19 +98,6 @@ function trollnelves2:OnPlayerReconnect(event)
         ModifyLumberPrice(0)
         hero:CalculateStatBonus(true)
         hero:RemoveModifierByName("modifier_disconnected")
-        if hero:IsElf() and hero.alive == false then
-            if hero.dced == true then
-                hero.alive = true
-                hero.dced = false
-                else
-                local player = PlayerResource:GetPlayer(playerID)
-                if player then
-                    CustomGameEventManager:Send_ServerToPlayer(player,
-                        "show_helper_options",
-                    {})
-                end
-            end
-        end
     end
 end
 

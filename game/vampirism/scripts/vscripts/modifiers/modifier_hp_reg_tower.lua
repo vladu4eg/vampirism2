@@ -11,7 +11,7 @@ function  modifier_hp_reg_tower:IsAura()
 end
 
 function  modifier_hp_reg_tower:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_hp_reg_tower:IsPurgable()
@@ -54,7 +54,7 @@ function  modifier_hp_reg_tower_aura:IsAura()
 end
 
 function  modifier_hp_reg_tower_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_hp_reg_tower_aura:IsPurgable()

@@ -3,9 +3,9 @@ Player = Player or {}
 require('libraries/team')
 
 local goldGainedImportance = 8
-local goldGivenImportance = 3
+local goldGivenImportance = 8
 local lumberGainedImportance = 8
-local lumberGivenImportance = 3
+local lumberGivenImportance = 8
 local rankImportance = 30
 local rankPers = 5
 
@@ -25,9 +25,9 @@ end
 function CDOTA_PlayerResource:SetGold(hero,gold)
     local playerID = hero:GetPlayerOwnerID()
 	if GameRules.MapSpeed >= 4 then
-		gold = math.min(gold, math.floor(2000000 * GameRules.MultiMapSpeed))
+		gold = math.min(gold, math.floor(9999999 * GameRules.MultiMapSpeed))
 	else
-		gold = math.min(gold, math.floor(1000000 * GameRules.MultiMapSpeed)) 
+		gold = math.min(gold, math.floor(9999999 * GameRules.MultiMapSpeed)) 
 	end
     GameRules.gold[playerID] = gold
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_custom_gold_changed", {
@@ -38,7 +38,7 @@ end
 
 function CDOTA_PlayerResource:ModifyGold(hero,gold,noGain)
     if GameRules.test2 then
-		PlayerResource:SetGold(hero, math.floor(1000000 * GameRules.MultiMapSpeed))
+		PlayerResource:SetGold(hero, math.floor(9999999 * GameRules.MultiMapSpeed))
 		return
 	end
     noGain = noGain or false
@@ -58,9 +58,9 @@ function CDOTA_PlayerResource:SetLumber(hero, lumber)
     local playerID = hero:GetPlayerOwnerID()
 	
 	if GameRules.MapSpeed >= 4 then
-		lumber = math.min(lumber, math.floor(2000000 * GameRules.MultiMapSpeed))
+		lumber = math.min(lumber, math.floor(9999999 * GameRules.MultiMapSpeed))
 	else
-		lumber = math.min(lumber, math.floor(1000000 * GameRules.MultiMapSpeed))
+		lumber = math.min(lumber, math.floor(9999999 * GameRules.MultiMapSpeed))
 	end
 	GameRules.lumber[playerID] = lumber
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_lumber_changed", {
@@ -71,7 +71,7 @@ end
 
 function CDOTA_PlayerResource:ModifyLumber(hero,lumber,noGain)
     if GameRules.test2 then
-		PlayerResource:SetLumber(hero, math.floor(1000000 * GameRules.MultiMapSpeed))
+		PlayerResource:SetLumber(hero, math.floor(9999999 * GameRules.MultiMapSpeed))
 		return
 	end
     noGain = noGain or false
@@ -235,7 +235,7 @@ function CDOTA_PlayerResource:GetScoreBonusGoldGiven(pID)
 	local add = playerSum/teamAvg > 0 and 0 or 1
 	playerSum = math.abs(playerSum)
 	teamAvg = math.abs(teamAvg)
-	local value = math.floor((math.max(playerSum,teamAvg)/math.min(playerSum,teamAvg)*goldGivenImportance/1000))
+	local value = math.floor((math.max(playerSum,teamAvg)/math.min(playerSum,teamAvg)*goldGivenImportance/50))
 	value = math.min(goldGivenImportance,value)
 	return (value*sign)
 end
@@ -273,7 +273,7 @@ function CDOTA_PlayerResource:GetScoreBonusLumberGiven(pID)
 	local add = playerSum/teamAvg > 0 and 0 or 1
 	playerSum = math.abs(playerSum)
 	teamAvg = math.abs(teamAvg)
-	local value = math.floor((math.max(playerSum,teamAvg)/math.min(playerSum,teamAvg)*lumberGivenImportance/1000))
+	local value = math.floor((math.max(playerSum,teamAvg)/math.min(playerSum,teamAvg)*lumberGivenImportance/50))
 	value = math.min(lumberGivenImportance,value)
 	return (value*sign)
 end
@@ -284,7 +284,7 @@ function CDOTA_PlayerResource:GetScoreBonusRank(pID)
 	local allyTeamScore = Team.GetAverageScore(allyTeam)
 	local enemyTeamScore = Team.GetAverageScore(enemyTeam)
 	local sign = allyTeamScore > enemyTeamScore and -1 or 1
-	local value = math.floor((math.abs(enemyTeamScore - allyTeamScore))*rankImportance/5000)
+	local value = math.floor((math.abs(enemyTeamScore - allyTeamScore))*rankImportance/3000)
 	value = math.min(rankImportance,value)
 	return (value*sign)
 end

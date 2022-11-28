@@ -449,7 +449,7 @@ function Activate()
 	GameRules.scores = {}
 
 	GameRules.isTesting = false
-	GameRules.server = "https://tve3.us/test/"  -- "https://localhost:5001/test/" --
+	GameRules.server = "https://tve3.us/vamp/"  -- "https://localhost:5001/test/" --
 
 	--GameRules.xp = {}
 	GameRules.types = {}
@@ -464,14 +464,21 @@ function Activate()
 	GameRules.Score = {}
 	GameRules.PlayersBase = {}
 	GameRules.PlayersFPS = {}
-	GameRules.test = true
-	GameRules.test2 = true
+	GameRules.test = false
+	GameRules.test2 = false
 	GameRules.PlayersCount = 0
 	GameRules.KickList = {}
 	GameRules.MultiMapSpeed = 1
 	GameRules.Mute = {}
 	GameRules.countFlag = {}
 	GameRules.tent = {}
+
+	GameRules.shopTroll = {}
+	GameRules.shopElf = {}
+
+
+
+
 	
 	GameRules.PoolTable = {}
     GameRules.PoolTable[0] = {}

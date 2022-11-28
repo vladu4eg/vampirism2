@@ -56,7 +56,7 @@
 	    "StatusHealth"        "5000"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "10"                   // Base mana.
-	    "StatusManaRegen"     "0.05"                 // Mana regeneration rate.
+	    "StatusManaRegen"     "1"                 // Mana regeneration rate.
 	
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
@@ -313,43 +313,7 @@
 		"VisionNighttimeRange"    "1800"                  // Range of vision at night time.
 		"DisableWearables"               "0"
 	}
-	"npc_dota_hero_wisp"
-	{
-		"override_hero"				"npc_dota_hero_wisp"
-		"AbilityLayout"     "6"
-		"Ability1"				"pick_stalker"
-		"Ability2"				"pick_lifestealer"
-		"Ability3"				"pick_doom"
-		"Ability4"				"pick_sladar"
-		"Ability5"				""
-		"Ability6"				""
-		"Ability7"				""
-		"Ability8"				""
-		"Ability9"				""
-		"Ability10"				""
-		"Ability11"				""
-		"Ability12"				""
-		"Ability13"				""
-		"Ability14"   	    ""
-		"Ability15"   	    ""
-		"Ability16"   	    ""
-		
-		"AbilityLayout"                         "5"
-		"VisionNighttimeRange"			"200"
-		"VisionDaytimeRange"			"200"
-		"AttributeBaseStrength"			"50000"									// Base strength
-		"ArmorPhysical"					"999999.0"
-		"MagicalResistance"				"999999"
 
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
-
-		"HasInventory"				"1"
-		"CollisionSize"			"1"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"	
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-	}
 	"npc_dota_hero_lycan"{
 		"override_hero"     "npc_dota_hero_lycan"
 		"SoundSet"			"Hero_Lycan"
@@ -361,7 +325,7 @@
 		"Ability4" 			"earth_lord_split_earth"
 		"Ability5"    	    "vampire_crit"
 		"Ability6"    	    ""
-		"Ability7"    	    ""
+		"Ability7"    	    "deniable"
 		"Ability8"    	    "antiblock"
 		"Ability9"    	    ""
 		"Ability10"   	    ""
@@ -464,8 +428,8 @@
     "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
     "AttributeBaseStrength"   "48" // Base strength
     "AttributeStrengthGain"   "48" // Strength bonus per level.
-    "AttributeBaseIntelligence" "48" // Base intelligence
-    "AttributeIntelligenceGain" "48" // Intelligence bonus per level.
+    "AttributeBaseIntelligence" "0" // Base intelligence
+    "AttributeIntelligenceGain" "0" // Intelligence bonus per level.
     "AttributeBaseAgility"    "48" // Base agility
     "AttributeAgilityGain"    "48" // Agility bonus per level.
 
@@ -478,9 +442,9 @@
     // Status
     //-------------------------------------------------------------------------------------------------------------
     "StatusHealth"        "750"
-    "StatusMana"        "800"
+    "StatusMana"        "0"
     "StatusHealthRegen"     "10"
-    "StatusManaRegen"     "5.5"
+    "StatusManaRegen"     "0"
     "VisionDaytimeRange"    "1400"
     "VisionNighttimeRange"    "1600"
 
@@ -490,5 +454,45 @@
 	"BountyGoldMin"       "50"                   // Gold earned min.
 	"BountyGoldMax"       "50"                   // Gold earned max.
   }
+
+  	"npc_dota_hero_wisp"
+	{
+		"override_hero"				"npc_dota_hero_wisp"
+		"Model" "models/development/invisiblebox.vmdl"
+		"AbilityLayout"     "6"
+		"Ability1"				"dummy_passive"
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+		"Ability9"				""
+		"Ability10"				""
+		"Ability11"				""
+		"Ability12"				""
+		"Ability13"				""
+		"Ability14"   	    ""
+		"Ability15"   	    ""
+		"Ability16"   	    ""
+		
+		"AbilityLayout"                         "5"
+		"VisionNighttimeRange"			"0"
+		"VisionDaytimeRange"			"0"
+		"AttributeBaseStrength"			"50000"									// Base strength
+		"ArmorPhysical"					"999999.0"
+		"MagicalResistance"				"999999"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"HasInventory"				"1"
+		"CollisionSize"			"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"DisableWearables"               "1"
+	}
 	
 }

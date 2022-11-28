@@ -71,7 +71,7 @@ end
 
 function modifier_range_no_miss_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and 
@@ -94,9 +94,14 @@ function modifier_range_no_miss_state:IsPurgable()
 	return false
 end
 
+function modifier_range_no_miss_state:GetTexture()
+	return "SpellBookPage09_add_004"
+end
+
 function modifier_range_no_miss_aura:CheckState()
 	local state = {
 		[MODIFIER_STATE_CANNOT_MISS] = true
 	}
 	return state
 end
+

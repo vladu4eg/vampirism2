@@ -10,7 +10,9 @@ function Teleport( event )
 	if string.match(event.target:GetUnitName(), "ward") or 
 	   string.match(event.target:GetUnitName(), "assasin") or 
 	   string.match(event.target:GetUnitName(), "golem") or 
-	   string.match(event.target:GetUnitName(), "fel_best") then
+	   string.match(event.target:GetUnitName(), "fel_best") or 
+	   event.target:GetUnitName() == "shade_2" or 
+	   event.target:GetUnitName() == "sucied_boy" then
 		
 		SendErrorMessage(playerID, "error_no_take_ward")
 		event.ability:EndCooldown()

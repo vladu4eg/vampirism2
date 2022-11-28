@@ -11,7 +11,7 @@ function  modifier_slayers_low:IsAura()
 end
 
 function  modifier_slayers_low:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_slayers_low:IsPurgable()
@@ -54,7 +54,7 @@ function  modifier_slayers_low_aura:IsAura()
 end
 
 function  modifier_slayers_low_aura:IsHidden()
-    return false
+    return true
 end
 
 function  modifier_slayers_low_aura:IsPurgable()
@@ -91,7 +91,7 @@ end
 
 function modifier_slayers_low_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(0.5,function()
+		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			print("11111111")
