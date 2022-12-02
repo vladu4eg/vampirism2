@@ -409,77 +409,6 @@ function GoldOnAttack (event)
 	end
 end
 
-function KillWispOnAttack (event)
-		local caster = event.caster
-		local dmg = math.floor(event.DamageDealt) * GameRules.MapSpeed
-		local target = event.unit
-		caster.attackTarget = target:GetEntityIndex()
-		target.attackers = target.attackers or {}
-		target.attackers[caster:GetEntityIndex()] = true
-		if target:GetUnitName() == 'gold_wisp' then
-			local units = Entities:FindAllByClassname("npc_dota_creature")
-			units = FindUnitsInRadius(target:GetTeamNumber(), target:GetAbsOrigin() , nil, 64 , DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_CREEP , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
-    		for _, unit in pairs(units) do
-				if unit:GetUnitName() == 'gold_wisp'  then
-					ApplyDamage({victim = unit, attacker = caster, damage = 1, damage_type = DAMAGE_TYPE_PHYSICAL })
-				end
-			end	
-		end
-end
-
-function ExchangeLumber(event)
-	if IsServer() then
-		local caster = event.caster
-		local playerID = caster:GetMainControllingPlayer()
-		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-		local amount = event.Amount
-		
-		local price = 0
-		local increasePrice = 0
-		for a = 10,math.abs(amount),10 do
-			price = price + GameRules.lumberPrice + increasePrice
-			if amount > 0 then
-				increasePrice = increasePrice + 5
-				else
-				if GameRules.lumberPrice + increasePrice - 5 > 10 then
-					increasePrice = increasePrice - 5
-				end
-			end
-		end
-	--	if PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 and GameRules.PlayersBase[caster:GetPlayerOwnerID()] ~= GameRules.PlayersBase[playerID] then
---			SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_your_hero")
-	--		return false
-	--	end
-		--Buy wood
-		if amount > 0 then
-			if price > PlayerResource:GetGold(playerID) then
-				SendErrorMessage(playerID, "error_not_enough_gold")
-				return false
-				else
-				PlayerResource:ModifyGold(hero,-price,true)
-				PlayerResource:ModifyLumber(hero,amount,true)
-				
-				ModifyLumberPrice(increasePrice)
-				PopupGoldGain(caster,math.floor(price),false)
-				PopupLumber(caster,math.floor(amount),true)
-			end
-			--Sell wood
-			else
-			amount = -amount
-			price = price + increasePrice
-			if amount > PlayerResource:GetLumber(playerID) then
-				SendErrorMessage(playerID, "error_not_enough_lumber")
-				return false
-				else
-				PlayerResource:ModifyGold(hero,price,true)
-				PlayerResource:ModifyLumber(hero,-amount,true)
-				ModifyLumberPrice(increasePrice)
-				PopupGoldGain(caster,math.floor(price),true)
-				PopupLumber(caster,math.floor(amount),false)
-			end
-		end
-	end
-end
 function SkillOnSpellStart(event)
 	if IsServer() then
 		local caster = event.caster
@@ -560,18 +489,12 @@ function SpawnUnitOnSpellStart(event)
 		local gold_cost = ability:GetSpecialValueFor("gold_cost")
 		local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
 		local food = ability:GetSpecialValueFor("food_cost")
-		local wisp = ability:GetSpecialValueFor("wisp_cost")
 		local mine_cost = ability:GetSpecialValueFor("MineCost")
 		PlayerResource:ModifyGold(hero,-gold_cost)
 		PlayerResource:ModifyLumber(hero,-lumber_cost)
 		PlayerResource:ModifyFood(hero,food)
-		PlayerResource:ModifyWisp(hero,wisp)
 		PlayerResource:ModifyMine(hero,mine_cost)
-	--	if PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 and GameRules.PlayersBase[caster:GetPlayerOwnerID()] ~= GameRules.PlayersBase[playerID] then
-	--		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_your_hero")
-	--		caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-	--		return false
-	--	end
+
 		if PlayerResource:GetGold(playerID) < 0 then
 			SendErrorMessage(playerID, "error_not_enough_gold")
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
@@ -587,11 +510,6 @@ function SpawnUnitOnSpellStart(event)
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			return false
 		end
-		if hero.wisp > GameRules.maxWisp and wisp ~= 0 then
-			SendErrorMessage(playerID, "error_not_enough_wisp")
-			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-			return false
-		end
 		if mine_cost ~= nil then
             if mine_cost ~= 0 then
             if hero.mine > GameRules.maxMine  then
@@ -604,13 +522,6 @@ function SpawnUnitOnSpellStart(event)
 		if unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
 			if not hero.slayer:GetRespawnsDisabled() then
 				SendErrorMessage(playerID, "error_not_slayers_many")
-				caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-				return false
-			end
-		end
-		if tonumber(string.match(unit_name,"%d+")) ~= nil then
-			if tonumber(string.match(unit_name,"%d+")) >= 1 and tonumber(string.match(unit_name,"%d+")) <= 6 and string.match(unit_name,"%a+") == "wisp" and (GameRules:GetGameTime() - GameRules.startTime) > NO_CREATE_WISP/GameRules.MapSpeed then
-				SendErrorMessage(playerID, "error_not_create_wisp")
 				caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 				return false
 			end
@@ -656,16 +567,6 @@ function SpawnUnitOnChannelSucceeded(event)
 			table.insert(hero.units,unit)
 			unit:SetControllableByPlayer(playerID, true)
 			
-			UpdateSkinWisp(unit_name, unit)
-
-			if tonumber(string.match(unit_name,"%d+")) ~= nil then
-				if tonumber(string.match(unit_name,"%d+")) >= 1 and tonumber(string.match(unit_name,"%d+")) <= 6 and string.match(unit_name,"%a+") == "wisp"  then
-					unit:AddNewModifier(unit, nil, "modifier_kill", {duration = (NO_CREATE_WISP - (GameRules:GetGameTime() - GameRules.startTime))/GameRules.MapSpeed})
-				end
-			elseif unit_name == "gold_wisp" then 
-				unit:AddNewModifier(unit, nil, "modifier_kill", {duration = TIME_LIFE_GOLD_WISP})
-			end
-			
 			if string.match(unit_name,"%a+") == "worker" then
 				ABILITY_Repair = unit:FindAbilityByName("repair")
 				ABILITY_Repair:ToggleAutoCast()
@@ -674,38 +575,6 @@ function SpawnUnitOnChannelSucceeded(event)
 	end
 end
 
-function UpdateSkinWisp(unit_name, unit)
-	local parts = CustomNetTables:GetTableValue("Particles_Tabel",tostring(unit:GetPlayerOwnerID()))
-	if parts ~= nil then      
-		if  string.match(unit_name,"%a+") == "wisp" and parts["3"] == "normal" and unit_name ~= "gold_wisp" then
-			if string.match(GetMapName(),"winter") then
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/courier/baby_winter_wyvern/baby_winter_wyvern_flying.vmdl", 1.2)    
-				elseif string.match(GetMapName(),"spring") then
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/serpent_warbler/serpent_warbler_flying.vmdl", 1.1)    
-				elseif string.match(GetMapName(),"autumn") or string.match(GetMapName(),"halloween") then 
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/little_fraid_the_courier_of_simons_retribution/little_fraid_the_courier_of_simons_retribution_flying.vmdl", 1.2)    
-				elseif string.match(GetMapName(),"desert") then 
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/ig_dragon/ig_dragon_flying.vmdl", 1.2)    
-				elseif string.match(GetMapName(),"helheim") then 
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/dc_demon/dc_demon_flying.vmdl", 1.2)
-				elseif string.match(GetMapName(),"china") then 
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/green_jade_dragon/green_jade_dragon_flying.vmdl", 1.4) 
-				elseif string.match(GetMapName(),"jungle") then 
-				wearables:RemoveWearables(unit)
-				UpdateModel(unit, "models/items/courier/deathbringer/deathbringer_flying.vmdl", 1.4) 
-			end
-			--elseif parts["3"] == "normal" and unit_name == "gold_wisp" then
-			--		wearables:RemoveWearables(unit)
-			--		UpdateModel(unit, "models/gold_wisp.vmdl", 1)     
-		end
-	end
-end
 
 function SpawnUnitOnChannelInterrupted(event)
 	if IsServer() then
@@ -717,12 +586,10 @@ function SpawnUnitOnChannelInterrupted(event)
 		local gold_cost = ability:GetSpecialValueFor("gold_cost")
 		local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
 		local food = ability:GetSpecialValueFor("food_cost")
-		local wisp = ability:GetSpecialValueFor("wisp_cost")
 		local mine_cost = ability:GetSpecialValueFor("MineCost")
 		PlayerResource:ModifyGold(hero,gold_cost,true)
 		PlayerResource:ModifyLumber(hero,lumber_cost,true)
 		PlayerResource:ModifyFood(hero,-food)
-		PlayerResource:ModifyWisp(hero,-wisp)
 		if mine_cost ~= nil then
             if mine_cost ~= 0 then
 				PlayerResource:ModifyMine(hero,-mine_cost)
@@ -769,194 +636,6 @@ function RepairAutocast(event)
 		end)
 	end
 	end)
-end
-
-function GatherLumber(event)
-	if IsServer() then
-		local caster = event.caster
-		local target = event.target
-		local ability = event.ability
-		local target_class = target:GetClassname()
-		local pID = caster:GetPlayerOwnerID()
-		caster:Interrupt()
-		if target_class ~= "ent_dota_tree" then
-			caster:Interrupt()
-			return
-		end
-		
-		local tree = target
-		
-		
-		-- Check for empty tree for Wisps
-		if tree.builder ~= nil and tree.builder ~= caster then
-			SendErrorMessage(pID,"The tree is occupied!")
-			caster:Interrupt()
-			return
-		end
-		
-		local tree_pos = tree:GetAbsOrigin()
-		local particleName = "particles/ui_mouseactions/ping_circle_static.vpcf"
-		local particle = ParticleManager:CreateParticleForPlayer(particleName, PATTACH_CUSTOMORIGIN, caster, caster:GetPlayerOwner())
-		ParticleManager:SetParticleControl(particle, 0, Vector(tree_pos.x, tree_pos.y, tree_pos.z+20))
-		ParticleManager:SetParticleControl(particle, 1, Vector(0,255,0))
-		Timers:CreateTimer(3, function() 
-			ParticleManager:DestroyParticle(particle, true)
-		end)
-		caster.target_tree2 = event.target
-		caster.target_tree = tree
-		ability.cancelled = false
-		
-		tree.builder = caster
-		
-		-- Fake toggle the ability, cancel if any other order is given
-		if not ability:GetToggleState() then
-			ability:ToggleAbility()
-		end
-		
-		-- Recieving another order will cancel this
-		-- ability:ApplyDataDrivenModifier(caster, caster, "modifier_on_order_cancel_lumber", {})
-		tree_pos.z = tree_pos.z - 28
-		caster:SetAbsOrigin(tree_pos)
-		tree.wisp_gathering = true
-		ability:ApplyDataDrivenModifier(caster, caster, "modifier_gathering_lumber", {})
-	end
-end
-
-function UpgradeWisp(event)
-	if IsServer() then
-		local caster = event.caster
-		local target = caster.target_tree2
-		local point = caster:GetAbsOrigin()
-		local pID = caster:GetPlayerOwnerID()
-		local hero = PlayerResource:GetSelectedHeroEntity(pID)
-		local ability = event.ability
-		local unit_name = GetAbilityKV(ability:GetAbilityName()).UnitName
-		local casterAbility = caster:FindAbilityByName("gather_lumber")
-
-
-		local gold_cost = ability:GetSpecialValueFor("gold_cost")
-		local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
-		local food = ability:GetSpecialValueFor("food_cost")
-		local wisp = ability:GetSpecialValueFor("wisp_cost")
-		if PlayerResource:GetGold(pID) < gold_cost then
-            SendErrorMessage(pID, "error_not_enough_gold")
-			if casterAbility ~= nil then
-				caster:CastAbilityOnTarget(target, casterAbility, pID)
-			end
-            return false
-        end
-        if PlayerResource:GetLumber(pID) < lumber_cost then
-            SendErrorMessage(pID, "error_not_enough_lumber")
-			if casterAbility ~= nil then
-				caster:CastAbilityOnTarget(target, casterAbility, pID)
-			end
-            return false
-        end
-		if (hero.food > GameRules.maxFood[pID] and food ~= 0) or hero.food > 300 then
-			SendErrorMessage(pID, "error_not_enough_food")
-			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-			if casterAbility ~= nil then
-				caster:CastAbilityOnTarget(target, casterAbility, pID)
-			end
-			return false
-		end
-		if hero.wisp > GameRules.maxWisp and wisp ~= 0 then
-			SendErrorMessage(pID, "error_not_enough_wisp")
-			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-			if casterAbility ~= nil then
-				caster:CastAbilityOnTarget(target, casterAbility, pID)
-			end
-			return false
-		end
-		caster:ForceKill(true) --This will call RemoveBuilding
-		Timers:CreateTimer(10,function()
-			UTIL_Remove(caster)
-		end)
-		PlayerResource:ModifyGold(hero,-gold_cost)
-		PlayerResource:ModifyLumber(hero,-lumber_cost)
-		PlayerResource:ModifyFood(hero,food)
-		PlayerResource:ModifyWisp(hero,wisp)
-		local unit = CreateUnitByName(unit_name, point , true, nil, nil, hero:GetTeamNumber())
-		unit:SetOwner(hero)
-		unit:SetControllableByPlayer(pID, true)
-		PlayerResource:NewSelection(pID, unit)
-		Timers:CreateTimer(0.3,function() 
-			local targetAbility = unit:FindAbilityByName("gather_lumber")
-			if targetAbility ~= nil then
-				unit:CastAbilityOnTarget(target, targetAbility, pID)
-			end
-		end)
-
-		UpdateSkinWisp(unit_name, unit)
-
-	end
-end
-
-function LumberGain( event )
-	if IsServer() then
-		local ability = event.ability
-		local caster = event.caster
-		local lumberGain = GetUnitKV(caster:GetUnitName(), "LumberAmount") * GameRules.MapSpeed
-		local lumberInterval = GetUnitKV(caster:GetUnitName(), "LumberInterval")
-		local playerID = caster:GetPlayerOwnerID()
-		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-		ModifyLumberPerSecond(hero, lumberGain, lumberInterval)
-		local dataTable = { entityIndex = caster:GetEntityIndex(),
-		amount = lumberGain, interval = lumberInterval, statusAnim = GameRules.PlayersFPS[playerID] }
-		local player = hero:GetPlayerOwner()
-		if player then
-			CustomGameEventManager:Send_ServerToPlayer(player, "tree_wisp_harvest_start", dataTable)
-		end
-	end
-end
-
-function ModifyLumberPerSecond(hero, amount, interval) 
-	hero.lumberPerSecond = hero.lumberPerSecond + (amount/interval)
-end
-
-function CancelGather(event)
-	if IsServer() then
-		local caster = event.caster
-		local ability = event.ability
-		
-		caster:RemoveModifierByName("modifier_gathering_lumber")
-		
-		ability.cancelled = true
-		caster.state = "idle"
-		
-		local tree = caster.target_tree
-		if tree then
-			caster.target_tree = nil
-			tree.builder = nil
-		end
-		if ability:GetToggleState() then
-			ability:ToggleAbility()
-		end
-		-- Give 1 extra second of fly movement
-		caster:SetMoveCapability(DOTA_UNIT_CAP_MOVE_FLY)
-		Timers:CreateTimer(0.03,function() 
-			caster:SetMoveCapability(DOTA_UNIT_CAP_MOVE_GROUND)
-			caster:AddNewModifier(caster, nil, "modifier_phased", {duration=0.03})
-		end)
-		local lumberGain = GetUnitKV(caster:GetUnitName(), "LumberAmount") * GameRules.MapSpeed
-		local lumberInterval = GetUnitKV(caster:GetUnitName(), "LumberInterval")
-		local playerID = caster:GetPlayerOwnerID()
-		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-		ModifyLumberPerSecond(hero, -lumberGain, lumberInterval)
-		local dataTable = { entityIndex = caster:GetEntityIndex() }
-		local player = hero:GetPlayerOwner()
-		if player then
-			CustomGameEventManager:Send_ServerToPlayer(player, "tree_wisp_harvest_stop", dataTable)
-		end
-	end
-end
-
-function TrollBuff(keys)
-	local caster = keys.caster
-	if caster:GetUnitName() == 'tower_19' or caster:GetUnitName() == 'tower_19_1' or caster:GetUnitName() == 'tower_19_2' then
-		keys.ability:StartCooldown(180)
-	end
-	EmitGlobalSound("Hero_TrollWarlord.BattleTrance.Cast")
 end
 
 function GoldMineCreate(keys)
@@ -1173,77 +852,6 @@ function BuyItem(event)
 	hero:AddItem(item)
 end
 
-function BuySkill(event)
-	local ability = event.ability
-	local caster = event.caster
-	local item_name = GetAbilityKV(ability:GetAbilityName()).ItemName
-	local gold_cost = GetItemKV(item_name)["AbilitySpecial"]["02"]["gold_cost"];
-	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
-	local playerID = caster.buyer
-	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-	local checkBear = false
-	local bearHero
-	item_name = string.gsub(item_name, "item_", "")
-	
-	if hero == nil then
-		return
-	end
-
-	if GameRules.test2 == true then
-		hero = GameRules.trollHero
-	end
-
-	if hero ~= GameRules.trollHero then
-		SendErrorMessage(playerID, "error_buy_skill_only_troll")
-		return
-	end
-	
-	local units = Entities:FindAllByClassname("npc_dota_lone_druid_bear")
-	for _,unit in pairs(units) do
-		local unit_name = unit:GetUnitName();
-		if unit_name == "npc_dota_hero_bear" then
-			checkBear = true
-			bearHero = unit
-			break
-		end
-	end
-	
-	if not checkBear then
-		SendErrorMessage(playerID, "error_no_bear_team")
-		return
-	end
-	
-	if not IsInsideShopArea(hero) then
-		SendErrorMessage(playerID, "error_shop_out_of_range")
-		ability:EndCooldown()
-		return
-	end
-	if gold_cost > PlayerResource:GetGold(playerID) then
-		SendErrorMessage(playerID, "error_not_enough_gold")
-		ability:EndCooldown()
-		return
-	end
-	if lumber_cost > PlayerResource:GetLumber(playerID) then
-		SendErrorMessage(playerID, "error_not_enough_lumber")
-		ability:EndCooldown()
-		return
-	end 
-	
-	if bearHero:HasAbility(item_name) then
-		SendErrorMessage(playerID, "error_bear_have_skill")
-		ability:EndCooldown()
-		return	
-	end
-	
-	PlayerResource:ModifyLumber(hero,-lumber_cost)
-	PlayerResource:ModifyGold(hero,-gold_cost)
-	
-	bearHero:AddAbility(item_name)
-    local abil = bearHero:FindAbilityByName(item_name)
-    abil:SetLevel(abil:GetMaxLevel())
-	
-end
-
 function IsInsideShopArea(unit) 
 	for index, shopTrigger in ipairs(GameRules.shops) do
 		if IsInsideBoxEntity(shopTrigger, unit) then
@@ -1344,78 +952,6 @@ function BuyGoldTroll(event)
 	PlayerResource:ModifyLumber(hero,-price)
 end
 
-function StealGold(event)
-	local status, nextCall = Error_debug.ErrorCheck(function() 
-	local caster = event.caster
-	local target = event.target
-	local playerID = GameRules.trollID
-	local hero = GameRules.trollHero
-	local sum = math.ceil(hero:GetNetworth()*0.002)+10
-	local trollCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
-		for i = 1, trollCount do
-			local pID = PlayerResource:GetNthPlayerIDOnTeam(DOTA_TEAM_BADGUYS, i)
-			if PlayerResource:IsValidPlayerID(pID) then 
-				local playerHero = PlayerResource:GetSelectedHeroEntity(pID) or false
-				if playerHero then
-					if playerHero:IsTroll() or playerHero:IsWolf() then
-						sum = math.max( sum,  math.ceil(playerHero:GetNetworth()*0.003)+10 )
-					end
-				end
-			end
-		end
-	local maxSum = 50000
-	local units = Entities:FindAllByClassname("npc_dota_creature")
-
-	for _,unit in pairs(units) do
-		local unit_name = unit:GetUnitName();
-		if unit_name == "troll_hut_6" or unit_name == "troll_hut_7" then
-			maxSum = 500000
-			sum = math.ceil(hero:GetNetworth()*0.004)+10
-			caster:GiveMana(5)
-		end
-	end
-	if GameRules:GetGameTime() - GameRules.startTime >= WOLF_START_SPAWN_TIME then
-		if sum > maxSum then
-			sum = maxSum
-		end
-		else
-		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_time")
-		sum = 0
-	end
-	if sum > 0 then
-		local countAngel = 0
-		local units = FindUnitsInRadius(DOTA_TEAM_GOODGUYS, caster:GetAbsOrigin() , nil, 2000 , DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
-		for _,unit in pairs(units) do
-			if unit ~= nil then
-				if unit:IsAngel() and PlayerResource:GetConnectionState(caster:GetPlayerOwnerID()) == 2 then
-					countAngel = countAngel + 1
-				end
-			end
-		end
-		if countAngel > 2 then
-			sum = math.ceil(sum/countAngel)
-		end
-		if caster:GetDeaths() > 2 then
-			sum = math.ceil(sum/(caster:GetDeaths() - 1))
-		end
-		
-	end
-	PlayerResource:ModifyGold(caster,sum)
-	PopupGoldGain(caster,sum)
-	end)
-end
-
-function CheckStealGoldTarget(event)
-	local caster = event.caster
-	local target = event.target
-	local pID = caster:GetMainControllingPlayer()
-	if not string.match(target:GetUnitName(),"troll_hut") then
-		caster:Interrupt()
-		SendErrorMessage(pID, "error_castable_only_on_troll_hut")
-		caster:SetMana(caster:GetMana() + 20)
-	end
-end
-
 function CommitSuicide(event)
 	local caster = event.caster
 	--local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , 64 , DOTA_UNIT_TARGET_TEAM_ENEMY ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
@@ -1493,100 +1029,6 @@ function ItemBlinkDoom(keys)
 	
 end
 
-
-
-
-function TowerAttackSpeed( keys )
-	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
-	local ability_level = ability:GetLevel() - 1
-	local modifier = keys.modifier
-	local max_stacks = ability:GetLevelSpecialValueFor("max_stacks", ability_level)
-	
-	-- Check if we have an old target
-	if caster.fervor_target then
-		-- Check if that old target is the same as the attacked target
-		if caster.fervor_target == target then
-			-- Check if the caster has the attack speed modifier
-			if caster:HasModifier(modifier) and target:HasModifier("modifier_fervor_target") then
-				-- Get the current stacks
-				local stack_count = caster:GetModifierStackCount(modifier, ability)
-				
-				-- Check if the current stacks are lower than the maximum allowed
-				if stack_count < max_stacks then
-					-- Increase the count if they are
-					caster:SetModifierStackCount(modifier, ability, stack_count + 1)
-				end
-				else
-				-- Apply the attack speed modifier and set the starting stack number
-				ability:ApplyDataDrivenModifier(caster, caster, modifier, {})
-				caster:SetModifierStackCount(modifier, ability, 1)
-			end
-			else
-			-- If its not the same target then set it as the new target and remove the modifier
-			caster:RemoveModifierByName(modifier)
-			caster.fervor_target = target
-		end
-		else
-		caster.fervor_target = target
-	end
-end
-
-function NightAbility( keys )
-	local ability = keys.ability
-	local duration = ability:GetSpecialValueFor("duration")
-	--local currentTime = GameRules:GetTimeOfDay()
-	
-	-- Time variables
-	local time_flow = 0.0020833333
-	local time_elapsed = 0
-	-- Calculating what time of the day will it be after Darkness ends
-	local start_time_of_day = GameRules:GetTimeOfDay()
-	local end_time_of_day = start_time_of_day + duration * time_flow
-	
-	if end_time_of_day >= 1 then end_time_of_day = end_time_of_day - 1 end
-	
-	-- Setting it to the middle of the night
-	GameRules:SetTimeOfDay(0)
-	
-	-- Using a timer to keep the time as middle of the night and once Darkness is over, normal day resumes
-	Timers:CreateTimer(1, function()
-		if time_elapsed < duration then
-			GameRules:SetTimeOfDay(0)
-			time_elapsed = time_elapsed + 1
-			return 1
-			else
-			GameRules:SetTimeOfDay(end_time_of_day)
-		end
-	end)
-end
-
-function CheckNight(keys)
-	local caster = keys.caster
-	if GameRules:IsDaytime() then
-		caster:Interrupt()
-		SendErrorMessage(caster:GetPlayerOwnerID(), "error_not_night")
-	end
-end
-
-function CheckNightInvis(keys)
-	local caster = keys.caster
-	local id = caster:GetPlayerID()
-	if GameRules:IsDaytime() then
-		if caster:HasModifier("modifier_stand_invis") then
-			caster:RemoveModifierByName("modifier_stand_invis")
-			if Pets.playerPets[id] then
-				Pets.playerPets[id]:RemoveModifierByName("modifier_invisible") 
-			end
-		end
-		else
-		if Pets.playerPets[id] then
-			Pets.playerPets[id]:AddNewModifier(Pets.playerPets[id], self, "modifier_invisible", {})
-		end
-	end
-end
-
 function HealBuilding(event)
 	local caster = event.caster
 	local target = event.target
@@ -1610,83 +1052,6 @@ function HealBuilding(event)
 		end)
 	end 
 end
-
-function StackModifierCreated(keys)
-	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
-	local modifier = keys.Modifier
-	
-	local stack_count = 0
-	if target:HasModifier(modifier) then
-		stack_count = target:GetModifierStackCount(modifier, ability)
-		else 
-		ability:ApplyDataDrivenModifier(caster, target, modifier, {})
-	end
-	target:SetModifierStackCount(modifier, ability, stack_count + 1)
-end
-
-function StackModifierCreated3(keys)
-	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
-	local modifier = keys.Modifier
-	
-	local stack_count = 0
-	if target:HasModifier("modifier_buff_counter_stun") then
-		stack_count = target:GetModifierStackCount(modifier, ability)
-		else 
-		ability:ApplyDataDrivenModifier(caster, target, modifier, {})
-	end
-	target:SetModifierStackCount(modifier, ability, stack_count + 1)
-	
-	local tar = target:FindModifierByName( "modifier_storm_bolt_datadriven" )
-	
-	if target:HasModifier("modifier_buff_counter_stun") and stack_count+1 == 2 and tar and not target:IsWolf() then
-		tar:SetDuration(2,true)
-		elseif target:HasModifier("modifier_buff_counter_stun") and stack_count+1 == 3 and tar and not target:IsWolf() then
-		tar:SetDuration(1.5,true)
-		elseif target:HasModifier("modifier_buff_counter_stun") and stack_count+1 == 4 and tar and not target:IsWolf() then
-		tar:SetDuration(1,true)
-		elseif target:HasModifier("modifier_buff_counter_stun") and stack_count+1 > 4 and tar and not target:IsWolf() then
-		tar:SetDuration(0.5,true)
-	end
-end
-
-function StackModifierCreated2(keys)
-	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
-	local modifier = keys.Modifier
-	
-	local stack_count = 0
-	if target:HasModifier("modifier_buff_counter") then
-		stack_count = target:GetModifierStackCount(modifier, ability)
-		else 
-		ability:ApplyDataDrivenModifier(caster, target, modifier, {})
-	end
-	target:SetModifierStackCount(modifier, ability, stack_count + 1)
-	
-	local tar = target:FindModifierByName( "modifier_rooted" )
-	local tar2 = target:FindModifierByName( "modifier_disarmed" )
-	local tar3 = target:FindModifierByName( "invis_disabled" )
-	
-	if target:HasModifier("modifier_buff_counter") and stack_count+1 == 2 and not target:IsWolf() then
-		tar:SetDuration(3,true)
-		tar2:SetDuration(3,true)
-		tar3:SetDuration(3,true)
-	elseif target:HasModifier("modifier_buff_counter") and stack_count+1 == 3 and not target:IsWolf() then
-		tar:SetDuration(1.5,true)
-		tar2:SetDuration(1.5,true)
-		tar3:SetDuration(1.5,true)
-	elseif target:HasModifier("modifier_buff_counter") and stack_count+1 > 3 and not target:IsWolf() then
-		tar:SetDuration(1,true)
-		tar2:SetDuration(1,true)
-		tar3:SetDuration(1,true)
-	end
-	FlagItem(keys)
-end
-
 
 function GlyphItem(keys)
 	local caster = keys.caster
@@ -1740,25 +1105,6 @@ function FlagItem(keys)
 		end
 	end
 end
-
-function StackModifierExpired(keys)
-	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
-	local modifier = keys.Modifier
-	
-	local stackCount = target:GetModifierStackCount(modifier, ability)
-	if stackCount <= 1 then
-		target:RemoveModifierByName(modifier)
-		else
-		target:SetModifierStackCount(modifier, ability, stackCount-1)
-	end
-end	
-
-function troll_buff(keys)
-	local unit = keys:GetCaster()
-	EmitSoundOn("Hero_TrollWarlord.BattleTrance.Cast", unit)
-end		
 
 function GiveResourcesRandom(event)
     local targetID = event.target

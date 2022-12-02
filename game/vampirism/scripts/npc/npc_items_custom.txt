@@ -7592,14 +7592,13 @@
 		"AbilityTextureName"			"lia_hell_mask"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"ItemAliases"					"�?екира �?ро�?ти;�?�?;poleaxe of rage;por"
+		
 		"ItemInitialCharges"			"1"
 		"ItemStockInitial" "1" 
 		"ItemStockMax" "1"
 		"ItemStockTime" "20"
-		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"16.0"
-		"AbilityManaCost"				"100"
 		"ItemPermanent"					"0"
+		
 		"AbilitySpecial"
 		{
 			"01"
@@ -7657,7 +7656,6 @@
 		}
 		"OnSpellStart"
 		{
-			
 			"ApplyModifier"
 			{
 				"Target"
@@ -7747,8 +7745,7 @@
 				
 				"EffectName"			"particles/items2_fx/mask_of_madness.vpcf"
 				"EffectAttachType"		"follow_origin"
-				"SpendCharge"
-				{}	
+
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%berserk_bonus_movement_speed_percentage"
@@ -10911,6 +10908,54 @@
 				}
 			}
 		}	
+	}
+
+	"item_lia_rune_lumber"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityTextureName"			"rune_lumber"
+
+		"Model"							"models/props_gameplay/branch.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneLumber"
+			}
+	
+			"FireSound"
+			{
+				"EffectName"	"Rune.Bounty"
+				"Target" 		"CASTER"
+			}
+		}
+	
+	
+	
 	}
 
 }

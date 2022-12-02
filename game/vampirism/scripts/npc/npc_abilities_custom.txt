@@ -6036,27 +6036,27 @@
 		}
 	}
 
-	"build_tower_12"{
+	"build_tower_5"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"	"build_tower_12"
+		"AbilityTextureName"	"build_tower"
 		"AbilityCastRange"		"150"
 		"Building"				"1"
 		"BuildTime"				"1.0"
 		"Scale"					"1"
-		"UnitName"				"tower_12"
+		"UnitName"				"tower_5"
 		"MaxLevel"				"1"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"100"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"150000"
+				"lumber_cost"			"250000"
 			}
 			"03"
 			{
@@ -6075,46 +6075,6 @@
 		}
 	}
 
-	"build_tower_16"{
-		"BaseClass"				"ability_datadriven"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"	"build_tower_16"
-		"AbilityCastRange"		"150"
-		"Building"				"1"
-		"BuildTime"				"1.0"
-		"Scale"					"1"
-		"UnitName"				"tower_16"
-		"MaxLevel"				"1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"250"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"750000"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"MineCost"				"0"
-			}
-		}
-		
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"Build"
-			}
-		}
-	}
-
-	
 
 	"build_buff_1"{
 		"BaseClass"				"ability_datadriven"
@@ -6346,6 +6306,25 @@
 			}
 		}
 	}
+	"upgrade_to_tower_5_1"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_5_1"
+			}
+		}
+	}
 	"upgrade_to_tower_6"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -6362,6 +6341,25 @@
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
 				"NewName"		"tower_6"
+			}
+		}
+	}
+	"upgrade_to_tower_6_1"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_6_1"
 			}
 		}
 	}
@@ -6384,6 +6382,25 @@
 			}
 		}
 	}
+	"upgrade_to_tower_7_1"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_7_1"
+			}
+		}
+	}
 	"upgrade_to_tower_8"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -6403,6 +6420,25 @@
 			}
 		}
 	}
+	"upgrade_to_tower_8_1"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_8_1"
+			}
+		}
+	}
 	"upgrade_to_tower_9"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -6419,6 +6455,25 @@
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
 				"NewName"		"tower_9"
+			}
+		}
+	}
+	"upgrade_to_tower_9_1"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_9_1"
 			}
 		}
 	}
@@ -6444,7 +6499,7 @@
 	"upgrade_to_tower_10_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_10_1"
+		"AbilityTextureName"			"build_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6460,105 +6515,10 @@
 			}
 		}
 	}
-	"upgrade_to_tower_10_2"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_10_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_10_2"
-			}
-		}
-	}
-	"upgrade_to_tower_10_3"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_10_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_10_3"
-			}
-		}
-	}
-	"upgrade_to_tower_11"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_11"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_11"
-			}
-		}
-	}
-	"upgrade_to_tower_11_1"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_11_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_11_1"
-			}
-		}
-	}
-	"upgrade_to_tower_11_2"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_11_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_11_2"
-			}
-		}
-	}
 	"upgrade_to_tower_12"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_12"
+		"AbilityTextureName"			"build_tower_10_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6574,10 +6534,10 @@
 			}
 		}
 	}
-	"upgrade_to_tower_12_1"
+	"upgrade_to_tower_11"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_12_1"
+		"AbilityTextureName"			"build_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6589,14 +6549,15 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_12_1"
+				"NewName"		"tower_11"
 			}
 		}
 	}
-	"upgrade_to_tower_12_2"
+
+	"upgrade_to_tower_11_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_12_1"
+		"AbilityTextureName"			"build_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6608,219 +6569,11 @@
 			{
 				"ScriptFile"	"builder.lua"
 				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_12_2"
+				"NewName"		"tower_11_1"
 			}
 		}
 	}
-	"upgrade_to_tower_13"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_13"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_13"
-			}
-		}
-	}
-	"upgrade_to_tower_14"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_14"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_14"
-			}
-		}
-	}
-	"upgrade_to_tower_15"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_15"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_15"
-			}
-		}
-	}
-	"upgrade_to_tower_15_1"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_15"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_15_1"
-			}
-		}
-	}
-	"upgrade_to_tower_15_2"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_15"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_15_2"
-			}
-		}
-	}
-	"upgrade_to_tower_16"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_16"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_16"
-			}
-		}
-	}
-	"upgrade_to_tower_17"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_17"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_17"
-			}
-		}
-	}
-	"upgrade_to_tower_18"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_18"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_18"
-			}
-		}
-	}
-	"upgrade_to_tower_19"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_19"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"180"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_19"
-			}
-		}
-	}
-	"upgrade_to_tower_19_1"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_19"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"180"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_19_1"
-			}
-		}
-	}
-	"upgrade_to_tower_19_2"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_19"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"180"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_19_2"
-			}
-		}
-	}
+	
 	"upgrade_to_tower_20"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -6841,44 +6594,7 @@
 			}
 		}
 	}
-	"upgrade_to_tower_21"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_21"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_21"
-			}
-		}
-	}
-	"upgrade_to_tower_22"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_22"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-		"MaxLevel"						"1"
-		"Building"						"1"
-		"BuildTime"						"3"
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"UpgradeBuilding"
-				"NewName"		"tower_22"
-			}
-		}
-	}
+	
 	"upgrade_to_true_sight_tower"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -7225,6 +6941,44 @@
 			}
 		}
 	}
+
+	"upgrade_to_gold_mine_7"{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"	"build_gold_mine"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"1"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"gold_mine_7"
+			}
+		}
+	}
+
+	"upgrade_to_gold_mine_8"{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"	"build_gold_mine"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"1"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"gold_mine_8"
+			}
+		}
+	}
 	
 	"build_gold_mine_1"{
 		"BaseClass"				"ability_datadriven"
@@ -7247,7 +7001,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"20000"
+				"lumber_cost"			"80000"
 			}
 			"03"
 			{
@@ -7262,7 +7016,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"GoldAmount"				"1"
+				"GoldAmount"				"4"
 			}
 
 		}
@@ -7296,7 +7050,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"40000"
+				"lumber_cost"			"152000"
 			}
 			"03"
 			{
@@ -7334,7 +7088,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100000"
+				"lumber_cost"			"360000"
 			}
 			"03"
 			{
@@ -7372,7 +7126,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"135000"
+				"lumber_cost"			"680000"
 			}
 			"03"
 			{
@@ -9094,7 +8848,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"5"
+				"food_cost"			"15"
 			}	
 			"04"
 			{
@@ -9207,12 +8961,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"35"
+				"gold_cost"			"15"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"30000"
+				"lumber_cost"		"0"
 			}	
 			"03"
 			{
@@ -11070,7 +10824,22 @@
 				"ScriptFile"			"custom_abilities.lua"
 				"Function"				"BuyGoldTroll"
 				"Target"				"CASTER"
-				"Amount"				"8"
+				"Amount"				"10"
+			}
+		}
+	}
+	"sell_lumber_100"{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"alchemist_goblins_greed"
+		"MaxLevel"						"1"
+		
+		"OnSpellStart"{
+			"RunScript"{
+				"ScriptFile"			"custom_abilities.lua"
+				"Function"				"BuyGoldTroll"
+				"Target"				"CASTER"
+				"Amount"				"100"
 			}
 		}
 	}
@@ -14312,14 +14081,14 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 		"AbilityCastRange"				"300"
-		"AbilityCooldown"				"3"
+	//	"AbilityCooldown"				"3"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"142"
+				"radius"					"64"
 			}
 		}
 		
@@ -15147,8 +14916,8 @@
 	      {
 	        "RunScript"
 	        {
-	          "ScriptFile"  "ai/peasant.lua"
-	          "Function"    "PlayAttackAnimation"
+	        //  "ScriptFile"  "ai/peasant.lua"
+	       //   "Function"    "PlayAttackAnimation"
 	        }
 	      }
 	
@@ -15156,8 +14925,8 @@
 	      {
 	        "RunScript"
 	        {
-	          "ScriptFile"  "ai/peasant.lua"
-	          "Function"    "StopAnimation"
+	        //  "ScriptFile"  "ai/peasant.lua"
+	        //  "Function"    "StopAnimation"
 	        }
 	      }
 	
@@ -15166,8 +14935,8 @@
 	      {
 	        "RunScript"
 	        {
-	          "ScriptFile"  "ai/peasant.lua"
-	          "Function"    "PlayAttackAnimation"
+	         // "ScriptFile"  "ai/peasant.lua"
+	          //"Function"    "PlayAttackAnimation"
 	        }
 	        "RunScript"
 	        {
@@ -17506,9 +17275,9 @@
 		"SpellImmunityType"       		"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 	
-		"AbilityCastRange"				"300 350 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 1950 2000"
+		"AbilityCastRange"				"600 600 600 600 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 1950 2000"
 		//"AbilityCastPoint"				"0.2"
 		"AbilityCooldown"				"6"
 		"AbilityManaCost"				"6"
@@ -19506,11 +19275,11 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
-
+	
 
 	"Modifiers"
 	{
-		"modifier_moon_glaive"
+		"modifier_tower_20_pure"
 		{
 			"Passive" 	"1"
 			"IsHidden"	"1"

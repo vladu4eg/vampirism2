@@ -19,6 +19,10 @@ end
 -- Lumber gathering
 
 function Gather( event )
+	if not IsServer then
+		return
+	end
+
 	local caster = event.caster
 	local target = event.target
 	local ability = event.ability
@@ -49,6 +53,9 @@ end
 
 -- Toggles Off Gather
 function ToggleOffGather( event )
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local gather_ability = caster:FindAbilityByName("gather_lumber_worker")
 
@@ -73,6 +80,9 @@ end
 
 -- Toggles Off Return because of an order (e.g. Stop)
 function ToggleOffReturn( event )
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local return_ability = caster:FindAbilityByName("return_resources")
 	
@@ -90,7 +100,9 @@ function ToggleOffReturn( event )
 end
 
 function CheckTreePosition( event )
-
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local target = caster.target_tree -- Index tree so we know which target to start with
 	local ability = event.ability
@@ -114,7 +126,9 @@ function CheckTreePosition( event )
 end
 
 function GatherLumber( event )
-	
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local ability = event.ability
 
@@ -153,7 +167,9 @@ end
 
 
 function ReturnResources( event )
-
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local ability = event.ability
 
@@ -184,7 +200,9 @@ function ReturnResources( event )
 end
 
 function CheckBuildingPosition( event )
-
+	if not IsServer then
+		return
+	end
 	local caster = event.caster
 	local target = caster.target_building -- Index building so we know which target to start with
 	local ability = event.ability
@@ -255,6 +273,9 @@ function CheckBuildingPosition( event )
 end
 
 function FindClosestResourceDeposit( caster )
+	if not IsServer then
+		return
+	end
 	local position = caster:GetAbsOrigin()
 
 	local buildings = Entities:FindAllByClassname("npc_dota_creature*") 
@@ -295,159 +316,12 @@ function ReleaseTree( event )
 	end
 end
 
--- Repairing
-
-function StartRepairing(event)
-	local caster = event.caster
-	local target = event.target
-	local ability = event.ability
-
-	if target:GetUnitName() == "npc_petri_exit" or target:GetUnitName() == "npc_petri_earth_wall" or target:GetUnitName() == "npc_petri_miracle1" or target:GetUnitName() == "npc_petri_miracle2" or target:GetUnitName() == "npc_petri_miracle3" then return end
-
-	if target:HasAbility("petri_building") ~= true then
-		Notifications:Bottom(caster:GetPlayerOwnerID(), {text="#repair_target_is_not_a_building", duration=1, style={color="red", ["font-size"]="45px"}})
-		return
-	end
-	
-	if target:HasAbility("petri_building") then
-		caster.repairingTarget = target
-
-		caster:RemoveModifierByName("modifier_repairing")
-		ability:ApplyDataDrivenModifier(caster, caster, "modifier_repairing", {})
-
-		if ability:GetToggleState() == false then
-			ability:ToggleAbility()
-		end
-	end
-end
-
-function CheckRepairingTargetPosition( event )
-	local caster = event.caster
-	local target = caster.repairingTarget
-	local ability = event.ability
-
-	caster:MoveToPosition(GetMoveToTreePosition( caster, target ))
-
-	local distance = (target:GetAbsOrigin() - caster:GetAbsOrigin()):Length()
-	local collision = distance < 280
-	if not collision then
-
-	elseif not caster:HasModifier("modifier_chopping_building") then
-		--caster:MoveToPosition(GetMoveToTreePosition( caster, target ))
-
-		caster:RemoveModifierByName("modifier_repairing")
-		ability:ApplyDataDrivenModifier(caster, caster, "modifier_chopping_building", {})
-	end
-end
-
-function RepairingAutocast( event )
-	local caster = event.caster
-	local ability = event.ability
-
-	if ability:GetAutoCastState() and not ability:GetToggleState() then
-		local units = FindUnitsInRadius(caster:GetTeam(), caster:GetAbsOrigin(), nil, 250, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, 0, 0, false)
-
-		for k,v in pairs(units) do
-			if v:GetPlayerOwnerID() == caster:GetPlayerOwnerID() then
-				if v:HasAbility("petri_building") and v:GetHealthPercent() ~= 100 then
-					caster:CastAbilityOnTarget(v, ability, caster:GetPlayerOwnerID())
-					break
-				end
-			end
-		end
-	end
-end
-
-function ToggleOffRepairing( event )
-	local caster = event.caster
-	local repair_ability = caster:FindAbilityByName("petri_repair")
-
-	if repair_ability:GetToggleState() == true then
-		repair_ability:ToggleAbility()
-
-		if Debug_Peasant then
-			print("Toggled Off Repairing")
-		end
-	end
-end
-
-function RepairBy1Percent( event )
-	local caster = event.caster
-	local ability = event.ability
-	local target = caster.repairingTarget
-
-	if caster.repairing_cooldown == true then
-		return false 
-	end
-
-	if target:IsNull() == true or not target or not target:IsAlive() then 
-		ability:ToggleAbility()
-
-		caster:RemoveModifierByName("modifier_chopping_building")
-		caster:RemoveModifierByName("modifier_repairing")
-		caster:RemoveModifierByName("modifier_chopping_building_animation")
-
-		RepairingAutocast( event )
-		
-		return false 
-	end
-
-	local health = target:GetHealth()
-	local maxHealth = target:GetMaxHealth()
-
-	local modCount = GetModifierCountByName(target,target,"modifier_being_repaired")
-
-	-- if health < maxHealth then
-		if modCount < 4 then
-
-			if (caster:GetUnitName() == "npc_petri_mega_peasant" and modCount > 2) then return end
-
-			PlayAttackAnimation( event )
-
-			ability:ApplyDataDrivenModifier(target, target, "modifier_being_repaired", {})
-
-			local healAmount = 3 + (target:GetMaxHealth() * 0.01295)
-			
-			if caster:GetUnitName() == "npc_petri_mega_peasant" then
-				ability:ApplyDataDrivenModifier(target, target, "modifier_being_repaired", {})
-				healAmount = healAmount + healAmount
-			end
-
-			if caster:IsHero() == true and GetModifierCountByName(target,target,"modifier_being_repaired") <= 1 then
-				ability:ApplyDataDrivenModifier(target, target, "modifier_being_repaired", {})
-				healAmount = healAmount + healAmount*2
-			end
-
-			if health == maxHealth then
-				healAmount = 0
-			end
-
-			target:Heal(healAmount, caster)
-
-			caster.repairing_cooldown = true
-
-			Timers:CreateTimer(1.0, function ()
-				caster.repairing_cooldown = false
-			end)
-		else
-			--caster:Stop()
-		end
-	-- else
-	-- 	local player = caster:GetPlayerOwner():GetPlayerID()
-
-	-- 	ability:ToggleAbility()
-
-	-- 	caster:RemoveModifierByName("modifier_chopping_building")
-	-- 	caster:RemoveModifierByName("modifier_repairing")
-	-- 	caster:RemoveModifierByName("modifier_chopping_building_animation")
-
-	-- 	RepairingAutocast( event )
-	-- end
-end
-
 -- Misc
 
 function Spawn( t )
+	if not IsServer then
+		return
+	end
 	local pID = thisEntity:GetPlayerOwnerID()
 	local ability = thisEntity:FindAbilityByName("gather_lumber_worker")
 

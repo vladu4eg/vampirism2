@@ -46,12 +46,7 @@ function trollnelves2:OnNPCSpawned(keys)
             trollnelves2:OnHeroInGame(npc)
         end
     end
-    if npc:IsAngel() and PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 and not GameRules.test and not GameRules.test2 then
-        npc:AddNewModifier(nil, nil, "modifier_disconnected", {})
-    end
-    if npc:IsWolf() and PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 and not GameRules.test and not GameRules.test2 then
-        npc:AddNewModifier(nil, nil, "modifier_disconnected", {})
-    end
+
     if npc:IsRealHero() then
         local info = {}
         info.PlayerID = npc:GetPlayerID()
@@ -65,27 +60,16 @@ function trollnelves2:OnNPCSpawned(keys)
     if npc:IsWolf() then
         npc:AddNewModifier(npc, nil, "modifier_death_armor", {})
     end
-  --  if npc:IsAngel() then
-  --      npc:AddNewModifier(npc, nil, "modifier_death_mana", {})
-  --   end
-    if EVENT_START then
-        --Halloween(npc)  
-    end
 end
 
 function trollnelves2:OnPlayerReconnect(event)
     local playerID = event.PlayerID
-    if GameRules.KickList[playerID] == 1 then 
-        SendToServerConsole("kick " .. PlayerResource:GetPlayerName(playerID))
-        return
-    end
     -- local notSelectedHero = GameRules.disconnectedHeroSelects[playerID]
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     --if notSelectedHero then
     --    hero = PlayerResource:ReplaceHeroWith(playerID, notSelectedHero, 0, 0)   
    -- end
-    if hero:IsAngel() then hero:RemoveModifierByName("modifier_disconnected") end
-    if hero:IsWolf() then hero:RemoveModifierByName("modifier_disconnected") end
+
     if hero then
         -- Send info to client]
         UpdateSpells(hero)
@@ -93,11 +77,8 @@ function trollnelves2:OnPlayerReconnect(event)
         PlayerResource:ModifyGold(hero, 0)
         PlayerResource:ModifyLumber(hero, 0)
         PlayerResource:ModifyFood(hero, 0)
-        PlayerResource:ModifyWisp(hero, 0)
         PlayerResource:ModifyMine(hero, 0)
-        ModifyLumberPrice(0)
         hero:CalculateStatBonus(true)
-        hero:RemoveModifierByName("modifier_disconnected")
     end
 end
 
@@ -112,7 +93,6 @@ function trollnelves2:OnDisconnect(event)
     local elfLoseTimer = 180
     
     if team == DOTA_TEAM_GOODGUYS then
-        hero:AddNewModifier(nil, nil, "modifier_disconnected", {})
         if hero.alive == true then
             hero.alive = false
             hero.dced = true
@@ -157,7 +137,6 @@ function trollnelves2:OnDisconnect(event)
         elseif team == DOTA_TEAM_BADGUYS then
         hero:MoveToPosition(Vector(0, 0, 0))
         if hero:IsWolf() then
-            hero:AddNewModifier(nil, nil, "modifier_disconnected", {})
             Timers:CreateTimer(60, function()
                 if hero ~= nil and GameRules.KickList[playerID] ~= 1 then
                     if PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 then
@@ -176,34 +155,6 @@ function trollnelves2:OnDisconnect(event)
             end)
             
         end
-    end
-    if hero:IsTroll() then
-        Timers:CreateTimer(function()
-            if trollLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2  and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 4 then
-                Notifications:ClearBottomFromAll()
-                Notifications:BottomToAll(
-                    {
-                        text = "The Troll will lose in " .. trollLoseTimer,
-                        style = {color = '#E62020'},
-                        duration = 1
-                    })
-                    trollLoseTimer = trollLoseTimer - 1
-                    return 1.0
-                    elseif trollLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 2 then
-                    return nil
-                    elseif trollLoseTimer <= 0 or PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 4 then
-                    GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
-                    local status, nextCall = Error_debug.ErrorCheck(function() 
-                        if string.match(GetMapName(),"clanwars") then
-                            Clanwars.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
-                        else
-                            Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
-                        end    
-                    end)
-                    GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
-                    return nil
-            end
-        end)
     end
 end
 
@@ -300,7 +251,6 @@ function trollnelves2:OnEntityKilled(keys)
 
     if IsBuilder(killed) then BuildingHelper:ClearQueue(killed) end
     if killed:IsRealHero() then
-        local bounty = -1
         
         if killed:IsElf() and killed.alive then
             for pID = 0, DOTA_MAX_TEAM_PLAYERS do
@@ -314,7 +264,7 @@ function trollnelves2:OnEntityKilled(keys)
             GameRules.countFlag[killedPlayerID] = nil
             GameRules.PlayersBase[killedPlayerID] = nil
 
-            bounty = ElfKilled(killed)
+            ElfKilled(killed)
             GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
             if CheckTrollVictory() then
                 for pID = 0, DOTA_MAX_TEAM_PLAYERS do
@@ -371,40 +321,6 @@ function trollnelves2:OnEntityKilled(keys)
                 GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
             end
            Pets.DeletePet(info)
-        elseif killed:IsAngel() then
-            bounty = math.max(PlayerResource:GetGold(killedPlayerID),
-            GameRules:GetGameTime()) / 4
-            PlayerResource:SetGold(killed, 0)
-            killed:SetRespawnPosition(RandomAngelLocation())
-            killed:SetTimeUntilRespawn(ANGEL_RESPAWN_TIME * PlayerResource:GetDeaths(killedPlayerID))
-
-            Timers:CreateTimer(ANGEL_RESPAWN_TIME, function()
-                killed:AddNewModifier(killed, nil, "modifier_invulnerable",
-                {duration = 5})
-            end)
-            killed:ClearInventoryCM()
-            Pets.DeletePet(info)
-        end
-        if bounty >= 0 and attacker ~= killed then
-            local killedName = PlayerResource:GetSelectedHeroEntity(
-            killedPlayerID) and
-            PlayerResource:GetSelectedHeroEntity(
-            killedPlayerID):GetUnitName() or
-            killed:GetUnitName()
-            local attackerName = PlayerResource:GetSelectedHeroEntity(
-            attackerPlayerID) and
-            PlayerResource:GetSelectedHeroEntity(
-            attackerPlayerID):GetUnitName() or
-            attacker:GetUnitName()
-            bounty = math.floor(bounty)
-            PlayerResource:ModifyGold(attacker, bounty)
-            local message = "%s1 (" .. GetModifiedName(attackerName) ..
-            ") killed " ..
-            PlayerResource:GetPlayerName(killedPlayerID) ..
-            " (" .. GetModifiedName(killedName) ..
-            ") for <font color='#F0BA36'>" .. bounty ..
-            "</font> gold!"
-            GameRules:SendCustomMessage(message, attackerPlayerID, 0)
         end
         if killed:GetUnitName() == "npc_dota_hero_templar_assassin" then
             killed:SetRespawnsDisabled(true)
@@ -517,9 +433,6 @@ function trollnelves2:OnEntityKilled(keys)
             elseif killed:GetKeyValue("FoodCost") then
             local foodCost = killed:GetKeyValue("FoodCost")
             PlayerResource:ModifyFood(hero, -foodCost)
-            elseif killed:GetKeyValue("WispCost") then
-            local wisp = killed:GetKeyValue("WispCost")
-            PlayerResource:ModifyWisp(hero, -wisp)
             elseif killed:GetKeyValue("MineCost") then
             local mine = killed:GetKeyValue("MineCost")
             PlayerResource:ModifyMine(hero, -mine)
@@ -533,7 +446,6 @@ function ElfKilled(killed)
     killed.alive = false
     killed.legitChooser = true
     
-    local bounty = PlayerResource:GetGold(killedID)/10
     PlayerResource:SetGold(killed, 0)
     PlayerResource:SetLumber(killed, 0)
     
@@ -549,17 +461,11 @@ function ElfKilled(killed)
         PlayerResource:SetCameraTarget(killedID, nil)
     end)
     
-    if string.match(GetMapName(),"clanwars") then
-        bounty = PlayerResource:GetGold(killedID) + (400 + GameRules:GetGameTime())
-        UTIL_Remove(killed)
-        return bounty
-    end 
     local args = {}
     args.team = DOTA_TEAM_BADGUYS
     args.playerID = killedID
     ChooseHelpSide(killedID, args)
-    
-    return bounty
+
 end
 
 function CheckTrollVictory()

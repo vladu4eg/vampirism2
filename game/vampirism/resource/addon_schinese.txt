@@ -65,7 +65,7 @@
 		"rock_23"                                                              	"Fire Dragon Wall"
 		"rock_24"                                                              	"Immunity Wall"
 		"tower_1"                                                                         "Tower 1"
-		"tower_1_1"                                                                         "New Tower 1"
+		"base_twr"                                                                         "New Tower 1"
 		"tower_2"                                                                         "Tower 2"
 		"tower_3"                                                                         "Tower 3"
 		"tower_4"                                                                         "Tower 4"
@@ -819,10 +819,10 @@
 		"DOTA_Tooltip_ability_build_tower_1_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_tower_1_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
 
-		"DOTA_Tooltip_ability_build_tower_1_1"                                              "Build New Tower 1"
-		"DOTA_Tooltip_ability_build_tower_1_1_Description"                                  "Build tower to defend yourself from the mighty vampires!<br>Damage: 1"
-		"DOTA_Tooltip_ability_build_tower_1_1_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_build_tower_1_1_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_build_base_twr"                                              "Build New Tower 1"
+		"DOTA_Tooltip_ability_build_base_twr_Description"                                  "Build tower to defend yourself from the mighty vampires!<br>Damage: 1"
+		"DOTA_Tooltip_ability_build_base_twr_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_build_base_twr_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_build_slayerstaverna_1"                                              "Build Slayer Tavern"
 		"DOTA_Tooltip_Ability_build_slayerstaverna_1_Description"                                  "Creates a hero that will help you protect your buildings."

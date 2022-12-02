@@ -410,7 +410,7 @@ function BuildingHelper:OnTreeCut(keys)
         BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
-    local roll_chance = 1111  -- RandomFloat(0, 500)
+    local roll_chance = RandomFloat(0, 500)
     if roll_chance <= CHANCE_DROP_LUMBER then
         local spawnPoint = tree:GetAbsOrigin()	
         local newItem = CreateItem( "item_lia_rune_lumber", nil, nil )

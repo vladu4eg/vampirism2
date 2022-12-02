@@ -175,18 +175,18 @@ function trollnelves2:DamageFilter( kv )
       if trollCountStack[idAttacker] == nil then
          trollCountStack[idAttacker] = 1
       end
-      if heroAttacker:HasModifier("modifier_item_gold_axe") and math.fmod(trollCountStack[idAttacker], 10) == 0 then     
-          PlayerResource:ModifyGold(heroAttacker, 2)
-          heroAttacker:AddExperience(10, DOTA_ModifyXP_Unspecified, false,false)
-          PopupGoldGain(heroAttacker,2)
+      if heroAttacker:HasModifier("modifier_item_gold_blade") and math.fmod(trollCountStack[idAttacker], 10) == 0 then
+        PlayerResource:ModifyGold(heroAttacker, 20)
+        heroAttacker:AddExperience(100, DOTA_ModifyXP_Unspecified, false,false)
+        PopupGoldGain(heroAttacker,20)
       elseif heroAttacker:HasModifier("modifier_item_gold_staff") and math.fmod(trollCountStack[idAttacker], 10) == 0 then
           PlayerResource:ModifyGold(heroAttacker, 10)
           heroAttacker:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
           PopupGoldGain(heroAttacker,10)
-      elseif heroAttacker:HasModifier("modifier_item_gold_blade") and math.fmod(trollCountStack[idAttacker], 10) == 0 then
-          PlayerResource:ModifyGold(heroAttacker, 20)
-          heroAttacker:AddExperience(100, DOTA_ModifyXP_Unspecified, false,false)
-          PopupGoldGain(heroAttacker,20)
+      elseif heroAttacker:HasModifier("modifier_item_gold_axe") and math.fmod(trollCountStack[idAttacker], 10) == 0 then     
+          PlayerResource:ModifyGold(heroAttacker, 2)
+          heroAttacker:AddExperience(10, DOTA_ModifyXP_Unspecified, false,false)
+          PopupGoldGain(heroAttacker,2)
       end
       trollCountStack[idAttacker] = trollCountStack[idAttacker] + 1 
     end
@@ -195,18 +195,22 @@ function trollnelves2:DamageFilter( kv )
       kv.damage = 0
     end
 
-    if string.match(heroAttacker:GetUnitName(), "fel_best") and not heroKilled:GetUnitName() == "worker_1" then
+    if string.match(heroAttacker:GetUnitName(), "fel_best") and heroKilled:GetUnitName() ~= "worker_1" then
       kv.damage = 0
     end
 
-
+    if (heroAttacker:IsElf() or string.match(heroAttacker:GetUnitName(), "build_worker")) and heroAttacker:GetPlayerOwnerID() == heroKilled:GetPlayerOwnerID() then
+      kv.damage = 99999999999
+    elseif heroAttacker:GetPlayerOwnerID() ~= heroKilled:GetPlayerOwnerID() and heroAttacker:GetTeamNumber() == heroKilled:GetTeamNumber() then 
+      kv.damage = 0
+    end
 
     if heroKilled:IsElf() and (not heroAttacker:IsTroll() and not heroAttacker:IsWolf()) then
       kv.damage = 0
     end
 
     if heroAttacker:IsTroll() and heroKilled:IsWolf() then
-      kv.damage = 100000000
+      kv.damage = 999999999999
     end
 
    -- if (string.match(heroKilled:GetUnitName(), "gold_mine") or string.match(heroKilled:GetUnitName(), "wisp")) and team == DOTA_TEAM_BADGUYS then

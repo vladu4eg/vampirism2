@@ -46,12 +46,7 @@ end
 
 function RuneLumber(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
-	local value
-	if hero:IsElf() then
-		value = 2000 * math.ceil(GameRules:GetGameTime()/60)
-	else
-		value = math.ceil(GameRules:GetGameTime()/1800)
-	end
+	local value = 2000 * math.ceil(GameRules:GetGameTime()/60)
 	PlayerResource:ModifyLumber(hero, value, true)
 	PopupLumber(hero, value, true)
 end

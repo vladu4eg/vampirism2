@@ -52,11 +52,6 @@ function SelectPets:SetPets()
 				CustomGameEventManager:Send_ServerToPlayer( PlayerResource:GetPlayer(i), "SetSelectedPets", arr)
 				Pets.DeletePet( info )
 				Pets.CreatePet( info,  info.part)
-				--local pets = CustomNetTables:GetTableValue("Pets_Tabel",tostring(i))
-				--local npc = PlayerResource:GetSelectedHeroEntity(i)
-				--if pets["11"] == "normal" and not EVENT_START then
-				--	SetModelVip(npc)
-				--end
 		end
 	end
 end

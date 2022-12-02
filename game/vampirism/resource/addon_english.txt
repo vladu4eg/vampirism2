@@ -80,39 +80,33 @@
 		"rock_23"                                                              	"Fire Dragon Wall"
 		"rock_24"                                                              	"Immunity Wall"
 		"tower_1"                                                                         "Tower 1"
-		"tower_1_1"                                                                         "New Tower 1"
-		"tower_2"                                                                         "Tower 2"
-		"tower_3"                                                                         "Tower 3"
-		"tower_4"                                                                         "Tower 4"
-		"tower_5"                                                                         "Tower 5"
-		"tower_6"                                                                         "Tower 6"
-		"tower_7"                                                                         "Tower 7"
-		"tower_8"                                                                         "Tower 8"
-		"tower_9"                                                                         "Tower 9"
-		"tower_10"                                                                        "Tower 10"
-		"tower_10_1"                                                                        "Tower Debuff"
-		"tower_10_2"                                                                        "Tower 10 lvl 3"
-		"tower_10_3"                                                                        "Tower 10 lvl 4"
-		"tower_11"                                                                        "Tower 11 lvl 1"
-		"tower_11_1"                                                                        "Tower 11 lvl 2"
-		"tower_11_2"                                                                        "Tower 11 lvl 3"
-		"tower_12"                                                                        "Tower 12"
-		"tower_12_1"                                                                        "Tower 12 lvl 2"
-		"tower_12_2"                                                                        "Tower 12 lvl 3"
-		"tower_13"                                                                        "Tower 13"
-		"tower_14"                                                                        "Tower 14"
-		"tower_15"                                                                        "Tower 15"
-		"tower_15_1"                                                                      "Tower 15 lvl 2"
-		"tower_15_2"                                                                      "Tower 15 lvl 3"
-		"tower_16"                                                                        "Tower 16"
-		"tower_17"                                                                        "Tower 17"
-		"tower_18"                                                                        "Tower 18"
-		"tower_19"                                                                        "Tower 19 lvl 1(3 min!) NO DAMAGE!!!"
-		"tower_19_1"                                                                      "Tower 19 lvl 2(3 min!) NO DAMAGE!!!"
-		"tower_19_2"                                                                      "Tower 19 lvl 3(3 min!) NO DAMAGE!!!"
+		"base_twr"                                                                       "New Tower 1"
+		"tower_2"                                                                         "Tower 2 DMG"
+		"tower_3"                                                                         "Tower 3 DMG"
+		"tower_4"                                                                         "Tower 4 DMG"
+		"tower_5"                                                                         "Tower 5 DMG"
+		"tower_6"                                                                         "Tower 6 DMG"
+		"tower_7"                                                                         "Tower 7 DMG"
+		"tower_8"                                                                         "Tower 8 DMG"
+		"tower_9"                                                                         "Tower 9 DMG"
+		"tower_10"                                                                        "Tower 10 DMG"
+		"tower_11"                                                                        "Tower 11 DMG"
+
+		"tower_2_1"                                                                         "Tower 2 SPD"
+		"tower_3_1"                                                                         "Tower 3 SPD"
+		"tower_4_1"                                                                         "Tower 4 SPD"
+		"tower_5_1"                                                                         "Tower 5 SPD"
+		"tower_6_1"                                                                         "Tower 6 SPD"
+		"tower_7_1"                                                                         "Tower 7 SPD"
+		"tower_8_1"                                                                         "Tower 8 SPD"
+		"tower_9_1"                                                                         "Tower 9 SPD"
+		"tower_10_1"                                                                        "Tower 10 SPD"
+		"tower_11_1"                                                                        "Tower 11 SPD"
+		
+		"tower_12"                                                                        "Tower Debuff"
+	
 		"tower_20"                                                                        "End Game"
-		"tower_21"                                                                        "Tower 21"
-		"tower_22"                                                                        "Tower 22"
+	
 		"true_sight_tower"                                                                "True Sight Tower"
 		"trader_1"                                                                        "Trader 1"
 		"trader_2"                                                                        "Trader 2"
@@ -1100,6 +1094,8 @@
 		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
+		"DOTA_Tooltip_Ability_item_lia_rune_lumber"			"Lumber"
+
 
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven"                                  "Darkness Aura Datadriven"
 		"DOTA_Tooltip_modifier_darkness_aura_datadriven_Description"                      ""
@@ -1191,28 +1187,28 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Upgrade your rock!<br>HP:3500<br>ARMOR:45<br>REGEN:45"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_4"                                          "Rock 4"
-		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your rock!<br>HP:6000<br>ARMOR:60<br>REGEN:100"
+		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your rock!<br>HP:10000<br>ARMOR:60<br>REGEN:100"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_5"                                          "Rock 5"
-		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your rock!<br>HP:14000<br>ARMOR:75<br>REGEN:150"
+		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your rock!<br>HP:16000<br>ARMOR:75<br>REGEN:150"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_6"                                    "Ultra Wall 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your rock!<br>HP:30000<br>ARMOR:90<br>REGEN:250"
+		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your rock!<br>HP:35000<br>ARMOR:95<br>REGEN:250"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_7"                                    "Ultra Wall 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Upgrade your ultra wall!<br>HP:45000<br>ARMOR:105<br>REGEN:500"
+		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Upgrade your ultra wall!<br>HP:100000<br>ARMOR:115<br>REGEN:500"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_8"                                    "Ultra Wall 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_8_Description"                        "Upgrade your ultra wall!<br>HP:75000<br>ARMOR:120<br>REGEN:750"
+		"DOTA_Tooltip_ability_upgrade_to_rock_8_Description"                        "Upgrade your ultra wall!<br>HP:200000<br>ARMOR:135<br>REGEN:750"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Ultra Wall 4"
-		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your ultra wall!<br>HP:200000<br>ARMOR:135<br>REGEN:1000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your ultra wall!<br>HP:400000<br>ARMOR:150<br>REGEN:2000"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Ultra Wall 5"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your ultra wall!<br>HP:400000<br>ARMOR:150<br>REGEN:2000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your ultra wall!<br>HP:800000<br>ARMOR:165<br>REGEN:4000"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Demonic Wall 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Upgrade your Demonic wall!<br>HP:800000<br>ARMOR:165<br>REGEN:4000"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Upgrade your Demonic wall!<br>HP:1000000<br>ARMOR:180<br>REGEN:8000"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_12"                                  "Demonic Wall 2EERRRORORRR"
 		"DOTA_Tooltip_ability_upgrade_to_rock_12_Description"                      "Upgrade your demonic wall!<br>HP:20480<br>ARMOR:7<br>REGEN:8000"
@@ -1273,10 +1269,10 @@
 		"DOTA_Tooltip_ability_build_tower_1_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_tower_1_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
 
-		"DOTA_Tooltip_ability_build_tower_1_1"                                              "Build New Tower 1"
-		"DOTA_Tooltip_ability_build_tower_1_1_Description"                                  "Build tower to defend yourself from the mighty vampires!<br>Damage: 1"
-		"DOTA_Tooltip_ability_build_tower_1_1_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_ability_build_tower_1_1_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_ability_build_base_twr"                                              "Build New Tower 1"
+		"DOTA_Tooltip_ability_build_base_twr_Description"                                  "Build tower to defend yourself from the mighty vampires!<br>Damage: 1"
+		"DOTA_Tooltip_ability_build_base_twr_gold_cost"                                    "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_build_base_twr_lumber_cost"                                  "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_build_slayerstaverna_1"                                              "Build Slayer Tavern"
 		"DOTA_Tooltip_Ability_build_slayerstaverna_1_Description"                                  "Creates a hero that will help you protect your buildings."
@@ -1299,10 +1295,10 @@
 		"DOTA_Tooltip_Ability_build_tower_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_build_tower_10_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
-		"DOTA_Tooltip_Ability_build_tower_12"                                                 "Build Tower 12"
-		"DOTA_Tooltip_Ability_build_tower_12_Description"                                     "Damage: 13751"
-		"DOTA_Tooltip_Ability_build_tower_12_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
-		"DOTA_Tooltip_Ability_build_tower_12_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		"DOTA_Tooltip_Ability_build_tower_5"                                                 "Build Tower 5"
+		"DOTA_Tooltip_Ability_build_tower_5_Description"                                     "Damage: 13751"
+		"DOTA_Tooltip_Ability_build_tower_5_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_build_tower_5_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		
 
@@ -1430,101 +1426,65 @@
 		"DOTA_Tooltip_ability_upgrade_to_buff_fire_6"                                    "Faerie Tower 6"
 		"DOTA_Tooltip_ability_upgrade_to_buff_fire_6_Description"                        "Reduces a target enemy unit's armor 960 and gives vision of that unit."
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_2"                                         "Tower 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 81"
+		"DOTA_Tooltip_ability_upgrade_to_tower_2"                                         "Tower 2 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1000<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_3"                                         "Tower 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 201"
+		"DOTA_Tooltip_ability_upgrade_to_tower_3"                                         "Tower 3 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 2500<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_4"                                         "Tower 4"
-		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 381"
+		"DOTA_Tooltip_ability_upgrade_to_tower_4"                                         "Tower 4 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 6000<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_5"                                         "Tower 5"
-		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 701"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5"                                         "Tower 5 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 27500<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_6"                                         "Tower 6"
-		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1201"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6"                                         "Tower 6 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 68750<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_7"                                         "Tower 7"
-		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1401"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7"                                         "Tower 7 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 137500<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_8"                                         "Tower 8"
-		"DOTA_Tooltip_ability_upgrade_to_tower_8_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1751"
+		"DOTA_Tooltip_ability_upgrade_to_tower_8"                                         "Tower 8 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_8_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 225000<br>ATTACK SPEED: 1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_9"                                         "Tower 9"
-		"DOTA_Tooltip_ability_upgrade_to_tower_9_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 2626"
+		"DOTA_Tooltip_ability_upgrade_to_tower_9"                                         "Tower 9 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_9_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 325000<br>ATTACK SPEED: 0.75"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_10"                                        "Tower 10"
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 3501"
+		"DOTA_Tooltip_ability_upgrade_to_tower_10"                                        "Tower 10 DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_10_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 555000<br>ATTACK SPEED: 0.5"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_1"                                        "Tower Debuff"
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 10000<br>Aura Armor: -600 enemy"
+		"DOTA_Tooltip_ability_upgrade_to_tower_12"                                        "Tower Debuff"
+		"DOTA_Tooltip_ability_upgrade_to_tower_12_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 10000<br>Aura Armor: -600 enemy"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_2"                                        "Tower 10 lvl 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_2_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 10240-20480"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_3"                                        "Tower 10 lvl 4"
-		"DOTA_Tooltip_ability_upgrade_to_tower_10_3_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 20480-40960"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_11"                                        "Tower 11"
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 4376"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_1"                                        "Tower 11 lvl 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 256000"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_2"                                        "Tower 11 lvl 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_11_2_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_12"                                        "Tower 12"
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 13751"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_1"                                        "Tower 12 lvl 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 256000"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_2"                                        "Tower 12 lvl 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_12_2_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_13"                                        "Tower 13"
-		"DOTA_Tooltip_ability_upgrade_to_tower_13_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 27501"
+		"DOTA_Tooltip_ability_upgrade_to_tower_11"                                        "Tower 11  DMG"
+		"DOTA_Tooltip_ability_upgrade_to_tower_11_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 13750000<br>ATTACK SPEED: 0.4"
 		
-		"DOTA_Tooltip_ability_upgrade_to_tower_14"                                        "Tower 14"
-		"DOTA_Tooltip_ability_upgrade_to_tower_14_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 41251"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_15"                                        "Tower 15"
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 55001"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_1"                                      "Tower 15 lvl  2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_1_Description"                          "Upgrade your tower to improve your defence!<br>Damage: "
+		"DOTA_Tooltip_ability_upgrade_to_tower_5_1"                                         "Tower 5 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5_1_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 2000<br>ATTACK SPEED: 0.1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_2"                                      "Tower 15 lvl  3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_15_2_Description"                          "Upgrade your tower to improve your defence!<br>Damage: 999999"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_16"                                        "Tower 16"
-		"DOTA_Tooltip_ability_upgrade_to_tower_16_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 68751"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_17"                                        "Tower 17"
-		"DOTA_Tooltip_ability_upgrade_to_tower_17_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 137501"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_18"                                        "Tower 18"
-		"DOTA_Tooltip_ability_upgrade_to_tower_18_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 275001"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6_1"                                         "Tower 6 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6_1_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 5000<br>ATTACK SPEED: 0.1"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_19"                                        "Tower 19 lvl 1 (3 minutes to build). The troll will receive a strong buff! NO DAMAGE!!!"
-		"DOTA_Tooltip_ability_upgrade_to_tower_19_Description"                            "Upgrade your tower to anger the Troll!<br>NO DAMAGE!!!<br>The troll will receive a strong buff!"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_19_1"                                      "Tower 19 lvl 2 (3 minutes to build). The troll will receive a strong buff! NO DAMAGE!!!"
-		"DOTA_Tooltip_ability_upgrade_to_tower_19_1_Description"                          "Upgrade your tower to anger the Troll!<br>NO DAMAGE!!!<br>The troll will receive a strong buff!"
-		
-		"DOTA_Tooltip_ability_upgrade_to_tower_19_2"                                      "Tower 19 lvl 3 (3 minutes to build). The troll will receive a strong buff! NO DAMAGE!!!"
-		"DOTA_Tooltip_ability_upgrade_to_tower_19_2_Description"                          "Upgrade your tower to anger the Troll!<br>NO DAMAGE!!!<br>The troll will receive a strong buff!"
-		
+		"DOTA_Tooltip_ability_upgrade_to_tower_7_1"                                         "Tower 7 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7_1_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 10000<br>ATTACK SPEED: 0.1"
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_8_1"                                         "Tower 8 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_8_1_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 19500<br>ATTACK SPEED: 0.1"
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_9_1"                                         "Tower 9 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_9_1_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 39000<br>ATTACK SPEED: 0.1"
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_10_1"                                        "Tower 10 SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_10_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 78000<br>ATTACK SPEED: 0.1"
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_12_1"                                        "Tower Debuff"
+		"DOTA_Tooltip_ability_upgrade_to_tower_12_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 10000<br>Aura Armor: -600 enemy"
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_11_1"                                        "Tower 11  SPD"
+		"DOTA_Tooltip_ability_upgrade_to_tower_11_1_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 195000<br>ATTACK SPEED: 0.1"
+
 		"DOTA_Tooltip_ability_upgrade_to_tower_20"                                        "End Game Tower "
 		"DOTA_Tooltip_ability_upgrade_to_tower_20_Description"                            "Upgrade your tower to win the game! "
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_21"                                        "Tower 21"
-		"DOTA_Tooltip_ability_upgrade_to_tower_21_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 550001"
-
-		"DOTA_Tooltip_ability_upgrade_to_tower_22"                                        "Tower 22"
-		"DOTA_Tooltip_ability_upgrade_to_tower_22_Description"                            "Upgrade your tower to improve your defence!<br>Damage: 999999<br>Skill: Clinkz Swipes"
 
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower"                                "True Sight Tower"
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "
@@ -1907,13 +1867,13 @@
 		"DOTA_Tooltip_modifier_range_tower_Description"                                 "Learn to increase attack range for killing Vampires."
 
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc"                                             "Research HP Regen for Wall"
-		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_Description"                                 "The upgrade works on walls that have regeneration above 1000 per second. Does not work on weak walls."
+		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_Description"                                 "Increases regeneration by 20% for each level of pumping from the main regeneration."
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_skill_count"                                   "REGEN WALL:  "
 
 		"DOTA_Tooltip_modifier_regen_walls_proc"                                             "Research HP Regen for Wall"
-		"DOTA_Tooltip_modifier_regen_walls_proc_Description"                                 "The upgrade works on walls that have regeneration above 1000 per second. Does not work on weak walls."
+		"DOTA_Tooltip_modifier_regen_walls_proc_Description"                                 "Increases regeneration by 20% for each level of pumping from the main regeneration."
 
 
 		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls"                                             "Research Mana Regen for Buff Tower"
@@ -1980,7 +1940,7 @@
 		"DOTA_Tooltip_modifier_range_no_miss_Description"                                 "Level 17, 18 and 21 towers ignore Vampire evasion."
 
 		"DOTA_Tooltip_modifier_range_no_miss_state"                                             "Accurate Shot"
-		"DOTA_Tooltip_modifier_range_no_miss_state_Description"                                 "Level 17, 18 and 21 towers ignore Vampire evasion."
+		"DOTA_Tooltip_modifier_range_no_miss_state_Description"                                 "Level 9, 10 and 11 towers ignore Vampire evasion."
 		
 		"DOTA_Tooltip_ability_6_wave_cripple"  "Cripple"
 		"DOTA_Tooltip_ability_6_wave_cripple_Description"  "Reduces movement and attack speed and damage of a target enemy."
@@ -2260,6 +2220,9 @@
 
 		"DOTA_Tooltip_ability_sell_lumber_8"                                              "Sell 80000 Lumber"
 		"DOTA_Tooltip_ability_sell_lumber_8_Description"                                  "Sell 80000 lumber for 10 gold"
+
+		"DOTA_Tooltip_ability_sell_lumber_100"                                              "Sell 800000 Lumber"
+		"DOTA_Tooltip_ability_sell_lumber_100_Description"                                  "Sell 800000 lumber for 100 gold"
 
 		"item_lia_healing_ward_unit"	"Healing Ward"
 		"DOTA_Tooltip_ability_item_lia_healing_ward"	"Healing Wards"

@@ -147,20 +147,6 @@ function CDOTA_PlayerResource:ModifyFood(hero, food)
 	end
 end
 
-function CDOTA_PlayerResource:ModifyWisp(hero,wisp)
-	if hero == nil then
-		return
-	end
-    wisp = string.match(wisp,"[-]?%d+") or 0
-    local playerID = hero:GetPlayerOwnerID()
-    hero.wisp = hero.wisp + wisp
-	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_wisp_changed", {
-		playerID = playerID,
-		wisp = math.floor(hero.wisp),
-		maxWisp = GameRules.maxWisp,
-	})
-end
-
 function CDOTA_PlayerResource:ModifyMine(hero, mine)
 	if hero == nil then
 		return

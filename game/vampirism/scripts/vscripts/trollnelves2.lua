@@ -39,7 +39,7 @@ LinkLuaModifier("modifier_hp_elf", "modifiers/modifier_hp_elf.lua", LUA_MODIFIER
 LinkLuaModifier("modifier_hp_walls", "modifiers/modifier_hp_walls.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_slayers_max", "modifiers/modifier_slayers_max.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_range_no_miss", "modifiers/modifier_range_no_miss.lua", LUA_MODIFIER_MOTION_NONE)
-
+LinkLuaModifier("modifier_hp_elf_2", "modifiers/modifier_hp_elf_2.lua", LUA_MODIFIER_MOTION_NONE)
 
 if trollnelves2 == nil then
     DebugPrint('[TROLLNELVES2] creating trollnelves2 game mode')
@@ -152,7 +152,7 @@ function SelectHeroes()
     end
     local countTroll = 0
     local sumChance = 0
-    if GameRules.PlayersCount >= 1 and GameRules.PlayersCount <= 6 then
+    if GameRules.PlayersCount >= 1 and GameRules.PlayersCount <= 8 then
         countTroll = 1
     else
         countTroll = 2
@@ -359,7 +359,10 @@ function InitializeBadHero(hero)
     if PlayerResource:GetSelectedHeroName(playerID) ~= "npc_dota_hero_wisp" then
         local abil2 = hero:FindAbilityByName("reveal_area")
         abil2:SetLevel(abil2:GetMaxLevel())
-        --abil2 = hero:FindAbilityByName("antiblock")
+        abil2 = hero:FindAbilityByName("deniable")
+        if abil2 then
+            abil2:SetLevel(abil2:GetMaxLevel())
+        end
         --abil2:SetLevel(abil2:GetMaxLevel())
         --abil2 = hero:FindAbilityByName("attribute_antibonuses")
         --abil2:SetLevel(abil2:GetMaxLevel())
@@ -372,6 +375,8 @@ function InitializeBadHero(hero)
         PlayerResource:ModifyFood(hero, 0)
         hero:AddNewModifier(hero, nil, "modifier_anti_hp_mana_regen", {})
         hero:AddNewModifier(hero, nil, "modifier_max_attackspeed", {})
+        
+
         
     end
     --hero:SetStashEnabled(false)
@@ -425,21 +430,8 @@ function InitializeBuilder(hero)
     PlayerResource:SetGold(hero, ELF_STARTING_GOLD)
     PlayerResource:SetLumber(hero, ELF_STARTING_LUMBER)
     PlayerResource:ModifyFood(hero, 0)
-    PlayerResource:ModifyWisp(hero, 0)
     PlayerResource:ModifyMine(hero, 0)
-    hero:SetStashEnabled(false)
-    hero:RemoveAbility("troll_warlord_battle_trance_datadriven")
-    Timers:CreateTimer(BUFF_ENIGMA_TIME/GameRules.MapSpeed, function() 
-        hero = PlayerResource:GetSelectedHeroEntity(playerID)
-        if hero == nil then
-            return nil
-        end
-        if hero:IsElf() then
-            hero:AddAbility("troll_warlord_battle_trance_datadriven")
-            local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
-            abil:SetLevel(abil:GetMaxLevel())
-        end
-    end)   
+    hero:SetStashEnabled(false) 
     hero:CalculateStatBonus(true)
     local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
@@ -570,18 +562,13 @@ function InitializeWolf(hero)
     
     PlayerResource:SetGold(hero, math.floor(gold))
     PlayerResource:SetLumber(hero, math.floor(lumber))
-    
-    local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
-    if abil ~= nil then
-        abil:RemoveAbility("troll_warlord_battle_trance_datadriven")
-    end
     hero:CalculateStatBonus(true)
+    PlayerResource:SetUnitShareMaskForPlayer(GameRules.shopTroll:GetPlayerID(), playerID, 2, true)
 end
 
 function trollnelves2:PreStart()
    -- StartCreatingMinimapBuildings()
     local gameStartTimer = PRE_GAME_TIME
-    ModifyLumberPrice(0)
     Timers:CreateTimer(function()
         if gameStartTimer > 0 then
             Notifications:ClearBottomFromAll()
@@ -610,6 +597,7 @@ function trollnelves2:PreStart()
                         BuffGold()
                         FakeHeroTroll()
                         FakeHeroElf()
+                        FirstGold()
                     end
                     -- Unstun the elves
                     local elfCount = PlayerResource:GetPlayerCountForTeam(
@@ -711,16 +699,6 @@ function trollnelves2:Inittrollnelves2()
     DebugPrint('[TROLLNELVES2] Done loading trollnelves2 trollnelves2!\n\n')
 end
 
-function ModifyLumberPrice(amount)
-    amount = string.match(amount, "[-]?%d+") or 0
-    GameRules.lumberPrice = math.max(GameRules.lumberPrice + amount,
-    MINIMUM_LUMBER_PRICE)
-    CustomGameEventManager:Send_ServerToTeam(DOTA_TEAM_GOODGUYS,
-        "player_lumber_price_changed", {
-            lumberPrice = GameRules.lumberPrice
-        })
-end
-
 function SetResourceValues()
     for pID = 0, DOTA_MAX_PLAYERS do
         if PlayerResource:IsValidPlayer(pID) then
@@ -788,8 +766,7 @@ function UpdateSpells(unit)
             local bIsBuilding = abilityKV and abilityKV.Building or 0
             if bIsBuilding == 1 then
                 local buildingName = abilityKV.UnitName
-                DisableAbilityIfMissingRequirements(playerID, hero, tempAbility,
-                buildingName)
+                DisableAbilityIfMissingRequirements(playerID, hero, tempAbility, buildingName)
             end
         end
     end
@@ -905,6 +882,8 @@ function GetClass(unitName)
         return "house"
         elseif string.match(unitName, "gold_mine") then
         return "gold_mine"
+        elseif string.match(unitName, "base_twr") then
+        return "base_twr"
     end
 end
 
@@ -944,6 +923,25 @@ function BuffGold()
         GameRules:SendCustomMessage("<font color='#009900'>HUMAN</font> got "..BUFF_GOLD_SUM_ELF[countBuffGold].." gold", 0, 0)
         GameRules:SendCustomMessage("<font color='#9A2E00'>VAMPIRE</font> got "..BUFF_GOLD_SUM_TROLL[countBuffGold].." gold", 0, 0)     
     return BUFF_GOLD_TIME end)
+end
+
+function FirstGold()
+    Timers:CreateTimer(180, function()
+        for pID=0,DOTA_MAX_TEAM_PLAYERS do
+            if PlayerResource:IsValidPlayerID(pID) then
+                local hero = PlayerResource:GetSelectedHeroEntity(pID)
+                if hero then
+                    local team = hero:GetTeamNumber()
+                    if team ~= nil then
+                        if team == DOTA_TEAM_GOODGUYS then
+                            PlayerResource:ModifyGold(hero, 1, true) 
+                        end
+                    end
+                end
+            end
+        end
+        GameRules:SendCustomMessage("<font color='#009900'>HUMAN</font> got 1 gold", 0, 0)  
+    end)
 end
 
 function FakeHeroTroll()
@@ -993,7 +991,7 @@ function FakeHeroTroll()
                 end
             elseif unit_name == "recipe_shop_troll" then
                 local abil = unit:FindAbilityByName("buy_item_recipe_end_game")
-                abil:StartCooldown(2700)
+                abil:StartCooldown(1023)
             end
 
         end

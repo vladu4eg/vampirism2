@@ -147,9 +147,7 @@ end
 function wearables:SelectSkin(info)
     if info.offp == 0 then
 		local npc = PlayerResource:GetSelectedHeroEntity(info.PlayerID)
-		if not EVENT_START then
-			SetModelVip(npc, info.part)
-		end		
+		SetModelVip(npc, info.part)	
 	end
 end
 
@@ -159,9 +157,7 @@ function wearables:SetSkin()
 	for i=0,pplc-1 do
 		if GameRules.SkinDefaults[i] ~= nil and GameRules.SkinDefaults[i] ~= "" and PlayerResource:GetConnectionState(i) == 2 then
 			local npc = PlayerResource:GetSelectedHeroEntity(i)
-			if not EVENT_START then
-				SetModelVip(npc, tostring(GameRules.SkinDefaults[i]))
-			end
+			SetModelVip(npc, tostring(GameRules.SkinDefaults[i]))
 		end
 	end
 end

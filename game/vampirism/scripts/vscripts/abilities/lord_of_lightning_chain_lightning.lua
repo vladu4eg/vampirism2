@@ -42,7 +42,7 @@ function lord_of_lightning_chain_lightning:OnSpellStart()
 		return 
 	end
 	if target.state ~= "complete" then
-		ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = self })
+		ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_PURE, ability = self })
 	end
 	
 	--PopupDamage(target,math.floor(damage))
@@ -115,7 +115,7 @@ function lord_of_lightning_chain_lightning:OnSpellStart()
 			-- damage and decay
 			damage = damage - (damage*decay)
 			if target.state ~= "complete" then
-				ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = self })
+				ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_PURE, ability = self })
 			end
 			--PopupDamage(target,math.floor(damage))
 			--print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")

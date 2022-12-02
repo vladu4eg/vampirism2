@@ -266,11 +266,6 @@ function chatcommand:OnPlayerChat(event)
 		FindClearSpaceForUnit(hero, pos, true)
 		hero:CalculateStatBonus(true)
 		
-		elseif event.text == "!test22"  then
-		hero:RemoveModifierByName("modifier_hp_wood_worker")
-		hero:AddNewModifier(hero, nil, "modifier_hp_wood_worker", {}):SetStackCount(4)
-	elseif event.text == "!test23"  then
-		hero:RemoveModifierByName("modifier_hp_wood_worker")
 		
 	--elseif event.text == "!skin" then
 	--	wearables:RemoveWearables(hero)

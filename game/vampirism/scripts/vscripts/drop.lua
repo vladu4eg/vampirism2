@@ -5,7 +5,7 @@ require('settings')
 item_drop = {
 	--{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
 
-	{items = {"item_lia_rune_gold"}, limit = 9999, chance = 100, units = 
+	{items = {"item_lia_rune_gold"}, limit = 9999, chance = 100, duration = 60, units = 
 	{"npc_dota_hero_lycan","npc_dota_hero_omniknight", "npc_dota_hero_night_stalker","npc_dota_hero_doom_bringer",
 	"npc_dota_hero_life_stealer","npc_dota_hero_slardar","wood_worker_1","wood_worker_2", "wood_worker_3","wood_worker_4",
 	"wood_worker_5","build_worker_1","build_worker_2"} },
