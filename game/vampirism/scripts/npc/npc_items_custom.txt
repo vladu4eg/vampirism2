@@ -7598,13 +7598,13 @@
 		"ItemStockMax" "1"
 		"ItemStockTime" "20"
 		"ItemPermanent"					"0"
-		
+		"AbilityCooldown"				"60"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type" "FIELD_INTEGER"
-				"bonus_damage" 				"500"
+				"bonus_damage" 				"200"
 			}
 			"02"
 			{
@@ -7619,7 +7619,7 @@
 			"04"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"berserk_bonus_attack_speed"					"10000"
+				"berserk_bonus_attack_speed"					"10"
 			}
 			"05"
 			{
@@ -7639,7 +7639,7 @@
 			"08"
 			{
 				"var_type"										"FIELD_FLOAT"
-				"burn_damage"								"400000"
+				"burn_damage"								"500000"
 			}
 			"09"
 			{
@@ -7753,15 +7753,6 @@
 					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"		"%berserk_extra_incoming_damage_percentage"
 				}
 				"ThinkInterval"  "1"
-	            "OnIntervalThink"
-	            {
-	                "Damage"
-	                {
-	                    "Target"        "CASTER"
-	                    "Type"          "DAMAGE_TYPE_PURE"
-	                    "Damage"        "%burn_damage"
-	                }               
-	            }
 			}
 		}
 	}
@@ -8704,7 +8695,7 @@
 			"04"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"berserk_bonus_attack_speed"					"10000"
+				"berserk_bonus_attack_speed"					"10"
 			}
 			"05"
 			{
@@ -8719,7 +8710,7 @@
 			"07"
 			{
 				"var_type"										"FIELD_FLOAT"
-				"berserk_duration"								"3.0"
+				"berserk_duration"								"5.0"
 			}
 			"08"
 			{
@@ -8836,16 +8827,6 @@
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%berserk_bonus_attack_speed"
 					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"		"%berserk_extra_incoming_damage_percentage"
 				}
-				"ThinkInterval"  "1"
-	            "OnIntervalThink"
-	            {
-	                "Damage"
-	                {
-	                    "Target"        "CASTER"
-	                    "Type"          "DAMAGE_TYPE_PURE"
-	                    "Damage"        "%burn_damage"
-	                }               
-	            }
 			}
 		}
 	}
@@ -10435,7 +10416,7 @@
 			"08"
 			{
 				"var_type" "FIELD_INTEGER"
-				"illusion_incoming_damage" "10000"
+				"illusion_incoming_damage" "1000"
 			}
 			"09"
 			{

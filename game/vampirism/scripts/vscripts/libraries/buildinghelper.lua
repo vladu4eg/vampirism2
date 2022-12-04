@@ -234,8 +234,7 @@ ParseRequirements(name, previousRequirements, allRequirements, allBuildingRequir
 
 local requirements = info["Requirements"]
 if requirements then
-    ParseRequirements(name, requirements, allRequirements,
-    allBuildingRequirementClasses)
+    ParseRequirements(name, requirements, allRequirements, allBuildingRequirementClasses)
 end
 local upgrades = info["Upgrades"]
 if upgrades then

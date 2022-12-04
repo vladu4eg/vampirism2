@@ -245,7 +245,7 @@ function trollnelves2:OnEntityKilled(keys)
     info.PlayerID = killedPlayerID
     info.hero = killed
     
-    if killed ~= nil and killedPlayerID ~= attackerPlayerID then
+    if killed ~= nil and killedPlayerID ~= attackerPlayerID and attacker ~= nil then
         drop:RollItemDrop(killed)
     end
 

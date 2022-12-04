@@ -59,8 +59,6 @@ function Build( event )
                 SendErrorMessage(playerID, "error_not_enough_mine")
                 caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
                 return false
-            else
-                PlayerResource:ModifyMine(hero, mine_cost)
             end
             end
         end
@@ -72,6 +70,7 @@ function Build( event )
     event:OnBuildingPosChosen(function(vPos)
         PlayerResource:ModifyGold(hero,-gold_cost)
         PlayerResource:ModifyLumber(hero,-lumber_cost)
+        PlayerResource:ModifyMine(hero, mine_cost)
         EmitSoundOnEntityForPlayer("DOTA_Item.ObserverWard.Activate", hero, hero:GetPlayerOwnerID())
     end)
     
@@ -90,7 +89,7 @@ function Build( event )
         if work.refund and work.refund == true and not work.repair then
             PlayerResource:ModifyGold(hero,gold_cost,true)
             PlayerResource:ModifyLumber(hero,lumber_cost,true)
-            PlayerResource:ModifyMine(hero, -mine_cost)
+            PlayerResource:ModifyMine(hero, -1)
         end
     end)
     

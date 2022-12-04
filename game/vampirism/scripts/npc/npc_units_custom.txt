@@ -160,8 +160,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1"		// Range of vision at night time.
+		"VisionDaytimeRange"		"0"		// Range of vision during day light.
+		"VisionNighttimeRange"		"0"		// Range of vision at night time.
 		
 		// Bots
 		//----------------------------------------------------------------
@@ -270,8 +270,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"575"		// Range of vision during day light.
-		"VisionNighttimeRange"		"575"		// Range of vision at night time.
+		"VisionDaytimeRange"		"0"		// Range of vision during day light.
+		"VisionNighttimeRange"		"0"		// Range of vision at night time.
 		
 		// Bots
 		//----------------------------------------------------------------
@@ -456,8 +456,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -522,8 +522,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -601,8 +601,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -674,8 +674,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -746,8 +746,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -810,8 +810,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -888,8 +888,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -961,8 +961,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1025,8 +1025,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1104,8 +1104,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1179,8 +1179,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1253,8 +1253,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1327,8 +1327,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1401,8 +1401,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1475,8 +1475,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1549,8 +1549,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1623,8 +1623,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1699,8 +1699,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1775,8 +1775,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1903,8 +1903,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1969,8 +1969,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2043,8 +2043,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2118,8 +2118,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2193,8 +2193,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2267,8 +2267,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2343,8 +2343,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2406,8 +2406,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2467,8 +2467,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2528,8 +2528,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2595,8 +2595,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2657,8 +2657,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2730,8 +2730,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2802,8 +2802,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2920,8 +2920,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3022,8 +3022,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3123,8 +3123,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3224,8 +3224,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3337,8 +3337,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3440,8 +3440,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3538,8 +3538,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3627,8 +3627,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3732,8 +3732,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3835,8 +3835,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -3939,8 +3939,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4042,8 +4042,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4135,8 +4135,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4238,8 +4238,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4340,8 +4340,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4443,8 +4443,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4545,8 +4545,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4648,8 +4648,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4739,8 +4739,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4817,8 +4817,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -4895,8 +4895,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5003,8 +5003,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5113,8 +5113,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5206,8 +5206,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5297,8 +5297,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5392,8 +5392,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5493,8 +5493,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5591,8 +5591,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5692,8 +5692,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5790,8 +5790,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5884,8 +5884,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -5975,8 +5975,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6075,8 +6075,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6172,8 +6172,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6271,8 +6271,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6367,8 +6367,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6467,8 +6467,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6565,8 +6565,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6657,8 +6657,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6746,8 +6746,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6825,7 +6825,7 @@
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"       "900"
+	    "VisionNighttimeRange"      "900"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -6919,8 +6919,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"        "1000"  
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
@@ -7074,8 +7074,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7116,7 +7116,7 @@
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "2"
-	    "BuildTime"                 "5"
+	    "BuildTime"                 "1"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
@@ -7158,8 +7158,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7241,8 +7241,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7325,8 +7325,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7403,8 +7403,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7497,8 +7497,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7585,8 +7585,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -7606,7 +7606,7 @@
 		"ModelScale"                            "0.6"
 		"Level"                                 "1"
 		"HealthBarOffset"                       "140"
-		"MineCost"                  			"1"
+		"MineCost"                  			"0"
 		"precache"
 		{
 			"model"                                 "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_frost.vmdl"
@@ -7618,7 +7618,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
 	    "AttackDamageMin"     "300"                   // Damage range min.
 	    "AttackDamageMax"     "300"                   // Damage range max.
 		"AttackRange"			"300"
@@ -7672,7 +7672,7 @@
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"					"300"
-		"VisionNighttimeRange"					"100"
+		"VisionNighttimeRange"					"300"
 
 		// Team
 		//----------------------------------------------------------------
@@ -7691,7 +7691,7 @@
 		"ModelScale"                            "0.6"
 		"Level"                                 "1"
 		"HealthBarOffset"                       "140"
-		"MineCost"                  			"1"
+		"MineCost"                  			"0"
 		"precache"
 		{
 			"model"                                 "models/heroes/techies/techies.vmdl"
@@ -7703,7 +7703,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
 	    "AttackDamageMin"     "300"                   // Damage range min.
 	    "AttackDamageMax"     "300"                   // Damage range max.
 		"AttackRange"			"300"
@@ -7758,8 +7758,8 @@
 
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"					"600"
-		"VisionNighttimeRange"					"600"
+		"VisionDaytimeRange"					"300"
+		"VisionNighttimeRange"					"300"
 
 		// Team
 		//----------------------------------------------------------------
@@ -7777,91 +7777,6 @@
 				"4" 	{ "ItemDef" "7009" } // Weapon 
 	        }
 	    }
-	}
-
-	"gold_wisp"
-	{
-		// General
-		//----------------------------------------------------------------
-		"BaseClass"                             "npc_dota_creature"
-		"Model"                                 "models/heroes/wisp/wisp.vmdl"
-		"ModelScale"                            "0.6"
-		"Level"                                 "1"
-		"HealthBarOffset"                       "140"
-		"MineCost"                  			"1"
-		"precache"
-		{
-			"model"                                 "models/heroes/wisp/wisp.vmdl"
-		}
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"                         "0"
-		"MagicalResistance"                     "0"
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageMin"                       "1.0"
-		"AttackDamageMax"                       "1.0"
-		"AttackRate"                            "1.00"
-
-		"AbilityLayout"							"11"
-		"Ability1" 								"build_gold_mine_1"
-		"Ability2"								"build_gold_mine_2"
-		"Ability3"								"build_gold_mine_3"
-		"Ability4"								"build_gold_mine_4"
-		"Ability5"								"build_gold_mine_5"
-		"Ability6"								"build_gold_mine_6"
-		"Ability7"								"build_gold_mine_7"
-		"Ability8"								"build_gold_mine_8"
-		"Ability9"								"build_gold_mine_9"
-		"Ability10"								"build_gold_mine_10"
-		"Ability11"								"commit_suicide"
-
-		"Creature"
-	    {
-	        "AttachWearables"
-	        {
-	            "1" { "ItemDef" "536" }
-	        }
-	    }
-
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyGoldMin"                         "0.0"
-		"BountyGoldMax"                         "0.0"
-
-		// Bounds
-		//----------------------------------------------------------------
-		"BoundsHullName"                        "DOTA_HULL_SIZE_HERO"
-		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
-		"FormationRank"                         "0"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"                         "270"
-		"MovementTurnRate"                      "0.6"
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"                          "10"
-		"StatusHealthRegen"                     "0.0"
-		"StatusMana"                            "0"
-		"StatusManaRegen"                       "0"
-
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"					"600"
-		"VisionNighttimeRange"					"600"
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"								"DOTA_TEAM_NEUTRALS"
-		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
-		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 
 	//=================================================================================
@@ -7884,7 +7799,314 @@
 		"ConsumesBuilder"			"0"
 		"BuilderInside"				"0"
 		"MaxGold"					"999999"
-		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_1_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_1"						"1"
+		}
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"GoldInterval"				"30"
+		"GoldAmount"				"4"
+		"MineCost"                  "1"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "5000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"30"		// Experience earn.
+	  	"BountyGoldMin"				"30"		// Gold earned min.
+	  	"BountyGoldMax"				"30"		// Gold earned max.
+	}
+	"gold_mine_1_2"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_1_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_1"						"1"
+		}
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"GoldInterval"				"30"
+		"GoldAmount"				"8"
+		"MineCost"                  "1"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "5000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"60"		// Experience earn.
+	  	"BountyGoldMin"				"60"		// Gold earned min.
+	  	"BountyGoldMax"				"60"		// Gold earned max.
+	}
+	"gold_mine_1_3"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_1_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_1"						"1"
+		}
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"GoldInterval"				"30"
+		"GoldAmount"				"12"
+		"MineCost"                  "1"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "5000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"90"		// Experience earn.
+	  	"BountyGoldMin"				"90"		// Gold earned min.
+	  	"BountyGoldMax"				"90"		// Gold earned max.
+	}
+	"gold_mine_1_4"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_1_5"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"80000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_1"						"1"
+		}
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"GoldInterval"				"30"
+		"GoldAmount"				"16"
+		"MineCost"                  "1"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "5000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"120"		// Experience earn.
+	  	"BountyGoldMin"				"120"		// Gold earned min.
+	  	"BountyGoldMax"				"120"		// Gold earned max.
+	}
+	"gold_mine_1_5"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
 	    // Stats
@@ -7908,12 +8130,8 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"1"
 		"Ability1"					"gold_mine_ability"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""
-		"Ability10"					""
 		"GoldInterval"				"30"
-		"GoldAmount"				"4"
+		"GoldAmount"				"20"
 		"MineCost"                  "1"
 	    // General
 	    //-----------------------------
@@ -7933,18 +8151,16 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
-		"BountyXP"					"30"		// Experience earn.
-	  	"BountyGoldMin"				"30"		// Gold earned min.
-	  	"BountyGoldMax"				"30"		// Gold earned max.
-
-		
+		"BountyXP"					"150"		// Experience earn.
+	  	"BountyGoldMin"				"150"		// Gold earned min.
+	  	"BountyGoldMax"				"150"		// Gold earned max.
 	}
 	//=================================================================================
 	// Building: Gold Mine 2
@@ -7978,14 +8194,15 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"1"
 		"Ability1"					"gold_mine_ability"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""
-		"Ability10"					""
 		"Upgrades"
 	    {
-	        "Count"     "1"
-	        "1"{
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_2_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"152000"
+			}
+	        "2"{
 				"unit_name"			"gold_mine_3"
 				"gold_cost"			"0"
 				"lumber_cost"		"220000"
@@ -8015,8 +8232,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8025,7 +8242,313 @@
 		"BountyXP"					"60"		// Experience earn.
 	  	"BountyGoldMin"				"60"		// Gold earned min.
 	  	"BountyGoldMax"				"60"		// Gold earned max.
+	}
+	"gold_mine_2_2"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_2_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"152000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"220000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_2"						"1"
+		}
+		"GoldAmount"				"8"
+		"GoldInterval"				"15"
+	    // General
+	    //-----------------------------
 
+	    "ArmorPhysical"             "10"
+		"StatusHealth"              "10000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"120"		// Experience earn.
+	  	"BountyGoldMin"				"120"		// Gold earned min.
+	  	"BountyGoldMax"				"120"		// Gold earned max.
+	}
+	"gold_mine_2_3"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_2_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"152000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"220000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_2"						"1"
+		}
+		"GoldAmount"				"12"
+		"GoldInterval"				"15"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "10"
+		"StatusHealth"              "10000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"180"		// Experience earn.
+	  	"BountyGoldMin"				"180"		// Gold earned min.
+	  	"BountyGoldMax"				"180"		// Gold earned max.
+	}
+	"gold_mine_2_4"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Upgrades"
+	    {
+	        "Count"     "2"
+			"1"{
+				"unit_name"			"gold_mine_2_5"
+				"gold_cost"			"0"
+				"lumber_cost"		"152000"
+			}
+	        "2"{
+				"unit_name"			"gold_mine_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"220000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_2"						"1"
+		}
+		"GoldAmount"				"16"
+		"GoldInterval"				"15"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "10"
+		"StatusHealth"              "10000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"240"		// Experience earn.
+	  	"BountyGoldMin"				"240"		// Gold earned min.
+	  	"BountyGoldMax"				"240"		// Gold earned max.
+	}
+	"gold_mine_2_5"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Upgrades"
+	    {
+	        "Count"     "1"
+	        "1"{
+				"unit_name"			"gold_mine_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"220000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_2"						"1"
+		}
+		"GoldAmount"				"20"
+		"GoldInterval"				"15"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "10"
+		"StatusHealth"              "10000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"300"		// Experience earn.
+	  	"BountyGoldMin"				"300"		// Gold earned min.
+	  	"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	//=================================================================================
 	// Building: Gold Mine 3
@@ -8065,8 +8588,13 @@
 		"Ability10"					""
 		"Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 	        "1"{
+				"unit_name"			"gold_mine_3_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"360000"
+			}
+			"2"{
 				"unit_name"			"gold_mine_4"
 				"gold_cost"			"0"
 				"lumber_cost"		"350000"
@@ -8096,8 +8624,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8106,7 +8634,329 @@
 		"BountyXP"					"90"		// Experience earn.
 	  	"BountyGoldMin"				"90"		// Gold earned min.
 	  	"BountyGoldMax"				"90"		// Gold earned max.
+	}
+	"gold_mine_3_2"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+		"Upgrades"
+	    {
+	        "Count"     "2"
+	        "1"{
+				"unit_name"			"gold_mine_3_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"360000"
+			}
+			"2"{
+				"unit_name"			"gold_mine_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"350000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_3"						"1"
+		}
+		"GoldAmount"				"8"
+		"GoldInterval"				"6"
+	    // General
+	    //-----------------------------
 
+	    "ArmorPhysical"             "20"
+		"StatusHealth"              "20000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"180"		// Experience earn.
+	  	"BountyGoldMin"				"180"		// Gold earned min.
+	  	"BountyGoldMax"				"180"		// Gold earned max.
+	}
+	"gold_mine_3_3"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+		"Upgrades"
+	    {
+	        "Count"     "2"
+	        "1"{
+				"unit_name"			"gold_mine_3_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"360000"
+			}
+			"2"{
+				"unit_name"			"gold_mine_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"350000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_3"						"1"
+		}
+		"GoldAmount"				"14"
+		"GoldInterval"				"6"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "20"
+		"StatusHealth"              "20000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"270"		// Experience earn.
+	  	"BountyGoldMin"				"270"		// Gold earned min.
+	  	"BountyGoldMax"				"270"		// Gold earned max.
+	}
+	"gold_mine_3_4"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+		"Upgrades"
+	    {
+	        "Count"     "2"
+	        "1"{
+				"unit_name"			"gold_mine_3_5"
+				"gold_cost"			"0"
+				"lumber_cost"		"360000"
+			}
+			"2"{
+				"unit_name"			"gold_mine_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"350000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_3"						"1"
+		}
+		"GoldAmount"				"18"
+		"GoldInterval"				"6"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "20"
+		"StatusHealth"              "20000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"360"		// Experience earn.
+	  	"BountyGoldMin"				"360"		// Gold earned min.
+	  	"BountyGoldMax"				"360"		// Gold earned max.
+	}
+	"gold_mine_3_5"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"gold_mine_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"350000"
+			}
+	    }
+		"Requirements"
+		{
+			"house_3"						"1"
+		}
+		"GoldAmount"				"22"
+		"GoldInterval"				"6"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "20"
+		"StatusHealth"              "20000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"450"		// Experience earn.
+	  	"BountyGoldMin"				"450"		// Gold earned min.
+	  	"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	//=================================================================================
 	// Building: Gold Mine 4
@@ -8135,6 +8985,15 @@
 		{
 			"house_4"						"1"
 		}
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"gold_mine_4_2"
+				"gold_cost"			"0"
+				"lumber_cost"		"680000"
+			}
+	    }
 	    // Stats
 	    //-----------------------------
 	    "Level"                     "1"
@@ -8169,8 +9028,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8179,6 +9038,307 @@
 		"BountyXP"					"120"		// Experience earn.
 	  	"BountyGoldMin"				"120"		// Gold earned min.
 	  	"BountyGoldMax"				"120"		// Gold earned max.
+	}
+	"gold_mine_4_2"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"Requirements"
+		{
+			"house_4"						"1"
+		}
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"gold_mine_4_3"
+				"gold_cost"			"0"
+				"lumber_cost"		"680000"
+			}
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+		"GoldAmount"				"8"
+		"GoldInterval"				"3"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "40"
+		"StatusHealth"              "40000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"120"		// Experience earn.
+	  	"BountyGoldMin"				"120"		// Gold earned min.
+	  	"BountyGoldMax"				"120"		// Gold earned max.
+	}
+	"gold_mine_4_3"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"StartingBuilding"          "1"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"Requirements"
+		{
+			"house_4"						"1"
+		}
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"gold_mine_4_4"
+				"gold_cost"			"0"
+				"lumber_cost"		"680000"
+			}
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+		"GoldAmount"				"12"
+		"GoldInterval"				"3"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "40"
+		"StatusHealth"              "40000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"240"		// Experience earn.
+	  	"BountyGoldMin"				"240"		// Gold earned min.
+	  	"BountyGoldMax"				"240"		// Gold earned max.
+	}
+	"gold_mine_4_4"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"Requirements"
+		{
+			"house_4"						"1"
+		}
+		"Upgrades"
+	    {
+	        "Count"     "1"
+			"1"{
+				"unit_name"			"gold_mine_4_5"
+				"gold_cost"			"0"
+				"lumber_cost"		"680000"
+			}
+	    }
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+		"GoldAmount"				"16"
+		"GoldInterval"				"3"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "40"
+		"StatusHealth"              "40000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"360"		// Experience earn.
+	  	"BountyGoldMin"				"360"		// Gold earned min.
+	  	"BountyGoldMax"				"360"		// Gold earned max.
+	}
+	"gold_mine_4_5"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
+	    "ModelScale"                "2.5"
+	    "ModelRotation"             "0"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ConsumesBuilder"			"0"
+		"BuilderInside"				"0"
+		"MaxGold"					"999999"
+		//"Limit"						"30"
+		"RequiresRepair"			"1"
+		"precache"
+		{
+			"model"                     "models/props_gameplay/gold_bag.vmdl"
+	    }
+		"Requirements"
+		{
+			"house_4"						"1"
+		}
+	    // Stats
+	    //-----------------------------
+	    "Level"                     "1"
+	    "BuildTime"                 "3"
+		"MineCost"                  "1"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"1"
+		"Ability1"					"gold_mine_ability"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+		"GoldAmount"				"20"
+		"GoldInterval"				"3"
+	    // General
+	    //-----------------------------
+
+	    "ArmorPhysical"             "40"
+		"StatusHealth"              "40000"
+	    "StatusHealthRegen"         "1000"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		"BountyXP"					"480"		// Experience earn.
+	  	"BountyGoldMin"				"480"		// Gold earned min.
+	  	"BountyGoldMax"				"480"		// Gold earned max.
 	}
 	//=================================================================================
 	// Building: Gold Mine 5
@@ -8252,8 +9412,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8334,8 +9494,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8369,7 +9529,7 @@
 	    }
 		"Requirements"
 		{
-			"house_1"						"1"
+			"house_4"						"1"
 		}
 	    // Stats
 	    //-----------------------------
@@ -8406,16 +9566,16 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
-		"BountyXP"					"800"		// Experience earn.
-	  	"BountyGoldMin"				"800"		// Gold earned min.
-	  	"BountyGoldMax"				"800"		// Gold earned max.
+		"BountyXP"					"900"		// Experience earn.
+	  	"BountyGoldMin"				"900"		// Gold earned min.
+	  	"BountyGoldMax"				"900"		// Gold earned max.
 	}
 
 	//=================================================================================
@@ -8478,8 +9638,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8547,8 +9707,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8617,8 +9777,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1"
-	    "VisionNighttimeRange"        "1"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"        "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8910,8 +10070,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -8977,8 +10137,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9044,8 +10204,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9111,8 +10271,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9178,8 +10338,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9245,8 +10405,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9312,8 +10472,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9379,8 +10539,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9446,13 +10606,14 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"
+	    "VisionDaytimeRange"        "0"
+	    "VisionNighttimeRange"      "0"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+		"HasInventory"				"1"
 	}
 	
 	"wood_worker_1"
@@ -9502,8 +10663,8 @@
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
-	  "VisionDaytimeRange"  "800"
-	  "VisionNighttimeRange"  "600"
+	  "VisionDaytimeRange"  "0"
+	  "VisionNighttimeRange"  "0"
 	
 	  "TeamName"     "DOTA_TEAM_GOODGUYS"
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -9554,8 +10715,8 @@
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
-	  "VisionDaytimeRange"  "800"
-	  "VisionNighttimeRange"  "600"
+	  "VisionDaytimeRange"  "0"
+	  "VisionNighttimeRange"  "0"
 	
 	  "TeamName"     "DOTA_TEAM_GOODGUYS"
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -9608,8 +10769,8 @@
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
-	  "VisionDaytimeRange"  "800"
-	  "VisionNighttimeRange"  "600"
+	  "VisionDaytimeRange"  "0"
+	  "VisionNighttimeRange"  "0"
 	
 	  "TeamName"     "DOTA_TEAM_GOODGUYS"
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -9662,8 +10823,8 @@
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
-	  "VisionDaytimeRange"  "800"
-	  "VisionNighttimeRange"  "600"
+	  "VisionDaytimeRange"  "0"
+	  "VisionNighttimeRange"  "0"
 	
 	  "TeamName"     "DOTA_TEAM_GOODGUYS"
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -9717,8 +10878,8 @@
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	
-	  "VisionDaytimeRange"  "800"
-	  "VisionNighttimeRange"  "600"
+	  "VisionDaytimeRange"  "0"
+	  "VisionNighttimeRange"  "0"
 	
 	  "TeamName"     "DOTA_TEAM_GOODGUYS"
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -9752,7 +10913,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"            		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"                       "5"
 		"AttackDamageMax"                       "5"
 		"AttackRate"                            "1.00"
@@ -9773,7 +10934,7 @@
 		"Ability10"					""
 		"RepairAbility"				"repair"
 		"FixedRepair"				"0"
-		"RepairSpeed"				"3"
+		"RepairSpeed"				"5"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -9807,7 +10968,7 @@
 
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"					"900"
+		"VisionDaytimeRange"					"600"
 		"VisionNighttimeRange"					"600"
 
 		// Team
@@ -10949,8 +12110,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "450" //"900"
-	    "VisionNighttimeRange"      "450" //"600"
+	    "VisionDaytimeRange"        "0" //"900"
+	    "VisionNighttimeRange"      "0" //"600"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"

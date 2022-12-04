@@ -5,70 +5,6 @@
 	{
 		"addon_game_name"			"VAMPIRISM 2"
 		
-		"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>Пассив: мини-удар</h1> Каждая атака имеет шанс %minibash_chance%%% вызвать мини-удар."
-"DOTA_Tooltip_ability_buy_item_lia_hammer_Description" "<h1>Пассив: мини-удар</h1> Каждая атака имеет шанс %minibash_chance%%% вызвать мини-удар."
-"DOTA_Tooltip_Ability_item_golem_fire_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_item_golem_stone_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_item_golem_flesh_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" "Невозможно убить человека.<br>Создает голема на %duration% сек."
-"DOTA_Tooltip_Ability_item_shade_Description" "Невозможно убить человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_shade_Description" "Невозможно убить человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
-"DOTA_Tooltip_Ability_item_assasin_Description" "Можно убивать ТОЛЬКО лесорубов.<br>Создает ассасина на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_assasin_Description" "Можно убивать ТОЛЬКО лесорубов.<br>Создает Убийцу на %duration% сек."
-"DOTA_Tooltip_Ability_item_fel_best_Description" "Можно убивать ТОЛЬКО ремонтников стен.<br>Создает зверя Скверны на %duration% сек."
-"DOTA_Tooltip_Ability_buy_item_fel_best_Description" "Можно убивать ТОЛЬКО ремонтников стен.<br>Создает чудовище Скверны на %duration% сек."
-"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description" "<h1>Активный: Берсерк</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, но заклинатель получает дополнительный урон в %berserk_extra_incoming_damage_percentage%%% раз. Увеличивает урон на %bonus_damage. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
-"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_Description" "<h1>Активный: Берсерк</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, но заклинатель получает дополнительный урон в %berserk_extra_incoming_damage_percentage%%% раз. Увеличивает урон на %bonus_%. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
-"DOTA_Tooltip_ability_item_heart_blood_Description" "<h1>Активный: Берсерк</h1> Дает бонус %berserk_bonus_movement_speed_percentage%%% скорости передвижения и %berserk_bonus_attack_speed% скорости атаки, но заклинатель получает %berserk_extra_incoming_damage_percentage%%% дополнительного урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
-"DOTA_Tooltip_ability_buy_item_heart_blood_Description" "<h1>Активный: Берсерк</h1> Дает бонус %berserk_bonus_movement_speed_percentage%%% скорости передвижения и %berserk_bonus_attack_speed% скорости атаки, но заклинатель получает %berserk_extra_incoming_damage_percentage%%% дополнительного урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассив: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%% % дополнительного урона».
-"DOTA_Tooltip_Ability_item_golden_hand_Description" "С шансом 20% вы можете получить дополнительно 20 золотых."
-"DOTA_Tooltip_Ability_buy_item_golden_hand_Description" "С вероятностью 20% вы можете получить дополнительно 20 золотых."
-"DOTA_Tooltip_Ability_item_pulse_staff_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
-"DOTA_Tooltip_Ability_buy_item_pulse_staff_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам в цепи."
-"DOTA_Tooltip_Ability_item_burst_gem_Description" "<h1>Активация: Огненный шар</h1> Посылает огненный взрыв в любого юнита без иммунитета к магии."
-"DOTA_Tooltip_Ability_buy_item_burst_gem_Description" "<h1>Активация: Огненный шар</h1> Посылает огненный заряд в любого юнита без иммунитета к магии."
-"DOTA_Tooltip_Ability_item_roketa_Description" "<h1>Активный: Ракета</h1> Убивает любого юнита без иммунитета к магии. ОДИН РАЗ ИСПОЛЬЗУЕТСЯ."
-"DOTA_Tooltip_Ability_buy_item_roketa_Description" "<h1>Активный: Ракета</h1> Убивает любого юнита без иммунитета к магии. ОДИН РАЗ ИСПОЛЬЗУЕТСЯ."
-"DOTA_Tooltip_Ability_item_immunity_shield_Description" "Щит защищает владельца от магии."
-"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description" "Щит защищает владельца от магии."
-"DOTA_Tooltip_Ability_item_troll_teleport_Description" "Телепортирует героя к союзному юниту."
-"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description" "Телепортирует героя к союзному юниту."
-"DOTA_Tooltip_Ability_item_spirit_Description" "Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
-"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description" "<h1>РЕЦЕПТ</h1> Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
-"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description" "<h1>РЕЦЕПТ</h1>"
-"DOTA_Tooltip_Ability_item_golden_greed_Description" "С вероятностью 35% вы можете получить дополнительно 80 золотых."
-"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" "<h1>РЕЦЕПТ</h1><br>С вероятностью 35% вы можете получить дополнительно 80 золотых."
-"DOTA_Tooltip_Ability_item_clock_dracula_Description" "Делает героя невидимым."
-"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" "<h1>РЕЦЕПТ</h1>Дает герою невидимость."
-"DOTA_Tooltip_ability_item_doom_frostbite_Description" "<h1>Активный: Обморожение</h1>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP: 1 800 000 "
-"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description" "<h1>РЕЦЕПТ<br>Активен: Frostbite</h1>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP : 1 800 000"
-"DOTA_Tooltip_Ability_item_pulse_ricochet_Description" "<h1>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
-"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description" "<h1>РЕЦЕПТ<br>Активный: Цепная молния</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным единицам в цепи."
-"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description" "<h1>Активация: Иллюзия</h1> Создает изображение целевого юнита. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд. "
-"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description" "<h1>РЕЦЕПТ<br>Активный: Иллюзия</h1> Создает изображение целевого юнита. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится % иллюзия_длительность% секунд."
-"DOTA_Tooltip_Ability_item_demonic_remains_Description" "Каждый убитый юнит дает вам +10 ко всем характеристикам."
-"DOTA_Tooltip_ability_buy_item_demonic_remains_Description" "Каждый убитый юнит дает вам +10 ко всем характеристикам."
-"DOTA_Tooltip_Ability_item_pick_axe_Description" "Длинный топор позволяет добраться до золотых приисков, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ ПРИИСКАХ!"
-"DOTA_Tooltip_Ability_buy_item_pick_axe_Description" "Длинный топор позволяет добраться до золотых приисков, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ ПРИИСКАХ!"
-"DOTA_Tooltip_Ability_item_mask_undeath_Description" "Блокирует %bonus_block% урона."
-"DOTA_Tooltip_Ability_buy_item_mask_undeath_Description" "Блокирует %bonus_block% урона."
-"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description" "<h1>Активация: Срубка деревьев</h1>Срубить одно дерево. Одноразовый топор. Полезно со сферой рока.."
-"DOTA_Tooltip_Ability_food_cost_Description" "Увеличивает максимальное количество еды (сыр) на 50/100/300. Максимум 300 еды (сыр)."
-"DOTA_Tooltip_ability_build_rock_1_Description" "Стройте камень. Используйте его, чтобы заблокировать доступ вампира к вашей базе. Обязательно отцентрируйте его!"
-
-
-
-
-
-
-
-
-		"buy_currency"						"Покупка Vamp Coint."
-		"buy_currency_description"			"100 руб = 170 монет. Можно донатить через Сбер, Киви или Яндекс(Писать в Дискорде). Есть скидки за большое количество монет(Писать в Дискорде). При первой покупке от +50 монет выдается 100 монет бесплатно (Писать в Discord)."
-
-
 		"shop_button"	"Магазин"
 
 		"shop_main"		"Главная"
@@ -132,102 +68,626 @@
 		"subscribe_description"			"Шанс тролля, бонусный рейтинг и другие подписки приобретаются на 1 месяц. Повторная покупка увеличивает срок действия на 1 месяц."
 		"sounds_description"			"Звуки и спреи, купленные за монеты, выдаются навсегда. Чтобы включить звук или спрей, нажмите клавишу L."
 		"spray_description"				"Звуки и спреи, купленные за монеты, выдаются навсегда. Чтобы включить звук или спрей, нажмите клавишу L."
-
-		"DOTA_Tooltip_Ability_item_get_gem_Description"								"Дает 10 Lucky Gem.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек."
-
-		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Дает 10 TvE Coint.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек."
-
-
-		"DOTA_Tooltip_ability_item_vip_Description"                               	"Активируйте предмет и получите эффект сезона в следующей игре.<br>Можно активаровать только от 10 человек."
 		
-		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		// ******************** ABILITY MODIFIERS ********************
+		"DOTA_Tooltip_ability_spell_immunity_Description"  "Этот юнит невосприимчив к магии."
+
+		"DOTA_Tooltip_ability_frost_lord_freezing_Description"	"С шансом в 22% может заморозить атакующего и нанести ему урон."
+		"DOTA_Tooltip_modifier_frost_lord_freezing_debuff_Description"	"Этот юнит заморожен."
+
+
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_Description"	"Создает ледяной щит вокруг выбранного дружественного юнита. Щит добавляет броню и замедляет атакующих его юнитов на 20 секунд."
+
+		"DOTA_Tooltip_ability_witch_doctor_frost_armor_aghanim_description" "Увеличивает бонусную броню и продолжительность, но также увеличивает затраты маны."
+
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+20 ко всем атрибутам."
 		
-		"DOTA_Tooltip_ability_item_autumnt_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		"DOTA_Tooltip_Ability_tower_15_return25_Description"                            "Возвращает 25% урона атакующему."
+
+
+		// ******************** ITEM MODIFIERS ********************
+		"DOTA_Tooltip_ability_item_lia_healing_ward_Description"	"<h1>Активное: </h1>Призывает оберег, который увеличивает регенерацию здоровья ближайших союзников на %heal_percent_tooltip%%%.<br>Длится %duration% секунд."
+
+		"DOTA_Tooltip_ability_buy_item_heal_ward_Description"	"<h1>Активное: </h1>Призывает оберег, который увеличивает регенерацию здоровья ближайших союзников на %heal_percent_tooltip%%%.<br>Длится %duration% секунд."
+
+
+		"DOTA_Tooltip_ability_item_lia_hammer_Description" "<h1>Пассивное: Mini-Bash</h1> Каждая атака имеет шанс %minibash_chance%%% нанести мини-стан."
+
+		"DOTA_Tooltip_ability_buy_item_lia_hammer_Description" "<h1>Пассивное: Mini-Bash</h1> Каждая атака имеет шанс %minibash_chance%%% нанести мини-стан."
+
+
+		"DOTA_Tooltip_Ability_item_golem_fire_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_golem_fire_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_golem_stone_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+		"DOTA_Tooltip_Ability_buy_item_golem_stone_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+		"DOTA_Tooltip_Ability_item_golem_flesh_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+		"DOTA_Tooltip_Ability_buy_item_golem_flesh_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Голема на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_sucied_boy_Description" 		"Не может убить Человека.<br>Создает мальчика-самоубийцу на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_sucied_boy_Description" 		"Не может убить Человека.<br>Создает мальчика-самоубийцу на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_meat_carier_Description" 		"Не может убить Человека.<br>Может атаковать ТОЛЬКО Слееров.<br>Создает мясной перевозчик на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_meat_carier_Description" 		"Не может убить Человека.<br>Может атаковать ТОЛЬКО Слееров.<br>Создает мясной перевозчик на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_sniper_Description" 		"Не может убить Человека.<br>Юнит имеет атаку 10000. Радиус атаки 4000. Производит мощный выстрел каждые 3 секунды.<br>Создает One Shot на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_sniper_Description" 		"Не может убить Человека.<br>Юнит имеет атаку 10000. Радиус атаки 4000. Производит мощный выстрел каждые 3 секунды.<br>Создает One Shot на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_shade_Description" 		"Не может убить Человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_shade_Description" 		"Не может убить Человека.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_shade_2"				"Fly Shade"
+		"DOTA_Tooltip_Ability_item_shade_2_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_shade_2_Description" 		"Не может убить Человека.<br>Вы не можете телепортироваться к этому юниту.<br>Небольшой урон.<br>Создает тень на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_assasin_Description" 		"Может убивать ТОЛЬКО лесорубов.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Ассасина на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_assasin_Description" 		"Может убивать ТОЛЬКО лесорубов.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Ассасина на %duration% сек."
+
+		"DOTA_Tooltip_Ability_item_fel_best_Description" 		"Может убивать ТОЛЬКО мастеров по ремонту стен.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Зверя Скверны на %duration% сек."
+
+		"DOTA_Tooltip_Ability_buy_item_fel_best_Description" 		"Может убивать ТОЛЬКО мастеров по ремонту стен.<br>Вы не можете телепортироваться к этому юниту.<br>Создает Зверя Скверны на %duration% сек."
+
+		"DOTA_Tooltip_ability_5_megaboss_firestorm_Description" "Вызывает волны огня, которые наносят урон юнитам в области. Каждая волна наносит врагам 200 единиц урона. Затронутые юниты также получают 100 единиц урона в секунду в течение 3 секунд."
+
+		"DOTA_Tooltip_modifier_rain_of_fire_burn_Description" "Этот юнит получает урон с течением времени."
+
+		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_Description"	"<h1>Активное: Berserk</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, а также получает %berserk_extra_incoming_damage_percentage%%% дополнительного входящего урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассивное: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%%% дополнительного урона."
+		"DOTA_Tooltip_ability_item_lia_poleaxe_of_rage_bonus_damage"	"+$damage"
+		"DOTA_Tooltip_Ability_item_lia_poleaxe_of_rage_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_lia_poleaxe_of_rage_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_buy_item_lia_poleaxe_of_rage_Description"	"<h1>Активное: Berserk</h1> Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, а также получает %berserk_extra_incoming_damage_percentage%%% дополнительного входящего урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассивное: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%%% дополнительного урона."
+
+		"DOTA_Tooltip_ability_item_heart_blood_Description"	"<h1>Активное: Berserk</h1>Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, а также получает %berserk_extra_incoming_damage_percentage%%% дополнительного входящего урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассивное: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%%% дополнительного урона."
+		"DOTA_Tooltip_ability_buy_item_heart_blood_Description"	"<h1>Активное: Berserk</h1>Дает дополнительную скорость передвижения %berserk_bonus_movement_speed_percentage%%% и скорость атаки %berserk_bonus_attack_speed%, а также получает %berserk_extra_incoming_damage_percentage%%% дополнительного входящего урона. Увеличивает урон в %bonus_damage% раз. Длится %berserk_duration% секунд. Владелец получает %burn_damage% каждую секунду. Владелец может умереть от предмета.\n<h1>Пассивное: Критический удар</h1>Дарит каждой атаке %crit_chance%% шанс нанести %crit_mult%%% дополнительного урона."
+
+		"DOTA_Tooltip_Ability_item_golden_hand_Description" 		"С шансом 20% можно получить дополнительно 20 золота."
+		"DOTA_Tooltip_Ability_buy_item_golden_hand_Description" 		"С шансом 20% можно получить дополнительно 20 золота."
+
+
+		"DOTA_Tooltip_Ability_item_gold_axe_Description" 		"Каждые 10 атак дают герою 2 золота и 10 опыта."
+		"DOTA_Tooltip_Ability_buy_item_gold_axe_Description" 		"Каждые 10 атак дают герою 2 золота и 10 опыта."
+
+		"DOTA_Tooltip_Ability_item_gold_staff_Description" 		"Каждые 10 атак дают герою 10 золота и 50 опыта."
+		"DOTA_Tooltip_Ability_buy_item_gold_staff_Description" 		"Каждые 10 атак дают герою 10 золота и 50 опыта."
+
+		"DOTA_Tooltip_Ability_item_gold_blade_Description" 		"Каждые 10 атак дают герою 20 золота и 100 опыта."
+		"DOTA_Tooltip_Ability_buy_item_gold_blade_Description" 		"Каждые 10 атак дают герою 20 золота и 100 опыта."
+
+
+		"DOTA_Tooltip_Ability_item_pulse_staff_Description"	"<h1>Активное: Chain Lightning</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
+		"DOTA_Tooltip_Ability_buy_item_pulse_staff_Description"	"<h1>Активное: Chain Lightning</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
+
+		"DOTA_Tooltip_Ability_item_burst_gem_Description"	"<h1>Активное: Fireball</h1>Посылает огненный взрыв в любого юнита без иммунитета к магии."
+
+		"DOTA_Tooltip_Ability_buy_item_burst_gem_Description"	"<h1>Активное: Fireball</h1> Посылает огненный взрыв в любого юнита без иммунитета к магии."
+
+		"DOTA_Tooltip_Ability_item_roketa_Description"	"<h1>Активное: Missile</h1> Убивает любого юнита без иммунитета к магии. ОДНОРАЗОВОЕ ИСПОЛЬЗОВАНИЕ."
+
+		"DOTA_Tooltip_Ability_buy_item_roketa_Description"	"<h1>Активное: Missile</h1> Убивает любого юнита без иммунитета к магии. ОДНОРАЗОВОЕ ИСПОЛЬЗОВАНИЕ."
+
+		"DOTA_Tooltip_Ability_item_immunity_shield_Description"										"Щит защищает владельца от магии."
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description"										"Щит защищает владельца от магии."
+
+		"DOTA_Tooltip_Ability_item_troll_teleport_Description"										"Телепортирует героя к союзному юниту."
+		"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description"										"Телепортирует героя к союзному юниту."
+
+		"DOTA_Tooltip_Ability_item_spirit_Description"										"Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description"									"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Blade of Teleport<br></h2>Восстанавливает %heal_percentage%%% текущего здоровья за каждого убитого юнита. Телепортирует героя к союзному юниту."
+
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description"							"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Glove with Claws<br>Hand of Strength<br></h2>"
+
+		"DOTA_Tooltip_Ability_item_golden_greed_Description" 		"С шансом 35% можно получить дополнительно 80 золотых."
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" 		"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Golden Hand<br>Hand of Strength<br></h2><br>С шансом 35% можно получить дополнительно 80 золотых."
+
+		"DOTA_Tooltip_Ability_item_clock_dracula_Description" 		"Дает герою невидимость."
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" 		"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Clock of Invisibility<br>Necklace of Blood<br>Hand of Strength<br></h2>Дает герою невидимость."
+
+
+		"DOTA_Tooltip_Ability_item_slayer_vest_Description" 		"Показывает невидимых юнитов в радиусе %radius%."
+		"DOTA_Tooltip_Ability_buy_item_slayer_vest_Description" 		"Показывает невидимых юнитов в радиусе %radius%."
+
+
+		"DOTA_Tooltip_Ability_item_shield_light_Description" 		"Активное умение делает Слеера невосприимчивым к магии на %shield_duration% секунд."
+		"DOTA_Tooltip_Ability_buy_item_shield_light_Description" 		"Активное умение делает Слеера невосприимчивым к магии на %shield_duration% секунд."
+
+
+		"DOTA_Tooltip_ability_item_doom_frostbite_Description"	"<h1>Активное: Frostbite</h1>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP: 1 800 000."
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description"	"<h1>РЕЦЕПТ<br>Активное: Frostbite</h1><h2>Необходимые предметы:<br>Armor of the Devil<br>Necklace of Blood<br></h2>Замораживает врагов на %stun_duration% секунд и наносит %stun_damage% урона в радиусе %stun_radius%. Увеличивает вашу броню на %bonus_armor%.<br> HP: 1 800 000."
+
+
+
+		"DOTA_Tooltip_ability_item_end_game_Description"	"Забирает ману у всех Людей. Дает иммунитет к магии. Аура с посекундным уроном."
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_Description"	"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Monster Claws<br>Magic Immunity Shield<br></h2>Забирает ману у всех Людей. Дает иммунитет к магии. Аура с посекундным уроном."
+
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Активное: Chain Lightning</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>РЕЦЕПТ<br>Активное: Chain Lightning</h1><h2>Необходимые предметы:<br>Pulse Staff<br>Fiery Comet<br></h2> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
+
+		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description"	"<h1>Активное: Illusion</h1> Создает образ целевой единицы. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд."
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description"	"<h1>РЕЦЕПТ<br>Активное: Illusion</h1> <h2>Необходимые предметы:<br>Bull Mark<br></h2> Создает образ целевой единицы. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд."
+
+		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +10 ко всем характеристикам."
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +10 ко всем характеристикам."
+
+
+		"DOTA_Tooltip_Ability_item_pick_axe"	"Long Axe (Anti GM)"
+		"DOTA_Tooltip_Ability_item_pick_axe_Description"	"Длинный топор позволяет сломать золотые рудники, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ РУДНИКАХ!"
+		"DOTA_Tooltip_Ability_buy_item_pick_axe"	"Long Axe (Anti GM)"
+		"DOTA_Tooltip_Ability_buy_item_pick_axe_Description"	"Длинный топор позволяет сломать золотые рудники, которые расположены на холме. Одноразовый топор. ИСПОЛЬЗУЙТЕ ТОЛЬКО НА ЗОЛОТЫХ РУДНИКАХ!"
+			
+		"DOTA_Tooltip_Ability_item_mask_undeath_Description"									"Блокирует %bonus_block% урона."
+		"DOTA_Tooltip_Ability_buy_item_mask_undeath_Description"									"Блокирует %bonus_block% урона."
+
+		"DOTA_Tooltip_Ability_buy_item_quelling_blade2_Description"	"<h1>Активное: Tree Felling</h1>Позволяет срубить 1 дерево. Одноразовый топор. Полезно с Doom Sphere."
+
+
+		"DOTA_Tooltip_Ability_food_cost"													"Food (Cheese)"
+		"DOTA_Tooltip_Ability_food_cost_Description"										"Увеличивает максимальное количество еды (сыра) на 50/100/300. Максимум 300 еды (сыр)."
+
+		"DOTA_Tooltip_ability_max_building_level_Description"                             "Эта способность ничего не делает, она просто здесь, чтобы горячие клавиши не перепутались."
+
+		"DOTA_Tooltip_ability_build_tent_Description"                                     "Дает 50 еды."
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Обновите свою палатку! Дает 100 еды."
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Обновите свою палатку! Дает 300 еды."
+		"DOTA_Tooltip_ability_gain_gold_Description"                                      "Gives certain amount of gold every second."
+
+		"DOTA_Tooltip_ability_build_rock_1_Description"                                     "Постройте стенку(камень). Используйте это, чтобы заблокировать доступ вампира к вашей базе."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_3_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_4_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_5_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_3_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_4_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_5_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_3_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_4_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_5_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_3_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_4_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_5_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
 		
-		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
 
-		"DOTA_Tooltip_ability_item_spring_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
 
-		"DOTA_Tooltip_ability_item_summer_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_5_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_6_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_7_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_8_Description"                              "Улучшение уменьшает интервал добычи золота или увеличивает количество добываемого золота."
+
+
+		"DOTA_Tooltip_ability_build_tower_1_Description"                                  "Построй башню, чтобы защитить себя от могучих вампиров!"
+
+		"DOTA_Tooltip_ability_build_base_twr_Description"                                  "Построй башню, чтобы защитить себя от могучих вампиров!"
+
+
+		"DOTA_Tooltip_Ability_build_slayerstaverna_1_Description"                                  "Создает героя, который поможет вам защитить ваши постройки."
+
+
+		"DOTA_Tooltip_Ability_build_human_box_fake_Description"                                  "Создать приманку для вампиров."
+
+		"DOTA_Tooltip_Ability_build_human_box_Description"                                  "Если Вампир очень слаб, то можно принести ему жертву."
+
+
 		
-		"DOTA_Tooltip_ability_item_ghosttown_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		"DOTA_Tooltip_Ability_build_true_sight_tower_Description"                                     "Постройте свою башню истинного обзора, которая показывает невидимых юнитов вокруг себя."
 
-		"DOTA_Tooltip_ability_item_winter_tree_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_1_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 3000. Количество зданий 4"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_2_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 6000. Количество зданий 6"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_3_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 12000. Количество зданий 8"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_4_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 24000. Количество зданий 10"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_5_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 48000. Количество зданий 12"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_6_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 48000. Количество зданий 14"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_7_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 96000. Количество зданий 16"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_8_Description"	"Ремонт нескольких соседних зданий.<br>Ремонт 200000. Количество зданий 16"
+		"DOTA_Tooltip_Ability_shadow_wave_datadriven_vimpire_Description"	"<h1>Активное: Healing Wave</h1> Последовательно лечит до %max_targets% союзников на %damage% очков жизни."
+
+		"DOTA_Tooltip_Ability_build_buff_1_Description"                                     "Создает здание, которое может ремонтировать другие здания. Ремонт 3000. Количество зданий 4"
+		"DOTA_Tooltip_ability_upgrade_to_buff_1_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 3000. Количество зданий 4"
+		"DOTA_Tooltip_ability_upgrade_to_buff_2_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 6000. Количество зданий 6"
+		"DOTA_Tooltip_ability_upgrade_to_buff_3_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 12000. Количество зданий 8"
+		"DOTA_Tooltip_ability_upgrade_to_buff_4_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 24000. Количество зданий 10"
+		"DOTA_Tooltip_ability_upgrade_to_buff_5_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 48000. Количество зданий 12"
+		"DOTA_Tooltip_ability_upgrade_to_buff_6_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 48000. Количество зданий 14"
+		"DOTA_Tooltip_ability_upgrade_to_buff_7_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 96000. Количество зданий 16"
+		"DOTA_Tooltip_ability_upgrade_to_buff_8_Description"                             "Ремонт нескольких соседних зданий.<br>Ремонт 200000. Количество зданий 16"
+
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_1_Description"	"Посылает заряд отрицательной энергии, который сжигает 30 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_2_Description"	"Посылает заряд отрицательной энергии, который сжигает 60 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_3_Description"	"Посылает заряд отрицательной энергии, который сжигает 120 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_4_Description"	"Посылает заряд отрицательной энергии, который сжигает 240 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_wave_16_mana_burn_5_Description"	"Посылает заряд отрицательной энергии, который сжигает 480 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_1_Description"                        "Посылает заряд отрицательной энергии, который сжигает 30 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_2_Description"                        "Посылает заряд отрицательной энергии, который сжигает 60 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_3_Description"                        "Посылает заряд отрицательной энергии, который сжигает 120 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_4_Description"                        "Посылает заряд отрицательной энергии, который сжигает 240 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_5_Description"                        "Посылает заряд отрицательной энергии, который сжигает 480 маны целевого вражеского юнита. Сгоревшая мана сгорает, нанося цели урон, равный количеству сожженной маны."
+
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_1_Description"	"Снижает броню вражеского юнита на 30 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_2_Description"	"Снижает броню вражеского юнита на 60 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_3_Description"	"Снижает броню вражеского юнита на 120 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_4_Description"	"Снижает броню вражеского юнита на 240 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_5_Description"	"Снижает броню вражеского юнита на 480 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_19_wave_faerie_fire_6_Description"	"Снижает броню вражеского юнита на 960 и дает обзор этого юнита. Длится 7,5 секунд."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_1_Description"                        "Снижает броню вражеского юнита на 30 и дает обзор этого юнита."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_2_Description"                        "Снижает броню вражеского юнита на 60 и дает обзор этого юнита."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_3_Description"                        "Снижает броню вражеского юнита на 120 и дает обзор этого юнита."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_4_Description"                        "Снижает броню вражеского юнита на 240 и дает обзор этого юнита."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_5_Description"                        "Снижает броню вражеского юнита на 480 и дает обзор этого юнита."
+
+		"DOTA_Tooltip_ability_upgrade_to_buff_fire_6_Description"                        "Снижает броню вражеского юнита на 960 и дает обзор этого юнита."
+
+
+		"DOTA_Tooltip_ability_upgrade_to_tower_20_Description"                            "Конец игры! GG!"
+
+		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower_Description"                    "Улучшите свою башню до башни истинного обзора, которая показывает невидимых юнитов вокруг себя."
+
+		"DOTA_Tooltip_ability_build_trader_1_Description"                                 "Построить магазин Слееров."
 		
-		"DOTA_Tooltip_ability_item_winter_end_Description"                               "Вы уже близки к разгадке!"
+
+		"DOTA_Tooltip_ability_build_workersguild_1_Description"                            "Здесь можно нанять рабочих!<br>Улучшения открывают доступ к улучшенным рабочим."
+
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_2_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_3_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_4_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_5_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+
+		"DOTA_Tooltip_Ability_slayer_ensnare_Description"					"Связывает вампира благословенной сетью так, что он не может двигаться."
+		"DOTA_Tooltip_ability_slayer_summon_tracker_Description"                          "Создает рабочих, которые ремонтируют здания."
+
+		"DOTA_Tooltip_ability_slayer_building_protection_Description"                     "Делает все близлежащие здания, принадлежащие вам, неуязвимыми на несколько секунд."
+
+		"DOTA_Tooltip_ability_slayer_avatar_Description"                                  "Станьте невосприимчивыми к магии и получите бонусы к характеристикам."
+
+		"DOTA_Tooltip_ability_slayer_ensnare_Description"                                 "Связывает вампира благословенной сетью так, что он не может двигаться."
+		"DOTA_Tooltip_modifier_dark_lord_presence_Description"                             "Aura -600  amor"
+
+		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_Description"                             	"Aura -600  amor"
 		
-		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Winter 2.<br>Можно активаровать только от 10 человек."
+		"DOTA_Tooltip_ability_vampire_crit_Description"	"Дает %crit_chance%% шанс нанести больше урона при атаке."
 
-		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Donater 10.<br>Можно активаровать только от 10 человек."
+		"DOTA_Tooltip_ability_earth_lord_split_earth_Description"  "Ударяет по земле, нанося урон ближайшим вражеским наземным юнитам и оглушая их."
 
-		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "Сообществу ТвЕ3 исполнился 2 года!<br>Спасибо за активную поддержку!<br>Я ценю Вашу помощь!<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Birthday.<br>Можно активаровать только от 10 человек."
+		"DOTA_Tooltip_ability_lord_of_lightning_chain_lightning_Description"	"Бросает молнию, которая пронзает ближайших вражеских юнитов, нанося урон. Урон увеличивается с каждым прыжком."
 
-		"DOTA_Tooltip_ability_drop_gift_Description"                               "Спасибо за прохождение квеста!<br>Сундук Проклятых выдаст вам от 25 до 200 ивент предметов в случайное время."
 
-		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Дает +190 к скорости бега на 20 секунд."
+		"DOTA_Tooltip_voven_from_blood_soul_burn_debuff_Description"	"Этот юнит замолчал, и его урон уменьшился."
+		"DOTA_Tooltip_voven_from_blood_soul_burn_buff_Description"	"Этот юнит замолчал, и его урон уменьшился."
 
-		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 10 человек. "
+
+		"DOTA_Tooltip_ability_repair_Description"                                         "Отремонтируйте свои здания!<br>Щелкните правой кнопкой мыши для автоматического применения."
 		
-		"DOTA_Tooltip_ability_item_event_desert_Description"                               	"Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Disert.<br>Можно активаровать только от 10 человек."
+		"DOTA_Tooltip_ability_commit_suicide_Description"								  "Используйте эту способность, чтобы совершить самоубийство."
+
+		"DOTA_Tooltip_Ability_gather_lumber_worker_Description"                                "Используйте эту способность на дереве. Дает древесину каждые 5 секунд."
+	
+		"DOTA_Tooltip_Ability_train_skill_hp_wood_Description"                                 "Увеличение здоровья защитит ваших лесорубов от магических умений вампиров."
+
+		"DOTA_Tooltip_modifier_hp_wood_worker_Description"                                 "Увеличение здоровья защитит ваших лесорубов от магических умений вампиров."
+		"DOTA_Tooltip_modifier_hp_wood_worker_aura_Description"                                 "Увеличение здоровья защитит ваших лесорубов от магических умений вампиров."
+
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_proc_20_Description"                                 "Улучшайте характеристики своей стены для защиты от Вампиров. Характеристики увеличиваются на 20% за каждое улучшение по сравнению с базовым здоровьем стены."
+
+		"DOTA_Tooltip_modifier_hp_walls_proc_Description"                                 "Улучшайте характеристики своей стены для защиты от Вампиров. Характеристики увеличиваются на 20% за каждое улучшение по сравнению с базовым здоровьем стены."
+
+		"DOTA_Tooltip_modifier_hp_walls_proc_aura_Description"                                 "Улучшайте характеристики своей стены для защиты от Вампиров. Характеристики увеличиваются на 20% за каждое улучшение по сравнению с базовым здоровьем стены."
+
+		"DOTA_Tooltip_Ability_train_skill_hp_walls_Description"                                 "Улучшайте характеристики своей стены для защиты от Вампиров. Характеристики увеличиваются на 15000 за каждое улучшение базового здоровья башни."
+
+		"DOTA_Tooltip_Ability_train_skill_range_towers_Description"                                 "Увеличивает дальность атаки башен."
+
+		"DOTA_Tooltip_modifier_range_tower_Description"                                 "Увеличивает дальность атаки башен."
+
+
+		"DOTA_Tooltip_Ability_train_skill_reg_walls_proc_Description"                                 "Увеличивает регенерацию на 20% за каждый уровень прокачки от основной регенерации."
+
+		"DOTA_Tooltip_modifier_regen_walls_proc_Description"                                 "Увеличивает регенерацию на 20% за каждый уровень прокачки от основной регенерации."
+
+		"DOTA_Tooltip_Ability_train_skill_mana_buffwalls_Description"                                 "Увеличенная регенерация маны для Buff Tower позволит вам чаще использовать активные умения."
+
+		"DOTA_Tooltip_Ability_train_skill_slayers_low_Description"                                 "Увеличивает характеристики вашего Слеера."
+
+		"DOTA_Tooltip_Ability_train_skill_slayers_max_Description"                                 "Увеличивает характеристики вашего Слеера."
+
+		"DOTA_Tooltip_Ability_train_skill_damage_tower_Description"                                 "Вы можете улучшить атаку своих башен и убить Вампира."
+
+		"DOTA_Tooltip_Ability_train_skill_armor_wall_Description"                                 "Улучшает броню стены на 20% от базовой брони."
+
+		"DOTA_Tooltip_Ability_train_skill_hp_reg_tower_Description"                                 "Увеличивает регенерацию Башен."
+
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_Description"                                 "НЕ ЗАБЫВАЙТЕ УЛУЧШАТЬ ЗДОРОВЬЕ ЧЕЛОВЕКА. Это спасет вашу жизнь."
+
+		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_Description"                                 "НЕ ЗАБЫВАЙТЕ УЛУЧШАТЬ ЗДОРОВЬЕ ЧЕЛОВЕКА. Это спасет вашу жизнь."
+
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_Description"                                 "Башни 9, 10 и 11 уровней игнорируют уклонение вампиров."
+
+		"DOTA_Tooltip_modifier_range_no_miss_Description"                                 "Башни 9, 10 и 11 уровней игнорируют уклонение вампиров."
+
+		"DOTA_Tooltip_modifier_range_no_miss_state_Description"                                 "Башни 9, 10 и 11 уровней игнорируют уклонение вампиров."
+		
+		"DOTA_Tooltip_ability_6_wave_cripple_Description"  "Снижает скорость бега и атаки, а также урон целевого врага."
+
+		"DOTA_Tooltip_modifier_6_wave_cripple_Description" "Скорость передвижения и атаки, а также урон этого юнита снижены."
+
+		"DOTA_Tooltip_Ability_train_npc_dota_hero_templar_assassin_Description"                                 "Слеер получает опыт каждую минуту в определенном месте на карте. Слеер может украсть золотую монету у Вампира или защитить вашу базу. Вы можете воскресить Слеера в таверне Slayer."
+
+
+		"DOTA_Tooltip_Ability_train_wood_worker_1_Description"                                 "Рабочие добывают дерево(lumber)."
+		"DOTA_Tooltip_Ability_train_wood_worker_2_Description"                                 "Рабочие добывают дерево(lumber)."
+		"DOTA_Tooltip_Ability_train_wood_worker_3_Description"                                 "Рабочие добывают дерево(lumber)."
+		"DOTA_Tooltip_Ability_train_wood_worker_4_Description"                                 "Рабочие добывают дерево(lumber)."
+		"DOTA_Tooltip_Ability_train_wood_worker_5_Description"                                 "Рабочие добывают дерево(lumber)."
+		"DOTA_Tooltip_Ability_train_build_worker_1_Description"                                 "Строят дополнительные здания."
+		"DOTA_Tooltip_Ability_train_build_worker_2_Description"                                 "Строят дополнительные здания."
+
+		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_2_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_3_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_4_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_5_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_6_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_7_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_8_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_9_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_build_gold_mine_10_Description"                              "Золотая шахта добывает золото. Вы можете улучшить свою шахту. Количество шахт ограничено. Вы можете построить шахту накраю вашей базы, чтобы Вампир не мог запрыгнуть на вашу базу с помощью предмета Doom Sphere."
+
+		"DOTA_Tooltip_ability_buy_item_troll_boots_Description"                             "Увеличьте скорость бега на %bonus_ms%%%"
+
+	
+		"DOTA_Tooltip_ability_sell_lumber_1_Description"                                  "Продать 8000 дерева(lumber) за 1 золото"
+
+		"DOTA_Tooltip_ability_sell_lumber_8_Description"                                  "Продать 80000 дерева(lumber) за 10 золото"
+
+		"DOTA_Tooltip_ability_sell_lumber_100_Description"                                  "Продать 800000 дерева(lumber) за 100 золото"
+
+
+		"DOTA_Tooltip_ability_item_lia_healing_ward_Description"	"<h1>Активное: </h1>Призывает оберег, который увеличивает регенерацию здоровья ближайших союзников на %heal_percent_tooltip%%%.<br>Длится %duration% секунд."
+
+		"DOTA_Tooltip_ability_healing_ward_ability_Description"	"Союзники в радиусе 500 получают дополнительное восстановление здоровья. Регенерация равна 3%% от максимального здоровья юнита."
+
+		"DOTA_Tooltip_modifier_healing_ward_ability_effect_Description"	"Регенерация этого юнита увеличена."
+
+		"DOTA_Tooltip_ability_item_blood_soul_burn_Description"	"Окружает врага волшебным пламенем, которое наносит урон с течением времени, предотвращает использование заклинаний и снижает урон от атаки. Soul Burn также значительно увеличивает скорость атаки."
+
+		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_Description"	"Окружает врага волшебным пламенем, которое наносит урон с течением времени, предотвращает использование заклинаний и снижает урон от атаки. Soul Burn также значительно увеличивает скорость атаки."
+
+		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"Сфера дает +5 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"Сфера дает +5 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
+
+		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability_Description"	"<h1>Активное: Invulnerability</h1>Дает неуязвимость на %duration% секунд."
+
+		"DOTA_Tooltip_Ability_buy_lia_potion_of_invulnerability_Description"	"<h1>Активное: Invulnerability</h1>Дает неуязвимость на %duration% секунд."
+		"DOTA_Tooltip_modifier_potion_of_invulnerability_Description" "Этот юнит неуязвим."
+
+		"DOTA_Tooltip_ability_item_lia_fire_gloves_Description"	"<h1>Toggle: Immolation </h1>Охватывает героя пламенем, нанося %damage_per_second% урона в секунду врагам в радиусе %radius%. <br>Вытягивает %mana_cost_per_second% маны в секунду."
+
+		"DOTA_Tooltip_ability_buy_item_lia_fire_gloves_Description"	"<h1>Toggle: Immolation </h1>Охватывает героя пламенем, нанося %damage_per_second% урона в секунду врагам в радиусе %radius%. <br>Вытягивает %mana_cost_per_second% маны в секунду."
+
+
+		// ***********************************************
+		// ******************** ITEMS ********************
+		// ***********************************************
+		
+		"DOTA_Tooltip_ability_item_building_destroy_Description"                          "Разрушить здание. Вы не возвращаете свои ресурсы, не можете уничтожить, если враг рядом и рядом нет вашего героя!"
+
+		"DOTA_Tooltip_ability_item_building_cancel_Description"                           "Отменить строительство."
+
+		"DOTA_Tooltip_ability_item_reveal_Description"                              	 "Золотой телескоп показывает видимость в радиусе %radius% на %dur_time%. Каждую минуту владелец получает 50 монет и 1000 дров."
+
+		"DOTA_Tooltip_ability_buy_item_reveal_Description"                              	 "Золотой телескоп показывает видимость в радиусе %radius% на %dur_time%. Каждую минуту владелец получает 50 монет и 1000 дров."
+		"DOTA_Tooltip_ability_item_troll_boots_Description"                               "Увеличьте скорость бега на %bonus_ms%%%"
+
+		"DOTA_Tooltip_ability_item_vip_Description"                               	"Активируйте предмет и получите эффект сезона.<br>Активировать можно только от 5 человек."
+
+		"DOTA_Tooltip_ability_item_event_Description"                               	"Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_ability_item_event_desert_Description"                               	"Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Дает эффект Грязь.<br>Активировать можно только от 5 человек."
+		
+		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_ability_item_spring_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_ability_item_summer_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_Ability_item_get_gem_Description"								"Gives 10 Lucky Gems.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Gives 10 TvE Coint.<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_Ability_buy_item_tome_of_knowledge_lvl_Description"										"Дает +1 уровень герою."
+
+
+		"DOTA_Tooltip_ability_item_lia_rune_gold_Description"                               "Дает случайное количество золота. Возьмите монету с помощью Слеера."
+
+		"DOTA_Tooltip_ability_item_winter_stress_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не синхронизируются в конце игры!<br>Вы можете активировать только от 5 человек."
+
+		"DOTA_Tooltip_ability_item_winter_end_Description"                               "You are already close to solving!"
+
+		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Winter 2.<br>You can only activate from 10 people."
+
+		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Donater 10.<br>You can only activate from 10 people."
+
+		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "The TvE3 community is 1 year old!<br>Thank you for your active support!<br>I appreciate your help!<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Birthday.<br>You can only activate from 10 people."
+	
+		"DOTA_Tooltip_Ability_smoke_screen_datadriven_Description"                               	"Замедляет на -50 на 20 секунд. 50% шанс промахнуться."
+
 
 
         "topptext"                                      									"Лучшие игроки в общем рейтинге: "
-        "topwtext"                                      									"Лучшие игроки за Эльфа: " 
-        "tophtext"                                      									"Лучшие игроки за Тролля: "
+        "topwtext"                                      									"Лучшие игроки за Людей: " 
+        "tophtext"                                      									"Лучшие игроки за Вампира: "
 		"topetext"																			"Лучшие игроки: "
 		
 		"leaderboard_name"                                      									"Таблица лидеров"
         "leaderboard_1"                                      									"Лучшие игроки (общий рейтинг)"
-        "leaderboard_2"                                      									"Лучшие Эльфы"
-		"leaderboard_3"                                      									"Лучшие Тролли"
+        "leaderboard_2"                                      									"Лучшие Люди"
+		"leaderboard_3"                                      									"Лучшие Вампиры"
 		"leaderboard_event"                                      									"Лидеры Ивента"
 		"leaderboard_button"                                      									"Лидеры"
 		
-		"summer"                                          										"Выдается за участие в Summer event."
-		"patron7"                                          										"Level 7 Donation. Доступно донатеру седьмого уровня и выше."
-		"tester"                                          										"Эффект тестировщика."
-		"top"                                          											"Награждаются игроки за ТОП 1-10 сезона."
-		"top1"                                          										"Награждается игроки за ТОП 1 сезона."
-		"top2-3"                                          										"Награждаются игроки за ТОП 2-3 сезона."
-		"top2"                                          										"Награждаются игроки за ТОП 2 сезона."
-		"top3"                                          										"Награждаются игроки за ТОП 3 сезона."
-		"spring"                                          										"Выдается за участие в Spring event."
-		"developer2"                                          									"Эффект разработчика."
-		"moderator"                                          									"Эффект модератора."
-		"newyear"                                          										"Выдается за участие в New Year event."
-		"autumn"                                          										"Выдается за участие в Autumn event."
-		"patron1"                                          										"Level 1 Donation. Доступно донатеру первого уровня и выше."
-		"patron2"                                          										"Level 2 Donation. Доступно донатеру второго уровня и выше."
-		"patron3"                                          										"Level 3 Donation. Доступно донатеру третьего уровня и выше."
-		"patron4"                                          										"Level 4 Donation. Доступно донатеру четвертого уровня и выше."
-		"patron5"                                          										"Level 5 Donation. Доступно донатеру пятого уровня и выше."
-		"patron6"                                          										"Level 6 Donation. Доступно донатеру шестого уровня и выше."
-		"birthday"                                          									"Выдается за участие в Birthday event."	
-		"patron8"                                          										"Level 8 Donation. Доступно донатеру восьмого уровня и выше."
-		"patron9"                                          										"Level 9 Donation. Доступно донатеру девятого уровня и выше."
-		"patron10"                                          									"Level 10 Donation. Доступно донатеру десятого уровня и выше."
-		"patron11"                                          									"Level 11 Donation. Доступно донатеру десятого уровня и выше."
-		"patron12"                                          									"Level 12 Donation. Доступно донатеру десятого уровня и выше."
-		"coldfire"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
-		"winter2"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
-		"suprise"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
-		"winter3"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"spring2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"autumn2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"summer2"																				"Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"dirt"																				    "Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"storm"																				 	"Выдается вместе с эффектом 10 уровня или в особых событиях."
-		"life"																				 	"Выдается вместе с эффектом 12 уровня или в особых событиях."
-		"toppatron"																				"Выдается за ТОП1-5 донатерам на Патреон."
+		"topetext"																			"The best players: "
+	
+
+		"subscribe_1"					"Vampire chance 25%"
+		"subscribe_2"					"Vampire chance 50%"
+		"subscribe_3"					"Vampire chance 75%"
+		"subscribe_4"					"Bonus rating 10%"
 
 		"subscribe_1_description"					"Увеличивает шанс получения Тролля на 25%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
 		"subscribe_2_description"					"Увеличивает шанс получения Тролля на 50%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
 		"subscribe_3_description"					"Увеличивает шанс получения Тролля на 75%. Действует 1 месяц.<br>Повторная покупка шанса увеличивает срок действия шанса на 1 месяц."
 		"subscribe_4_description"					"Увеличивает бонус рейтинг всех игроков в игре на 10%."
+		
 
 
+"reward_gems"				"GEMS"
+"reward_exp"				"PASS XP"
+"reward_coins"				"COINS"
+		"patreonbuttontext"																	"Donate Patreon"
+		"patreonbuttontext1"																"Donate PayPal Page"
+		"patreonbuttontext2"																"Donate Yandex Page"
+		"patreontext"	"If you want to support the project and help in development, 
+then you can make your donations using the site https://patreon.com/troll_vs_elves3 or https://paypal.me/elves3 or https://donate.stream/en/vladu4eg
+The money received will be spent on maintaining the servers and improving the quality of the content.
+Be sure to include a link to the profile in Steam, nickname in Discord / Steam. 
+Please provide as much information as possible about yourself so that I can thank you for your support. 
+You can send any amount.
+The effect is issued for 1 year. Your support helps the game develop."
 
-//Ежедневные задания
+
+		"error_not_enough_wisp"																"Превышен лимит Wisp! "
+		"error_not_enough_mine"																"Превышен лимит Gold"
+		"error_full_inventory"																"Полный инвентарь! "
+		"error_shop_out_of_range"															"Вы не в радиусе магазина! "
+		"error_not_enough_resources"														"Вам не хватает ресурсов! "
+		"error_type_only_digits"															"Введите только цифры! "
+		"error_select_only_your_allies"														"Выберите своего союзника! "
+		"error_enemy_nearby"																"Враг рядом! "
+		"error_invalid_build_position"														"Неверная позиция! "
+		"error_only_troll_can_upgrade"														"Только Тролль может улучшить Troll Hut! "
+		"error_no_radar"																	"К сожалению, сканирование в пользовательских играх не засчитывается в испытании сообщества! "
+		"error_not_night"																	"Работает только ночью! "
+		"error_item_not_sellable"															"Товар не продается!"
+		"error_not_time"																	"Украсть золото можно через 5 минут! "
+		"error_place_is_taken"																"Место занято другим Эльфом или тут нельзя ставить Флаг!"
+		"error_cant_build_flag"																"Тут нельзя ставить Флаг!"
+		"error_place_is_flag"																"Неподходящее место для флага!"
+		"team_choice_header"                                                                "Ты хочешь быть Троллем?"
+		"error_need_put_flag"																"Нужно построить Флаг!"
+		"team_choice_yes"                                                                   "Да"
+		"team_choice_no"                                                                    "Нет"
+		"error_not_spam_votekick"															"Голосование можно проводить один раз в 1 минуту!"
+		"error_construction_for_yourself"													"Вы не можете строить сверху Эльфа после 10 (x2) и 20 (x1) минут!"
+		"error_need_buy_hut_7"																"Вам нужно улучшить  Troll Hut до 6 уровня!"	
+		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
+		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
+		"error_enter_need_money"															"Нельзя передать меньше 100 золота или 1 дерева(lumber)."
+		"error_not_create_wisp"																"Нельзя создать Wisp 1-6 уровня после 40 минуты в х1, 20 минуты - х2, 10 минуты - 1х"
+		"error_no_bear_team"																"Нужно создать Медведя."
+		"error_buy_skill_only_troll"														"Купить Скилл может только Тролль."						
+		"error_bear_have_skill"																"У Медведя есть данный Скилл. "
+		"error_limit_queue"																	"Превышен лимит очереди построек. Максимум 15 построек. "
+		"error_limit_queue_wisp"															"Превышен лимит очереди построек."
+		"error_take_normal_builder"															"У юнита нет этой способности!<br>Выберите нужного юнита!"
+	
+		"error_not_slayers_many"															"Вы можете создать только 1 Слеера!"
+		"error_max_level"																	"Достигнут максимальный уровень!"
+		"error_not_time_3_min"																"Обмен доступен после 3 минуты."
+		
+		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
+		"donate3"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/tve3</font>"
+
+		//Ежедневные задания
 //В основном локализация по заданиям идет
 "troll_quest_title" 		"Ежедневные задания"
 "quest_closed"				"Недоступно"
@@ -270,108 +730,11 @@
 "clan_delete"				"Удалить клан"
 "clan_player_invited"		"Приглашен"
 "clan_error_name"			"Введите название клана"
-
-
-
-		"block"																				 	"Эффект заблокирован до релиза события."
 		
-		"partnote"                                          									"Описание Эффекта"
-		"partname"                                          									"Название Эффекта"
-		
-		"petsnote"                                          									"Описание Питомцев"
-		"petsname"                                          									"Название Питомцев"
-		
-		"ptop1autumn"																			"Награждается игроки за ТОП 1 сезона."									
-		"ptop1winter"																			"Награждается игроки за ТОП 1 сезона."																				
-		"ptop1spring"																			"Награждается игроки за ТОП 1 сезона."																				
-		"ptop1summer"																			"Награждается игроки за ТОП 1 сезона."																				
-		"ppatron1"																				"Доступно донатеру первого уровня и выше. Питомцы не входят в донат эффектов."
-		"ppatron2"																				"Доступно донатеру второго уровня и выше. Питомцы не входят в донат эффектов."
-		"ppatron3"																				"Доступно донатеру третьего уровня и выше. Питомцы не входят в донат эффектов."
-		"ppatron4"																				"Доступно донатеру четвертого уровня и выше. Питомцы не входят в донат эффектов."
-		"ppatron5"																				"Доступно донатеру пятого уровня и выше. Питомцы не входят в донат эффектов."
-		"ppatron6"																				"Доступно донатеру шестого уровня и выше. Питомцы не входят в донат эффектов."
-		"peventdesert"																			"Выдается за участие в Desert event."
-		"peventwinter"																			"Выдается за участие в Winter event."
-		"peventspring"																			"Выдается за участие в Spring event."
-		"peventsummer"																			"Выдается за участие в Summer event."
-		"discordnitro"																			"Будет выдаваться за поддержку сообщества TvE3 в социальных сетях."
-		"grils"																					"Выдается нашим любимым, красивым и вечно прекрасным девушкам в Discord)))"
-		
-		"seveasdefault"																			"Сохранить по умолчанию"
-		
-		"patreonbuttontext"																	"Donate Patreon"
-		"patreonbuttontext1"																"Donate PayPal Page"
-		"patreonbuttontext2"																"Donate Yandex Page"
-		"patreontext"	"Если вы хотите поддержать проект и помочь в развитии,
-то вы можете сделать пожертвования с помощью сайта https://patreon.com/troll_vs_elves3 или https://paypal.me/elves3 или https://donate.stream/en/vladu4eg
-Полученные деньги будут потрачены на обслуживание серверов и улучшение качества контента.
-Обязательно укажите ссылку на профиль в Steam, ник в Discord/Steam.
-Пожалуйста, предоставьте как можно больше информации о себе, чтобы я мог поблагодарить вас за поддержку.
-Эффект выдается сроком на 1 год. Ваша поддержка помогает игре развиваться."
-		
-		"bonus_damage"																		"Bonus Damage"
-		"bonus_armor"																		"Bonus Armor"
-		"bonus_hp"																			"Bonus HP"
-		"bonus_hp_regen"																	"Bonus HP Regenaration"
-		"bonus_atk_spd"																		"Bonus Atk. Speed"
-		"bonus_ms"																			"Bonus Movement Speed"
-		"error_not_enough_gold"																"Мало золота! "
-		"error_not_enough_lumber"															"Мало дерева(lumber) "
-		"error_not_buy_wolf"																"Волк не может улучшать Troll Hut! "
-		"error_castable_only_on_troll_hut"													"Можно использовать только на Troll Hut!"
-		"error_not_enough_food"																"Закончилась еда! "
-		"error_not_enough_wisp"																"Превышен лимит Wisp! "
-		"error_not_enough_mine"																"Превышен лимит Gold"
-		"error_full_inventory"																"Полный инвентарь! "
-		"error_shop_out_of_range"															"Вы не в радиусе магазина! "
-		"error_not_enough_resources"														"Вам не хватает ресурсов! "
-		"error_type_only_digits"															"Введите только цифры! "
-		"error_select_only_your_allies"														"Выберите своего союзника! "
-		"error_enemy_nearby"																"Враг рядом! "
-		"error_invalid_build_position"														"Неверная позиция! "
-		"error_only_troll_can_upgrade"														"Только Тролль может улучшить Troll Hut! "
-		"error_no_radar"																	"К сожалению, сканирование в пользовательских играх не засчитывается в испытании сообщества! "
-		"error_not_night"																	"Работает только ночью! "
-		"error_item_not_sellable"															"Товар не продается!"
-		"error_not_time"																	"Украсть золото можно через 5 минут! "
-		"error_place_is_taken"																"Место занято другим Эльфом или тут нельзя ставить Флаг!"
-		"error_cant_build_flag"																"Тут нельзя ставить Флаг!"
-		"error_place_is_flag"																"Тут нельзя ставить флаг!"
-		"team_choice_header"                                                                "Ты хочешь быть Троллем?"
-		"error_need_put_flag"																"Нужно построить Флаг!"
-		"team_choice_yes"                                                                   "Да"
-		"team_choice_no"                                                                    "Нет"
-		"error_not_spam_votekick"															"Голосование можно проводить один раз в 1 минуту!"
-		"error_construction_for_yourself"													"Вы не можете строить сверху Эльфа после 10 (x2) и 20 (x1) минут!"
-		"error_need_buy_hut_7"																"Вам нужно улучшить  Troll Hut до 7 уровня!"	
-		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
-		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
-		"error_enter_need_money"															"Нельзя передать меньше 100 золота или 1 дерева(lumber)."
-		"error_not_create_wisp"																"Нельзя создать Wisp 1-6 уровня после 40 минуты в х1, 20 минуты - х2, 10 минуты - 1х"
-		"error_no_bear_team"																"Нужно создать Медведя."
-		"error_buy_skill_only_troll"														"Купить Скилл может только Тролль."						
-		"error_bear_have_skill"																"У Медведя есть данный Скилл. "
-		"error_limit_queue"																	"Превышен лимит очереди построек. Максимум 20 построек. "
-		"error_limit_queue_wisp"															"Превышен лимит очереди построек."
-		"error_take_normal_builder"															"У юнита нет этой способности!<br>Выберите нужного юнита!"
-
-		
-		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon.</font>"
-		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Тролля, увеличить количество получаемых очков или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
-		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
-		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
-		"donate5"																			"<font color='#58ACFA'>Вы можете поделиться идеями/багами/пожеланиями на нашем сервере Discord!</font>"
-		"donate6"																			"<font color='#58ACFA'>Спасибо всем  тестирам  за  такой значительный  вклад  в развитие кастомки! Спасибо:*</font>"
-		"donate7"																			"<font color='#58ACFA'>Открыта регистрация на Турнир 1x4 в Discord: https://discord.gg/tve3</font>"
-		"donate8"																			"<font color='#58ACFA'>За нарушение правил игры предусмотрено наказание! Информация в Discord: https://discord.gg/tve3</font>"
-		"donate9"																			"<font color='#58ACFA'>СТАВЬТЕ ФЛАГ ВОЗЛЕ СВОЕГО КАМНЯ!</font>"
-		"donate10"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/tve3</font>"
-		
-		"loading_text"																		"&lt;=Щелкните здесь, чтобы получить советы!<br>
-		                                                                                    Не меняйте горячие клавиши после запуска игры.
+		"loading_text"																		"&lt;=Click this for tips!<br>
+		                                                                                    Don't change your hotkeys after starting the game.
 		                                                                                    "
-		"loading_text_no_troll"																		"Не выбирайте Вампира,  если  играете в первый раз, пожалуйста."
-		
+		"loading_text_no_troll"																"Не выбирайте Вампира,  если  играете в первый раз, пожалуйста."
+
 	}
 }

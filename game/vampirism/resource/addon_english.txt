@@ -172,6 +172,22 @@
 		"sucied_boy"																		"Suicide Boy"
 		"gold_wisp"                                                                       "Gold Wisp"
 		"gold_mine_1"                                                                     "Gold Mine 1"
+		"gold_mine_1_2"                                                                   "Gold Mine 1 UP 2"
+		"gold_mine_1_3"                                                                   "Gold Mine 1 UP 3"
+		"gold_mine_1_4"                                                                   "Gold Mine 1 UP 4"
+		"gold_mine_1_5"                                                                   "Gold Mine 1 UP 5"
+		"gold_mine_2_2"                                                                   "Gold Mine 2 UP 2"
+		"gold_mine_2_3"                                                                   "Gold Mine 2 UP 3"
+		"gold_mine_2_4"                                                                   "Gold Mine 2 UP 4"
+		"gold_mine_2_5"                                                                   "Gold Mine 2 UP 5"
+		"gold_mine_3_2"                                                                   "Gold Mine 3 UP 2"
+		"gold_mine_3_3"                                                                   "Gold Mine 3 UP 3"
+		"gold_mine_3_4"                                                                   "Gold Mine 3 UP 4"
+		"gold_mine_3_5"                                                                   "Gold Mine 3 UP 5"
+		"gold_mine_4_2"                                                                   "Gold Mine 4 UP 2"
+		"gold_mine_4_3"                                                                   "Gold Mine 4 UP 3"
+		"gold_mine_4_4"                                                                   "Gold Mine 4 UP 4"
+		"gold_mine_4_5"                                                                   "Gold Mine 4 UP 5"
 		"gold_mine_2"                                                                     "Gold Mine 2"
 		"gold_mine_3"                                                                     "Gold Mine 3"
 		"gold_mine_4"                                                                     "Gold Mine 4"
@@ -608,6 +624,37 @@
 		"DOTA_Tooltip_Ability_buy_item_golem_flesh_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_golem_flesh_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
+
+		"DOTA_Tooltip_Ability_item_sucied_boy"				"Suicide Boy"
+		"DOTA_Tooltip_Ability_item_sucied_boy_Description" 		"Cannot kill Human.<br>Creates a Suicide Boy for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_sucied_boy_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_sucied_boy_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_sucied_boy"				"Suicide Boy"
+		"DOTA_Tooltip_Ability_buy_item_sucied_boy_Description" 		"Cannot kill Human.<br>Creates a Suicide Boy for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_sucied_boy_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_sucied_boy_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_meat_carier"				"Meat Carrier"
+		"DOTA_Tooltip_Ability_item_meat_carier_Description" 		"Cannot kill Human.<br>Can ONLY attack Slayers.<br>Creates a Meat Carrier for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_meat_carier_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_meat_carier_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_meat_carier"				"Meat Carrier"
+		"DOTA_Tooltip_Ability_buy_item_meat_carier_Description" 		"Cannot kill Human.<br>Can ONLY attack Slayers.<br>Creates a Meat Carrier for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_meat_carier_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_meat_carier_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_Ability_item_sniper"				"One Shot"
+		"DOTA_Tooltip_Ability_item_sniper_Description" 		"Cannot kill Human.<br>Unit has 10000 attack. Attack radius 4000. Fires a powerful shot every 3 seconds.<br>Creates a One Shot for %duration%  sec."
+		"DOTA_Tooltip_Ability_item_sniper_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_sniper_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+		
+		"DOTA_Tooltip_Ability_buy_item_sniper"				"One Shot"
+		"DOTA_Tooltip_Ability_buy_item_sniper_Description" 		"Cannot kill Human.<br>Unit has 10000 attack. Attack radius 4000. Fires a powerful shot every 3 seconds.<br>Creates a One Shot for %duration%  sec."
+		"DOTA_Tooltip_Ability_buy_item_sniper_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_sniper_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
 		"DOTA_Tooltip_Ability_item_shade"				"Shade"
 		"DOTA_Tooltip_Ability_item_shade_Description" 		"Cannot kill Human.<br>Little damage.<br>Creates a Shade for %duration%  sec."
 		"DOTA_Tooltip_Ability_item_shade_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
@@ -810,12 +857,12 @@
 		"DOTA_Tooltip_Ability_buy_item_roketa_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 		
 
-		"DOTA_Tooltip_Ability_item_immunity_shield"												 "Magic Immunity Shied"
+		"DOTA_Tooltip_Ability_item_immunity_shield"												 "Magic Immunity Shield"
 		"DOTA_Tooltip_Ability_item_immunity_shield_Description"										"The shield gives the wearer protection from magic."
 		"DOTA_Tooltip_Ability_item_immunity_shield_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_immunity_shield_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
-		"DOTA_Tooltip_Ability_buy_item_immunity_shield"												 "Magic Immunity Shied"
+		"DOTA_Tooltip_Ability_buy_item_immunity_shield"												 "Magic Immunity Shield"
 		"DOTA_Tooltip_Ability_buy_item_immunity_shield_Description"										"The shield gives the wearer protection from magic."
 		"DOTA_Tooltip_Ability_buy_item_immunity_shield_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_immunity_shield_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
@@ -837,11 +884,11 @@
 		"DOTA_Tooltip_Ability_item_spirit_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_buy_item_recipe_spirit"												 "RECIPE: Blade of Teleport LVL 2"
-		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description"									"<h1>RECIPE</h1> Recovers %heal_percentage%%% of current health for each unit killed. Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_Description"									"<h1>RECIPE</h1><h2>Items:<br>Blade of Teleport<br></h2>Recovers %heal_percentage%%% of current health for each unit killed. Teleports the hero to an allied unit."
 		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_spirit_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
-		"DOTA_Tooltip_Ability_item_tiger_claw"	"Glove with Сlaws"
+		"DOTA_Tooltip_Ability_item_tiger_claw"	"Monster Claws"
 		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_str"	"+$str"		
 		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_int"	"+$int"
 		"DOTA_Tooltip_Ability_item_tiger_claw_bonus_agi"	"+$agi"
@@ -849,8 +896,8 @@
 		"DOTA_Tooltip_Ability_item_tiger_claw_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_tiger_claw_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
 
-		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw"	"Glove with Сlaws"
-		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description"							"<h1>RECIPE</h1>"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw"	"Monster Claws"
+		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_Description"							"<h1>RECIPE</h1><h2>Items:<br>Glove with Claws<br>Hand of Strength<br></h2>"
 		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_str"	"+$str"		
 		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_int"	"+$int"
 		"DOTA_Tooltip_ability_buy_item_recipe_tiger_claw_bonus_agi"	"+$agi"
@@ -870,7 +917,7 @@
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed"												 "Golden Blade"
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" 		"<h1>RECIPE</h1><br>With a 35% chance, you can get an additional 80 gold."
+		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_Description" 		"<h1>RECIPE</h1><h2>Items:<br>Golden Hand<br>Hand of Strength<br></h2><br>With a 35% chance, you can get an additional 80 gold."
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_str"	"+$str"		
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_int"	"+$int"
 		"DOTA_Tooltip_Ability_buy_item_recipe_golden_greed_bonus_agi"	"+$agi"
@@ -890,7 +937,7 @@
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula"												 "Dracula Cloak"
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
-		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" 		"<h1>RECIPE</h1>Gives the hero invisibility."
+		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_Description" 		"<h1>RECIPE</h1><h2>Items:<br>Clock of Invisibility<br>Necklace of Blood<br>Hand of Strength<br></h2>Gives the hero invisibility."
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_str"	"+$str"		
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_int"	"+$int"
 		"DOTA_Tooltip_Ability_buy_item_recipe_clock_dracula_bonus_agi"	"+$agi"
@@ -960,7 +1007,7 @@
 
 		
 
-		"DOTA_Tooltip_ability_item_doom_frostbite"						"Armor of the Devil"
+		"DOTA_Tooltip_ability_item_doom_frostbite"						"Armor of Ice"
 		"DOTA_Tooltip_ability_item_doom_frostbite_Description"	"<h1>Active: Frostbite</h1>Freezes enemies for %stun_duration% seconds and deals %stun_damage% damage at a %stun_radius% radius. Increases your armor by %bonus_armor%.<br> HP: 1 800 000"
 		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_str"	"+$str"		
 		"DOTA_Tooltip_ability_item_doom_frostbite_bonus_int"	"+$int"
@@ -969,14 +1016,32 @@
 		"DOTA_Tooltip_ability_item_doom_frostbite_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_item_doom_frostbite_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
 
-		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite"						"Armor of the Devil"
-		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description"	"<h1>RECIPE<br>Active: Frostbite</h1>Freezes enemies for %stun_duration% seconds and deals %stun_damage% damage at a %stun_radius% radius. Increases your armor by %bonus_armor%.<br> HP: 1 800 000"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite"						"Armor of Ice"
+		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_Description"	"<h1>RECIPE<br>Active: Frostbite</h1><h2>Items:<br>Armor of the Devil<br>Necklace of Blood<br></h2>Freezes enemies for %stun_duration% seconds and deals %stun_damage% damage at a %stun_radius% radius. Increases your armor by %bonus_armor%.<br> HP: 1 800 000"
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_str"	"+$str"		
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_int"	"+$int"
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_agi"	"+$agi"
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_bonus_hp"		"+$health"
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_doom_frostbite_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
+
+		"DOTA_Tooltip_ability_item_end_game"				"End Game Item"
+		"DOTA_Tooltip_ability_item_end_game_Description"	"Takes mana from all Humans. Grants immunity to magic. Aura with per second damage."
+		"DOTA_Tooltip_ability_item_end_game_bonus_str"	"+$str"		
+		"DOTA_Tooltip_ability_item_end_game_bonus_int"	"+$int"
+		"DOTA_Tooltip_ability_item_end_game_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_ability_item_end_game_bonus_armor"		"+$armor"
+		"DOTA_Tooltip_ability_item_end_game_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_ability_item_end_game_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
+
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game"						"End Game Item"
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_Description"	"<h1>RECIPE</h1><h2>Items:<br>Monster Claws<br>Magic Immunity Shield<br></h2>Takes mana from all Humans. Grants immunity to magic. Aura with per second damage."
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_bonus_str"	"+$str"		
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_bonus_int"	"+$int"
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_bonus_agi"	"+$agi"
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_bonus_armor"		"+$armor"
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_item_pulse_ricochet"				"Mega Pulse Staff"
 		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
@@ -985,7 +1050,7 @@
 		"DOTA_Tooltip_Ability_item_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet"				"Mega Pulse Staff"
-		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>RECIPE<br>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>RECIPE<br>Active: Chain Lightning</h1><h2>Items:<br>Pulse Staff<br>Fiery Comet<br></h2> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
@@ -997,7 +1062,7 @@
 		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_bonus_block"										"BLOCK DAMAGE: "
 
 		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions"	"Staff of Illusions"
-		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description"	"<h1>RECIPE<br>Active: Illusion</h1> Creates an image of a target unit. The illusion takes %illusion_incoming_damage%%% damage and deals %illusion_outgoing_damage%%% damage.<br>Illusion lasts %illusion_duration% seconds."
+		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description"	"<h1>RECIPE<br>Active: Illusion</h1> <h2>Items:<br>Bull Mark<br></h2> Creates an image of a target unit. The illusion takes %illusion_incoming_damage%%% damage and deals %illusion_outgoing_damage%%% damage.<br>Illusion lasts %illusion_duration% seconds."
 		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_evasion"									"%+$evasion"
 		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_armor"										"+$armor"
 		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_bonus_block"										"BLOCK DAMAGE: "
@@ -1156,7 +1221,57 @@
 		"DOTA_Tooltip_ability_build_rock_10_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_rock_10_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
-		
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_2"                                          "Gold Mine 1 UP 2"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_3"                                          "Gold Mine 1 UP 3"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_3_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_4"                                          "Gold Mine 1 UP 4"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_4_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_5"                                          "Gold Mine 1 UP 5"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_1_5_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_2"                                          "Gold Mine 2 UP 2"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_3"                                          "Gold Mine 2 UP 3"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_3_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_4"                                          "Gold Mine 2 UP 4"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_4_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_5"                                          "Gold Mine 2 UP 5"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_5_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_2"                                          "Gold Mine 3 UP 2"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_3"                                          "Gold Mine 3 UP 3"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_3_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_4"                                          "Gold Mine 3 UP 4"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_4_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_5"                                          "Gold Mine 3 UP 5"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_3_5_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_2"                                          "Gold Mine 4 UP 2"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_3"                                          "Gold Mine 4 UP 3"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_3_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_4"                                          "Gold Mine 4 UP 4"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_4_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_5"                                          "Gold Mine 4 UP 5"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_4_5_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
+
+
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2"                                          "Gold Mine 2"
+		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
 		
 		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2"                                          "Gold Mine 2"
 		"DOTA_Tooltip_Ability_upgrade_to_gold_mine_2_Description"                              "The improvement reduces the gold mining interval or increases the amount of gold mined."
@@ -1931,13 +2046,13 @@
 		"DOTA_Tooltip_Ability_train_skill_hp_elf_2_skill_count"                                  "HP HUMAN:  "
 
 		"DOTA_Tooltip_Ability_train_skill_range_no_miss"                                             "Accurate Shot"
-		"DOTA_Tooltip_Ability_train_skill_range_no_miss_Description"                                 "Level 17, 18 and 21 towers ignore Vampire evasion."
+		"DOTA_Tooltip_Ability_train_skill_range_no_miss_Description"                                 "Level 9, 10 and 11 towers ignore Vampire evasion."
 		"DOTA_Tooltip_Ability_train_skill_range_no_miss_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_train_skill_range_no_miss_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 
 
 		"DOTA_Tooltip_modifier_range_no_miss"                                             "Accurate Shot"
-		"DOTA_Tooltip_modifier_range_no_miss_Description"                                 "Level 17, 18 and 21 towers ignore Vampire evasion."
+		"DOTA_Tooltip_modifier_range_no_miss_Description"                                 "Level 9, 10 and 11 towers ignore Vampire evasion."
 
 		"DOTA_Tooltip_modifier_range_no_miss_state"                                             "Accurate Shot"
 		"DOTA_Tooltip_modifier_range_no_miss_state_Description"                                 "Level 9, 10 and 11 towers ignore Vampire evasion."
@@ -2061,70 +2176,70 @@
 
 
 		"DOTA_Tooltip_ability_build_gold_mine_1"                                          "Build Gold Mine 1"
-		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_1_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_1_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_1_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_1_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_2"                                          "Build Gold Mine 2"
-		"DOTA_Tooltip_ability_build_gold_mine_2_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_2_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_2_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_2_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_2_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_2_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_3"                                          "Build Gold Mine 3"
-		"DOTA_Tooltip_ability_build_gold_mine_3_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_3_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_3_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_3_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_3_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_3_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_4"                                          "Build Gold Mine 4"
-		"DOTA_Tooltip_ability_build_gold_mine_4_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_4_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_4_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_4_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_4_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_4_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_5"                                          "Build Gold Mine 5"
-		"DOTA_Tooltip_ability_build_gold_mine_5_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_5_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_5_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_5_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_5_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_5_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_6"                                          "Build Gold Mine 6"
-		"DOTA_Tooltip_ability_build_gold_mine_6_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_6_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_6_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_6_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_6_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_6_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_7"                                          "Build Gold Mine 7"
-		"DOTA_Tooltip_ability_build_gold_mine_7_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_7_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_7_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_7_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_7_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_7_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_8"                                          "Build Gold Mine 8"
-		"DOTA_Tooltip_ability_build_gold_mine_8_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_8_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_8_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_8_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_8_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_8_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_9"                                          "Build Gold Mine 9"
-		"DOTA_Tooltip_ability_build_gold_mine_9_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_9_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_9_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_9_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_9_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_gold_mine_9_lumber_cost"                              "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_gold_mine_10"                                          "Build Gold Mine 10"
-		"DOTA_Tooltip_ability_build_gold_mine_10_Description"                              "The Gold Mine brings gold, as does the Tent. You can build a limited number. After emptying the Gold Mine, the building will be removed. Build a Gold Mine on the edge of your base to prevent the Vampire from blinking at your base with a Doom Sphere."
+		"DOTA_Tooltip_ability_build_gold_mine_10_Description"                              "Gold mine extracts gold. You can improve your mine. The number of mines is limited. You can build a mine at the edge of your base to prevent the Vampire from jumping into your base with the Doom Sphere item."
 		"DOTA_Tooltip_ability_build_gold_mine_10_GoldInterval"                             "GOLD INTERVAL: "
 		"DOTA_Tooltip_ability_build_gold_mine_10_GoldAmount"                               "GOLD AMOUNT: "
 		"DOTA_Tooltip_ability_build_gold_mine_10_gold_cost"                                "<font color='#FFFF00'>GOLD COST: </font>"
@@ -2366,7 +2481,7 @@
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           "Cancel building"
 
 		"DOTA_Tooltip_ability_item_blink_datadriven"									  "Blink"
-		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Vampire.<br/>Max range: 1200"
+		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Vampire.<br/>Global Blink"
 
 		"DOTA_Tooltip_ability_item_root_ability"                                          "Root"
 		"DOTA_Tooltip_ability_item_root_ability_Description"                              "Roots the Vampire.<br/>The Vampire is unable to move and is visible throughout the duration, but still can cast spells. "
@@ -2567,28 +2682,28 @@
 		"DOTA_Tooltip_ability_item_troll_boots_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 		
 		"DOTA_Tooltip_ability_item_vip"                                           	"Event Effect"
-		"DOTA_Tooltip_ability_item_vip_Description"                               	"Activate the item and get the season effect.<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_vip_Description"                               	"Activate the item and get the season effect.<br>You can only activate from 5 people."
 		
 		"DOTA_Tooltip_ability_item_event"                                           	"Event Item"
-		"DOTA_Tooltip_ability_item_event_Description"                               	"Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_event_Description"                               	"Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 		
 		"DOTA_Tooltip_ability_item_event_desert"                                           	"Desert Event Item"
-		"DOTA_Tooltip_ability_item_event_desert_Description"                               	"Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Dirt.<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_event_desert_Description"                               	"Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Dirt.<br>You can only activate from 5 people."
 		
 		"DOTA_Tooltip_ability_item_winter_1"                                           "Event Item"
-		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_item_spring"                                           "Event Item"
-		"DOTA_Tooltip_ability_item_spring_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_spring_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_item_summer"                                           "Event Item"
-		"DOTA_Tooltip_ability_item_summer_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_summer_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_Ability_item_get_gem"											"Lucky Gem"
-		"DOTA_Tooltip_Ability_item_get_gem_Description"								"Gives 10 Lucky Gems.<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_Ability_item_get_gem_Description"								"Gives 10 Lucky Gems.<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_Ability_item_get_gold"											"TvE Coint Bag"
-		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Gives 10 TvE Coint.<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_Ability_item_get_gold_Description"								"Gives 10 TvE Coint.<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_buy_item_ward_sentry"													 "Sentry Ward"
 		"DOTA_Tooltip_ability_buy_item_ward_sentry_Description"										""
@@ -2630,19 +2745,19 @@
 		"DOTA_Tooltip_ability_item_lia_rune_gold_Description"                               "Gives a random amount of gold. Take the coin with your Slayer."
 
 		"DOTA_Tooltip_ability_item_winter_stress"                                           "Event Item by stresS_"
-		"DOTA_Tooltip_ability_item_winter_stress_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_winter_stress_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 5 people."
 		
 		"DOTA_Tooltip_ability_item_winter_end"                                           "Event Item"
 		"DOTA_Tooltip_ability_item_winter_end_Description"                               "You are already close to solving!"
 		
 		"DOTA_Tooltip_ability_item_event_winter"                                           "Winter Event Item"
-		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Winter 2.<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Winter 2.<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_item_event_helheim"                                           "Helheim Event Item"
-		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Donater 10.<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Donater 10.<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_item_event_birthday"                                           "Happy Birthday!"
-		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "The TvE3 community is 1 year old!<br>Thank you for your active support!<br>I appreciate your help!<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Birthday.<br>You can only activate from 10 people."
+		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "The TvE3 community is 1 year old!<br>Thank you for your active support!<br>I appreciate your help!<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Birthday.<br>You can only activate from 5 people."
 
 		"DOTA_Tooltip_ability_item_max_move"                                          	 "Speed ​​bottle."
 		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Gives +190 running speed for 20 seconds."
@@ -3093,7 +3208,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_not_enough_resources"														"You do not have enough resources! "
 		"error_type_only_digits"															"Enter only numbers! "
 		"error_select_only_your_allies"														"Select your ally! "
-		"error_enemy_nearby"																"Enemy is nearby! "
+		"error_enemy_nearby"																"Enemy is nearby! You are far from the building!"
 		"error_invalid_build_position"														"Invalid position! "
 		"error_only_troll_can_upgrade"														"Only the Vampire can upgrade the Hut! "
 		"error_no_radar"																	"Sadly scans in custom games don't count towards the community challenge! "
@@ -3137,16 +3252,9 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"fountaingoldt"																		"Return to the fountain to complete the ritual and access the treasures."
 		"failtrigger"																		"The gods did not approve of your offering, now you are cursed forever."
 		
-		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon.</font>"
-		"donate2"																			"<font color='#58ACFA'>You can increase the chance of getting a Vampire, increase the number of points you receive or get one of the unique cosmetic effects by supporting our project on Patreon.</font>"
-		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
-		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
-		"donate5"																			"<font color='#58ACFA'>Submit your ideas on what to add to the game in our Discord server!</font>"
-		"donate6"																			"<font color='#58ACFA'>Thanks to all the testers for such a significant contribution to the development of the game! Thank:*</font>"
-		"donate7"																			"<font color='#58ACFA'>Registration for Tournament 1x4 in Discord is open: https://discord.gg/tve3</font>"
-		"donate8"																			"<font color='#58ACFA'>There are penalties for violating the rules of the game! Information in Discord: https://discord.gg/tve3</font>"
-		"donate9"																			"<font color='#58ACFA'>PUT A FLAG NEAR YOUR STONE!</font>"
-		"donate10"																			"<font color='#58ACFA'>If you need help - write to Discord: https://discord.gg/tve3</font>"
+		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
+		"donate3"																			"<font color='#58ACFA'>If you need help - write to Discord: https://discord.gg/tve3</font>"
 
 		"DOTA_Tooltip_Ability_item_gold"													"Gold"
 		"DOTA_Tooltip_Ability_item_full"													"Full"

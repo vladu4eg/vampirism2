@@ -195,6 +195,11 @@ function trollnelves2:DamageFilter( kv )
       kv.damage = 0
     end
 
+    if string.match(heroAttacker:GetUnitName(), "meat_carier") and not string.match(heroKilled:GetUnitName(), "npc_dota_hero_templar_assassin") then
+      kv.damage = 0
+    end
+
+    
     if string.match(heroAttacker:GetUnitName(), "fel_best") and heroKilled:GetUnitName() ~= "worker_1" then
       kv.damage = 0
     end

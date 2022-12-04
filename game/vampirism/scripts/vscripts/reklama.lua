@@ -13,41 +13,6 @@ local msgs = {
 		StartTime = 300,
 		Interval = 360,
 		MaxCount = 18
-	},
-	["#donate4"] = {
-		StartTime = 450,
-		Interval = 650,
-		MaxCount = 3	
-	},
-	["#donate5"] = {
-		StartTime = 1200,
-		Interval = 650,
-		MaxCount = 3	
-	},
-	["#donate6"] = {
-		StartTime = 3000,
-		Interval = 2000,
-		MaxCount = 3	
-	},
-	["#donate7"] = {
-		StartTime = 60,
-		Interval = 300,
-		MaxCount = 30	
-	},
-	["#donate8"] = {
-		StartTime = 110,
-		Interval = 300,
-		MaxCount = 18,
-	},
-	["#donate9"] = {
-		StartTime = 30,
-		Interval = 120,
-		MaxCount = 25,
-	},
-	["#donate10"] = {
-		StartTime = 150,
-		Interval = 300,
-		MaxCount = 18,
 	}
 
 }
