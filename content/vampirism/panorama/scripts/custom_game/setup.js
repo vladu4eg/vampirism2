@@ -77,8 +77,8 @@ var uiWaitingSchedules = [];
     var healthContainer = centerBlock.FindChildTraverse("HealthContainer");
     InitializeCustomHpRegenLabel(healthContainer);
     healthContainer.FindChildTraverse("HealthRegenLabel").style.visibility = "collapse";
-    var manaContainer = centerBlock.FindChildTraverse("ManaContainer");
-    manaContainer.FindChildTraverse("ManaRegenLabel").style.visibility = "collapse";
+  //  var manaContainer = centerBlock.FindChildTraverse("ManaContainer");
+  // manaContainer.FindChildTraverse("ManaRegenLabel").style.visibility = "collapse";
     SetupUnusedItemHotkeys();
 
     GameEvents.Subscribe("gameui_activated", UpdateUI);

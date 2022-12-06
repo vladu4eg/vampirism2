@@ -6623,17 +6623,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"500"
+				"bonus_int"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"500"
+				"bonus_str"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"500"
+				"bonus_agi"				"50"
 			}
 		}
 	
@@ -7767,7 +7767,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"300"
+				"bonus_stat"			"30"
 			}
 			"02"
 			{
@@ -7791,7 +7791,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"300"
+				"bonus_stat"			"30"
 			}
 			"02"
 			{
@@ -7817,7 +7817,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"1200"
+				"bonus_stat"			"120"
 			}
 			"02"
 			{
@@ -7841,7 +7841,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"300"
+				"bonus_stat"			"30"
 			}
 			"02"
 			{
@@ -7889,7 +7889,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"2000"
+				"bonus_stat"			"200"
 			}
 			"02"
 			{
@@ -8013,7 +8013,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"5"
+				"gold_cost"				"1"
 			}	
 			"03"
 			{
@@ -8411,17 +8411,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"2000"
+				"bonus_agi"				"200"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"2000"
+				"bonus_str"				"200"
 			}	
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"2000"
+				"bonus_int"				"200"
 			}		
 
 		}
@@ -8621,17 +8621,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"10000"
+				"bonus_str"				"1000"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"10000"
+				"bonus_agi"				"1000"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"10000"
+				"bonus_int"				"1000"
 			}	
 			"07"
 			{
@@ -8871,17 +8871,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"4000"
+				"bonus_int"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"4000"
+				"bonus_str"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"4000"
+				"bonus_agi"				"400"
 			}	
 
 		}
@@ -8944,12 +8944,12 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"15000"
+				"bonus_str"				"1500"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"-30000"
+				"bonus_int"				"-3000"
 			}		
 
 		}
@@ -9011,17 +9011,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"500"
+				"bonus_int"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"500"
+				"bonus_str"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"500"
+				"bonus_agi"				"50"
 			}	
 			"07"
 			{
@@ -9621,17 +9621,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"19000"
+				"bonus_int"				"1900"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"19000"
+				"bonus_str"				"1900"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"19000"
+				"bonus_agi"				"1900"
 			}	
 			"07"
 			{
@@ -9727,17 +9727,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"5000"
+				"bonus_int"				"500"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"5000"
+				"bonus_str"				"500"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"5000"
+				"bonus_agi"				"500"
 			}
 			"07"
 			{
@@ -9830,17 +9830,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"1000"
+				"bonus_int"				"100"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"1000"
+				"bonus_str"				"100"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"1000"
+				"bonus_agi"				"100"
 			}
 			"07"
 			{
@@ -9969,17 +9969,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"13000"
+				"bonus_str"				"1300"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"13000"
+				"bonus_agi"				"1300"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"13000"
+				"bonus_int"				"1300"
 			}	
 			"07"
 			{
@@ -10757,7 +10757,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"69100"
+				"gold_cost"				"169100"
 			}	
 			"03"
 			{
@@ -10811,12 +10811,12 @@
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"66666"
+				"bonus_str"				"666"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"66666"
+				"bonus_agi"				"666"
 			}
 			"07"
 			{

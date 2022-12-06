@@ -51,7 +51,6 @@
 	
 
 
-
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_1.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_2.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_3.png" />
@@ -109,6 +108,17 @@
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_53.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_54.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_55.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_56.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_57.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_58.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_59.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_60.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_61.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_62.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_63.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_64.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_65.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_66.png" />
 
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_2.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_3.png" />
@@ -188,6 +198,11 @@
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_77.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_78.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_79.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_80.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_81.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_82.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_83.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_84.png" />
 
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/bonus.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chance.png" />
@@ -236,7 +251,16 @@
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_40.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_41.png" />
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_42.png" />
-		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_43.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_44.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_45.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_46.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_47.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_48.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_49.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_50.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_51.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_52.png" />
 		
 		
 		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/sounds.png" />

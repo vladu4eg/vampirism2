@@ -1044,13 +1044,13 @@
 		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_item_pulse_ricochet"				"Mega Pulse Staff"
-		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Active: Chain Lightning</h1> Deals %lightning_damage% damage to %lightning_bounces% random units in chain. Deals 8000 damage to buildings."
 		"DOTA_Tooltip_Ability_item_pulse_ricochet_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_Ability_item_pulse_ricochet_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet"				"Mega Pulse Staff"
-		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>RECIPE<br>Active: Chain Lightning</h1><h2>Items:<br>Pulse Staff<br>Fiery Comet<br></h2> Deals %lightning_damage% damage to %lightning_bounces% random units in chain."
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>RECIPE<br>Active: Chain Lightning</h1><h2>Items:<br>Pulse Staff<br>Fiery Comet<br></h2> Deals %lightning_damage% damage to %lightning_bounces% random units in chain. Deals 8000 damage to buildings."
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
@@ -1072,7 +1072,7 @@
 
 		
 		"DOTA_Tooltip_Ability_item_demonic_remains"	"Necklace of Blood"
-		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Each unit killed gives you +10 to all stats."
+		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Each unit killed gives you +1 to all stats."
 		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_str"	"+$str"		
 		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_int"	"+$int"
 		"DOTA_Tooltip_Ability_item_demonic_remains_bonus_agi"	"+$agi"
@@ -1080,7 +1080,7 @@
 		"DOTA_Tooltip_Ability_item_demonic_remains_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"	
 
 		"DOTA_Tooltip_ability_buy_item_demonic_remains"	"Necklace of Blood"
-		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Each unit killed gives you +10 to all stats."
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Each unit killed gives you +1 to all stats."
 		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_str"	"+$str"		
 		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_int"	"+$int"
 		"DOTA_Tooltip_ability_buy_item_demonic_remains_bonus_agi"	"+$agi"
@@ -1481,32 +1481,32 @@
 		"DOTA_Tooltip_ability_upgrade_to_buff_8_Description"                             "Repairs several adjacent buildings.<br>Heal 200000. Bounce 16"
 
 		"DOTA_Tooltip_ability_wave_16_mana_burn_1"  "Mana Burn 1"
-		"DOTA_Tooltip_ability_wave_16_mana_burn_1_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 3000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_1_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 30 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 		"DOTA_Tooltip_ability_wave_16_mana_burn_2"  "Mana Burn 2"
-		"DOTA_Tooltip_ability_wave_16_mana_burn_2_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 6000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_2_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 60 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 		"DOTA_Tooltip_ability_wave_16_mana_burn_3"  "Mana Burn 3"
-		"DOTA_Tooltip_ability_wave_16_mana_burn_3_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 12000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_3_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 120 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 		"DOTA_Tooltip_ability_wave_16_mana_burn_4"  "Mana Burn 4"
-		"DOTA_Tooltip_ability_wave_16_mana_burn_4_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 24000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_4_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 240 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 		"DOTA_Tooltip_ability_wave_16_mana_burn_5"  "Mana Burn 5"
-		"DOTA_Tooltip_ability_wave_16_mana_burn_5_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 48000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_wave_16_mana_burn_5_Description"	"Sends a bolt of negative energy that burns a target enemy unit's 480 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 
 
 		"DOTA_Tooltip_ability_upgrade_to_buff_mana_1"                                    "Mana Tower 1"
-		"DOTA_Tooltip_ability_upgrade_to_buff_mana_1_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 3000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_1_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 30 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 		"DOTA_Tooltip_ability_upgrade_to_buff_mana_2"                                    "Mana Tower 2"
-		"DOTA_Tooltip_ability_upgrade_to_buff_mana_2_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 6000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_2_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 60 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 		"DOTA_Tooltip_ability_upgrade_to_buff_mana_3"                                    "Mana Tower 3"
-		"DOTA_Tooltip_ability_upgrade_to_buff_mana_3_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 12000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_3_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 120 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 		"DOTA_Tooltip_ability_upgrade_to_buff_mana_4"                                    "Mana Tower 4"
-		"DOTA_Tooltip_ability_upgrade_to_buff_mana_4_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 24000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_4_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 240 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 		"DOTA_Tooltip_ability_upgrade_to_buff_mana_5"                                    "Mana Tower 5"
-		"DOTA_Tooltip_ability_upgrade_to_buff_mana_5_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 48000 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
+		"DOTA_Tooltip_ability_upgrade_to_buff_mana_5_Description"                        "Sends a bolt of negative energy that burns a target enemy unit's 480 mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned."
 
 		"DOTA_Tooltip_ability_19_wave_faerie_fire_1"  "Faerie Fire 1"
 		"DOTA_Tooltip_ability_19_wave_faerie_fire_1_Description"	"Reduces a target enemy unit's armor by 30 and gives vision of that unit. Lasts 7.5 seconds."
@@ -1605,7 +1605,7 @@
 		"DOTA_Tooltip_ability_upgrade_to_true_sight_tower_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "
 
 		"DOTA_Tooltip_Ability_build_house_1"                                             "Slayers Vault"
-		"DOTA_Tooltip_Ability_build_house_1_Description"                                 "Creates a shop with purchasable items."
+		"DOTA_Tooltip_Ability_build_house_1_Description"                                 "Build the main building, which will open access to building upgrades, heroes and units."
 		"DOTA_Tooltip_Ability_build_house_1_gold_cost"                                   "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_build_house_1_lumber_cost"                                 "<font color='#008000'>LUMBER COST: </font>"
 
@@ -1652,7 +1652,7 @@
 		"DOTA_Tooltip_ability_build_mother_of_nature_lumber_cost"                                      "<font color='#008000'>LUMBER COST: </font>"
 
 		"DOTA_Tooltip_ability_build_research_lab_1"                                         "Build Research Lab 1"
-		"DOTA_Tooltip_ability_build_research_lab_1_Description"                             "Build research laboratory. It is necessary to improve your towers to a better level! "
+		"DOTA_Tooltip_ability_build_research_lab_1_Description"                             "To improve the characteristics of your units or buildings, you need to build a laboratory and learn the necessary abilities."
 		"DOTA_Tooltip_ability_build_research_lab_1_gold_cost"                               "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_ability_build_research_lab_1_lumber_cost"                             "<font color='#008000'>LUMBER COST: </font>"
 
@@ -2374,13 +2374,13 @@
 		
 
 		"DOTA_Tooltip_Ability_item_sphere_doom"										"Sphere of Doom"
-		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"An orb that gives 5 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
+		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"An orb that gives 1 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
 		"DOTA_Tooltip_Ability_item_sphere_doom_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_sphere_doom_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_item_sphere_doom_max_blink_range"                     "RANGE BLINK:"
 
 		"DOTA_Tooltip_Ability_buy_item_sphere_doom"										"Sphere of Doom"
-		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"An orb that gives 5 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"An orb that gives 1 stats every few seconds to all Vampires and gives the holder a VERY short blink. Stats per sec do NOT stack."	
 		"DOTA_Tooltip_Ability_buy_item_sphere_doom_gold_cost"                           "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_sphere_doom_lumber_cost"                         "<font color='#008000'>LUMBER COST: </font>"
 		"DOTA_Tooltip_Ability_buy_item_sphere_doom_max_blink_range"                     "RANGE BLINK:"
@@ -3253,8 +3253,8 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"failtrigger"																		"The gods did not approve of your offering, now you are cursed forever."
 		
 		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon: https://patreon.com/troll_vs_elves3</font>"
-		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
-		"donate3"																			"<font color='#58ACFA'>If you need help - write to Discord: https://discord.gg/tve3</font>"
+		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
+		"donate3"																			"<font color='#58ACFA'>If you need help - write to Discord: https://discord.gg/cfkjMbffsu</font>"
 
 		"DOTA_Tooltip_Ability_item_gold"													"Gold"
 		"DOTA_Tooltip_Ability_item_full"													"Full"

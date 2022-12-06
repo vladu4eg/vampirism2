@@ -6,7 +6,7 @@
 
   "classic"
   {
-    "MaxPlayers"                    "12"
+    "MaxPlayers"                    "7"
   }
   
   "Default_Keys"

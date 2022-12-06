@@ -43,16 +43,19 @@ function tower_15_return25_revenge:OnTakeDamage(params)
 
 	if self.attack_record == params.record then		
 		local return_damage = self:GetAbility():GetSpecialValueFor("damage_return")*0.01*params.original_damage
-		
-		ApplyDamage(
-		{
+		if not params.attacker:IsMagicImmune() then
+			ApplyDamage(
+			{
 			victim = params.attacker, 
 			attacker = params.unit, 
 			damage = return_damage, 
 			damage_type = DAMAGE_TYPE_MAGICAL,
 			damage_flags = DOTA_DAMAGE_FLAG_REFLECTION,
 			ability = self:GetAbility()
-		})
+			})
+		end
+
+		
 	end
 
 end

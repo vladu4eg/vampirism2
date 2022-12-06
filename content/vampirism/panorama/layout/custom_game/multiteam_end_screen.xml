@@ -40,7 +40,7 @@
 				<Panel class="ActiveButton"  id="Button_3" onactivate="ExternalBrowserGoToURL('https://donate.stream/en/vladu4eg');" >
 					<Label class="ActiveButton_text" text="DStream" />
 				</Panel>
-				<Panel class="ActiveButton"  id="Button_4" onactivate="ExternalBrowserGoToURL('https://discord.gg/tve3');" >
+				<Panel class="ActiveButton"  id="Button_4" onactivate="ExternalBrowserGoToURL('https://discord.gg/cfkjMbffsu');" >
 					<Label class="ActiveButton_text" text="Discord" />
 				</Panel>
 			</Panel>

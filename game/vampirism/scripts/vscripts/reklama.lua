@@ -1,17 +1,17 @@
 local msgs = {
 	["#donate1"] = {
 		StartTime = 100,
-		Interval = 300,
+		Interval = 800,
 		MaxCount = 18,
 	},
 	["#donate2"] = {
 		StartTime = 200,
-		Interval = 400,
+		Interval = 800,
 		MaxCount = 18,
 	},
 	["#donate3"] = {
 		StartTime = 300,
-		Interval = 360,
+		Interval = 800,
 		MaxCount = 18
 	}
 

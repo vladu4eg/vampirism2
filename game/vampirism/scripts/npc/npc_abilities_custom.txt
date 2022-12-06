@@ -6079,7 +6079,7 @@
 	"build_buff_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"	"build_tower"
+		"AbilityTextureName"	"build_buff_tower"
 		"AbilityCastRange"		"150"
 		"Building"				"1"
 		"BuildTime"				"1.0"
@@ -6157,7 +6157,7 @@
 	"build_tower_1"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"	"build_tower"
+		"AbilityTextureName"	"build_tower_1"
 		"AbilityCastRange"		"150"
 		"Building"				"1"
 		"BuildTime"				"1.0"
@@ -6233,7 +6233,7 @@
 	"upgrade_to_tower_2"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_2"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6252,7 +6252,7 @@
 	"upgrade_to_tower_3"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_3"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6271,7 +6271,7 @@
 	"upgrade_to_tower_4"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_4"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6290,7 +6290,7 @@
 	"upgrade_to_tower_5"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_5"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6309,7 +6309,7 @@
 	"upgrade_to_tower_5_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_5"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6328,7 +6328,7 @@
 	"upgrade_to_tower_6"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_6"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6347,7 +6347,7 @@
 	"upgrade_to_tower_6_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_6"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6366,7 +6366,7 @@
 	"upgrade_to_tower_7"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_7"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6385,7 +6385,7 @@
 	"upgrade_to_tower_7_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_7"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6404,7 +6404,7 @@
 	"upgrade_to_tower_8"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_8"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6423,7 +6423,7 @@
 	"upgrade_to_tower_8_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_8"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6442,7 +6442,7 @@
 	"upgrade_to_tower_9"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_9"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6461,7 +6461,7 @@
 	"upgrade_to_tower_9_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_9"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6480,7 +6480,7 @@
 	"upgrade_to_tower_10"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_10"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6499,7 +6499,7 @@
 	"upgrade_to_tower_10_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_10"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6537,7 +6537,7 @@
 	"upgrade_to_tower_11"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_11"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -6557,7 +6557,7 @@
 	"upgrade_to_tower_11_1"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
+		"AbilityTextureName"			"build_tower_11"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -9133,7 +9133,7 @@
 	"train_wood_worker_1"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"wood_worker_1"
+		"AbilityTextureName"		"item_assasin"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_1"
 		
@@ -11920,17 +11920,17 @@
 			"02"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"					"2000"
+				"bonus_str"					"200"
 			}
 			"03"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"					"2000"
+				"bonus_agi"					"200"
 			}
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"					"2000"
+				"bonus_int"					"200"
 			}
 		}
 	}
@@ -11959,17 +11959,17 @@
 			"01"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"					"300"
+				"bonus_str"					"30"
 			}
 			"02"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"					"300"
+				"bonus_agi"					"30"
 			}
 			"03"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"					"300"
+				"bonus_int"					"30"
 			}
 		}
 
@@ -11998,7 +11998,7 @@
 			"01"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"					"1200"
+				"bonus_int"					"120"
 			}
 		}
 	}
@@ -12025,7 +12025,7 @@
 			"01"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"					"300"
+				"bonus_agi"					"30"
 			}
 		}
 	}
@@ -12052,7 +12052,7 @@
 			"01"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"					"300"
+				"bonus_str"					"30"
 			}
 		}
 	}
@@ -16551,7 +16551,7 @@
 	    "01"
 	    {
 	      "var_type"      "FIELD_INTEGER"
-	      "mana_burn"     "3000"
+	      "mana_burn"     "30"
 	    }
 	    "02"
 	    {
@@ -16593,7 +16593,7 @@
 	    "01"
 	    {
 	      "var_type"      "FIELD_INTEGER"
-	      "mana_burn"     "6000"
+	      "mana_burn"     "60"
 	    }
 	    "02"
 	    {
@@ -16634,7 +16634,7 @@
 	    "01"
 	    {
 	      "var_type"      "FIELD_INTEGER"
-	      "mana_burn"     "12000"
+	      "mana_burn"     "120"
 	    }
 	    "02"
 	    {
@@ -16675,7 +16675,7 @@
 	    "01"
 	    {
 	      "var_type"      "FIELD_INTEGER"
-	      "mana_burn"     "24000"
+	      "mana_burn"     "240"
 	    }
 	    "02"
 	    {
@@ -16716,7 +16716,7 @@
 	    "01"
 	    {
 	      "var_type"      "FIELD_INTEGER"
-	      "mana_burn"     "48000"
+	      "mana_burn"     "480"
 	    }
 	    "02"
 	    {
@@ -17861,7 +17861,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_cost_per_second"	"50"
+				"mana_cost_per_second"	"1"
 			}
 		}
 	}
@@ -17898,17 +17898,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"500"
+				"bonus_int"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"500"
+				"bonus_str"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"500"
+				"bonus_agi"				"50"
 			}
 		}
 	}
@@ -18544,7 +18544,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"5"
+				"gold_cost"				"1"
 			}	
 			"03"
 			{
@@ -18769,17 +18769,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"2000"
+				"bonus_agi"				"200"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"2000"
+				"bonus_str"				"200"
 			}	
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"2000"
+				"bonus_int"				"200"
 			}		
 
 		}
@@ -18883,17 +18883,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"10000"
+				"bonus_str"				"1000"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"10000"
+				"bonus_agi"				"1000"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"10000"
+				"bonus_int"				"1000"
 			}	
 			"07"
 			{
@@ -19009,17 +19009,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"4000"
+				"bonus_int"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"4000"
+				"bonus_str"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"4000"
+				"bonus_agi"				"400"
 			}	
 
 		}
@@ -19057,12 +19057,12 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"15000"
+				"bonus_str"				"1500"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"-30000"
+				"bonus_int"				"-3000"
 			}		
 
 		}
@@ -19100,17 +19100,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"500"
+				"bonus_int"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"500"
+				"bonus_str"				"50"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"500"
+				"bonus_agi"				"50"
 			}	
 			"07"
 			{
@@ -19183,22 +19183,22 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"66666666"
+				"bonus_int"				"666"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"66666666"
+				"bonus_str"				"666"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"66666666"
+				"bonus_agi"				"666"
 			}
 			"07"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_armor"				"66666666"
+				"bonus_armor"				"66666"
 			}
 		}
 	}
@@ -19223,17 +19223,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"5000"
+				"bonus_int"				"500"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"5000"
+				"bonus_str"				"500"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"5000"
+				"bonus_agi"				"500"
 			}
 			"07"
 			{
@@ -19263,17 +19263,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"1000"
+				"bonus_int"				"100"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"1000"
+				"bonus_str"				"100"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"1000"
+				"bonus_agi"				"100"
 			}
 			"07"
 			{
@@ -19308,17 +19308,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"13000"
+				"bonus_str"				"1300"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"13000"
+				"bonus_agi"				"1300"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"13000"
+				"bonus_int"				"1300"
 			}	
 			"07"
 			{
@@ -19487,17 +19487,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"19000"
+				"bonus_int"				"1900"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"19000"
+				"bonus_str"				"1900"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"19000"
+				"bonus_agi"				"1900"
 			}	
 			"07"
 			{

@@ -81,7 +81,7 @@ function ToggleRewards() {
 function InitGameRewards()
 {
 	var week = player_table[2] - 1
-
+	
 	for (var i = 0; i < rewards.length; i++) {
 		let normal_day_week = i + 1
 		normal_day_week = normal_day_week + ( 7 * week)
@@ -156,7 +156,7 @@ function CreateReward(day, reward_day, reward_table, week)
 	RewardInfoLabel.AddClass("RewardInfoLabel");
 
 	let reward_info = reward_table[2]
-	if ( week > 0 && reward_day != 6)
+	if ( week > 0 ) // reward_coins
 	{
 		reward_info = (multiplier * (week+1)) * reward_table[2]
 	}

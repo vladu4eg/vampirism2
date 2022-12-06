@@ -6,6 +6,9 @@ function DamageProc(event)
         and not hero:HasModifier("modifier_potion_of_invulnerability") then
         hero:AddNewModifier(hero, event, "modifier_bonus_damage_proc", {Duration = event.Dur_time, Amount = event.Amount})
     end
+    if event.ability:GetName() == "item_lia_poleaxe_of_rage" then
+        event.ability:SetDroppable(false)
+    end
     Timers:CreateTimer(4, function()
         if event.ability:GetName() == "item_lia_poleaxe_of_rage" then
             event.ability:SpendCharge()
@@ -31,20 +34,28 @@ function modifier_bonus_damage_proc:IsHidden()
 end
 
 function modifier_bonus_damage_proc:OnCreated( kv )
-    self.count = 0
-	self:StartIntervalThink(1)
-	self:OnIntervalThink()
+        self.count = 0
+	    self:StartIntervalThink(1)
+	    self:OnIntervalThink()
+
+    
     
 end
 
 function modifier_bonus_damage_proc:OnIntervalThink()
-	self.count = self.count + 1
-    local caster = self:GetParent()
-	local changeHp = 500000
-	local reduction = caster:GetMaxHealth()*0.0001
-    if caster:GetHealth()-changeHp > reduction then       --Проверка уровня хп после уменьшения
-        caster:SetHealth(caster:GetHealth()-changeHp ) 
-    else
-      caster:SetHealth( reduction )
-    end	
+        
+
+        self.count = self.count + 1
+        local caster = self:GetParent()
+        local changeHp = 500000
+        local reduction = caster:GetMaxHealth()*0.0001
+        if caster == nil then
+            return false
+        end
+        if caster:GetHealth()-changeHp > reduction then       --Проверка уровня хп после уменьшения
+            caster:SetHealth(caster:GetHealth()-changeHp ) 
+        else
+            caster:SetHealth( reduction )
+        end	
+	
 end

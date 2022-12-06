@@ -23,26 +23,19 @@ function Shop.RequestVip(pID, steam, callback)
 		DeepPrintTable(obj)
 		DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
-		for id = 1, 80 do
+		for id = 1, 84 do
 			parts[id] = "nill"
 		end
 		CustomNetTables:SetTableValue("Particles_Tabel",tostring(pID),parts)
 		for id=1,#obj do
 			parts[obj[id].num] = "normal"
 			CustomNetTables:SetTableValue("Particles_Tabel",tostring(pID),parts)
-			PoolTable["1"][tostring(obj[id].num+100)] =  "1" .. tostring(obj[id].num)
+			PoolTable["1"][tostring(obj[id].num+100)] = tostring(obj[id].num+100)
 			
 			if tonumber(obj[id].num) == 11 then
 				PoolTable["1"]["601"] = "601"
 				PoolTable["1"]["620"] = "620"
-			end
-
-			if tonumber(obj[id].num) == 44 or tonumber(obj[id].num) == 29 or tonumber(obj[id].num) == 28 or tonumber(obj[id].num) == 27 or tonumber(obj[id].num) == 32 then
-				GameRules.BonusPercent = GameRules.BonusPercent  + 0.02
-			end
-			if tonumber(obj[id].num) == 8 then
-				GameRules.BonusPercent = GameRules.BonusPercent  + 0.5
-			end 	
+			end	
 		end
 		CustomNetTables:SetTableValue("Shop", tostring(pID), PoolTable)
 		return obj
@@ -259,8 +252,6 @@ function Shop.RequestBonusTroll(pID, steam, callback)
 				PoolTable["2"]["0"] = obj[1].chance
 				PoolTable["2"]["1"] = obj[1].srok
 				local roll_chance = RandomFloat(0, 100)
-				DebugPrint("Donate Chance: ".. tonumber(obj[1].chance))
-				DebugPrint("Donate Random: ".. roll_chance)
 				if roll_chance <= tonumber(obj[1].chance) and PlayerResource:GetConnectionState(pID) == 2 then
 					table.insert(GameRules.BonusTrollIDs, {pID, obj[1].chance})
 				end	
@@ -338,9 +329,10 @@ function Shop:BuyShopItem(table, callback)
 	if not GameRules.isTesting  then
 		if GameRules:IsCheatMode() then return end
 	end
-    local steam = tostring(PlayerResource:GetSteamID(table.id))
+    local steam = tostring(PlayerResource:GetSteamID(tonumber(table.id)))
     table.SteamID = steam
     table.MatchID = MatchID
+	table.id = tostring(table.id)
 	local req = CreateHTTPRequest("POST",GameRules.server .. "buy/")
 	local encData = json.encode(table)
 	DebugPrint("***********************************************")
@@ -370,7 +362,7 @@ function Shop:BuyShopItem(table, callback)
 			Shop.RequestBonus(table.id, steam, callback)
 		elseif string.match(table.Nick, "%a+") == "chest" then
 			Shop.RequestChests(table.id, steam, callback)
-		elseif string.match(table.Nick, "%a+") == "spray" or string.match(table.Nick, "%a+") == "sounds" then
+		elseif string.match(table.Nick, "%a+") == "spray" or string.match(table.Nick, "%a+") == "sounds" or string.match(table.Nick, "%a+") == "sound" then
 			Shop.RequestSounds(table.id, steam, callback)
 		elseif string.match(table.Nick, "%a+") == "skin" then
 			Shop.RequestSkin(table.id, steam, callback)
@@ -478,38 +470,37 @@ end
 -- Хранишь айди сундука и его шмотки с шансами
 -- У gold/gem есть 3 массив это от скольки до скольки
 Shop.Chests = {
-	--{"501"] = { {1, 10},{2, 10},{3, 10},{4, 10},{5, 10},{6, 10}, {7, 10}, {8, 10}, {9, 10}, {"gold", 10, {100, 300} } },
-	--{"502"] = { {103, 10},{11, 10},{12, 10},{13, 10},{14, 10},{15, 10},{16, 10},{17, 10},{18, 10}, {"gold", 10, {100, 300} } }
-	["523"] = {{802,100},{111,100},{112,100},{113,100},{114,100},{115,100},{116,100},{103,100},{127,100}, {"gold", 20, {10, 100} } },
+	--{"501"] = { {1, 25},{2, 25},{3, 25},{4, 25},{5, 25},{6, 25}, {7, 25}, {8, 25}, {9, 25}, {"gold", 10, {100, 300} } },
+	--{"502"] = { {103, 25},{11, 25},{12, 25},{13, 25},{14, 25},{15, 25},{16, 25},{17, 25},{18, 25}, {"gold", 10, {100, 300} } }
 	
-	["501"] = {{704,60},{705,60},{818,40},{24,60},{117,60},{130,60},{116,50},{602,50},{603,50}, 	{"gold", 20, {10, 100} } },
-	["502"] = {{712,60},{716,60},{819,40},{25,60},{118,60},{131,60},{602,50},{603,50},{604,50}, 	{"gold", 20, {15, 150} } },
-	["503"] = {{723,60},{719,60},{822,40},{26,60},{119,60},{114,60},{115,60},{605,50},{606,50}, 	{"gold", 20, {10, 100} } },
-	["504"] = {{724,60},{801,40},{836,40},{20,60},{120,60},{111,60},{605,50},{606,50},{607,50}, 	{"gold", 20, {15, 150} } },
-	["505"] = {{720,60},{802,40},{838,40},{21,60},{122,60},{112,60},{606,50},{607,50},{608,50}, 	{"gold", 20, {15, 150} } },
-	["506"] = {{706,60},{803,40},{41,60},{31,60},{35,40},{103,60},{607,50},{613,50},{609,50}, 	{"gold", 20, {20, 200} } },
-	["507"] = {{707,60},{804,40},{36,60},{37,60},{19,20},{129,10},{113,60},{615,50},{612,50}, 	{"gold", 20, {25, 250} } },
-	["508"] = {{708,60},{805,40},{29,60},{39,60},{28,20},{132,10},{615,50},{612,50},{616,50}, 	{"gold", 20, {30, 300} } },
-	["509"] = {{709,60},{806,40},{5,60},{10,60},{32,20},{133,10},{614,50},{616,50},{617,50}, 	{"gold", 20, {35, 350} } },
-	["510"] = {{710,60},{807,40},{6,60},{38,60},{127,10},{134,10},{46,20},{635,50},{636,50}, 	{"gold", 20, {40, 400} } },
-	["511"] = {{713,60},{810,40},{7,60},{40,60},{128,10},{135,10},{47,20},{637,50},{638,50}, 	{"gold", 20, {40, 400} } },
-	["512"] = {{717,60},{811,40},{8,60},{42,60},{126,60},{144,10},{48,20},{639,50},{640,50}, 	{"gold", 20, {45, 450} } },
-	["513"] = {{711,60},{813,40},{9,60},{43,60},{124,60},{146,10},{49,20},{641,50},{642,50}, 	{"gold", 20, {45, 450} } },
+	["501"] = {{704,25},{705,25},{818,25},{24,25},{117,25},{130,25},{116,25},{602,25},{603,25}, 	{"gold", 20, {10, 100} } },
+	["502"] = {{712,25},{716,25},{819,25},{25,25},{118,25},{131,25},{602,25},{603,25},{604,25}, 	{"gold", 20, {15, 125} } },
+	["503"] = {{723,25},{719,25},{822,25},{26,25},{119,25},{114,25},{115,25},{605,25},{606,25}, 	{"gold", 20, {10, 100} } },
+	["504"] = {{724,25},{801,25},{836,25},{20,25},{120,25},{111,25},{605,25},{606,25},{607,25}, 	{"gold", 20, {15, 125} } },
+	["505"] = {{720,25},{802,25},{838,25},{21,25},{122,25},{112,25},{606,25},{607,25},{608,25}, 	{"gold", 20, {15, 125} } },
+	["506"] = {{706,25},{803,25},{41,25},{31,25},{35,25},{103,25},{607,25},{613,25},{609,25}, 	{"gold", 20, {20, 200} } },
+	["507"] = {{707,25},{804,25},{36,25},{37,25},{19,25},{129,25},{113,25},{615,25},{612,25}, 	{"gold", 20, {25, 225} } },
+	["508"] = {{708,25},{805,25},{29,25},{39,25},{28,25},{132,25},{615,25},{612,25},{616,25}, 	{"gold", 20, {30, 300} } },
+	["509"] = {{709,25},{806,25},{5,25},{10,25},{32,25},{133,25},{614,25},{616,25},{617,25}, 	{"gold", 20, {35, 325} } },
+	["510"] = {{710,25},{807,25},{6,25},{38,25},{127,25},{134,25},{46,25},{635,25},{636,25}, 	{"gold", 20, {40, 400} } },
+	["511"] = {{713,25},{810,25},{7,25},{40,25},{128,25},{135,25},{47,25},{637,25},{638,25}, 	{"gold", 20, {40, 400} } },
+	["512"] = {{717,25},{811,25},{8,25},{42,25},{126,25},{144,25},{48,25},{639,25},{640,25}, 	{"gold", 20, {45, 425} } },
+	["513"] = {{711,25},{813,25},{9,25},{43,25},{124,25},{146,25},{49,25},{641,25},{642,25}, 	{"gold", 20, {45, 425} } },
 	--66
-	["514"] = {{614,50},{602,60},{603,50},{604,50},{605,40},{606,50},{607,50},{608,50},{609,50}, 	{"gold", 20, {100, 1000} } },
-	["515"] = {{615,60},{612,10},{616,50},{617,50},{613,40},{639,50},{640,50},{641,50},{642,50}, 	{"gold", 20, {100, 1000} } },
+	["514"] = {{614,25},{602,25},{603,25},{604,25},{605,25},{606,25},{607,25},{608,25},{609,25}, 	{"gold", 20, {100, 1000} } },
+	["515"] = {{615,25},{612,25},{616,25},{617,25},{613,25},{639,25},{640,25},{641,25},{642,25}, 	{"gold", 20, {100, 1000} } },
 
 	--wolf 31
-	["516"] = {{701,60},{814,40},{827,40},{18,60},{46,10},{133,10},{134,10},{624,50},{621,50}, 	{"gold", 20, {10, 100} } },
-	["517"] = {{702,60},{816,40},{833,40},{23,60},{115,60},{135,10},{624,50},{621,50},{622,50}, 	{"gold", 20, {15, 150} } },
-	["518"] = {{703,60},{722,60},{834,40},{27,60},{47,10},{50,20},{621,50},{622,50},{627,50}, 	{"gold", 20, {20, 200} } },
-	["519"] = {{715,60},{721,60},{44,60},{22,60},{48,10},{51,20},{623,50},{628,50},{625,50}, 	{"gold", 20, {20, 200} } },
-	["520"] = {{714,60},{718,60},{45,60},{34,60},{52,20},{610,50},{611,50},{629,50},{626,50}, 	{"gold", 20, {35, 350} } },
+	["516"] = {{701,25},{814,25},{827,25},{18,25},{46,25},{133,25},{134,25},{624,25},{621,25}, 	{"gold", 20, {10, 100} } },
+	["517"] = {{702,25},{816,25},{833,25},{23,25},{115,25},{135,25},{624,25},{621,25},{622,25}, 	{"gold", 20, {15, 125} } },
+	["518"] = {{703,25},{722,25},{834,25},{27,25},{47,25},{50,25},{621,25},{622,25},{627,25}, 	{"gold", 20, {20, 200} } },
+	["519"] = {{715,25},{721,25},{44,25},{22,25},{48,25},{51,25},{623,25},{628,25},{625,25}, 	{"gold", 20, {20, 200} } },
+	["520"] = {{714,25},{718,25},{45,25},{34,25},{52,25},{610,25},{611,25},{629,25},{626,25}, 	{"gold", 20, {35, 325} } },
 
-	["521"] = {{620,60},{624,50},{621,40},{622,60},{627,40},{628,60},{625,50},{629,50},{626,50}, {"gold", 20, {100, 1000} } },
+	["521"] = {{620,25},{624,25},{621,25},{622,25},{627,25},{628,25},{625,25},{629,25},{626,25}, {"gold", 20, {100, 1000} } },
 
-	["522"] = {{808,60},{809,50},{825,15},{33,60},{53,40},{54,60},{55,20},{618,50},{619,50}, {"gold", 20, {45, 450} } }
-
+	["522"] = {{808,25},{809,25},{825,25},{33,25},{53,25},{54,25},{55,25},{618,25},{619,25}, {"gold", 20, {45, 425} } },
+	["523"] = {{802,99},{111,99},{112,99},{113,99},{114,99},{115,99},{116,99},{103,99},{127,99}, {"gold", 20, {10, 100} } }
 	
 }
 
@@ -549,7 +540,8 @@ function Shop:GetReward(chest_id, playerID)
 		if RollPercentage(reward[2]) then
 		    reward_recieve = reward[1]
 			DebugPrint("playerID " .. playerID)
-			DebugPrintTable(PoolTable["1"])
+			
+			
 			for i, v in pairs(PoolTable["1"]) do
 				if tostring(reward[1]) == tostring(v) then
 					reward_recieve = Shop.Chests[chest_id][10][1]
@@ -566,7 +558,7 @@ function Shop:GetReward(chest_id, playerID)
 
 	data.Nick = chest_id 
 	data.Num = tostring(reward_recieve)
-	data.id = playerID
+	data.id = tostring(playerID)
 	
 	if reward_recieve == "gold" then -- Проверка что выпала голда
 		data.Gem = 0
@@ -821,9 +813,10 @@ function Shop:EventRewards(table, callback)
     local steam = tostring(PlayerResource:GetSteamID(table.id))
     table.SteamID = steam
     table.MatchID = MatchID
-	table.playerID = table.id
+	table.playerID = tostring(table.id)
 	table.Gem = 0
 	table.Gold = 0
+	table.id = tostring(table.id)
 	--table.Count 
 	-- table.type
 	local req = CreateHTTPRequest("POST",GameRules.server .. "postrewards/")
@@ -890,7 +883,7 @@ function Shop:EventBattlePass(table, callback)
     local steam = tostring(PlayerResource:GetSteamID(table.PlayerID))
     table.SteamID = steam
     table.MatchID = MatchID
-	table.playerID = table.PlayerID
+	table.playerID = tostring(table.PlayerID)
 	table.Gem = 0
 	table.Gold = 0
 	--table.Count 

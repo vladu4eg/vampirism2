@@ -208,14 +208,14 @@
 		"DOTA_Tooltip_ability_item_end_game_Description"	"Забирает ману у всех Людей. Дает иммунитет к магии. Аура с посекундным уроном."
 		"DOTA_Tooltip_Ability_buy_item_recipe_end_game_Description"	"<h1>РЕЦЕПТ</h1><h2>Необходимые предметы:<br>Monster Claws<br>Magic Immunity Shield<br></h2>Забирает ману у всех Людей. Дает иммунитет к магии. Аура с посекундным уроном."
 
-		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Активное: Chain Lightning</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
-		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>РЕЦЕПТ<br>Активное: Chain Lightning</h1><h2>Необходимые предметы:<br>Pulse Staff<br>Fiery Comet<br></h2> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке."
+		"DOTA_Tooltip_Ability_item_pulse_ricochet_Description"	"<h1>Активное: Chain Lightning</h1> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке. Наносит 8000 урона постройкам. "
+		"DOTA_Tooltip_Ability_buy_item_recipe_pulse_ricochet_Description"	"<h1>РЕЦЕПТ<br>Активное: Chain Lightning</h1><h2>Необходимые предметы:<br>Pulse Staff<br>Fiery Comet<br></h2> Наносит %lightning_damage% урона %lightning_bounces% случайным юнитам по цепочке. Наносит 8000 урона постройкам. "
 
 		"DOTA_Tooltip_ability_item_lia_staff_of_illusions_Description"	"<h1>Активное: Illusion</h1> Создает образ целевой единицы. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд."
 		"DOTA_Tooltip_Ability_buy_item_recipe_lia_staff_of_illusions_Description"	"<h1>РЕЦЕПТ<br>Активное: Illusion</h1> <h2>Необходимые предметы:<br>Bull Mark<br></h2> Создает образ целевой единицы. Иллюзия получает %illusion_incoming_damage%%% урона и наносит %illusion_outgoing_damage%%% урона.<br>Иллюзия длится %illusion_duration% секунд."
 
-		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +10 ко всем характеристикам."
-		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +10 ко всем характеристикам."
+		"DOTA_Tooltip_Ability_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +1 ко всем характеристикам."
+		"DOTA_Tooltip_ability_buy_item_demonic_remains_Description"	"Каждый убитый юнит дает вам +1 ко всем характеристикам."
 
 
 		"DOTA_Tooltip_Ability_item_pick_axe"	"Long Axe (Anti GM)"
@@ -405,13 +405,13 @@
 
 		"DOTA_Tooltip_ability_build_workersguild_1_Description"                            "Здесь можно нанять рабочих!<br>Улучшения открывают доступ к улучшенным рабочим."
 
-		"DOTA_Tooltip_Ability_upgrade_to_workersguild_2_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_2_Description"                         "Улучшения открывают доступ к улучшенным рабочим."
 
-		"DOTA_Tooltip_Ability_upgrade_to_workersguild_3_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_3_Description"                         "Улучшения открывают доступ к улучшенным рабочим."
 
-		"DOTA_Tooltip_Ability_upgrade_to_workersguild_4_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_4_Description"                         "Улучшения открывают доступ к улучшенным рабочим."
 
-		"DOTA_Tooltip_Ability_upgrade_to_workersguild_5_Description"                         "лучшения открывают доступ к улучшенным рабочим."
+		"DOTA_Tooltip_Ability_upgrade_to_workersguild_5_Description"                         "Улучшения открывают доступ к улучшенным рабочим."
 
 		"DOTA_Tooltip_Ability_slayer_ensnare_Description"					"Связывает вампира благословенной сетью так, что он не может двигаться."
 		"DOTA_Tooltip_ability_slayer_summon_tracker_Description"                          "Создает рабочих, которые ремонтируют здания."
@@ -541,8 +541,8 @@
 
 		"DOTA_Tooltip_ability_buy_item_blood_soul_burn_Description"	"Окружает врага волшебным пламенем, которое наносит урон с течением времени, предотвращает использование заклинаний и снижает урон от атаки. Soul Burn также значительно увеличивает скорость атаки."
 
-		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"Сфера дает +5 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
-		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"Сфера дает +5 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
+		"DOTA_Tooltip_Ability_item_sphere_doom_Description"							"Сфера дает +1 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
+		"DOTA_Tooltip_Ability_buy_item_sphere_doom_Description"							"Сфера дает +1 к характеристикам всем Вампирам. Активное умение позволяет сделать блинк на короткие дистанции. ."	
 
 		"DOTA_Tooltip_ability_item_lia_potion_of_invulnerability_Description"	"<h1>Активное: Invulnerability</h1>Дает неуязвимость на %duration% секунд."
 
@@ -600,6 +600,11 @@
 	
 		"DOTA_Tooltip_Ability_smoke_screen_datadriven_Description"                               	"Замедляет на -50 на 20 секунд. 50% шанс промахнуться."
 
+		"DOTA_Tooltip_ability_build_tree_Description"                                         "Восстанавливает срубленные деревья. Не работает, если на дереве есть здание."
+
+		"DOTA_Tooltip_Ability_attack_tree_skill_Description"										"Позволяет срубить одно дерево."
+		"DOTA_Tooltip_ability_build_research_lab_1_Description"                             "Для улучшения характеристик ваших юнитов или построек необходимо построить лабораторию и изучить необходимые способности."
+		"DOTA_Tooltip_Ability_build_house_1_Description"                                 "Постройте основное здание, которое откроет доступ к улучшениям построек, героев и юнитов."
 
 
         "topptext"                                      									"Лучшие игроки в общем рейтинге: "
@@ -684,8 +689,8 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_not_time_3_min"																"Обмен доступен после 3 минуты."
 		
 		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon: https://patreon.com/troll_vs_elves3</font>"
-		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
-		"donate3"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/tve3</font>"
+		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
+		"donate3"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/cfkjMbffsu</font>"
 
 		//Ежедневные задания
 //В основном локализация по заданиям идет

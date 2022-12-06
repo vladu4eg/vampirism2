@@ -28,14 +28,14 @@ function modifier_demonic_remains_killer:GetModifierBonusStats_Strength()
 	--	player = self:GetParent()
 	--end
 
-	return 10 * self:GetStackCount()
+	return 1 * self:GetStackCount()
 end
 
 function modifier_demonic_remains_killer:GetModifierBonusStats_Agility()
 
-	return 10 * self:GetStackCount()
+	return 1 * self:GetStackCount()
 end
 
 function modifier_demonic_remains_killer:GetModifierBonusStats_Intellect()
-	return  10 * self:GetStackCount()
+	return  1 * self:GetStackCount()
 end

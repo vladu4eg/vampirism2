@@ -458,10 +458,10 @@ function SkillOnChannelSucceeded(event)
 		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 		local skill_name = GetAbilityKV(ability:GetAbilityName()).SkillName
 		local stack = ability:GetLevel()
-		hero:RemoveModifierByName(skill_name)
-		Timers:CreateTimer(1,function()
+		--hero:RemoveModifierByName(skill_name)
+		--Timers:CreateTimer(1,function()
 			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
-		end)
+		--end)
 		ability:SetLevel(stack+1)
 	end
 end
@@ -548,7 +548,7 @@ function SpawnUnitOnChannelSucceeded(event)
 			local abil2 = slayer:FindAbilityByName("slayer_blink")
         	abil2:SetLevel(abil2:GetMaxLevel())
 			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
-			slayer:AddNewModifier(slayer, nil, "modifier_anti_hp_mana_regen", {})
+			--slayer:AddNewModifier(slayer, nil, "modifier_anti_hp_mana_regen", {})
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
 			hero.slayer:SetRespawnPosition(caster:GetAbsOrigin())
@@ -567,10 +567,20 @@ function SpawnUnitOnChannelSucceeded(event)
 			table.insert(hero.units,unit)
 			unit:SetControllableByPlayer(playerID, true)
 			
-			if string.match(unit_name,"%a+") == "worker" then
+			if string.match(unit_name,"build_worker") then
 				ABILITY_Repair = unit:FindAbilityByName("repair")
 				ABILITY_Repair:ToggleAutoCast()
-			end
+				unit.units = {}
+				unit.disabledBuildings = {}
+				unit.buildings = {} -- This keeps the name and quantity of each building
+				for _, buildingName in ipairs(GameRules.buildingNames) do
+					unit.buildings[buildingName] = {
+						startedConstructionCount = 0,
+						completedConstructionCount = 0
+					}
+				end
+				UpdateSpells(hero)
+			end			
 		end
 	end
 end

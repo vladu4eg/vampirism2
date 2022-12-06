@@ -17,7 +17,7 @@
 		"Ability8" 					"build_gold_mine_1" //
 		"Ability9"					"attack_tree_skill"
 		"Ability10"					"build_tree"
-		"Ability11"					"build_flag"
+		"Ability11"					""
 		"Ability12"					""
 		"Ability13"					"repair"
 		"Ability14"   	    		"attribute_antibonuses"
@@ -98,12 +98,12 @@
 		"AttackDamageMax"     "71"                   // Damage range max.
 		
 		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "320"                   // Base strength
-		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "320"                   // Base intelligence
-		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "320"                   // Base agility
-		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
+		"AttributeBaseStrength"   "32"                   // Base strength
+		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "32"                   // Base intelligence
+		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "32"                   // Base agility
+		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -151,7 +151,7 @@
 		"Ability16"   	    ""
 		"Ability17"   	    ""
 		"Ability18"   	    "attribute_antibonuses"
-		
+	
 		"ArmorPhysical"       "24"                 // Physical protection.
 		"MagicalResistance"       "30"                 // Magical protection (percentage).
 		
@@ -161,12 +161,12 @@
 		"AttackDamageMax"     "71"                   // Damage range max.
 		
 		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "350"                   // Base strength
-		"AttributeStrengthGain"   "60"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "350"                   // Base intelligence
-		"AttributeIntelligenceGain" "60"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "350"                   // Base agility
-		"AttributeAgilityGain"    "60"                   // Agility bonus per level.
+		"AttributeBaseStrength"   "32"                   // Base strength
+		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "32"                   // Base intelligence
+		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "32"                   // Base agility
+		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -175,7 +175,7 @@
 		"BoundsHullName"      "DOTA_HULL_SIZE_REGULAR"
 		//"RingRadius"        "70"
 		"CollisionSize"			"48"
-
+		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"       "500"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
@@ -347,12 +347,12 @@
 		"AttackDamageMax"     "71"                   // Damage range max.
 		
 		"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "320"                   // Base strength
-		"AttributeStrengthGain"   "50"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "320"                   // Base intelligence
-		"AttributeIntelligenceGain" "50"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "320"                   // Base agility
-		"AttributeAgilityGain"    "50"                   // Agility bonus per level.
+		"AttributeBaseStrength"   "32"                   // Base strength
+		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "32"                   // Base intelligence
+		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "32"                   // Base agility
+		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -363,7 +363,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "450"                 // Speed.
+		"MovementSpeed"       "500"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "68000"                 // Base health.
@@ -414,8 +414,8 @@
     // Attack
     //-------------------------------------------------------------------------------------------------------------
     "AttackCapabilities"    "DOTA_UNIT_CAP_RANGED_ATTACK"
-    "AttackDamageMin"       "250" // Damage range min.
-    "AttackDamageMax"     "258" // Damage range max.
+    "AttackDamageMin"       "50" // Damage range min.
+    "AttackDamageMax"     "58" // Damage range max.
     "AttackRate"        "0.5" // Speed of attack.
     "AttackAnimationPoint"    "0.3" // Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"  "600" // Range within a target can be acquired.
@@ -426,12 +426,12 @@
     // Attributes
     //-------------------------------------------------------------------------------------------------------------
     "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
-    "AttributeBaseStrength"   "48" // Base strength
-    "AttributeStrengthGain"   "48" // Strength bonus per level.
+    "AttributeBaseStrength"   "5" // Base strength
+    "AttributeStrengthGain"   "5" // Strength bonus per level.
     "AttributeBaseIntelligence" "0" // Base intelligence
     "AttributeIntelligenceGain" "0" // Intelligence bonus per level.
-    "AttributeBaseAgility"    "48" // Base agility
-    "AttributeAgilityGain"    "48" // Agility bonus per level.
+    "AttributeBaseAgility"    "5" // Base agility
+    "AttributeAgilityGain"    "5" // Agility bonus per level.
 
     // Movement
     //-------------------------------------------------------------------------------------------------------------
@@ -453,6 +453,8 @@
 	"BountyXP"          "50"                 // Experience earn.
 	"BountyGoldMin"       "50"                   // Gold earned min.
 	"BountyGoldMax"       "50"                   // Gold earned max.
+
+	"CollisionSize"			"1"
   }
 
   	"npc_dota_hero_wisp"

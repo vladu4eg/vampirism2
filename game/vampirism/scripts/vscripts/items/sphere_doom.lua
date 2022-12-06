@@ -56,14 +56,14 @@ function modifier_hero_killer:DeclareFunctions()
 end
 
 function modifier_hero_killer:GetModifierBonusStats_Strength()
-	return ( 5 * self:GetStackCount()) 
+	return ( 1 * self:GetStackCount()) 
 end
 
 function modifier_hero_killer:GetModifierBonusStats_Agility()
 
-	return (5 * self:GetStackCount()) 
+	return (1 * self:GetStackCount()) 
 end
 
 function modifier_hero_killer:GetModifierBonusStats_Intellect()
-	return (5 * self:GetStackCount()) 
+	return (1 * self:GetStackCount()) 
 end

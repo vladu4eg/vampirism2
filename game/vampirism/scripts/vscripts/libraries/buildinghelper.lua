@@ -2604,7 +2604,7 @@ function BuildingHelper:IsInsideBaseArea(unit, location, nameBuilding, build)
     local baseIndex = BuildingHelper:IdBaseArea(location)
 
     DebugPrint("FLAG")
-    DebugPrint(hero:FindAbilityByName("build_flag"):GetCooldownTime())
+
     if baseIndex ~= nil then
         if GameRules.PlayersBase[playerID] ~= baseIndex then
             for pID = 0, DOTA_MAX_TEAM_PLAYERS do

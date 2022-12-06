@@ -223,6 +223,21 @@ function Build( event )
                 unit:ReduceMana(1000)
             end
         end
+        if string.match(building_name,"research_lab") then
+            for i=0, unit:GetAbilityCount()-1 do
+                local buildingAbility = unit:GetAbilityByIndex(i)
+                if buildingAbility then
+		            local skill_name = GetAbilityKV(buildingAbility:GetAbilityName()).SkillName
+		            local levelAbil = buildingAbility:GetLevel()
+                    if hero:FindModifierByName(skill_name) then
+                        if hero:FindModifierByName(skill_name):GetStackCount()+1 ~= buildingAbility:GetLevel() then
+                            buildingAbility:SetLevel(hero:FindModifierByName(skill_name):GetStackCount()+1)
+                        end	
+                    end
+                end
+            end
+        end
+        
 
     end)
     
@@ -486,7 +501,20 @@ function UpgradeBuilding( event )
         for _, value in ipairs(hero.units) do
             UpdateUpgrades(value)
         end
-
+        if string.match(newBuildingName,"research_lab") then
+            for i=0, newBuilding:GetAbilityCount()-1 do
+                local buildingAbility = newBuilding:GetAbilityByIndex(i)
+                if buildingAbility then
+		            local skill_name = GetAbilityKV(buildingAbility:GetAbilityName()).SkillName
+		            local levelAbil = buildingAbility:GetLevel()
+                    if hero:FindModifierByName(skill_name) then
+                        if hero:FindModifierByName(skill_name):GetStackCount()+1 ~= buildingAbility:GetLevel() then
+                            buildingAbility:SetLevel(hero:FindModifierByName(skill_name):GetStackCount()+1)
+                        end	
+                    end
+                end
+            end
+        end
     end)
 end
 

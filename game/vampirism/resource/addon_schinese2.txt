@@ -243,13 +243,13 @@
 		"donate1"																			"<font color='#58ACFA'>你可以在Patreon上支持这个游戏。</font>"
 		"donate2"																			"<font color='#58ACFA'>你可以通过在Patreon上支持我们的项目来增加你获得吸血鬼的机会，增加你获得的点数或获得其中一个独特的化妆品效果。</font>"
 		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
-		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/tve3</font>"
+		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
 		"donate5"																			"<font color='#58ACFA'>你可以在我们的Discord服务器上分享想法/错误/愿望!</font>"
 		"donate6"																			"<font color='#58ACFA'>感谢所有的测试者为定制化的发展做出了巨大的贡献! 谢谢你 ：*</font>"
 		"donate7"																			"<font color='#58ACFA'></font>"
 		"donate8"																			"<font color='#58ACFA'></font>"
 		"donate9"																			"<font color='#58ACFA'></font>"
-		"donate10"																			"<font color='#58ACFA'>如果你需要帮助，请在Discord上联系我: https://discord.gg/tve3</font>"
+		"donate10"																			"<font color='#58ACFA'>如果你需要帮助，请在Discord上联系我: https://discord.gg/cfkjMbffsu</font>"
 		
 		"loading_text"																		"&lt;=点击这里获取提示!<br>
 		                                                                                    开始游戏后不要改变热键.

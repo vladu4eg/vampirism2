@@ -27,6 +27,8 @@ function ChainLightning( event )
 	EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)
 	if target.state ~= "complete" then
 		ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+	elseif target.state == "complete" and ability:GetName() == "item_pulse_ricochet" then
+		ApplyDamage({ victim = target, attacker = hero, damage = 8000, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
 	end
 	--PopupDamage(target,math.floor(damage))
 
@@ -44,7 +46,7 @@ function ChainLightning( event )
 	
 			-- unit selection and counting
 			units = FindUnitsInRadius(hero:GetTeamNumber(), target:GetOrigin(), target, bounce_range, DOTA_UNIT_TARGET_TEAM_ENEMY, 
-						DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, true)
+						DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, true)
 
 			-- particle and dummy to start the chain
 			targetVec = target:GetAbsOrigin()
@@ -99,6 +101,8 @@ function ChainLightning( event )
 			damage = damage - (damage*decay)
 			if target.state ~= "complete" then
 				ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
+			elseif target.state == "complete" and ability:GetName() == "item_pulse_ricochet" then
+				ApplyDamage({ victim = target, attacker = hero, damage = 8000, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
 			end
 			--PopupDamage(target,math.floor(damage))
 			print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
