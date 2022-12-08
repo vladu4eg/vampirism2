@@ -38,26 +38,21 @@ end
 
 function modifier_hp_elf:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			local countStack = caster:FindModifierByName("modifier_hp_elf"):GetStackCount()
+			if countStack == 0 then
+				countStack = 1
+			end
+			self:SetStackCount(countStack)
+	end
+end
+
+function modifier_hp_elf:OnRefresh( kv )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			local countStack = caster:FindModifierByName("modifier_hp_elf"):GetStackCount()
 			self:SetStackCount(countStack)
-			target:CalculateStatBonus(true)
-			self:ForceRefresh()
-			self:SendBuffRefreshToClients()
-			target:CalculateStatBonus(true)
-			self:StartIntervalThink( 1 )
-			self:OnIntervalThink()
-		end)
-		
 	end
-end
-
-function modifier_hp_elf:OnIntervalThink()
-	local target = self:GetParent()
-	target:CalculateStatBonus(true)
-	self:ForceRefresh()
-	self:SendBuffRefreshToClients()
-	target:CalculateStatBonus(true)
 end

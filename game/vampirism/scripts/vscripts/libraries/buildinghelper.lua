@@ -915,6 +915,32 @@ function BuildingHelper:OrderFilter(order)
                 end
                 return false
             end
+            if string.match(abilityName, "train_") then
+                local unitName = unit:GetUnitName()
+                for _, selectedEntityIndex in pairs(selectedEntities) do
+                    local selectedEntityHandle = EntIndexToHScript(selectedEntityIndex)
+                    if selectedEntityHandle and
+                        selectedEntityHandle:GetUnitName() == unitName then
+                        for a = 0, selectedEntityHandle:GetAbilityCount() - 1 do
+                            local upgradeAbility = selectedEntityHandle:GetAbilityByIndex(a)
+                            if upgradeAbility and
+                                upgradeAbility:GetAbilityName() == abilityName then
+                                ExecuteOrderFromTable(
+                                    {
+                                        UnitIndex = selectedEntityIndex,
+                                        OrderType = DOTA_UNIT_ORDER_CAST_NO_TARGET,
+                                        TargetIndex = targetIndex,
+                                        AbilityIndex = upgradeAbility:GetEntityIndex(),
+                                        Queue = true
+                                    })
+                                    goto entityLoop
+                            end
+                        end
+                    end
+                    ::entityLoop::
+                end
+                return false
+            end
         end
     end
     if order_type == DOTA_UNIT_ORDER_RADAR then

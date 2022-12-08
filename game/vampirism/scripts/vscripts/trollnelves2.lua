@@ -243,8 +243,6 @@ function trollnelves2:OnHeroInGame(hero)
         InitializeBuilder(hero)
         elseif hero:IsTroll() then
         InitializeTroll(hero)
-        elseif hero:IsAngel() then
-        InitializeAngel(hero)
         elseif hero:IsWolf() then
         InitializeWolf(hero)
     end
@@ -348,8 +346,8 @@ function InitializeBadHero(hero)
         -- hero:AddNewModifier(hero, nil, "modifier_anti_hp_mana_regen", {})
         hero:AddNewModifier(hero, nil, "modifier_max_attackspeed", {})
         
-
-        
+        hero:AddItemByName("item_tpscroll_troll")
+        hero:AddItemByName("item_tpscroll_troll")
     end
     --hero:SetStashEnabled(false)
 end
@@ -691,8 +689,6 @@ function GetModifiedName(orgName)
         return "<font color='#00CC00'>Human</font>"
         elseif string.match(orgName, WOLF_HERO) then
         return "<font color='#800000'>Wolf</font>"
-        elseif string.match(orgName, ANGEL_HERO) then 
-        return "<font color='#0099FF'>Angel</font>"
         else
         return "?"
     end
@@ -869,7 +865,6 @@ end
 Slayers = {}
 function SlayerPool()
     Timers:CreateTimer(function()
-        local trigger = Entities:FindAllByName("trigger_lvl_slayers")
         for pID=0,DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
                 local hero = PlayerResource:GetSelectedHeroEntity(pID)
@@ -877,7 +872,7 @@ function SlayerPool()
                     local team = hero:GetTeamNumber()
                     if team ~= nil then
                         if team == DOTA_TEAM_GOODGUYS and hero.slayer ~= nil then
-                            for index, shopTrigger in ipairs(trigger) do
+                            for index, shopTrigger in ipairs(GameRules.slayerUP) do
                                 if shopTrigger:IsTouching(hero.slayer) then
                                     hero.slayer:HeroLevelUp(true)
                                 end

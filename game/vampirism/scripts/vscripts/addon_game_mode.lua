@@ -410,6 +410,7 @@ function Activate()
 	GameRules.shops = Entities:FindAllByClassname("trigger_shop")
 	GameRules.base = Entities:FindAllByName("trigger_base")
 	GameRules.baseBlock = Entities:FindAllByName("trigger_antibild")
+	GameRules.slayerUP = Entities:FindAllByName("trigger_lvl_slayers")
 	GameRules.startTime = nil
 	GameRules.colorCounter = 1
 	GameRules.gold = {}
@@ -420,8 +421,8 @@ function Activate()
 	GameRules.lumberGiven = {}
 	GameRules.scores = {}
 
-	GameRules.isTesting = false
-	GameRules.server = "https://tve3.us/vamp/"  -- "https://localhost:5001/test/" --
+	GameRules.isTesting = true
+	GameRules.server = "https://tve3.us/vamp/"  --  "https://localhost:5001/vamp/" --
 
 	--GameRules.xp = {}
 	GameRules.types = {}

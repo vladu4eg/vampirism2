@@ -71,7 +71,25 @@ end
 
 function modifier_regen_walls_proc_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
+				if target and target.hpReg then
+					target.hpReg = target.hpReg * 1.2
+					CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg-target.hpRegDebuff,0)),unit=target:GetEntityIndex() })
+				else
+					local countStack = caster:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
+					if countStack == 0 then
+						countStack = 1
+					end
+					target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
+				end
+			end		
+	end
+end
+
+function modifier_regen_walls_proc_aura:OnRefresh( kv )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
@@ -82,9 +100,7 @@ function modifier_regen_walls_proc_aura:OnCreated( kv )
 					local countStack = caster:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
 					target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
 				end
-			end
-		end)
-		
+			end		
 	end
 end
 

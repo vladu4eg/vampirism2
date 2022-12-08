@@ -482,9 +482,9 @@
 		"AbilityLayout"                         "5"
 		"VisionNighttimeRange"			"0"
 		"VisionDaytimeRange"			"0"
-		"AttributeBaseStrength"			"50000"									// Base strength
-		"ArmorPhysical"					"999999.0"
-		"MagicalResistance"				"999999"
+		"AttributeBaseStrength"			"5"									// Base strength
+		"ArmorPhysical"					"9.0"
+		"MagicalResistance"				"9"
 
 		"BountyXP"					"0"
 		"BountyGoldMin"				"0"

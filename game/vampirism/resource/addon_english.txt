@@ -872,6 +872,13 @@
 		"DOTA_Tooltip_Ability_item_troll_teleport_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_troll_teleport_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
+		"DOTA_Tooltip_Ability_item_tpscroll_troll"												 "Portal Scroll"
+		"DOTA_Tooltip_Ability_item_tpscroll_troll_Description"										"Teleports the hero to an allied unit."
+		"DOTA_Tooltip_Ability_item_tpscroll_troll_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
+		"DOTA_Tooltip_Ability_item_tpscroll_troll_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
+
+		
+
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport"												 "Blade of Teleport"
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport_Description"										"Teleports the hero to an allied unit."
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"

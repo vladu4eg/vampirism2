@@ -79,28 +79,24 @@ end
 
 function modifier_armor_wall_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
+				local countStack = caster:FindModifierByName("modifier_armor_wall"):GetStackCount()
+				if countStack == 0 then
+					countStack = 1
+				end
+				self:SetStackCount(countStack)
+			end
+	end
+end
+function modifier_armor_wall_aura:OnRefresh( kv )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
 				local countStack = caster:FindModifierByName("modifier_armor_wall"):GetStackCount()
 				self:SetStackCount(countStack)
-				target:CalculateGenericBonuses()
-				self:ForceRefresh()
-				self:SendBuffRefreshToClients()
-				target:CalculateGenericBonuses()
-				self:StartIntervalThink( 1 )
-				self:OnIntervalThink()
 			end
-		end)
-		
 	end
-end
-
-function modifier_armor_wall_aura:OnIntervalThink()
-	local target = self:GetParent()
-	target:CalculateGenericBonuses()
-	self:ForceRefresh()
-	self:SendBuffRefreshToClients()
-	target:CalculateGenericBonuses()
 end

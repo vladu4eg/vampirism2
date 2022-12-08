@@ -66,7 +66,7 @@ function Stats.SubmitMatchData(winner,callback)
 	end
 	if GameRules.PlayersCount >= MIN_RATING_PLAYER then
 		for pID=0,DOTA_MAX_TEAM_PLAYERS do
-			if PlayerResource:IsValidPlayerID(pID) and PlayerResource:GetTeam(pID) ~= 5 then
+			if PlayerResource:IsValidPlayerID(pID) and not PlayerResource:IsFakeClient(pID) and PlayerResource:GetTeam(pID) ~= 5 then
 				data.MatchID = tostring(GameRules:Script_GetMatchID() or 0)
 				data.Gem = 0
 				data.Team = tostring(PlayerResource:GetTeam(pID))
@@ -98,6 +98,9 @@ function Stats.SubmitMatchData(winner,callback)
 				data.Score = 0
 				if hero then
 					data.Type = tostring(PlayerResource:GetType(pID) or "null")
+					if hero:IsWolf() or hero:IsElf() then
+						data.Team = tostring(2)
+					end
 						if PlayerResource:GetTeam(pID) == winner then
 							if hero:IsTroll() then
 								data.Score = tostring(math.floor(25/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
@@ -119,7 +122,7 @@ function Stats.SubmitMatchData(winner,callback)
 								data.Score = tostring(math.floor(debuffPoint + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
 							end
 						end 
-						if hero:IsAngel() or hero:IsWolf() then 
+						if hero:IsWolf() then 
 							data.Score = tostring(math.floor(-5 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
 							data.Team = tostring(2)
 						elseif hero:IsElf() and PlayerResource:GetDeaths(pID) > 0 then 

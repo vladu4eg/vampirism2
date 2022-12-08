@@ -58,7 +58,8 @@ function trollnelves2:OnNPCSpawned(keys)
         --npc:SetCustomHealthLabel("top1autumn",  123, 11, 78)
     end
     if npc:IsWolf() then
-        npc:AddNewModifier(npc, nil, "modifier_death_armor", {})
+        npc:AddNewModifier(npc, nil, "modifier_phased", {Duration = 1})
+        ResolveNPCPositions(npc:GetAbsOrigin(),130)
     end
 end
 
@@ -122,11 +123,7 @@ function trollnelves2:OnDisconnect(event)
                             elseif elfLoseTimer <= 0 or PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 4 then
                             GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                             local status, nextCall = Error_debug.ErrorCheck(function() 
-                                if string.match(GetMapName(),"clanwars") then
-                                    Clanwars.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
-                                else
-                                    Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
-                                end    
+                                Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback) 
                             end)
                             GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
                             return nil
@@ -207,7 +204,7 @@ function trollnelves2:OnItemAddedInv(keys)
     local player = PlayerResource:GetPlayer(keys.inventory_player_id)
     local itemname = keys.itemname
     if hero ~= nil then
-        if (hero:IsAngel() or hero:IsElf()) and not string.match(itemname,"vip") and not string.match(itemname,"event") 
+        if hero:IsElf() and not string.match(itemname,"vip") and not string.match(itemname,"event") 
         and not string.match(itemname,"autumn") and not string.match(itemname,"spring") and not string.match(itemname,"winter")  
         and not string.match(itemname,"summer") and not string.match(itemname,"gold") and not string.match(itemname,"gem") then 
             hero:RemoveItem(itemEntity)
@@ -274,11 +271,7 @@ function trollnelves2:OnEntityKilled(keys)
                 end
                 GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                 local status, nextCall = Error_debug.ErrorCheck(function() 
-                    if string.match(GetMapName(),"clanwars") then
-                        Clanwars.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
-                    else
-                        Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
-                    end   
+                        Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback) 
                 end)
                 GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
                 return
@@ -306,11 +299,7 @@ function trollnelves2:OnEntityKilled(keys)
             end
             GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
             local status, nextCall = Error_debug.ErrorCheck(function() 
-                if string.match(GetMapName(),"clanwars") then
-                    Clanwars.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
-                else
-                    Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
-                end  
+                Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
             end)
             GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
         elseif killed:IsWolf() then
@@ -501,8 +490,8 @@ function GiveResources(eventSourceIndex, event)
                     return
                 end
                 if ((lastSendTime[targetID] == nil or lastSendTime[targetID] + 140 < GameRules:GetGameTime())
-                and (lastTakeGoldTime[casterID] == nil or lastTakeGoldTime[casterID] + 30 < GameRules:GetGameTime())) or casterHero:IsAngel() then
-                    if (gold > 99 or lumber > 1) or (casterHero:IsAngel() and (gold >= 1 or lumber >= 1 )) then
+                and (lastTakeGoldTime[casterID] == nil or lastTakeGoldTime[casterID] + 30 < GameRules:GetGameTime())) then
+                    if (gold > 99 or lumber > 1) then
                         PlayerResource:ModifyGold(casterHero, -gold, true)
                         PlayerResource:ModifyLumber(casterHero, -lumber, true)
                         PlayerResource:ModifyGold(hero, gold, true)
@@ -526,13 +515,6 @@ function GiveResources(eventSourceIndex, event)
                         end
                         text = text .. " to " .. PlayerResource:GetPlayerName(hero:GetPlayerOwnerID()) .. "(" .. GetModifiedName(hero:GetUnitName()) .. ")!"
                         GameRules:SendCustomMessageToTeam(text, casterHero:GetTeamNumber(), 0, 0)
-                    
-                        if casterHero:IsAngel() == false then
-                            lastSendTime[targetID] = GameRules:GetGameTime()
-                            lastTakeGoldTime[targetID] = GameRules:GetGameTime()
-                        end
-                    elseif not casterHero:IsAngel() then
-                        SendErrorMessage(casterID, "#error_enter_need_money")
                     end
                     
                 elseif lastSendTime[targetID] ~= nil and lastSendTime[targetID] + 140 > GameRules:GetGameTime() then
@@ -589,14 +571,7 @@ end
 function Halloween(npc)
     if string.match(GetMapName(),"halloween") then
         wearables:RemoveWearables(npc)
-        if npc:IsAngel() then
-            UpdateModel(npc, "models/heroes/death_prophet/death_prophet.vmdl", 1)  
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_head/drowned_siren_head.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_drowned_siren_skirt/drowned_siren_drowned_siren_skirt.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_armor/drowned_siren_armor.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/exorcism/drowned_siren_drowned_siren_crowned_fish/drowned_siren_drowned_siren_crowned_fish.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_misc/drowned_siren_misc.vmdl")
-            elseif npc:IsWolf() then
+        if npc:IsWolf() then
             UpdateModel(npc, "models/heroes/life_stealer/life_stealer.vmdl", 1)  
             wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_belt/bloody_ripper_belt.vmdl")
             wearables:AttachWearable(npc, "models/items/lifestealer/promo_bloody_ripper_back/promo_bloody_ripper_back.vmdl")

@@ -135,8 +135,10 @@ function CDOTA_PlayerResource:ModifyFood(hero, food)
 		if GameRules.maxFood[playerID] == nil then
 			GameRules.maxFood[playerID] = STARTING_MAX_FOOD
 		end
-		if GameRules.maxFood[playerID] <= 300 then
+		if GameRules.maxFood[playerID] >= 15 and GameRules.maxFood[playerID] <= 300 then
 			maxFoodPlayer = GameRules.maxFood[playerID]
+		elseif GameRules.maxFood[playerID] < 15 then
+			maxFoodPlayer = 15
 		end
     hero.food = hero.food + food
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_food_changed", {
@@ -180,8 +182,7 @@ function CDOTA_PlayerResource:GetType(pID)
 			return "troll"
 		end
 	end
-    return string.match(heroName,ANGEL_HERO) and "angel"
-	or string.match(heroName,WOLF_HERO) and "wolf"
+    return string.match(heroName,WOLF_HERO) and "wolf"
 	or "elf"
 end
 
@@ -296,9 +297,6 @@ function CDOTA_BaseNPC:IsTroll()
 	end
 	return false
 end
-function CDOTA_BaseNPC:IsAngel()
-	return self:GetUnitName() == ANGEL_HERO
-end 
 function CDOTA_BaseNPC:IsWolf()
 	return self:GetUnitName() == WOLF_HERO
 end

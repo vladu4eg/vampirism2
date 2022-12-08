@@ -339,7 +339,11 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 		}
 		for ( var playerId of teamPlayers )
 		{
-			_ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContainer, playerId, localPlayerTeamId )
+			if(Players.GetPlayerSelectedHero(playerId) != "npc_dota_hero_wisp")
+			{
+				_ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContainer, playerId, localPlayerTeamId )
+			}
+			
 		}
 	}
 

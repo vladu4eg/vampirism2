@@ -4942,7 +4942,7 @@
 	        "1"{
 				"unit_name"			"tower_2"
 				"gold_cost"			"0"
-				"lumber_cost"		"25000"
+				"lumber_cost"		"45000"
 			}
 			"2"{
 				"unit_name"			"buff_1"
@@ -5157,7 +5157,7 @@
 	        "1"{
 				"unit_name"			"tower_3"
 				"gold_cost"			"0"
-				"lumber_cost"		"60000"
+				"lumber_cost"		"90000"
 			}
 	    }
 		

@@ -460,6 +460,8 @@ function SkillOnChannelSucceeded(event)
 		local stack = ability:GetLevel()
 		--hero:RemoveModifierByName(skill_name)
 		--Timers:CreateTimer(1,function()
+		DebugPrint("stack " .. stack)
+		DebugPrint("skill_name " .. skill_name)
 			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
 		--end)
 		ability:SetLevel(stack+1)
@@ -530,7 +532,7 @@ function SpawnUnitOnSpellStart(event)
 end
 
 function SpawnUnitOnChannelSucceeded(event)
-	if IsServer() then
+	--if IsServer() then
 		local caster = event.caster
 		local ability = event.ability
 		local playerID = caster:GetPlayerOwnerID()
@@ -548,6 +550,11 @@ function SpawnUnitOnChannelSucceeded(event)
 			local abil2 = slayer:FindAbilityByName("slayer_blink")
         	abil2:SetLevel(abil2:GetMaxLevel())
 			GameRules:SendCustomMessage("<font color='#009900'>"..playername.."</font> Create a slayer at "..ConvertToTime(GameRules:GetGameTime() - GameRules.startTime).." ", 0, 0)
+			for index, shopTrigger in ipairs(GameRules.slayerUP) do
+				local location = shopTrigger:GetAbsOrigin()
+				MinimapEvent(hero:GetTeamNumber(), hero, location.x, location.y, DOTA_MINIMAP_EVENT_HINT_LOCATION, 3 )
+			end
+			
 			--slayer:AddNewModifier(slayer, nil, "modifier_anti_hp_mana_regen", {})
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
@@ -582,7 +589,7 @@ function SpawnUnitOnChannelSucceeded(event)
 				UpdateSpells(hero)
 			end			
 		end
-	end
+	--end
 end
 
 
@@ -1010,7 +1017,7 @@ function ItemBlinkDoom(keys)
 	if not GridNav:IsTraversable(target_point) or GridNav:IsBlocked(target_point) or GridNav:IsNearbyTree(target_point, 35, true) or not GridNav:CanFindPath(origin_point, target_point)  then
 		block = true
 	end
-	local units = FindUnitsInRadius(keys.caster:GetTeamNumber(), target_point , nil, 65 , DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL  , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
+	local units = FindUnitsInRadius(keys.caster:GetTeamNumber(), target_point , nil, 48 , DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL  , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
 	for _,unit in pairs(units) do
 		if unit ~= nil then
 			DebugPrint(unit:GetUnitName())

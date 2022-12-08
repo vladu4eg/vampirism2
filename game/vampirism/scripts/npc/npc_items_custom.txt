@@ -10934,9 +10934,138 @@
 				"Target" 		"CASTER"
 			}
 		}
-	
-	
-	
 	}
+
+	"item_tpscroll_troll"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"item_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+	"AbilityTextureName"		"tpscroll"
+	"MaxLevel"						"1"
+	"Model"							"models/props_gameplay/tpscroll01.vmdl"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0" // ?? global
+	"AbilityCastPoint"				"3"
+	"AbilityCooldown"				"120"
+
+	"ItemStackable"                 "1"
+	"ItemSellable" 					"1"
+	"ItemPermanent"                 "0"
+	"ItemDroppable"					"1"
+	"ItemShareability"				"ITEM_NOT_SHAREABLE"
+
+	"ItemInitialCharges"			"1"
+	"ItemDisplayCharges"			"1"
+	"ItemStockMax"					"999"
+	"ItemStockInitial"				"0"
+	"BonusDelayedStockCount"		"1"
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end_team.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_e.vpcf"	//Endcap if canceled
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
+	}
+	"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"0"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+
+	"OnAbilityPhaseStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_teleportation"
+			"Target" 		"CASTER"
+			"Duration"		"3"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Grow"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+			"Function"		"CreateTeleportParticles"
+			"Target"		"POINT"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Disappear"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+			"Function"		"Teleport"
+			"Target"		"POINT"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Appear"
+			"Target" 		"CASTER"
+		}
+		"SpendCharge" 
+			{}
+	}
+
+	"Modifiers"
+	{
+		"modifier_teleportation"
+		{
+			"IsHidden"			"0"
+	
+			"EffectName"		"particles/econ/events/ti6/teleport_end_ti6.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"OnOrder"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_Furion.Teleport_Disappear"
+					"Target" 		"CASTER"
+				}
+
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+					"Function"		"EndTeleport"
+				}
+
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_teleportation"
+					"Target" 		"CASTER"
+				}
+			}
+		}
+	}
+}
 
 }

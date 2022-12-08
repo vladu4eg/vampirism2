@@ -33,31 +33,26 @@ function  modifier_hp_elf_2:DeclareFunctions()
 end
 
 function modifier_hp_elf_2:GetModifierHealthBonus()
-	return 95000 * self:GetStackCount()
+	return 9500 * self:GetStackCount()
 end
 
 function modifier_hp_elf_2:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			local countStack = caster:FindModifierByName("modifier_hp_elf_2"):GetStackCount()
+			if countStack == 0 then
+				countStack = 1
+			end
+			self:SetStackCount(countStack)
+	end
+end
+
+function modifier_hp_elf_2:OnRefresh( kv )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			local countStack = caster:FindModifierByName("modifier_hp_elf_2"):GetStackCount()
 			self:SetStackCount(countStack)
-			target:CalculateStatBonus(true)
-			self:ForceRefresh()
-			self:SendBuffRefreshToClients()
-			target:CalculateStatBonus(true)
-			self:StartIntervalThink( 1 )
-			self:OnIntervalThink()
-		end)
-		
 	end
-end
-
-function modifier_hp_elf_2:OnIntervalThink()
-	local target = self:GetParent()
-	target:CalculateStatBonus(true)
-	self:ForceRefresh()
-	self:SendBuffRefreshToClients()
-	target:CalculateStatBonus(true)
 end

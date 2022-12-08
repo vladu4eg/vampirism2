@@ -1,7 +1,7 @@
 Error_debug = Error_debug or {}
 local dedicatedServerKey = GetDedicatedServerKeyV2("1")
 
-Error_debug.server = "https://tve3.us/debug/" -- "https://localhost:5001/test/" --
+Error_debug.server = "https://tve3.us/vampdebug/" -- "https://localhost:5001/test/" --
 
 function Error_debug.SendData(data,callback)
 	local req = CreateHTTPRequestScriptVM("POST",Error_debug.server)

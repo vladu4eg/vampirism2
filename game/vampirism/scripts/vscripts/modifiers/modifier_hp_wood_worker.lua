@@ -75,7 +75,24 @@ end
 
 function modifier_hp_wood_worker_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then
+				local countStack = caster:FindModifierByName("modifier_hp_wood_worker"):GetStackCount()
+				if countStack == 0 then
+					countStack = 1
+				end
+				target:SetMaxHealth(target:GetMaxHealth() + (350 * countStack))
+				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + (350 * countStack) )
+				target:SetHealth(target:GetHealth() + (350 * countStack))
+				--target:SetBaseDamageMin(target:GetBaseDamageMin() * dmg)	
+				--target:SetBaseDamageMax(target:GetBaseDamageMax() * dmg) 
+			end	
+	end
+end
+
+function modifier_hp_wood_worker_aura:OnRefresh( )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then
@@ -86,9 +103,7 @@ function modifier_hp_wood_worker_aura:OnCreated( kv )
 				target:SetHealth(target:GetHealth() + (350 * countStack))
 				--target:SetBaseDamageMin(target:GetBaseDamageMin() * dmg)	
 				--target:SetBaseDamageMax(target:GetBaseDamageMax() * dmg) 
-			end
-		end)
-		
+			end	
 	end
 end
 

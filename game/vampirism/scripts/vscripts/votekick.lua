@@ -21,9 +21,6 @@ function VotekickStart(eventSourceIndex, event)
 				lastKickTime[event.target] = -240
 			end
 		end
-		if ctrHeroID:IsAngel() then
-			return 
-		end 
 		if ctrHeroID:IsElf() and team == DOTA_TEAM_GOODGUYS and PlayerResource:GetConnectionState(event.target) == 2 
 			and (lastKickTime[event.target] == nil or lastKickTime[event.target] + 240 < GameRules:GetGameTime())
 			and (checkVote == nil or checkVote + 40 < GameRules:GetGameTime()) then	

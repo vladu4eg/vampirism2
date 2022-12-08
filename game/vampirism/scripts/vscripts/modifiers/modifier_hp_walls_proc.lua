@@ -71,7 +71,26 @@ end
 
 function  modifier_hp_walls_proc_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
+			local caster = self:GetCaster()
+			local target = self:GetParent()
+			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
+				local countStack = caster:FindModifierByName("modifier_hp_walls_proc"):GetStackCount()
+				print(countStack)
+				if countStack == 0 then
+					countStack = 1
+				end
+				target:SetMaxHealth(target:GetMaxHealth() * (0.2 * countStack + 1))
+				target:SetBaseMaxHealth(target:GetBaseMaxHealth() * (0.2 * countStack + 1) )
+				target:SetHealth(target:GetHealth() * (0.2 * countStack + 1))
+				--target:SetBaseDamageMin(target:GetBaseDamageMin() * dmg)	
+				--target:SetBaseDamageMax(target:GetBaseDamageMax() * dmg) 
+			end
+		
+	end
+end
+
+function  modifier_hp_walls_proc_aura:OnRefresh( kv )
+	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
@@ -83,7 +102,6 @@ function  modifier_hp_walls_proc_aura:OnCreated( kv )
 				--target:SetBaseDamageMin(target:GetBaseDamageMin() * dmg)	
 				--target:SetBaseDamageMax(target:GetBaseDamageMax() * dmg) 
 			end
-		end)
 		
 	end
 end

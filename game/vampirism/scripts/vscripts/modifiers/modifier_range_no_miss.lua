@@ -71,16 +71,13 @@ end
 
 function modifier_range_no_miss_aura:OnCreated( kv )
 	if IsServer() then
-		Timers:CreateTimer(1,function()
 			local caster = self:GetCaster()
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and 
 			(target:GetUnitName() == "tower_9" or target:GetUnitName() == "tower_10" or target:GetUnitName() == "tower_11" 
 		  or target:GetUnitName() == "tower_9_1" or target:GetUnitName() == "tower_10_1" or target:GetUnitName() == "tower_11_1") then
 				target:AddNewModifier(target, nil, "modifier_range_no_miss_state", {})
-			end
-		end)
-		
+			end	
 	end
 end
 
