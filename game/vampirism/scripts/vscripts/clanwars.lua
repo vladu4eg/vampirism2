@@ -25,7 +25,6 @@ function Clanwars.SubmitMatchData(winner,callback)
 				GameRules.scores[pID].elf = 0
 				GameRules.scores[pID].troll = 0
 			end
-			DebugPrint("pID " .. pID )
 			if GameRules.Bonus[pID] == nil then
 				GameRules.Bonus[pID] = 0
 			end

@@ -1,5 +1,4 @@
 if Shop == nil then
-	DebugPrint( 'top' )
 	_G.Shop = class({})
 end
 local dedicatedServerKey = GetDedicatedServerKeyV2("1")

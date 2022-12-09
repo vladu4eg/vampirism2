@@ -212,9 +212,6 @@ for requirementName, requirementCount in pairs(requirements) do
     local currentRequirementClassData =
     allBuildingRequirementClasses[unitName][requirementClass]
     local currentRequirementClassLevel = currentRequirementClassData and currentRequirementClassData.level or 0
-    DebugPrint(requirementName)
-    DebugPrint(unitName)
-    DebugPrint("12310000000")
     if requirementLevel > currentRequirementClassLevel then
         allBuildingRequirementClasses[unitName][requirementClass] =
         {level = requirementLevel, unitName = requirementName}
@@ -321,7 +318,6 @@ function BuildingHelper:ParseKV()
                 elseif info["BuyItem"] then
                 local itemName = info["ItemName"]
                 local bonus_attr
-                DebugPrint(itemName)
                 if GetItemKV(itemName)["AbilitySpecial"]["01"] then
                     for key, value in pairs(
                         GetItemKV(itemName)["AbilitySpecial"]["01"]) do
@@ -1242,7 +1238,6 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
         fModelRotation = GetUnitKV(unitName).ModelRotation or 0
     end
     buildingTable:SetVal("ModelRotation", fModelRotation)
-    DebugPrint("Super unit name - " .. unitName)
     local requiresrepair = GetUnitKV(unitName).RequiresRepair or 0
     buildingTable:SetVal("RequiresRepair", requiresrepair)
     
@@ -1745,7 +1740,6 @@ function BuildingHelper:StartBuilding(builder)
                                 fAddedHealth = fAddedHealth + hpGain
                                 building:SetHealth(building:GetHealth() + hpGain)
                                 local fModelScale = (buildTime - fTimeBuildingCompleted + GameRules:GetGameTime()) / buildTime * (GetUnitKV(building:GetUnitName(),  "ModelScale") or 1)
-                                -- DebugPrint(fModelScale)
                                 building:SetModelScale(fModelScale)
                             end
                         else
@@ -2629,7 +2623,6 @@ function BuildingHelper:IsInsideBaseArea(unit, location, nameBuilding, build)
     local playerID = hero:GetPlayerOwnerID()
     local baseIndex = BuildingHelper:IdBaseArea(location)
 
-    DebugPrint("FLAG")
 
     if baseIndex ~= nil then
         if GameRules.PlayersBase[playerID] ~= baseIndex then
@@ -2666,12 +2659,9 @@ end
 function BuildingHelper:IdBaseArea(location)
     for index, shopTrigger in ipairs(GameRules.base) do
         if shopTrigger:IsTouching(location) then
-            DebugPrint("truee")
       --      if location:GetUnitName() == "npc_dota_units_base2" then
         --        location:ForceKill(true)
         --    end
-            DebugPrint(shopTrigger:entindex())
-            DebugPrint(index)
             return shopTrigger:entindex()
         end
     end
@@ -2765,7 +2755,6 @@ function BuildingHelper:AddToQueue(builder, location, bQueued)
     end
     
     if builder.buildingQueue ~= nil then
-        DebugPrint(#builder.buildingQueue)
         if string.match(buildingName, "gold_mine") and #builder.buildingQueue > 0 then  
             SendErrorMessage(playerID, "error_limit_queue_wisp")
             return

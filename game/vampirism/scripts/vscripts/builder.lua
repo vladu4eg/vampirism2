@@ -20,8 +20,6 @@ function Build( event )
     local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
 	local mine_cost = ability:GetSpecialValueFor("MineCost")
 
-    DebugPrint("--------------------------------------------------------------------")
-    DebugPrint(caster:GetEntityIndex())
     local status, nextCall = Error_debug.ErrorCheck(function()
     -- Makes a building dummy and starts panorama ghosting
     BuildingHelper:AddBuilding(event)
@@ -52,9 +50,6 @@ function Build( event )
 
         if mine_cost ~= nil then
             if mine_cost ~= 0 then
-            DebugPrint(mine_cost)
-            DebugPrint(hero.mine)
-            DebugPrint(GameRules.maxMine )
             if hero.mine > GameRules.maxMine  then
                 SendErrorMessage(playerID, "error_not_enough_mine")
                 caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
@@ -241,8 +236,6 @@ function Build( event )
 
     end)
     
-    -- These callbacks will only fire when the state between below half health/above half health changes.
-    -- i.e. it won't fire multiple times unnecessarily.
     event:OnBelowHalfHealth(function(unit)
         --BuildingHelper:print("" .. unit:GetUnitName() .. " is below half health.")
     end)
@@ -251,24 +244,6 @@ function Build( event )
         --BuildingHelper:print("" ..unit:GetUnitName().. " is above half health.")        
     end)
 	
-    --	if building_name == "tent" and BuildingHelper:IsInsideBaseArea(hero) == false then
-	--	local check = false
-	--	DebugPrint("Test1")
-    --		for _,base in ipairs(playersBase) do
-	--		local numBase, pID = unpack(base)
-	--		DebugPrint("Test1.2")
-	--		if pID == playerID then
-	--			check = true
-	--			DebugPrint("Test2")
-	--		end
-	--	end
-	--	DebugPrint("Test3.1")
-    --		DebugPrint(IdBaseArea(hero))
-    --if check == false and IdBaseArea(hero) ~= nil then
-	--		table.insert(playersBase,{IdBaseArea(hero),playerID})
-	--		DebugPrint("Test3.2")
-	--	end
-    --	end
 end)
 end
 

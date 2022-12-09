@@ -53,11 +53,11 @@ function ToggleInformation() {
 // Айди кнопки, заголовок(переменная addon_russia принимает br fontcolor итд), описание(переменная addon_russia принимает br fontcolor итд), иконка справа, айди панели с информацией
 var information_buttons =
 [
-	["information_button_1", "button_title1", "button_description1", "troll_icon", "information_panel_1"],
-	["information_button_2", "button_title2", "button_description2", "troll_icon", "information_panel_2"],
-	["information_button_3", "button_title3", "button_description3", "troll_icon", "information_panel_3"],
-	["information_button_4", "button_title4", "button_description4", "troll_icon", "information_panel_4"],
-	["information_button_5", "button_title5", "button_description5", "troll_icon", "information_panel_5"],
+	["#information_button_1", "#button_title1", "#button_description1", "troll_icon", "information_panel_1"],
+	["#information_button_2", "#button_title2", "#button_description2", "troll_icon", "information_panel_2"],
+	["#information_button_3", "#button_title3", "#button_description3", "troll_icon", "information_panel_3"],
+	["#information_button_4", "#button_title4", "#button_description4", "troll_icon", "information_panel_4"],
+	["#information_button_5", "#button_title5", "#button_description5", "troll_icon", "information_panel_5"],
 ]
 
 // Панели с информацией
@@ -65,11 +65,11 @@ var information_buttons =
 
 var information_panels = 
 [
-	["information_panel_1", "information_title1", "information_description1", "video_1"],
-	["information_panel_2", "information_title2", "information_description2", "video_2"],
-	["information_panel_3", "information_title3", "information_description3", "video_3"],
-	["information_panel_4", "information_title4", "information_description4", "video_4"],
-	["information_panel_5", "information_title5", "information_description5", "video_5"],
+	["information_panel_1", "#information_title1", "#information_description1", "video_1"],
+	["information_panel_2", "#information_title2", "#information_description2", "video_2"],
+	["information_panel_3", "#information_title3", "#information_description3", "video_3"],
+	["information_panel_4", "#information_title4", "#information_description4", "video_4"],
+	["information_panel_5", "#information_title5", "#information_description5", "video_5"],
 ]
 
 

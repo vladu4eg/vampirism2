@@ -1,5 +1,4 @@
 if chatcommand == nil then
-	DebugPrint( 'chatcommand' )
 	_G.chatcommand = class({})
 end
 local lastCommandChat = {}
@@ -96,7 +95,6 @@ function chatcommand:OnPlayerChat(event)
 		(lastCommandChat[event.playerid] == nil or lastCommandChat[event.playerid] + 120 < GameRules:GetGameTime() - GameRules.startTime) then
 		local steamID = tostring(PlayerResource:GetSteamID(event.playerid))
 		local pID = tonumber(event.playerid)
-		DebugPrint(pID)
 		Shop.RequestEvent(pID, steamID, callback)
 		lastCommandChat[event.playerid] = GameRules:GetGameTime() 
 		elseif event.text == "!test" then

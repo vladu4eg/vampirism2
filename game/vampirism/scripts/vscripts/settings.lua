@@ -10,7 +10,7 @@ TEAM_CHOICE_TIME = 30
 TROLL_SPAWN_TIME = 55
 PRE_GAME_TIME = 40
 
-WOLF_STARTING_RESOURCES_FRACTION = 0.08 -- What percentage of troll's networth wolves should start with
+WOLF_STARTING_RESOURCES_FRACTION = 0.3 -- What percentage of troll's networth wolves should start with
 
 ELF_STARTING_GOLD = 0
 ELF_STARTING_LUMBER = 50
@@ -26,8 +26,8 @@ PERC_KICK_PLAYER = 0.90
 MIN_PLAYER_KICK = 4
 
 CHANCE_DROP_GEM_BARRACKS_3 = 25
-SEASON_MAP = "autumn" -- name map
-SEASON_ITEM = "item_autumn"           --  "item_winter_1" item_spring;  item_summer; item_autumn;
+SEASON_MAP = "winter" -- name map
+SEASON_ITEM = "item_winter_1"           --  "item_winter_1" item_spring;  item_summer; item_autumn;
 
 CHANCE_DROP_LUMBER = 2
 RESPAWN_TREE_TIME_MIN = 20

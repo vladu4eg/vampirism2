@@ -23,7 +23,6 @@ LUA_MODIFIER_MOTION_NONE)
 function trollnelves2:OnGameRulesStateChange()
     DebugPrint("GameRulesStateChange ******************")
     local newState = GameRules:State_Get()
-    DebugPrint(newState)
     if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
         trollnelves2:GameSetup()
         trollnelves2:PostLoadPrecache()
@@ -166,7 +165,6 @@ function trollnelves2:OnConnectFull(keys)
    -- local playerID = player:GetPlayerID()
    -- GameRules.userIds[userID] = playerID
     trollnelves2:_Capturetrollnelves2()
-    
 end
 
 function trollnelves2:OnItemPickedUp(keys)
@@ -381,7 +379,6 @@ function trollnelves2:OnEntityKilled(keys)
             
             if hero then -- Skip looping unnecessarily when elf dies
                 local name = killed:GetUnitName()
-                -- DebugPrint("name " .. name)
                 ModifyStartedConstructionBuildingCount(hero, name, -1)
                 if killed.state == "complete" then
                     ModifyCompletedConstructionBuildingCount(hero, name, -1)
@@ -389,7 +386,6 @@ function trollnelves2:OnEntityKilled(keys)
                 if killed.ancestors then
                     for _, ancestorUnitName in pairs(killed.ancestors) do
                         if name ~= ancestorUnitName then
-                            -- DebugPrint("ancestorUnitName " .. ancestorUnitName)
                             ModifyStartedConstructionBuildingCount(hero,
                                 ancestorUnitName,
                             -1)
@@ -473,10 +469,6 @@ function GiveResources(eventSourceIndex, event)
     local casterID = event.casterID
     local gold = math.floor(math.abs(tonumber(event.gold)))
     local lumber = math.floor(math.abs(tonumber(event.lumber)))
-    if string.match(GetMapName(),"clanwars") then
-        SendErrorMessage(event.casterID, "error_not_send_money_cw")
-        return 
-    end 
     if tonumber(event.gold) ~= nil and tonumber(event.lumber) ~= nil then
         if PlayerResource:GetSelectedHeroEntity(targetID) and
             PlayerResource:GetSelectedHeroEntity(targetID):GetTeam() ==
@@ -489,9 +481,9 @@ function GiveResources(eventSourceIndex, event)
                     SendErrorMessage(casterID, "error_not_enough_resources")
                     return
                 end
-                if ((lastSendTime[targetID] == nil or lastSendTime[targetID] + 140 < GameRules:GetGameTime())
-                and (lastTakeGoldTime[casterID] == nil or lastTakeGoldTime[casterID] + 30 < GameRules:GetGameTime())) then
-                    if (gold > 99 or lumber > 1) then
+                if ((lastSendTime[targetID] == nil or lastSendTime[targetID] + 300 < GameRules:GetGameTime())
+                and (lastTakeGoldTime[casterID] == nil or lastTakeGoldTime[casterID] + 60 < GameRules:GetGameTime())) then
+                    if gold > 99 or lumber > 1 then
                         PlayerResource:ModifyGold(casterHero, -gold, true)
                         PlayerResource:ModifyLumber(casterHero, -lumber, true)
                         PlayerResource:ModifyGold(hero, gold, true)
@@ -515,13 +507,17 @@ function GiveResources(eventSourceIndex, event)
                         end
                         text = text .. " to " .. PlayerResource:GetPlayerName(hero:GetPlayerOwnerID()) .. "(" .. GetModifiedName(hero:GetUnitName()) .. ")!"
                         GameRules:SendCustomMessageToTeam(text, casterHero:GetTeamNumber(), 0, 0)
+                        lastSendTime[targetID] = GameRules:GetGameTime()
+                        lastTakeGoldTime[targetID] = GameRules:GetGameTime()
+                    else
+                        SendErrorMessage(casterID, "#error_enter_need_money")
                     end
                     
-                elseif lastSendTime[targetID] ~= nil and lastSendTime[targetID] + 140 > GameRules:GetGameTime() then
-                    local timeLeft = math.ceil(lastSendTime[targetID] + 140 - GameRules:GetGameTime())
+                elseif lastSendTime[targetID] ~= nil and lastSendTime[targetID] + 300 > GameRules:GetGameTime() then
+                    local timeLeft = math.ceil(lastSendTime[targetID] + 300 - GameRules:GetGameTime())
                     SendErrorMessage(casterID, "You can send money in " .. timeLeft .. " seconds!")
                 else
-                    local timeLeft = math.ceil(lastTakeGoldTime[casterID] + 30 - GameRules:GetGameTime())
+                    local timeLeft = math.ceil(lastTakeGoldTime[casterID] + 60 - GameRules:GetGameTime())
                     SendErrorMessage(casterID, "You can send money in " .. timeLeft .. " seconds!")
                 end
             end

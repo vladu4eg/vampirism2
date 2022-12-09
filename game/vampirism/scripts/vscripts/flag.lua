@@ -3,7 +3,6 @@ local lastFlagTime = {}
 
 
 function FlagStart(eventSourceIndex, event)
-	DebugPrint("FlagStart")
 	if event.target ~= nil then
 		local hero = PlayerResource:GetSelectedHeroEntity(event.target)
 		local casterHero = PlayerResource:GetSelectedHeroEntity(event.casterID)	
@@ -16,7 +15,6 @@ function FlagStart(eventSourceIndex, event)
 		    and GameRules.PlayersBase[event.casterID] ~= nil and GameRules.countFlag[event.casterID] == nil
 			-- and (GameRules:GetGameTime() - GameRules.startTime < 120  or  (lastFlagTime[event.target] == nil or lastFlagTime[event.target] + 240 < GameRules:GetGameTime()) )
 			and (lastFlagTime[event.casterID] == nil or lastFlagTime[event.casterID] + 60 < GameRules:GetGameTime()) then	
-			DebugPrint("FlagStart SEND")
 			lastFlagTime[event.casterID] = GameRules:GetGameTime()
 			CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(event.target), "show_flag_options", {["name"] = playerName, ["id"] = event.target,["casterID"] = event.casterID} )
 			
@@ -32,11 +30,8 @@ function FlagStart(eventSourceIndex, event)
 end
 
 function FlagGive(eventSourceIndex, event)
-	DebugPrint("event.vote " .. event.vote)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.playerID1)
 	if event.vote == 1 then
-        DebugPrint("GameRules.PlayersBase[event.casterID] FlagGive " .. GameRules.PlayersBase[event.casterID])
-        DebugPrint("event.casterID FlagGive " .. event.casterID)
 		if hero.units ~= nil then
 			for i=1,#hero.units do
 				if hero.units[i] and not hero.units[i]:IsNull() and hero.units[i]:GetUnitName() == "flag" then

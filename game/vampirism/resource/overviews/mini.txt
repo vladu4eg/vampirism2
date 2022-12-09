@@ -1,0 +1,8 @@
+mini
+{
+	material materials/overviews/mini.vmat
+	pos_x -9664
+	pos_y 9824
+	scale 18.688
+}
+

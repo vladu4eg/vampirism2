@@ -34,6 +34,5 @@ function Feed(keys)
         target:ForceKill(false)
         end
         else
-        DebugPrint("ELSE")
     end
 end

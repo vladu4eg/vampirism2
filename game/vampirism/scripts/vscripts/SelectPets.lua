@@ -60,7 +60,6 @@ function SelectPets:SetDefaultPets(event)
     local player = PlayerResource:GetPlayer(event.PlayerID)
 		local data = {}
 		if event.part ~=  nil then
-			DebugPrint("no save")
 			data.SteamID = tostring(PlayerResource:GetSteamID(event.PlayerID))
 			data.Num = tostring(event.part)
 			data.TypeDonate = "2"

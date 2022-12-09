@@ -1,5 +1,4 @@
 if top == nil then
-	DebugPrint( 'top' )
 	_G.top = class({})
 end
 

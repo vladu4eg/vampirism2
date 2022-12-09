@@ -102,7 +102,6 @@ function wearables:RemoveWearables(hero)
 	while cur ~= nil do --пока наш текущий указатель не равен nil(пустота/пустой указатель)
 		cur = cur:NextMovePeer() -- выбираем следующий указатель на подобъект нашего обьекта
 		if cur ~= nil and cur:GetClassname() ~= "" and (cur:GetClassname() == "dota_item_wearable" or cur:GetClassname() == "prop_dynamic") then -- проверяем, елси текущий указатель не пуст, название класса не пустое, и если этот класс есть класс "dota_item_wearable", то есть надеваемые косметические предметы
-			DebugPrint(cur:GetClassname())
 			table.insert(wearables, cur) -- добавляем в таблицу на удаление текущий предмет(сверху проверяли класс текущего объекта)
 		end
 	end

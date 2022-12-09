@@ -292,11 +292,11 @@
 		"shop_error_label"					"Not enough money! "
 		"buy_currency"						"Purchase of TvE Coint."
 		"buy_currency_description"						"1 dollar = 100 coins. Write to Discord @vladu4eg for technical support. If you purchase a large number of coins, then you can request additional free coins in Discord. With the first purchase of 50 coins or more, 100 coins are issued for free (Write in Discord)."
-				"pet_description"											"Only one Pet is issued per purchase. Pets purchased with coins are permanent. Pets for gems are issued for 1 month. Some Pets are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
+		"pet_description"											"Only one Pet is issued per purchase. Pets purchased with coins are permanent. Pets for gems are issued for 1 month. Some Pets are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
 		"skin_description"											"Only one Skin is issued per purchase. Skins purchased with coins are permanent. Skins for gems are issued for 1 month. Some Skins are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
 		"particle_description"											"Only one effect is issued per purchase. Effects purchased with coins are permanent. Effects for gems are issued for 1 month. Some effects are given out for TOP1-10, participation in events, and so on. Follow the events on Discord for free prizes."
 		"chest_description"											"The chest is issued forever. Items from the chest are issued permanently. Some items are cheaper to buy in chests."
-		"subscribe_description"											"Troll chance, bonus rating and other subscriptions are purchased for 1 month. Repeated purchase increases the validity period by 1 month."
+		"subscribe_description"											"Vampire chance, bonus rating and other subscriptions are purchased for 1 month. Repeated purchase increases the validity period by 1 month."
 		"sounds_description"											"Sounds and sprays purchased with coins are issued permanently. To turn on the sound or spray, press the L key."
 		"spray_description"											"Sounds and sprays purchased with coins are issued permanently. To turn on the sound or spray, press the L key."
 		
@@ -2807,12 +2807,12 @@
 
 
         "topptext"                                      									"The best players in the overall ranking: "
-        "topwtext"                                      									"The best players for the Elf: "
+        "topwtext"                                      									"The best players for the Human: "
         "tophtext"                                      									"The best players for the Vampire: "
 		
 		"leaderboard_name"                                      									"Leaderboard"
         "leaderboard_1"                                      									"Top players (overall ranking)"
-        "leaderboard_2"                                      									"The best Elves"
+        "leaderboard_2"                                      									"The best Human"
 		"leaderboard_3"                                      									"The best Vampires"
 		"leaderboard_event"                                      									"Event Leaders"
 		"leaderboard_button"                                      									"Leaders"
@@ -3222,7 +3222,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_not_night"																	"Works only at night! "
 		"error_item_not_sellable"															"Item not sellable"
 		"error_not_time"																	"You can steal gold after 5 minutes! "
-		"error_place_is_taken"																"Place taken by another Elf or no flag here! "
+		"error_place_is_taken"																"Place taken by another Human or no flag here! "
 		"error_place_is_flag"																"You can't put a flag here!"
 		"error_need_put_flag"																"We need to build a flag!"
 		"team_choice_header"                                                                "Do you want to be the Vampire?"
@@ -3272,15 +3272,14 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"rewards_days"				"Day"
 		"reward_recieved"			"Received"
 		"reward_recieve"			"Take"
-		"cost_money_sell_item"		"All items are sold for 50% of the total price"
+		"cost_money_sell_item"		"All items are sold for 50% of the total price."
 		"error_no_take_ward"		"You cannot teleport to this unit!"
 		"error_shop_enemy_shop"		"This is an enemy shop!"
 		"error_need_create_slayer"			"Only Slayer can buy items in the shop!"
 		"error_not_shop_area"				"There is no Slayer near the store."
+		"info_button"						"Guide"
 		
-		"loading_text"																		"&lt;=Click this for tips!<br>
-		                                                                                    Don't change your hotkeys after starting the game.
-		                                                                                    "
+		"loading_text"																		"Don't change your hotkeys after starting the game."
 		"loading_text_no_troll"																"Do not choose Vampire if you are playing for the first time, please."
 		"DOTA_Chat_PlayerKilled"                    ""
         "DOTA_Chat_PlayerKilledNearby"              ""
@@ -3288,36 +3287,36 @@ The effect is issued for 1 year. Your support helps the game develop."
         "DOTA_Chat_PlayerKilledAssist"              ""
         "DOTA_Chat_PlayerKilledAssistNearby"        ""
 		"DOTA_Chat_PlayerKilledAssistNearbySingle"  ""
-		
-		"elf_tips1"																		"<br><br><b>Elf Tips</b>
-		<br>·You can build tent at the very start of the game near the troll base while you go search for a base. That way you will have a head start, just don't finish building it otherwise you won't be able to destroy it since the troll will be nearby. 
-		<br>·Build your rock in the middle of the steps
-		"
-		"elf_tips2"																		"·You can use glyph on yourself to troll the troll for 10seconds
-					<br>·Good towers early on can scare the troll away for good and give you time to dig dem gold mines. 2 towers are enough at the beginning!  Just upgrade it! 
-					<br>·Don't foget to use your abilities! It's better to start with Root since it has a lower cooldown than Glyph. 
-					<br>·Use glyph not only to save yourself from the desperate situation but to also prevent troll from farming
-					<br>·Find a friend that will co-operate with you and build duo base. You will be two times as strong. 
-					<br>·Right click the repair ability for an autocast repair, it will repair the closest building to you that has a health deficit! "
-		"elf_tips3"																	"·Share your resources. If you have extra resources share them! Teamwork is needed in this game so the troll doesn't get farmed too fast! "
-		
-		"troll_tips"																		"<b>Troll/Wolf Tips</b>
-					<br>·Make sure you don't die. If you die even once it's game over! 
-					<br>·Every attack gives you gold depending on how much damage you did
-					<br>·Buy items to become stronger! 
-					<br>·You should replace items by selling them and buying better ones
-					<br>·Always use your 1st skill (Reveal) to avoid wasting time finding Elves!. 
-					<br>·Try to find enemies which do not have a lot of strong towers so it is easier to farm up
-					<br>·Don't forget to upgrade your hut! Not only it will help you in a bad time, but it's also really good if you have wolves on your team. 
-					<br>·You can use teleport and invis together. That way you will be able to teleport while being invisible. 
-					<br>·Have fun trolling these small elves. 
-					"
-		"angel_tips"																		"<br><br><b>Angel Tips</b>
-		<br/>·Donate gold to those who really need it, like the Elf who got attacked by the Troll at the beginning.. 
-		<br/>·Don't let the Troll kill you! You've got lots of gold in your hands.                            
-		<br/>·Always empty your pocket!  Give gold to players because the troll can steal it!               
-        <br/>·You can assist players under attack by healing their wall or stunning the troll.             
-        <br/>·RUN RUN RUN When the troll/wolf comes! 
-		"
+
+		"Information_title"						"Guide"
+		"button_title1"							"START"
+		"button_title2"							"DEFENSE"
+		"button_title3"							"FIRST GOLD"
+		"button_title4"							"SLAYER"
+		"button_title5"							"VAMPIRE UNITS"
+
+		"information_title1"					"START"
+		"information_title2"					"DEFENSE"
+		"information_title3"					"FIRST GOLD"
+		"information_title4"					"SLAYER"
+		"information_title5"					"VAMPIRE UNITS"
+
+		"button_description1"							""
+		"button_description2"							""
+		"button_description3"							""
+		"button_description4"							""
+		"button_description5"							""
+
+		"information_description1"						"<h1>You must know in advance where you are going to build, so as not to waste time thinking, we quickly get to the right place using the global Blink. As soon as we got to the place, we immediately build a sawmill (House), order lumberjacks, and they will automatically start collecting wood. It is necessary to put a sawmill (House) at a distance of 1 cell from the forest, so that the workers have a place to maneuver, but it is also not far to walk. Next, we immediately set up 3-4 Tents. Then we build Slayer's Tavern and order Slayer, then build a research center, and then a wall. If everything is done quickly, then you can keep within 2 minutes, and be ready for an attack."
+		"information_description2"						"<h1>It is necessary to put 3 stones in the shape of a triangle. 1 stone is placed in front and 2 stones behind it, which will completely close the passage to the base. If you do not completely close the passage, then any invisible unit that is called by the Vampire can penetrate your base. It is necessary to build several towers of level 1. One level 1 tower is sure to upgrade into a Tower of Healing. Healing Towers can be upgraded or changed to Mana Tower (burns Vampire mana), Fairy Tower (Reduces Vampire armor). The remaining towers are up to level 2 or higher. Don't forget the True Sight Tower! You must protect not only the wall, but also your lumberjacks!"
+		"information_description3"						"<h1>After 3 minutes, all Humans receive 1 gold, and the ability to exchange wood for gold is also unlocked at the Vampire's base. You can exchange your tree for gold with the Slayer. If a Vampire killed a lumberjack, then there is a chance that a gold coin will fall from the killed lumberjack. You can pick her up with the Slayer. If you can raise a coin before 3 minutes, then this guarantees you a high increase in resources. For the first gold, you need to build a Slayer Vault, which will open access to the construction of the Gold Mine. Each Slayer Vault upgrade unlocks upgraded Lumberjacks."
+		"information_description4"						"<h1>Slayer can be crafted at the Slayer Tavern. After creating a Slayer for the first time, a notification will appear on the map about the place where Slayers can level up. Send Slayer 10-15 seconds before the end of the minute to the specified location and Slayer will receive +1 level. The slayer will help you protect your base from enemy units that the Vampire summons, and he can also create wall repairmen, throw a net or impose immortality on your buildings. If Slayer died, then you need to resurrect him in the Slayer Tavern. Slayers are delicious food for Vampires. Keep the Slayers alive!"
+		"information_description5"						"<h1>Vampires can summon minions. Henchmen can't kill a human!<br>
+The Shade unit is invisible to Humans. He can get to your base through 1 cell and summon a Vampire to him. It is necessary to completely build up the passage to the base.<br>
+Golems have a blink and can break your buildings inside the base. Slayer will help protect against them.<br>
+Invisible Assassin kills your lumberjacks. Don't forget to set True Sight!<br>
+Fel Beast kills the wall repairmen."
+
+
 	}
 }

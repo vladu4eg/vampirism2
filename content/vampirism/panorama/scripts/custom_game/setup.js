@@ -115,7 +115,7 @@ function UpdateHpRegLabel() {
 }
 
 function UpdateTooltips() {
-    //UpdateItemTooltips();
+    UpdateItemTooltips();
     UpdateAbilityTooltips();
 }
 
@@ -312,25 +312,19 @@ function UpdateItemTooltips() {
             var buttonWell = inventoryPanel.FindChildTraverse("ButtonWell");
             inventoryPanel.SetPanelEvent("onmouseover", (function (index, tooltipParent, inventoryPanel) {
                 return function () {
-                    if (inventoryPanel.BHasClass("no_ability")) {
-                        return;
-                    }
-                    var entityIndex = Players.GetLocalPlayerPortraitUnit();
-                    var abilityName = Abilities.GetAbilityName(Entities.GetItemInSlot(entityIndex, index));
-                    $.DispatchEvent("UIShowCustomLayoutParametersTooltip", tooltipParent, "AbilityTooltip",
-                        "file://{resources}/layout/custom_game/ability_tooltip.xml", "entityIndex=" + entityIndex + "&abilityName=" + abilityName);
+                    var base = $.GetContextPanel().GetParent().GetParent().GetParent();
+                    var tooltipManager = base.FindChildTraverse('Tooltips');
+                    tooltipManager.FindChildTraverse('SellPriceLabel').style.visibility = "visible";
+                    tooltipManager.FindChildTraverse('SellPriceLabel').text = $.Localize("#cost_money_sell_item");
+                    tooltipManager.FindChildTraverse('SellPriceTimeLabel').style.visibility = "collapse";
                 }
             })(i, buttonWell, inventoryPanel));
-            inventoryPanel.SetPanelEvent("onmouseout",
-                function () {
-                    $.DispatchEvent("UIHideCustomLayoutTooltip", "AbilityTooltip");
-                });
         }
     }
 }
 
 function UpdateItemTooltipsAndAbilityCustomHotkeys() {
-    //UpdateItemTooltips();
+    UpdateItemTooltips();
     UpdateAbilityCustomHotkeys();
 }
 

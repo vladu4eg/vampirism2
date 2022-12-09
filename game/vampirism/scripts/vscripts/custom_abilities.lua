@@ -460,8 +460,6 @@ function SkillOnChannelSucceeded(event)
 		local stack = ability:GetLevel()
 		--hero:RemoveModifierByName(skill_name)
 		--Timers:CreateTimer(1,function()
-		DebugPrint("stack " .. stack)
-		DebugPrint("skill_name " .. skill_name)
 			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
 		--end)
 		ability:SetLevel(stack+1)
@@ -1014,13 +1012,13 @@ function ItemBlinkDoom(keys)
 	--if difference_vector:Length2D() > keys.MaxBlinkRange then  --Clamp the target point to the MaxBlinkRange range in the same direction.
 		target_point = origin_point + (target_point - origin_point):Normalized() * keys.MaxBlinkRange
 	--end
-	if not GridNav:IsTraversable(target_point) or GridNav:IsBlocked(target_point) or GridNav:IsNearbyTree(target_point, 35, true) or not GridNav:CanFindPath(origin_point, target_point)  then
+	-- or not GridNav:CanFindPath(origin_point, target_point)
+	if not GridNav:IsTraversable(target_point) or GridNav:IsBlocked(target_point) or GridNav:IsNearbyTree(target_point, 35, true)   then
 		block = true
 	end
 	local units = FindUnitsInRadius(keys.caster:GetTeamNumber(), target_point , nil, 48 , DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL  , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
 	for _,unit in pairs(units) do
 		if unit ~= nil then
-			DebugPrint(unit:GetUnitName())
 			block = true
 			break
 		end

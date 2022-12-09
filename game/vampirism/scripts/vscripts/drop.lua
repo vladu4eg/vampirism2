@@ -13,7 +13,7 @@ item_drop = {
 
 	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
 	{items = {"item_get_gem"}, limit = 10, chance = 10, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
-	{items = {SEASON_ITEM}, limit = 15, chance = 500, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
+	{items = {SEASON_ITEM}, limit = 15, chance = 500, units = {"npc_dota_hero_lycan","npc_dota_hero_omniknight"} },
 	
 	{items = {"item_get_gold"}, limit = 1, chance = 5, units = {"event_line_boss_halloween"} },
 	{items = {"item_event_birthday"}, limit = 1, chance = 400, units = {"event_line_boss_halloween"} },
@@ -116,7 +116,6 @@ function drop:RollItemDrop(unit)
 					if item_name == nil then
 						return false
 					end
-					DebugPrint(item_name)
 					local spawnPoint = unit:GetAbsOrigin()	
 					local newItem = CreateItem( item_name, nil, nil )
 					local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
