@@ -9,8 +9,8 @@ function Blink(keys)
 	if difference:Length2D() > range then
 		point = casterPos + (point - casterPos):Normalized() * range
 	end
-
-	FindClearSpaceForUnit(caster, point, false)
+	caster:SetAbsOrigin(point)
+	FindClearSpaceForUnit(caster, point, true)
 	ProjectileManager:ProjectileDodge(caster)
 	
 	local blinkIndex = ParticleManager:CreateParticle("particles/units/heroes/hero_antimage/antimage_blink_start.vpcf", PATTACH_ABSORIGIN, caster)

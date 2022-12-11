@@ -95,7 +95,7 @@ function wearables:AttachWearable(unit, modelPath)
 end
 
 function wearables:RemoveWearables(hero)
-    print('#RemoveWearables')
+   -- print('#RemoveWearables')
 	local wearables = {} -- объявление локального массива на удаление
 	local cur = hero:FirstMoveChild() -- получаем первый указатель над подобъект объекта hero ()
 	

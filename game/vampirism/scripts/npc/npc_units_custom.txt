@@ -841,7 +841,7 @@
 		"PlayerCanControl"			"1"
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
-		"Limit"						"10"
+		"Limit"						"5"
 		"StartingBuilding"          "1"
 		
 	    // Stats
@@ -1654,6 +1654,7 @@
 		"Scale"						"1"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
+		"Limit"						"6"
 		//"Limit"						"9"
 	    // Stats
 	    //----------------------------- 
@@ -1730,6 +1731,7 @@
 		"Scale"						"1"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
+		"Limit"						"6"
 		//"Limit"						"9"
 	    // Stats
 	    //----------------------------- 
@@ -2832,6 +2834,7 @@
 		"Scale"						"1"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
+		"Limit"						"6"
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "11"
@@ -4150,10 +4153,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "0.6"
@@ -4187,12 +4190,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -4253,10 +4255,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "0.7"
@@ -4289,12 +4291,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -4355,10 +4356,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "0.8"
@@ -4392,12 +4393,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -4458,10 +4458,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "0.9"
@@ -4494,12 +4494,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -4560,10 +4559,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "1"
@@ -4597,12 +4596,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -4663,10 +4661,10 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+		"Model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/ember_spirit/ember_spirit.vmdl"
+			"model"						"models/heroes/dark_willow/dark_willow.vmdl"
 	    }
 		"DisableTurning"			"0"
 		"ModelScale"                "1.1"
@@ -4688,12 +4686,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "6759"}//head("Mentor of the High Plains Ceremonial Banner")
-		"Wearable2" {"ItemDef" "6760"}//belt("Mentor of the High Plains Great Cuirass")
-		"Wearable3" {"ItemDef" "6761"}//arms("Mentor of the High Plains Guard")
-		"Wearable4" {"ItemDef" "6762"}//shoulder("Mentor of the High Plains Decorated Pauldrons")
-		"Wearable5" {"ItemDef" "6763"}//("Mentor of the High Plains Right Tiger Hook")
-		"Wearable6" {"ItemDef" "6764"}//offhand_weapon("Mentor of the High Plains Left Tiger Hook")
+"Wearable1" {"ItemDef" "6977"}//offhand_weapon("Lantern of the Winter Rose")
+		"Wearable2" {"ItemDef" "6992"}//back("Wings of the Winter Rose")
+		"Wearable3" {"ItemDef" "6990"}//belt("Satchel of the Winter Rose")
+		"Wearable4" {"ItemDef" "6991"}//armor("Armor of the Winter Rose")
+		"Wearable5" {"ItemDef" "6978"}//head("Petals of the Winter Rose")
 	        }
 	    }
 
@@ -5034,7 +5031,7 @@
 		"Scale"						"1"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
-		"Limit"						"30"
+		"Limit"						"6"
 
 	    // Stats
 	    //----------------------------- 
@@ -6945,6 +6942,7 @@
 		"Scale"						"1"
 		"StartingBuilding"          "1"
 		"RequiresRepair"			"1"
+		"Limit"						"6"
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "2"
@@ -10381,7 +10379,7 @@
 		"Ability8"					"buy_item_block_4"
 		"Ability9"					"buy_item_ward_observer"
 		"Ability10"					"buy_item_ward_sentry"
-		"Ability11"					""
+		"Ability11"					"buy_item_tpscroll_troll"
 		"Ability12"					""
 		"Ability13"					""
 		"Ability14"					""

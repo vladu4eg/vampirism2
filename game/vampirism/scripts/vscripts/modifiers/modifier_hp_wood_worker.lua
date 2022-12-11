@@ -97,7 +97,6 @@ function modifier_hp_wood_worker_aura:OnRefresh( )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "wood_worker")  then
 				local countStack = caster:FindModifierByName("modifier_hp_wood_worker"):GetStackCount()
-				print(countStack)
 				target:SetMaxHealth(target:GetMaxHealth() + (350 * countStack))
 				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + (350 * countStack) )
 				target:SetHealth(target:GetHealth() + (350 * countStack))

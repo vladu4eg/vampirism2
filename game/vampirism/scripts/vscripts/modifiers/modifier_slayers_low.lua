@@ -93,10 +93,7 @@ function modifier_slayers_low_aura:OnCreated( kv )
 	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
-			print("11111111")
-			print(caster:GetPlayerOwnerID())
-			print(target:GetPlayerOwnerID())
-			print(target:GetUnitName())
+
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
 				local countStack = caster:FindModifierByName("modifier_slayers_low"):GetStackCount()
 				if countStack == 0 then
@@ -111,10 +108,7 @@ function modifier_slayers_low_aura:OnRefresh( kv )
 	if IsServer() then
 			local caster = self:GetCaster()
 			local target = self:GetParent()
-			print("11111111")
-			print(caster:GetPlayerOwnerID())
-			print(target:GetPlayerOwnerID())
-			print(target:GetUnitName())
+
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
 				local countStack = caster:FindModifierByName("modifier_slayers_low"):GetStackCount()
 				self:SetStackCount(countStack)

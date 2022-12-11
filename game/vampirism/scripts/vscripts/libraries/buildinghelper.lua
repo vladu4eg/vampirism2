@@ -122,7 +122,7 @@ function BuildingHelper:HookBoilerplate()
                         for _, func in ipairs(__ACTIVATE_HOOK.funcs) do
                             local status, err = pcall(func)
                             if not status then
-                                print("__ACTIVATE_HOOK callback error: " .. err)
+                             --   print("__ACTIVATE_HOOK callback error: " .. err)
                             end
                         end
                         
@@ -388,7 +388,7 @@ end
 
 function BuildingHelper:OnTreeCut(keys)
     local treePos = Vector(keys.tree_x, keys.tree_y, 0)
-    BuildingHelper:FreeGridSquares(2, treePos)
+   -- BuildingHelper:FreeGridSquares(2, treePos)
     local tree -- Figure out which tree was cut
     for _, t in pairs(BuildingHelper.AllTrees) do
         local pos = t:GetAbsOrigin()
@@ -398,8 +398,7 @@ function BuildingHelper:OnTreeCut(keys)
         end
     end
     if not tree then
-        BuildingHelper:print("ERROR: OnTreeCut couldn't find a tree for pos " ..
-        treePos.x .. "," .. treePos.y)
+       -- BuildingHelper:print("ERROR: OnTreeCut couldn't find a tree for pos " .. treePos.x .. "," .. treePos.y)
         return
     elseif tree.chopped_dummy then
         BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
@@ -420,17 +419,17 @@ function BuildingHelper:OnTreeCut(keys)
     tree.chopped_dummy = CreateUnitByName("npc_dota_units_base_tree", treePos, false, nil, nil, DOTA_TEAM_NOTEAM)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
     BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
-    
+    BuildingHelper:FreeGridSquares(2, treePos)
 	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
             if IsValidEntity(tree.chopped_dummy) then
                 BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
                 UTIL_Remove(tree.chopped_dummy)
-                BuildingHelper:BlockGridSquares(2, 2, treePos)
+               -- BuildingHelper:BlockGridSquares(2, 2, treePos)
             end
 		end);
     randTime = nil
-    BuildingHelper:FreeGridSquares(2, treePos)
+    
 end
 
 function BuildingHelper:BlockBH()
@@ -450,9 +449,9 @@ function BuildingHelper:InitGNV()
     local boundY1 = GridNav:WorldToGridPosY(worldMin.y)
     local boundY2 = GridNav:WorldToGridPosY(worldMax.y)
     
-    BuildingHelper:print("Max World Bounds: ")
-    BuildingHelper:print(GetWorldMinX() .. ' ' .. GetWorldMaxX() .. ' ' .. GetWorldMinY() .. ' ' .. GetWorldMaxY())
-    BuildingHelper:print(boundX1 .. ' ' .. boundX2 .. ' ' .. boundY1 .. ' ' .. boundY2)
+  --  BuildingHelper:print("Max World Bounds: ")
+  --  BuildingHelper:print(GetWorldMinX() .. ' ' .. GetWorldMaxX() .. ' ' .. GetWorldMinY() .. ' ' .. GetWorldMaxY())
+  --  BuildingHelper:print(boundX1 .. ' ' .. boundX2 .. ' ' .. boundY1 .. ' ' .. boundY2)
     
     local blockedCount = 0
     local unblockedCount = 0
@@ -535,7 +534,7 @@ function BuildingHelper:InitGNV()
             
             if treeBlocked then
                 BuildingHelper.Terrain[y][x] =
-                BuildingHelper.GridTypes["BLOCKED"]
+                BuildingHelper.GridTypes["BUILDABLE"]
             end
             
             shift = shift - 2
@@ -550,11 +549,11 @@ function BuildingHelper:InitGNV()
         if shift ~= 4 then gnv[#gnv + 1] = string.char(byte + 58) end
         
         if ASCII_ART then
-            print(table.concat(line, ''))
+          --  print(table.concat(line, ''))
             line = {}
         end
     end
-    BuildingHelper:print("local gnv_string = table.concat(gnv, '') ")
+  --  BuildingHelper:print("local gnv_string = table.concat(gnv, '') ")
     local gnv_string = table.concat(gnv, '')
     
     -- Running-length encoding
@@ -581,8 +580,7 @@ function BuildingHelper:InitGNV()
     local squareX = boundX2 - boundX1 + 1
     local squareY = boundY2 - boundY1 + 1
     
-    BuildingHelper:print("Free: " .. unblockedCount .. " Blocked: " ..
-    blockedCount)
+  --  BuildingHelper:print("Free: " .. unblockedCount .. " Blocked: " .. blockedCount)
     
     -- Initially, the construction grid equals the terrain grid
     -- Clients will have full knowledge of the terrain grid
@@ -603,10 +601,9 @@ function BuildingHelper:SendGNV(args)
     if playerID then
         local player = PlayerResource:GetPlayer(playerID)
         if player then
-            BuildingHelper:print("Sending GNV to player " .. playerID)
-            BuildingHelper:print("GNV Length: " ..
-            string.len(BuildingHelper.Encoded))
-            BuildingHelper:print("Sending GNV: " .. BuildingHelper.Encoded)
+        --    BuildingHelper:print("Sending GNV to player " .. playerID)
+          --  BuildingHelper:print("GNV Length: " .. string.len(BuildingHelper.Encoded))
+          --  BuildingHelper:print("Sending GNV: " .. BuildingHelper.Encoded)
             CustomGameEventManager:Send_ServerToPlayer(player, "gnv_register", {
                 gnv = BuildingHelper.Encoded,
                 squareX = BuildingHelper.squareX,
@@ -829,7 +826,7 @@ function BuildingHelper:OrderFilter(order)
             local target_name = target_handle:GetUnitName()
             
             if self:OnPreRepair(target_handle, unit) then
-                self:print("Order: Repair " .. target_handle:GetUnitName())
+            --    self:print("Order: Repair " .. target_handle:GetUnitName())
                 
                 -- Get the currently selected units and send new orders
                 local entityList = PlayerResource:GetSelectedEntities(
@@ -849,8 +846,7 @@ function BuildingHelper:OrderFilter(order)
                         end
                         
                         ent.skip = true
-                        BuildingHelper:print(
-                        "Repair Multi Order " .. target_handle:GetUnitName())
+                     --   BuildingHelper:print("Repair Multi Order " .. target_handle:GetUnitName())
                         ExecuteOrderFromTable(
                             {
                                 UnitIndex = entityIndex,
@@ -957,8 +953,7 @@ end
     * Manages each workers build queue. Will run once per builder
 ]] --
 function BuildingHelper:InitializeBuilder(builder)
-    BuildingHelper:print("InitializeBuilder " .. builder:GetUnitName() .. " " ..
-    builder:GetEntityIndex())
+   -- BuildingHelper:print("InitializeBuilder " .. builder:GetUnitName() .. " " .. builder:GetEntityIndex())
     
     if not builder.buildingQueue then builder.buildingQueue = {} end
     builder.state = "idle"
@@ -1145,8 +1140,7 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
     -- Extract data from the KV files, set is called to guarantee these have values later on in execution
     local unitName = buildingTable:GetVal("UnitName", "string")
     if not unitName then
-        BuildingHelper:print('Error: ' .. abilName ..
-        ' does not have a UnitName KeyValue')
+      --  BuildingHelper:print('Error: ' .. abilName .. ' does not have a UnitName KeyValue')
         return
     end
     buildingTable:SetVal("UnitName", unitName)
@@ -1157,15 +1151,13 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
     -- Ensure that the unit actually exists
     local unitTable = GetUnitKV(unitName)
     if not unitTable then
-        BuildingHelper:print('Error: Definition for Unit ' .. unitName ..
-        ' could not be found in the KeyValue files.')
+      --  BuildingHelper:print('Error: Definition for Unit ' .. unitName .. ' could not be found in the KeyValue files.')
         return
     end
     
     local construction_size = unitTable["ConstructionSize"]
     if not construction_size then
-        BuildingHelper:print('Error: Unit ' .. unitName ..
-        ' does not have a ConstructionSize KeyValue.')
+      --  BuildingHelper:print('Error: Unit ' .. unitName .. ' does not have a ConstructionSize KeyValue.')
         return
     end
     buildingTable:SetVal("ConstructionSize", construction_size)
@@ -1178,8 +1170,7 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
     
     local build_time = buildingTable["BuildTime"] or unitTable["BuildTime"]
     if not build_time then
-        BuildingHelper:print('Error: No BuildTime for ' .. unitName ..
-        '. Default to 0.1')
+       -- BuildingHelper:print('Error: No BuildTime for ' .. unitName .. '. Default to 0.1')
         build_time = 0.1
     end
     buildingTable:SetVal("BuildTime", build_time)
@@ -1189,8 +1180,7 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
     
     local pathing_size = unitTable["BlockPathingSize"]
     if not pathing_size then
-        BuildingHelper:print('Warning: Unit ' .. unitName ..
-        ' does not have a BlockPathingSize KeyValue. Defaulting to 0')
+      --  BuildingHelper:print('Warning: Unit ' .. unitName .. ' does not have a BlockPathingSize KeyValue. Defaulting to 0')
         pathing_size = 0
     end
     buildingTable:SetVal("BlockPathingSize", pathing_size)
@@ -1278,7 +1268,7 @@ function BuildingHelper:PlaceBuilding(player, name, location, construction_size,
     local hero = playerID and PlayerResource:GetSelectedHeroEntity(playerID)
     local teamNumber = hero and hero:GetTeamNumber() or DOTA_TEAM_NEUTRALS
     
-    BuildingHelper:print("PlaceBuilding for playerID " .. playerID)
+   -- BuildingHelper:print("PlaceBuilding for playerID " .. playerID)
     -- Spawn point obstructions before placing the building
     local gridNavBlockers = BuildingHelper:BlockGridSquares(construction_size,
         pathing_size,
@@ -1328,7 +1318,7 @@ end
 ]]
 function BuildingHelper:UpgradeBuilding(building, newName)
     local oldBuildingName = building:GetUnitName()
-    BuildingHelper:print("Upgrading Building: " .. oldBuildingName .. " -> " .. newName)
+  --  BuildingHelper:print("Upgrading Building: " .. oldBuildingName .. " -> " .. newName)
     local playerID = building:GetPlayerOwnerID()
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     local position = building:GetAbsOrigin()
@@ -1338,7 +1328,7 @@ function BuildingHelper:UpgradeBuilding(building, newName)
     local bPlayerCanControl = GetUnitKV(newName, "PlayerCanControl") or 0
     
     local buildTime = GetUnitKV(newName, "BuildTime") or 3
-    BuildingHelper:print(newName)
+  --  BuildingHelper:print(newName)
     if GameRules.MapSpeed == 4 and newName ~= "tower_19" and newName ~= "tower_19_1" and newName ~= "tower_19_2" and not string.match(newName,"rock") then
         buildTime = buildTime/4
     end
@@ -1446,8 +1436,7 @@ function BuildingHelper:UpgradeBuilding(building, newName)
                         end
                         else
                         
-                        BuildingHelper:print(
-                        "Scale was off by: " .. (fMaxScale - fCurrentScale))
+                      --  BuildingHelper:print("Scale was off by: " .. (fMaxScale - fCurrentScale))
                         newBuilding:SetModelScale(fMaxScale)
                         return
                     end
@@ -1588,9 +1577,7 @@ function BuildingHelper:StartBuilding(builder)
         return false
     end
 
-    BuildingHelper:print(
-        "Initializing Building Entity: " .. unitName .. " at " ..
-    VectorString(location))
+   --BuildingHelper:print("Initializing Building Entity: " .. unitName .. " at " .. VectorString(location))
     
     -- Mark this work in progress, skip refund if cancelled as the building is already placed
     work.inProgress = true
@@ -3515,10 +3502,7 @@ deniable = deniable
 end
 
 function PrintGridCoords(pos)
-print('(' .. string.format("%.1f", pos.x) .. ',' ..
-string.format("%.1f", pos.y) .. ') = [' ..
-GridNav:WorldToGridPosX(pos.x) .. ',' ..
-GridNav:WorldToGridPosY(pos.y) .. ']')
+print('(' .. string.format("%.1f", pos.x) .. ',' .. string.format("%.1f", pos.y) .. ') = [' .. GridNav:WorldToGridPosX(pos.x) .. ',' .. GridNav:WorldToGridPosY(pos.y) .. ']')
 end
 
 function VectorString(v)

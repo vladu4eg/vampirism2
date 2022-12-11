@@ -140,18 +140,18 @@ function SetupUnusedItemHotkeys() {
                 UseItemCommandCalled(data, hotkey, slot);
             }, "", 0);
         })(hotkey, i - 1);
-        $.Msg("hotkey ", hotkey );
-        $.Msg("cmd_name ", cmd_name );
+      //  $.Msg("hotkey ", hotkey );
+     //   $.Msg("cmd_name ", cmd_name );
         Game.CreateCustomKeyBind(hotkey, "UseHotkey_" + cmd_name);
     }
 }
 
 function UseItemCommandCalled(data, hotkey, slot) {
-    $.Msg("Use item command called: ", data, "; ", hotkey, "; ");
+   // $.Msg("Use item command called: ", data, "; ", hotkey, "; ");
     var selectedUnitID = Players.GetLocalPlayerPortraitUnit();
     var itemID = Entities.GetItemInSlot(selectedUnitID, slot);
     var abilitySlot = unusedHotkeyAbilitySlots[hotkey];
-    $.Msg("ItemID: ", itemID);
+   // $.Msg("ItemID: ", itemID);
     let itemName = Abilities.GetAbilityName(itemID);
     if (itemID !== -1 && itemName != "item_full") {
         Abilities.ExecuteAbility(itemID, selectedUnitID, false);
@@ -400,10 +400,10 @@ function IsHotkeyAvailable(selectedUnit, index) {
 function CleanUpUiSchedules() {
     for (var a = 0; a < uiWaitingSchedules.length; a++) {
         try {
-            $.Msg("Canceling schedule: ", uiWaitingSchedules[a]);
+       //     $.Msg("Canceling schedule: ", uiWaitingSchedules[a]);
             $.CancelScheduled(uiWaitingSchedules[a]);
         } catch (e) {
-            $.Msg("................................................................An error occured: ", e);
+    //        $.Msg("................................................................An error occured: ", e);
         }
     }
     uiWaitingSchedules.length = 0;

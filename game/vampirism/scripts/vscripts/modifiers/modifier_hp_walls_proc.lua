@@ -75,7 +75,6 @@ function  modifier_hp_walls_proc_aura:OnCreated( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
 				local countStack = caster:FindModifierByName("modifier_hp_walls_proc"):GetStackCount()
-				print(countStack)
 				if countStack == 0 then
 					countStack = 1
 				end
@@ -95,7 +94,6 @@ function  modifier_hp_walls_proc_aura:OnRefresh( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
 				local countStack = caster:FindModifierByName("modifier_hp_walls_proc"):GetStackCount()
-				print(countStack)
 				target:SetMaxHealth(target:GetMaxHealth() * (0.2 * countStack + 1))
 				target:SetBaseMaxHealth(target:GetBaseMaxHealth() * (0.2 * countStack + 1) )
 				target:SetHealth(target:GetHealth() * (0.2 * countStack + 1))

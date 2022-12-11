@@ -4904,9 +4904,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -4926,10 +4924,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -4949,11 +4944,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -4973,12 +4964,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -4998,13 +4984,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5024,14 +5004,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5051,15 +5024,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5079,16 +5044,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5108,17 +5064,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5138,19 +5084,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5170,19 +5104,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5203,20 +5125,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5236,21 +5145,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5270,22 +5165,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5305,23 +5185,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5341,24 +5205,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5378,24 +5225,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5415,24 +5245,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5452,24 +5265,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5490,24 +5286,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5528,24 +5307,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5566,24 +5328,7 @@
 		"MaxLevel"						"1"
 		"Building"						"1"
 		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-			"10"						"rock_11"
-			"11"						"rock_12"
-			"12"						"rock_13"
-			"13"						"rock_14"
-			"14"						"rock_15"
-			"15"						"rock_16"
-			"16"						"rock_17"
-		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -17851,12 +17596,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"500"
+				"damage_per_second"		"100"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"400"
+				"radius"				"900"
 			}
 			"06"
 			{
@@ -19622,7 +19367,25 @@
 	}
 }
 
-"buy_item_ward_sentry"
+"buy_item_tpscroll_troll"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"tpscroll"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_tpscroll_troll"
+		"BuyItem"					"1"
+		
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+	}
+
+	"buy_item_ward_sentry"
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityTextureName"		"item_ward_sentry"

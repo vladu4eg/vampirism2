@@ -1,17 +1,20 @@
 "AddonInfo"
 {
   "TeamCount" "5"
-  "maps"      "classic winter"
+  "maps"      "classic winter mini"
   "IsPlayable"  "1"
 
   "classic"
   {
     "MaxPlayers"                    "7"
   }
-  
   "winter"
   {
     "MaxPlayers"                    "12"
+  }
+  "mini"
+  {
+    "MaxPlayers"                    "5"
   }
   
   "Default_Keys"

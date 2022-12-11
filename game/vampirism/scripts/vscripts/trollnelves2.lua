@@ -1,7 +1,7 @@
 -- This is the primary trollnelves2 trollnelves2 script and should be used to assist in initializing your game mode
 -- Set this to true if you want to see a complete debug output of all events/processes done by trollnelves2
 -- You can also change the cvar 'trollnelves2_spew' at any time to 1 or 0 for output/no output
-TROLLNELVES2_DEBUG_SPEW = true
+TROLLNELVES2_DEBUG_SPEW = false
 LinkLuaModifier("modifier_movespeed_x4",
     "libraries/modifiers/modifier_movespeed_x4.lua",
 LUA_MODIFIER_MOTION_NONE)
@@ -221,7 +221,7 @@ function SelectHeroes()
 end
 
 function trollnelves2:OnHeroInGame(hero)
-    DebugPrint("OnHeroInGame")
+ --   DebugPrint("OnHeroInGame")
     if hero:GetUnitName() == "npc_dota_hero_templar_assassin" then
         return false
     end
@@ -347,7 +347,7 @@ function InitializeBadHero(hero)
         hero:AddNewModifier(hero, nil, "modifier_max_attackspeed", {})
         
         hero:AddItemByName("item_tpscroll_troll")
-        hero:AddItemByName("item_tpscroll_troll")
+        --hero:AddItemByName("item_tpscroll_troll")
     end
     --hero:SetStashEnabled(false)
 end
@@ -862,7 +862,6 @@ function GetClass(unitName)
     end
 end
 
-Slayers = {}
 function SlayerPool()
     Timers:CreateTimer(function()
         for pID=0,DOTA_MAX_TEAM_PLAYERS do
@@ -883,7 +882,6 @@ function SlayerPool()
             end
         end
     return 60 end)
-    
 end
 local countBuffGold = 1
 function BuffGold()

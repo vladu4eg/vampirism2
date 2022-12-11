@@ -79,7 +79,7 @@ function Build( event )
     -- Cancelled due to ClearQueue
     event:OnConstructionCancelled(function(work)
         local name = work.name
-        BuildingHelper:print("Cancelled construction of " .. name)
+        --BuildingHelper:print("Cancelled construction of " .. name)
         -- Refund resources for this cancelled work
         if work.refund and work.refund == true and not work.repair then
             PlayerResource:ModifyGold(hero,gold_cost,true)
@@ -91,7 +91,7 @@ function Build( event )
      
         -- A building unit was created
         event:OnConstructionStarted(function(unit)
-            BuildingHelper:print("Started construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
+            --BuildingHelper:print("Started construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
             unit.gold_cost = gold_cost
             unit.lumber_cost = lumber_cost
             unit:AddNewModifier(unit,nil,"modifier_phased",{}) 
@@ -149,7 +149,7 @@ function Build( event )
     
     -- A building finished construction
     event:OnConstructionCompleted(function(unit)
-        BuildingHelper:print("Completed construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex() .. " " .. tostring(unit))
+        --BuildingHelper:print("Completed construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex() .. " " .. tostring(unit))
         unit.state = "complete"
         unit.ancestors = {}
         local item = unit:GetItemInSlot(0)
@@ -249,11 +249,11 @@ end
 
 -- Called when the Cancel ability-item is used
 function CancelBuilding( keys )
-    DebugPrint("Trying to cancel!")
+    --DebugPrint("Trying to cancel!")
     local building = keys.unit
     local hero = building:GetOwner()
     
-    BuildingHelper:print("CancelBuilding "..building:GetUnitName().." "..building:GetEntityIndex())
+    --BuildingHelper:print("CancelBuilding "..building:GetUnitName().." "..building:GetEntityIndex())
     
     -- Refund here
    -- PlayerResource:ModifyGold(hero,building.gold_cost,true)

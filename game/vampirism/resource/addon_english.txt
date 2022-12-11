@@ -877,6 +877,8 @@
 		"DOTA_Tooltip_Ability_item_tpscroll_troll_gold_cost"                                       "<font color='#FFFF00'>GOLD COST: </font>"
 		"DOTA_Tooltip_Ability_item_tpscroll_troll_lumber_cost"                                     "<font color='#008000'>LUMBER COST: </font>"
 
+		"DOTA_Tooltip_Ability_buy_item_tpscroll_troll"												 "Portal Scroll"
+		"DOTA_Tooltip_Ability_buy_item_tpscroll_troll_Description"										"Teleports the hero to an allied unit."
 		
 
 		"DOTA_Tooltip_Ability_buy_item_troll_teleport"												 "Blade of Teleport"
@@ -3294,29 +3296,32 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"button_title3"							"FIRST GOLD"
 		"button_title4"							"SLAYER"
 		"button_title5"							"VAMPIRE UNITS"
+		"button_title6"							"VAMPIRE TRICKS"
 
 		"information_title1"					"START"
 		"information_title2"					"DEFENSE"
 		"information_title3"					"FIRST GOLD"
 		"information_title4"					"SLAYER"
 		"information_title5"					"VAMPIRE UNITS"
+		"information_title6"					"VAMPIRE TRICKS"
 
 		"button_description1"							""
 		"button_description2"							""
 		"button_description3"							""
 		"button_description4"							""
 		"button_description5"							""
+		"button_description6"							""
 
-		"information_description1"						"<h1>You must know in advance where you are going to build, so as not to waste time thinking, we quickly get to the right place using the global Blink. As soon as we got to the place, we immediately build a sawmill (House), order lumberjacks, and they will automatically start collecting wood. It is necessary to put a sawmill (House) at a distance of 1 cell from the forest, so that the workers have a place to maneuver, but it is also not far to walk. Next, we immediately set up 3-4 Tents. Then we build Slayer's Tavern and order Slayer, then build a research center, and then a wall. If everything is done quickly, then you can keep within 2 minutes, and be ready for an attack."
+		"information_description1"						"<h1>You must know in advance where you are going to build, so as not to waste time thinking, we quickly get to the right place using the global Blink. As soon as we got to the place, we immediately build a sawmill (House), order lumberjacks, and they will automatically start collecting wood. It is necessary to put a sawmill (House) at a distance of 1 cell from the forest, so that the workers have a place to maneuver, but it is also not far to walk. Next, we immediately set up 1-2 Tents. Then we build Slayer's Tavern and order Slayer, then build a research center, and then a wall. DON'T FORGET TO UPGRADE THE WALL! If everything is done quickly, then you can keep within 1 minute, and be ready for an attack."
 		"information_description2"						"<h1>It is necessary to put 3 stones in the shape of a triangle. 1 stone is placed in front and 2 stones behind it, which will completely close the passage to the base. If you do not completely close the passage, then any invisible unit that is called by the Vampire can penetrate your base. It is necessary to build several towers of level 1. One level 1 tower is sure to upgrade into a Tower of Healing. Healing Towers can be upgraded or changed to Mana Tower (burns Vampire mana), Fairy Tower (Reduces Vampire armor). The remaining towers are up to level 2 or higher. Don't forget the True Sight Tower! You must protect not only the wall, but also your lumberjacks!"
-		"information_description3"						"<h1>After 3 minutes, all Humans receive 1 gold, and the ability to exchange wood for gold is also unlocked at the Vampire's base. You can exchange your tree for gold with the Slayer. If a Vampire killed a lumberjack, then there is a chance that a gold coin will fall from the killed lumberjack. You can pick her up with the Slayer. If you can raise a coin before 3 minutes, then this guarantees you a high increase in resources. For the first gold, you need to build a Slayer Vault, which will open access to the construction of the Gold Mine. Each Slayer Vault upgrade unlocks upgraded Lumberjacks."
+		"information_description3"						"<h1>After 3 minutes, all Humans receive 1 gold, and the ability to exchange wood for gold is also unlocked at the Vampire's base. You can exchange your tree for gold with the Slayer. If a Vampire killed a lumberjack, then there is a chance that a gold coin will fall from the killed lumberjack. You can pick her up with the Slayer. If you can raise a coin before 3 minutes, then this guarantees you a high increase in resources. For the first gold, you need to build a Slayer Vault, which will open access to the construction of the Gold Mine. Each Slayer Vault upgrade unlocks upgraded Lumberjacks and upgraded Gold Mine."
 		"information_description4"						"<h1>Slayer can be crafted at the Slayer Tavern. After creating a Slayer for the first time, a notification will appear on the map about the place where Slayers can level up. Send Slayer 10-15 seconds before the end of the minute to the specified location and Slayer will receive +1 level. The slayer will help you protect your base from enemy units that the Vampire summons, and he can also create wall repairmen, throw a net or impose immortality on your buildings. If Slayer died, then you need to resurrect him in the Slayer Tavern. Slayers are delicious food for Vampires. Keep the Slayers alive!"
 		"information_description5"						"<h1>Vampires can summon minions. Henchmen can't kill a human!<br>
 The Shade unit is invisible to Humans. He can get to your base through 1 cell and summon a Vampire to him. It is necessary to completely build up the passage to the base.<br>
 Golems have a blink and can break your buildings inside the base. Slayer will help protect against them.<br>
 Invisible Assassin kills your lumberjacks. Don't forget to set True Sight!<br>
 Fel Beast kills the wall repairmen."
-
+		"information_description6"						"<h1>The vampire can buy Sphere Doom, which will give him Blink for short distances. All bases have weak spots that the Vampire can use Blink to push into. You need to build up weak spots and the Vampire will not be able to get to your base. A vampire can buy an ax and cut down a tree that prevents him from blinking or just passing through. Fortify places like this! A vampire can buy a rocket. The rocket is slow to fly, but on impact completely destroys a structure or living units. Be sure to build some walls to prevent the Vampire from entering your base on the first try. The Vampire can buy a long ax and break your Gold Mine, which covered your weak points from the Sphere Doom item."
 
 	}
 }

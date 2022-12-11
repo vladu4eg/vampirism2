@@ -21,7 +21,7 @@ LUA_MODIFIER_MOTION_NONE)
 
 
 function trollnelves2:OnGameRulesStateChange()
-    DebugPrint("GameRulesStateChange ******************")
+   -- DebugPrint("GameRulesStateChange ******************")
     local newState = GameRules:State_Get()
     if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
         trollnelves2:GameSetup()
@@ -33,7 +33,7 @@ end
 
 -- An NPC has spawned somewhere in game.  This includes heroes
 function trollnelves2:OnNPCSpawned(keys)
-    DebugPrint("OnNPCSpawned:")
+   -- DebugPrint("OnNPCSpawned:")
     local npc = EntIndexToHScript(keys.entindex)
     if npc.GetPhysicalArmorValue then
         npc:AddNewModifier(npc, nil, "modifier_custom_armor", {})
@@ -155,7 +155,7 @@ function trollnelves2:OnDisconnect(event)
 end
 
 function trollnelves2:OnConnectFull(keys)
-    DebugPrint("OnConnectFull ******************")
+   -- DebugPrint("OnConnectFull ******************")
   --  local entIndex = keys.index + 1
     -- The Player entity of the joining user
   --  local player = EntIndexToHScript(entIndex)
@@ -168,8 +168,8 @@ function trollnelves2:OnConnectFull(keys)
 end
 
 function trollnelves2:OnItemPickedUp(keys)
-    print('[BAREBONES] OnItemPickedUp')
-    DeepPrintTable(keys)
+   -- print('[BAREBONES] OnItemPickedUp')
+ --   DeepPrintTable(keys)
     local hero = PlayerResource:GetSelectedHeroEntity(keys.PlayerID)
     local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
     local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
@@ -195,8 +195,8 @@ function trollnelves2:OnItemPickedUp(keys)
 end
 
 function trollnelves2:OnItemAddedInv(keys)
-    print('[BAREBONES] OnItemAddedInv')
-    DeepPrintTable(keys)
+  --  print('[BAREBONES] OnItemAddedInv')
+   -- DeepPrintTable(keys)
     local hero = EntIndexToHScript(keys.inventory_parent_entindex)
     local itemEntity = EntIndexToHScript(keys.item_entindex)
     local player = PlayerResource:GetPlayer(keys.inventory_player_id)
@@ -223,7 +223,7 @@ end
 	It can be used to initialize non-hero player state or adjust the hero selection (i.e. force random etc)
 ]]
 function trollnelves2:OnAllPlayersLoaded()
-    DebugPrint("[TROLLNELVES2] All Players have loaded into the game")
+  --  DebugPrint("[TROLLNELVES2] All Players have loaded into the game")
     
 end
 
@@ -364,8 +364,7 @@ function trollnelves2:OnEntityKilled(keys)
                 for grid_type, v in pairs(gridTable) do
                     if tobool(v.RemoveOnDeath) then
                         local location = killed:GetAbsOrigin()
-                        BuildingHelper:print(
-                        "Clearing special grid of " .. grid_type)
+                       -- BuildingHelper:print("Clearing special grid of " .. grid_type)
                         if (v.Radius) then
                             BuildingHelper:RemoveGridType(v.Radius, location,
                             grid_type, "radius")
@@ -464,7 +463,7 @@ function CheckTrollVictory()
 end
 
 function GiveResources(eventSourceIndex, event)
-    DebugPrint("Give resources, event source index: ", eventSourceIndex)
+   -- DebugPrint("Give resources, event source index: ", eventSourceIndex)
     local targetID = event.target
     local casterID = event.casterID
     local gold = math.floor(math.abs(tonumber(event.gold)))
@@ -530,7 +529,7 @@ function GiveResources(eventSourceIndex, event)
 end
 
 function ChooseHelpSide(eventSourceIndex, event)
-    DebugPrint("Choose help side: " .. eventSourceIndex);
+  --  DebugPrint("Choose help side: " .. eventSourceIndex);
     local team = event.team
     local playerID = event.playerID
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
@@ -597,8 +596,8 @@ function Halloween(npc)
 end
 
 function trollnelves2:OnPlayerLevelUp(keys)
-    DebugPrint('[BAREBONES] OnPlayerLevelUp')
-    DebugPrintTable(keys)
+   -- DebugPrint('[BAREBONES] OnPlayerLevelUp')
+   -- DebugPrintTable(keys)
     
     --PrintTable(keys)
     

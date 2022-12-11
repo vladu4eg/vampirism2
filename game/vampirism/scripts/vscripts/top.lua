@@ -9,7 +9,7 @@ HardWinsTopList = {}
 PlaysTopListEvent = {}
 
 function top:UpdateTops()
-    print("UpdateTops")
+    --print("UpdateTops")
     CustomGameEventManager:Send_ServerToAllClients( "UpdateTopPlays", PlaysTopList)
     CustomGameEventManager:Send_ServerToAllClients( "UpdateTopWins", WinsTopList)
     CustomGameEventManager:Send_ServerToAllClients( "UpdateTopHardWins", HardWinsTopList)

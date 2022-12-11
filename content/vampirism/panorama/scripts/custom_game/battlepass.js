@@ -180,7 +180,7 @@ var free_rewards = [
 
 function ToggleBattlePass() {
 	player_bp_info = CustomNetTables.GetTableValue("Shop", Players.GetLocalPlayer())[7];
-	$.Msg(player_bp_info) 
+	//$.Msg(player_bp_info) 
     if (toggle === false) {
     	if (cooldown_panel == false) {
 	        toggle = true;
@@ -354,7 +354,7 @@ function CreateFreeReward(reward_level, lvl){
 
 
 function GiveReward(id, panel, type) {
-	$.Msg(id)
+	//$.Msg(id)
 
 	panel.SetPanelEvent("onactivate", function() {} );
 	panel.RemoveClass("PanelLock")

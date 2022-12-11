@@ -49,7 +49,7 @@ if IsServer() then
 					FIND_ANY_ORDER,
 					false)
 			
-			local damageTable = {attacker = caster, damage = self.damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability }
+			local damageTable = {attacker = caster, damage = self.damage, damage_type = DAMAGE_TYPE_PHYSICAL, ability = ability }
 			-- Deal damage to all targets passed
 			for _,unit in pairs(targets) do
 				damageTable.victim = unit

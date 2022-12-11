@@ -71,7 +71,6 @@ function  modifier_hp_reg_tower_aura:OnCreated( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
 				local countStack = caster:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
-				print(countStack)
 				if countStack == 0 then
 					countStack = 1
 				end
@@ -91,7 +90,6 @@ function  modifier_hp_reg_tower_aura:OnRefresh( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
 				local countStack = caster:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
-				print(countStack)
 				target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
 				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
 				target:SetHealth(target:GetHealth() + 2000 * countStack)

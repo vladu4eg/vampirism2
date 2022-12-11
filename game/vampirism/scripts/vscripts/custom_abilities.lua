@@ -346,7 +346,7 @@ function RevealArea( event )
 		Timers:CreateTimer(0.03,function()
 			local units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL  , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
 			for _,unit in pairs(units) do
-				if unit ~= nil then
+				if unit ~= nil and unit:GetTeamNumber() ~= 3 then
 					if unit:HasModifier("modifier_invisible") and not unit:HasModifier("modifier_invisible_truesight_immune") then -- 
 						unit:RemoveModifierByName("modifier_invisible")
 					end
@@ -508,6 +508,7 @@ function SpawnUnitOnSpellStart(event)
 		if (hero.food > GameRules.maxFood[playerID] and food ~= 0) or hero.food > 300 then
 			SendErrorMessage(playerID, "error_not_enough_food")
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
+			ability:EndChannel(false)
 			return false
 		end
 		if mine_cost ~= nil then
@@ -698,7 +699,7 @@ function ModifyGoldPerSecond(hero, amount, interval)
 end
 
 function HpRegenModifier(keys)
-	print ( '[vladu4eg] HpRegenModifier' )
+	--print ( '[vladu4eg] HpRegenModifier' )
 	local status, nextCall = Error_debug.ErrorCheck(function() 
 	local caster = keys.caster
 	
@@ -1194,7 +1195,7 @@ function build_tree( event )
         if IsInsideBoxEntity2(point, pos) then
 			BuildingHelper.TreeDummies[t:GetEntityIndex()] = nil
             UTIL_Remove(t.chopped_dummy)
-			BuildingHelper:BlockGridSquares(2, 2, pos)
+			--BuildingHelper:BlockGridSquares(2, 2, pos)
 		end
 	end
 end

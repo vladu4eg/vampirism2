@@ -100,7 +100,7 @@ function SpiritBearLevel( event )
 	local level = ability:GetLevel()
 	local unit_name = "npc_dota_hero_bear"
 	
-	print("Level Up Bear")
+	--print("Level Up Bear")
 	
 	-- Synergy Level. Checks both the default and the datadriven Synergy
 	local synergyAbility = caster:FindAbilityByName("lone_druid_synergy_datadriven")

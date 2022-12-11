@@ -10,7 +10,7 @@ var PT = {
 };
 
 
-$.Msg("[playertables_base.js] Loaded");
+//$.Msg("[playertables_base.js] Loaded");
 
 var PlayerTables = {};
 
@@ -177,7 +177,7 @@ function UpdateTable(msg)
   var table = PT.tables[msg.name];
   if (!table)
   {
-    $.Msg("PlayerTables.UpdateTable invoked on nonexistent playertable.");
+   // $.Msg("PlayerTables.UpdateTable invoked on nonexistent playertable.");
     return;
   }
 
@@ -207,7 +207,7 @@ function DeleteTableKeys(msg)
   var table = PT.tables[msg.name];
   if (!table)
   {
-    $.Msg("PlayerTables.DeleteTableKey invoked on nonexistent playertable.");
+    //$.Msg("PlayerTables.DeleteTableKey invoked on nonexistent playertable.");
     return;
   }
 

@@ -1,5 +1,5 @@
 if Donate == nil then
-	print ( '[Donate] creating Donate' )
+	--print ( '[Donate] creating Donate' )
 	Donate = {}
 end
 

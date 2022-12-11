@@ -10,17 +10,17 @@ function Shop.RequestVip(pID, steam, callback)
 	local parts = {}
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "vip/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("RequestVip ***********************************************" .. GameRules.server )
+--	DebugPrint("RequestVip ***********************************************" .. GameRules.server )
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+		--	DebugPrint("Connection failed! Code: ".. res.StatusCode)
+		--	DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
-		DeepPrintTable(obj)
-		DebugPrint("***********************************************")
+		--DeepPrintTable(obj)
+		--DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
 		for id = 1, 84 do
 			parts[id] = "nill"
@@ -44,17 +44,17 @@ end
 function Shop.RequestSkin(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "skin/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("RequestVip ***********************************************" .. GameRules.server )
+	--DebugPrint("RequestVip ***********************************************" .. GameRules.server )
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+		--	DebugPrint("Connection failed! Code: ".. res.StatusCode)
+		--	DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
-		DeepPrintTable(obj)
-		DebugPrint("***********************************************")
+	--	DeepPrintTable(obj)
+	--	DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
 
 		for id=1,#obj do
@@ -68,18 +68,18 @@ end
 function Shop.RequestEvent(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "event/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
-		DebugPrint("***********************************************")
-		DebugPrint(pID)
+		--DebugPrint("***********************************************")
+		--DebugPrint(pID)
 		local message = tostring(PlayerResource:GetPlayerName(pID)) .. " didn't get the event items.!"
 		if #obj > 0 then
 			if obj[1].srok ~= nil and #obj == 1 then
@@ -99,20 +99,20 @@ function Shop.GetVip(data,callback)
 	data.MatchID = MatchID
 	local req = CreateHTTPRequestScriptVM("POST",GameRules.server)
 	local encData = json.encode(data)
-	DebugPrint("***********************************************")
-	DebugPrint(GameRules.server)
-	DebugPrint(encData)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
+	--DebugPrint(GameRules.server)
+	--DebugPrint(encData)
+	--DebugPrint("***********************************************")
 	
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	req:SetHTTPRequestRawPostBody("application/json", encData)
 	req:Send(function(res)
-		DebugPrint("***********************************************")
-		DebugPrint(res.Body)
-		DebugPrint("Response code: " .. res.StatusCode)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
+		--DebugPrint(res.Body)
+		--DebugPrint("Response code: " .. res.StatusCode)
+		--DebugPrint("***********************************************")
 		if res.StatusCode ~= 200 then
-			DebugPrint("Error connecting GET VIP")
+			--DebugPrint("Error connecting GET VIP")
 		end
 		
 		if callback then
@@ -129,17 +129,17 @@ end
 function Shop.RequestVipDefaults(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "vip/defaults/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
-		DeepPrintTable(obj)
-		DebugPrint("RequestVipDefaults ***********************************************")
+		--DeepPrintTable(obj)
+		--DebugPrint("RequestVipDefaults ***********************************************")
 		if #obj > 0 then
 			if obj[1].num ~= nil then
 				GameRules.PartDefaults[pID] = obj[1].num
@@ -153,17 +153,17 @@ end
 function Shop.RequestSkinDefaults(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "skin/defaults/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
-		DeepPrintTable(obj)
-		DebugPrint("RequestSkinDefaults ***********************************************")
+		--DeepPrintTable(obj)
+		--DebugPrint("RequestSkinDefaults ***********************************************")
 		if #obj > 0 then
 			if obj[1].num ~= nil then
 				GameRules.SkinDefaults[pID] = tonumber(obj[1].num)
@@ -177,17 +177,17 @@ end
 function Shop.RequestPetsDefaults(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "pets/defaults/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
-		DeepPrintTable(obj)
-		DebugPrint("RequestPetsDefaults ***********************************************")
+		--DeepPrintTable(obj)
+		--DebugPrint("RequestPetsDefaults ***********************************************")
 		if #obj > 0 then
 			if obj[1].num ~= nil then
 				GameRules.PetsDefaults[pID] = obj[1].num
@@ -201,17 +201,17 @@ end
 function Shop.RequestBonus(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "bonus/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
 		PoolTable["3"]["0"] = "0"
 		PoolTable["3"]["1"] = "none"
@@ -230,19 +230,19 @@ end
 function Shop.RequestBonusTroll(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "troll/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	local tmp = 0
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
-		DebugPrint("***********************************************")
-		DebugPrintTable(CustomNetTables:GetTableValue("Shop", tostring(pID)))
+		--DebugPrint("***********************************************")
+		--DebugPrintTable(CustomNetTables:GetTableValue("Shop", tostring(pID)))
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
 		PoolTable["2"]["0"] = "0"
 		PoolTable["2"]["1"] = "none"
@@ -264,17 +264,17 @@ function Shop.RequestPets(pID, steam, callback)
 	local parts = {}
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "pets/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
 		for id = 0, 55 do
 			parts[id] = "nill"
 		end
@@ -296,17 +296,17 @@ end
 function Shop.RequestCoint(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "coint/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
 		PoolTable["0"]["0"] = "0"
 		PoolTable["0"]["1"] = "0"
@@ -334,21 +334,21 @@ function Shop:BuyShopItem(table, callback)
 	table.id = tostring(table.id)
 	local req = CreateHTTPRequest("POST",GameRules.server .. "buy/")
 	local encData = json.encode(table)
-	DebugPrint("***********************************************")
-	DebugPrint(GameRules.server)
-	DebugPrint(encData)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
+	--DebugPrint(GameRules.server)
+	--DebugPrint(encData)
+	--DebugPrint("***********************************************")
 	
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	req:SetHTTPRequestRawPostBody("application/json", encData)
 	req:Send(function(res)
-		DebugPrint("***********************************************")
-		DebugPrint(res.Body)
-		DebugPrint("Response code: " .. res.StatusCode)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
+		--DebugPrint(res.Body)
+		--DebugPrint("Response code: " .. res.StatusCode)
+		--DebugPrint("***********************************************")
 		if res.StatusCode ~= 200 then
 			GameRules:SendCustomMessage("Error during purchase. Code: " .. res.StatusCode, 1, 1)
-			DebugPrint("Error during purchase.")
+			--DebugPrint("Error during purchase.")
 		end
 
 		if string.match(table.Nick, "%a+") == "pet" then
@@ -385,20 +385,20 @@ function Shop.GetGem(data,callback)
     data.MatchID = MatchID
 	local req = CreateHTTPRequestScriptVM("POST",GameRules.server .. "coint/")
 	local encData = json.encode(data)
-	DebugPrint("***********************************************")
-	DebugPrint(GameRules.server)
-	DebugPrint(encData)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
+	--DebugPrint(GameRules.server)
+	--DebugPrint(encData)
+	--DebugPrint("***********************************************")
 	
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	req:SetHTTPRequestRawPostBody("application/json", encData)
 	req:Send(function(res)
-		DebugPrint("***********************************************")
-		DebugPrint(res.Body)
-		DebugPrint("Response code: " .. res.StatusCode)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
+		--DebugPrint(res.Body)
+		--DebugPrint("Response code: " .. res.StatusCode)
+		--DebugPrint("***********************************************")
 		if res.StatusCode ~= 200 then
-			DebugPrint("Error connecting GET GEM")
+			--DebugPrint("Error connecting GET GEM")
 		end
 		if data.EndGame == nil then
 			Shop.RequestCoint(data.playerID, data.SteamID, callback)
@@ -416,12 +416,12 @@ end
 function Shop.RequestChests(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "chests/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
-	DebugPrint("Chests update")
+	--DebugPrint("***********************************************")
+	--DebugPrint("Chests update")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
@@ -442,11 +442,11 @@ end
 function Shop.RequestSounds(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "sounds/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
@@ -508,7 +508,7 @@ function Shop:OpenChestAnimation(data)
 	local id = data.PlayerID
 	local reward = Shop:GetReward(data.chest_id, id) -- Предлагаю в этой функции возвращать выданный айди предмета
 
-	print(reward)
+	--print(reward)
 
 	Timers:CreateTimer(0.03, function()
 		time = time + 0.03
@@ -534,11 +534,11 @@ function Shop:GetReward(chest_id, playerID)
 	local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(playerID))
 --	PoolTable["4"][tostring(chest_id)] = {tostring(chest_id), tostring(chest_id.score - 1) }
 --	CustomNetTables:SetTableValue("Shop", tostring(pID), PoolTable)	
-	DebugPrint("reward_recieve " .. reward_recieve)
+	--DebugPrint("reward_recieve " .. reward_recieve)
 	for _, reward in pairs(Shop.Chests[chest_id]) do
 		if RollPercentage(reward[2]) then
 		    reward_recieve = reward[1]
-			DebugPrint("playerID " .. playerID)
+			--DebugPrint("playerID " .. playerID)
 			
 			
 			for i, v in pairs(PoolTable["1"]) do
@@ -563,7 +563,7 @@ function Shop:GetReward(chest_id, playerID)
 		data.Gem = 0
 		data.Gold = currency
 		data.Num = tostring(999)
-		print(currency)
+		--print(currency)
 	elseif reward_recieve == "gem" then -- Проверка что выпали гемы
 		data.Gem = currency
 		data.Gold = 0
@@ -686,7 +686,7 @@ function Shop:SelectVO(keys)
 				for pID=0,DOTA_MAX_TEAM_PLAYERS do
 					if PlayerResource:IsValidPlayerID(pID) then
 						if GameRules.Mute[pID] == nil then
-							DebugPrint(sound_name)
+							--DebugPrint(sound_name)
 							local hero = PlayerResource:GetPlayer(pID)
 							EmitSoundOnEntityForPlayer(sound_name, hero, pID)
 							-- EmitSoundOnClient(sound_name, hero)
@@ -780,12 +780,12 @@ end
 function Shop.RequestRewards(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "rewards/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
-	DebugPrint("Rewards update")
+	--DebugPrint("***********************************************")
+	--DebugPrint("Rewards update")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
@@ -820,21 +820,21 @@ function Shop:EventRewards(table, callback)
 	-- table.type
 	local req = CreateHTTPRequest("POST",GameRules.server .. "postrewards/")
 	local encData = json.encode(table)
-	DebugPrint("***********************************************")
-	DebugPrint(GameRules.server)
-	DebugPrint(encData)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
+	--DebugPrint(GameRules.server)
+	--DebugPrint(encData)
+	--DebugPrint("***********************************************")
 	
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	req:SetHTTPRequestRawPostBody("application/json", encData)
 	req:Send(function(res)
-		DebugPrint("***********************************************")
-		DebugPrint(res.Body)
-		DebugPrint("Response code: " .. res.StatusCode)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
+		--DebugPrint(res.Body)
+		--DebugPrint("Response code: " .. res.StatusCode)
+		--DebugPrint("***********************************************")
 		if res.StatusCode ~= 200 then
 			GameRules:SendCustomMessage("Error take rewards.. Code: " .. res.StatusCode, 1, 1)
-			DebugPrint("Error take rewards.")
+			--DebugPrint("Error take rewards.")
 		end
 		Shop.RequestCoint(table.playerID, table.SteamID, callback)
 		Shop.RequestXP(table.playerID, table.SteamID, callback)
@@ -849,12 +849,12 @@ end
 function Shop.RequestXP(pID, steam, callback)
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "xp/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("***********************************************")
-	DebugPrint("RequestXP update")
+	--DebugPrint("***********************************************")
+	--DebugPrint("RequestXP update")
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
-			DebugPrint("Connection failed! Code: ".. res.StatusCode)
-			DebugPrint(res.Body)
+			--DebugPrint("Connection failed! Code: ".. res.StatusCode)
+			--DebugPrint(res.Body)
 			return -1
 		end
 		
@@ -889,21 +889,21 @@ function Shop:EventBattlePass(table, callback)
 	-- table.type
 	local req = CreateHTTPRequest("POST",GameRules.server .. "battlepass/")
 	local encData = json.encode(table)
-	DebugPrint("***********************************************")
-	DebugPrint(GameRules.server)
-	DebugPrint(encData)
-	DebugPrint("***********************************************")
+	--DebugPrint("***********************************************")
+	--DebugPrint(GameRules.server)
+	--DebugPrint(encData)
+	--DebugPrint("***********************************************")
 	
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	req:SetHTTPRequestRawPostBody("application/json", encData)
 	req:Send(function(res)
-		DebugPrint("***********************************************")
-		DebugPrint(res.Body)
-		DebugPrint("Response code: " .. res.StatusCode)
-		DebugPrint("***********************************************")
+		--DebugPrint("***********************************************")
+		--DebugPrint(res.Body)
+		--DebugPrint("Response code: " .. res.StatusCode)
+		--DebugPrint("***********************************************")
 		if res.StatusCode ~= 200 then
 			GameRules:SendCustomMessage("Error take rewards.. Code: " .. res.StatusCode, 1, 1)
-			DebugPrint("Error take rewards.")
+			--DebugPrint("Error take rewards.")
 		end
 		Shop.RequestCoint(table.playerID, table.SteamID, callback)
 		Shop.RequestXP(table.playerID, table.SteamID, callback)

@@ -43,7 +43,7 @@ var player_table =
 
 function ToggleRewards() {
 	player_table = CustomNetTables.GetTableValue("Shop", Players.GetLocalPlayer())[6];
-	$.Msg(player_table)
+	//$.Msg(player_table)
     if (toggle === false) {
     	if (cooldown_panel == false) {
 	        toggle = true;
@@ -244,7 +244,7 @@ function RecieveReward(claim_panel, reward_panel, RewardIcon, RewardIconImage, t
 	// reward_count - количество 
 	// type_reward - тип награды
 
-	$.Msg(reward_count, type_reward)
+	//$.Msg(reward_count, type_reward)
 
 	GameEvents.SendCustomGameEventToServer( "EventRewards", {id: Players.GetLocalPlayer(), count: reward_count, type: type_reward} ); // отправляешь ивент 
 }

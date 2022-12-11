@@ -63,7 +63,7 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN, 0.0000000000000) 
 
 
-  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0.1)
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,15)
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 0.5)
@@ -218,6 +218,10 @@ function trollnelves2:DamageFilter( kv )
       kv.damage = 999999999999
     end
 
+    if heroAttacker:GetUnitName() == "tower_20" and heroKilled:GetTeamNumber() == 3 then
+      kv.damage = 999999999999
+    end
+
    -- if (string.match(heroKilled:GetUnitName(), "gold_mine") or string.match(heroKilled:GetUnitName(), "wisp")) and team == DOTA_TEAM_BADGUYS then
    --   kv.damage = 10
    -- end
@@ -245,7 +249,7 @@ function trollnelves2:GoldFilter( kv )
 end
 
 function trollnelves2:OnItemStateChanged(event)
-  print ( '[BAREBONES] OnItemStateChanged' )
+  --print ( '[BAREBONES] OnItemStateChanged' )
 
     local item = EntIndexToHScript(event.item_entindex) ---@type CDOTA_Item
     local hero = EntIndexToHScript(event.hero_entindex) ---@type CDOTA_BaseNPC_Hero

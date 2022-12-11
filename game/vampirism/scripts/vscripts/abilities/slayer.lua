@@ -55,7 +55,7 @@ function SlayerBuildingProtection( keys )
     if nearby:GetPlayerOwnerID() == pID then
       if nearby.state == "complete" then
         nearby:AddNewModifier(nearby, nil, "modifier_fountain_glyph",{})
-        print("DONE")
+        --print("DONE")
       end
     end
   end
@@ -73,8 +73,8 @@ function SlayerBuildingProtectionEnd( keys )
     if nearby:GetMainControllingPlayer() == pID then
       
       --if nearby:HasModifier("modifier_building_invulnerable") then
-        print("wtf")
-        PrintTable(nearby_units)
+      --  print("wtf")
+      --  PrintTable(nearby_units)
         nearby:RemoveModifierByName("modifier_fountain_glyph")
      -- end
     end

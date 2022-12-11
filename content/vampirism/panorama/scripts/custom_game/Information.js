@@ -58,6 +58,7 @@ var information_buttons =
 	["#information_button_3", "#button_title3", "#button_description3", "troll_icon", "information_panel_3"],
 	["#information_button_4", "#button_title4", "#button_description4", "troll_icon", "information_panel_4"],
 	["#information_button_5", "#button_title5", "#button_description5", "troll_icon", "information_panel_5"],
+	["#information_button_6", "#button_title6", "#button_description6", "troll_icon", "information_panel_6"],
 ]
 
 // Панели с информацией
@@ -70,6 +71,7 @@ var information_panels =
 	["information_panel_3", "#information_title3", "#information_description3", "video_3"],
 	["information_panel_4", "#information_title4", "#information_description4", "video_4"],
 	["information_panel_5", "#information_title5", "#information_description5", "video_5"],
+	["information_panel_6", "#information_title6", "#information_description6", "video_5"],
 ]
 
 

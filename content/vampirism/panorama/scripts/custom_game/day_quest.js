@@ -59,7 +59,7 @@ function CreateQuests()
 
 	if (player_table) 
 	{
-		$.Msg(player_table[1].length) 
+		//$.Msg(player_table[1].length) 
 		if (player_table[1].length <= 0)
 		{
 			$("#QuestPanelSwap").style.visibility = "collapse" 
@@ -84,7 +84,7 @@ function CreateQuest(quest_player_table, has_battlepass)
 	}
 
 	if (quest_table == null) {
-		$.Msg("У вас нет задания в базе")
+		//$.Msg("У вас нет задания в базе")
 		return
 	}
 
@@ -194,7 +194,7 @@ function UpdateQuest(data)
 	}
 
 	if (quest_table == null) {
-		$.Msg("У вас нет задания в базе")
+		//$.Msg("У вас нет задания в базе")
 		return
 	}
 
@@ -221,6 +221,6 @@ function UpdateQuest(data)
 			}
 		}
 	} else {
-		$.Msg("Не найдена панель задания")
+		//$.Msg("Не найдена панель задания")
 	}
 }

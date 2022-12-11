@@ -172,7 +172,7 @@ function PlayerTables:CreateTable(tableName, tableContents, pids)
   end
 
   if self.tables[tableName] then
-    print("[playertables.lua] Warning: player table '" .. tableName .. "' already exists.  Overriding.")
+  --  print("[playertables.lua] Warning: player table '" .. tableName .. "' already exists.  Overriding.")
   end
 
   self.tables[tableName] = tableContents
@@ -190,14 +190,14 @@ function PlayerTables:CreateTable(tableName, tableContents, pids)
         CustomGameEventManager:Send_ServerToPlayer(player, "pt_fu", {name=tableName, table=tableContents} )
       end
     else
-      print("[playertables.lua] Warning: Pid value '" .. pid .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
+     -- print("[playertables.lua] Warning: Pid value '" .. pid .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
     end
   end
 end
 
 function PlayerTables:DeleteTable(tableName)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+  --  print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -221,7 +221,7 @@ end
 
 function PlayerTables:SetPlayerSubscriptions(tableName, pids)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+  --  print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -241,14 +241,14 @@ function PlayerTables:SetPlayerSubscriptions(tableName, pids)
         CustomGameEventManager:Send_ServerToPlayer(player, "pt_fu", {name=tableName, table=table} )
       end
     else
-      print("[playertables.lua] Warning: Pid value '" .. pid .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
+    --  print("[playertables.lua] Warning: Pid value '" .. pid .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
     end
   end
 end
 
 function PlayerTables:AddPlayerSubscription(tableName, pid)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -263,14 +263,14 @@ function PlayerTables:AddPlayerSubscription(tableName, pid)
         CustomGameEventManager:Send_ServerToPlayer(player, "pt_fu", {name=tableName, table=table} )
       end
     else
-      print("[playertables.lua] Warning: Pid value '" .. v .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
+     -- print("[playertables.lua] Warning: Pid value '" .. v .. "' is not an integer between [0," .. DOTA_MAX_TEAM_PLAYERS .. "].  Ignoring.")
     end
   end
 end
 
 function PlayerTables:RemovePlayerSubscription(tableName, pid)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -281,7 +281,7 @@ end
 
 function PlayerTables:GetTableValue(tableName, key)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -294,7 +294,7 @@ end
 
 function PlayerTables:GetAllTableValues(tableName)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -307,7 +307,7 @@ end
 
 function PlayerTables:DeleteTableKey(tableName, key)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -327,7 +327,7 @@ end
 
 function PlayerTables:DeleteTableKeys(tableName, keys)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -370,7 +370,7 @@ function PlayerTables:SetTableValue(tableName, key, value)
     return 
   end
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 
@@ -390,7 +390,7 @@ end
 
 function PlayerTables:SetTableValues(tableName, changes)
   if not self.tables[tableName] then
-    print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
+   -- print("[playertables.lua] Warning: Table '" .. tableName .. "' does not exist.")
     return
   end
 

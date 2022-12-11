@@ -1,5 +1,5 @@
 if PrecacheLoad == nil then
-	print ( '[[TROLLNELVES2] Performing pre-load precache PRECACHE.lua' )
+	--print ( '[[TROLLNELVES2] Performing pre-load precache PRECACHE.lua' )
 	PrecacheLoad = {}
 end
 
@@ -48,7 +48,7 @@ end
 
 
 function PrecacheLoad:PrecacheLoad (context)
-    DebugPrint("[TROLLNELVES2] Performing pre-load precache PRECACHE.lua")
+   -- DebugPrint("[TROLLNELVES2] Performing pre-load precache PRECACHE.lua")
     PrecacheEverythingFromKV(context)
     
   -- for _, p in pairs(particle_folders) do

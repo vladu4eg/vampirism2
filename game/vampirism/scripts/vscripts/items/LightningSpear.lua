@@ -89,7 +89,7 @@ function ChainLightning( event )
 				    v.struckByChain = false
 				    v = nil
 				end
-			    print("End Chain, no more targets")
+			  --  print("End Chain, no more targets")
 				return	
 			end
 
@@ -105,7 +105,7 @@ function ChainLightning( event )
 				ApplyDamage({ victim = target, attacker = hero, damage = 8000, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability })
 			end
 			--PopupDamage(target,math.floor(damage))
-			print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
+		--	print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
 
 			-- play the sound
 			EmitSoundOn("Hero_Zuus.ArcLightning.Target",target)
@@ -124,7 +124,7 @@ function ChainLightning( event )
 				   	v.struckByChain = false
 				   	v = nil
 				end
-				print("End Chain, no more bounces")
+			--	print("End Chain, no more bounces")
 			end
 		end
 	})

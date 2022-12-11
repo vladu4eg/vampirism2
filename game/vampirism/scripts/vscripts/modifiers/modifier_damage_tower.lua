@@ -83,7 +83,6 @@ function modifier_damage_tower_aura:OnCreated( kv )
 			local target = self:GetParent()
 			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
 				local countStack = caster:FindModifierByName("modifier_damage_tower"):GetStackCount()
-				print(countStack)
 				if countStack == 0 then
 					countStack = 1
 				end
