@@ -92,9 +92,9 @@ end
 function PopupLumber(target, amount,gain)
     gain = gain==nil and true or gain
     if gain then
-        PopupNumbers(target, "damage", Vector(10, 200, 90), 3.0, amount, POPUP_SYMBOL_PRE_PLUS, nil)
+        PopupNumbers(target, "damage", Vector(10, 200, 90), 1.5, amount, POPUP_SYMBOL_PRE_PLUS, nil)
     else
-        PopupNumbers(target, "damage", Vector(10, 200, 90), 3.0, amount, POPUP_SYMBOL_PRE_MINUS, nil)
+        PopupNumbers(target, "damage", Vector(10, 200, 90), 1.5, amount, POPUP_SYMBOL_PRE_MINUS, nil)
     end
 end
 

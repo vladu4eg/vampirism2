@@ -135,10 +135,10 @@ function CDOTA_PlayerResource:ModifyFood(hero, food)
 		if GameRules.maxFood[playerID] == nil then
 			GameRules.maxFood[playerID] = STARTING_MAX_FOOD
 		end
-		if GameRules.maxFood[playerID] >= 15 and GameRules.maxFood[playerID] <= 300 then
+		if GameRules.maxFood[playerID] <= 300 and not GameRules.test2 then
 			maxFoodPlayer = GameRules.maxFood[playerID]
-		elseif GameRules.maxFood[playerID] < 15 then
-			maxFoodPlayer = 15
+		elseif GameRules.test2 then
+			maxFoodPlayer = 9999999
 		end
     hero.food = hero.food + food
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_food_changed", {
