@@ -32,7 +32,7 @@ function trollnelves2:_Inittrollnelves2()
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_1, 6)
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_2, 6)
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_3, 6)
-  
+  GameRules:SetUseBaseGoldBountyOnHeroes(true)
   -- Setup game mode
   mode = GameRules:GetGameModeEntity()     
   mode:SetCustomXPRequiredToReachNextLevel( XP_PER_LEVEL_TABLE )  
@@ -52,6 +52,7 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetMinimumAttackSpeed(MINIMUM_ATTACK_SPEED)
   mode:SetMaximumAttackSpeed(MAXIMUM_ATTACK_SPEED)
   
+
   mode:SetUseCustomHeroLevels ( true )
   mode:SetCameraDistanceOverride(1400)
     

@@ -1,9 +1,3 @@
-LUMBER_STACK_T1 = 20
-LUMBER_STACK_T2 = 160
-LUMBER_STACK_T3 = 480
-LUMBER_STACK_T4 = 1920
-LUMBER_STACK_T5 = 7680
-
 Debug_Peasant = false
 
 function PlayAttackAnimation( event )
@@ -131,7 +125,7 @@ function GatherLumber( event )
 	end
 	local caster = event.caster
 	local ability = event.ability
-
+	local hero = PlayerResource:GetSelectedHeroEntity(caster:GetPlayerOwnerID())
 	if caster == nil then
 		return
 	end
@@ -146,22 +140,13 @@ function GatherLumber( event )
 	local return_ability = caster:FindAbilityByName("return_resources")
 
 	caster.lumber_gathered = caster.lumber_gathered + single_chop
-
-	-- Show the stack of resources that the unit is carrying
-	if not caster:HasModifier("modifier_returning_resources") then
-        return_ability:ApplyDataDrivenModifier( caster, caster, "modifier_returning_resources", nil)
-    end
-    caster:SetModifierStackCount("modifier_returning_resources", caster, caster.lumber_gathered)
  
 	-- Increase up to the max, or cancel
 	if caster.lumber_gathered < max_lumber_carried then
 	else
-		local player = caster:GetPlayerOwnerID()
-
-		caster:RemoveModifierByName("modifier_chopping_wood")
-		caster:RemoveModifierByName("modifier_gather_lumber_rooted")
-	
-		caster:CastAbilityNoTarget(return_ability, player)
+		PlayerResource:ModifyLumber(hero,caster.lumber_gathered,true)
+		PopupLumber(caster,math.floor(caster.lumber_gathered),true)
+		caster.lumber_gathered = 0
 	end
 end
 

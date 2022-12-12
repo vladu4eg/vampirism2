@@ -324,7 +324,7 @@ function trollnelves2:OnEntityKilled(keys)
         if string.match(killed:GetUnitName(),"troll_hut") then
             hero = GameRules.trollHero
         end
-        if killed:GetUnitName() == "tent" then
+        if killed:GetUnitName() == "tent" and killed.state == 'complete' then
             GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 50
             PlayerResource:ModifyFood(hero, 0)
         elseif killed:GetUnitName() == "tent_2" then
