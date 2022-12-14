@@ -6,9 +6,6 @@ function modifier_regen_walls_proc:CheckState()
     return { [MODIFIER_STATE_BLOCK_DISABLED] = false}
 end
 --------------------------------------------------------------------------------
-function modifier_regen_walls_proc:IsAura()
-	return true
-end
 
 function modifier_regen_walls_proc:IsHidden()
     return true
@@ -30,32 +27,8 @@ function modifier_regen_walls_proc:IsPermanent()
 	return false
 end
 
-function modifier_regen_walls_proc:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_BASIC
-end
-
-function modifier_regen_walls_proc:GetAuraRadius()
-	return 9999999
-end
-
-function modifier_regen_walls_proc:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_FRIENDLY
-end
-
-function modifier_regen_walls_proc:GetAuraSearchFlags()
-	return DOTA_UNIT_TARGET_FLAG_NONE
-end
-
-function modifier_regen_walls_proc:GetModifierAura()
-	return "modifier_regen_walls_proc_aura"
-end
-
 --------------------------------------------------------------------------------
 modifier_regen_walls_proc_aura = class({})
-
-function modifier_regen_walls_proc_aura:IsAura()
-	return true
-end
 
 function modifier_regen_walls_proc_aura:IsHidden()
     return true
@@ -71,48 +44,53 @@ end
 
 function modifier_regen_walls_proc_aura:OnCreated( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
-				if target and target.hpReg then
-					target.hpReg = target.hpReg * 1.2
-					CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg-target.hpRegDebuff,0)),unit=target:GetEntityIndex() })
-				else
-					local countStack = caster:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
-					if countStack == 0 then
-						countStack = 1
-					end
-					target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
-				end
-			end		
+		local target = self:GetParent()
+		if target and target.hpReg then
+			target.hpReg = target.hpReg * 1.2
+			CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg,0)),unit=target:GetEntityIndex() })
+		else
+			local countStack = self:GetStackCount()
+			if countStack == 0 then
+				countStack = 1
+			end
+			target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
+		end
 	end
 end
 
 function modifier_regen_walls_proc_aura:OnRefresh( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
-				if target and target.hpReg then
-					target.hpReg = target.hpReg * 1.2
-					CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg-target.hpRegDebuff,0)),unit=target:GetEntityIndex() })
-				else
-					local countStack = caster:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
-					target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
-				end
-			end		
+		local target = self:GetParent()
+		if target and target.hpReg then
+			target.hpReg = target.hpReg * 1.2
+			CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg,0)),unit=target:GetEntityIndex() })
+		else
+			local countStack = self:GetStackCount()
+			target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
+		end		
 	end
 end
 
 
 function modifier_regen_walls_proc_aura:OnRemoved(kv)
 	if IsServer() then
-		local caster = self:GetCaster()
 		local target = self:GetParent()
-		if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
-			local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
-			target:SetBaseHealthRegen(regen)
-		end
+		local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
+		target:SetBaseHealthRegen(regen)
 	end
 end
 
+function modifier_regen_walls_proc_aura:OnStackCountChanged()
+	if IsServer() then
+		local target = self:GetParent()
+		local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
+		target:SetBaseHealthRegen(regen)
+		if target and target.hpReg then
+			target.hpReg = target.hpReg * 1.2
+			CustomGameEventManager:Send_ServerToAllClients("custom_hp_reg", { value=(max(target.hpReg,0)),unit=target:GetEntityIndex() })
+		else
+			local countStack = self:GetStackCount()
+			target:SetBaseHealthRegen(target:GetBaseHealthRegen() * 1.20 * countStack)
+		end	
+	end
+end

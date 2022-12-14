@@ -458,11 +458,37 @@ function SkillOnChannelSucceeded(event)
 		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 		local skill_name = GetAbilityKV(ability:GetAbilityName()).SkillName
 		local stack = ability:GetLevel()
-		--hero:RemoveModifierByName(skill_name)
-		--Timers:CreateTimer(1,function()
-			hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
-		--end)
+		hero:AddNewModifier(hero, hero, skill_name, {}):SetStackCount(stack)
 		ability:SetLevel(stack+1)
+
+		if (skill_name == "modifier_slayers_low" or skill_name == "modifier_slayers_max") and hero.slayer and not hero.slayer:GetRespawnsDisabled() then
+			hero.slayer:AddNewModifier(hero.slayer, hero.slayer, skill_name .. "_aura", {}):SetStackCount(stack)
+			return true	
+		end
+
+		for _, v in ipairs(hero.units) do
+			if skill_name == "modifier_hp_wood_worker" and string.match(v:GetUnitName(),"wood_worker")  then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_hp_walls_proc" and string.match(v:GetUnitName(),"rock") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_range_tower" and string.match(v:GetUnitName(),"tower") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_regen_walls_proc" and string.match(v:GetUnitName(),"rock") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)	
+			elseif skill_name == "modifier_mana_buffwalls" and string.match(v:GetUnitName(),"buff") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)	
+			elseif skill_name == "modifier_damage_tower" and string.match(v:GetUnitName(),"tower") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_armor_wall" and string.match(v:GetUnitName(),"rock") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_hp_reg_tower" and string.match(v:GetUnitName(),"tower") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)
+			elseif skill_name == "modifier_hp_walls" and string.match(v:GetUnitName(),"buff") then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)	
+			elseif skill_name == "modifier_range_no_miss" and string.match(v:GetUnitName(),"tower") and tonumber(string.match(v:GetUnitName(),"%d+")) >= 9 then
+				v:AddNewModifier(v, v, skill_name .. "_aura", {}):SetStackCount(stack)	
+			end
+		end
 	end
 end
 
@@ -544,12 +570,28 @@ function SpawnUnitOnChannelSucceeded(event)
 				MinimapEvent(hero:GetTeamNumber(), hero, location.x, location.y, DOTA_MINIMAP_EVENT_HINT_LOCATION, 3 )
 			end
 			
-			--slayer:AddNewModifier(slayer, nil, "modifier_anti_hp_mana_regen", {})
+			if hero:FindModifierByName("modifier_slayers_low")  then
+				local stack = hero:FindModifierByName("modifier_slayers_low"):GetStackCount()
+				slayer:AddNewModifier(slayer, slayer, "modifier_slayers_low_aura", {}):SetStackCount(stack)
+			end
+			if hero:FindModifierByName("modifier_slayers_max")  then
+				local stack = hero:FindModifierByName("modifier_slayers_max"):GetStackCount()
+				slayer:AddNewModifier(slayer, slayer, "modifier_slayers_max_aura", {}):SetStackCount(stack)
+			end
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer and hero.slayer:GetRespawnsDisabled() then
 			hero.slayer:SetRespawnPosition(caster:GetAbsOrigin())
 			hero.slayer:RespawnHero(false,false)
 			hero.slayer:SetRespawnsDisabled(false)
+			if hero:FindModifierByName("modifier_slayers_low")  then
+				local stack = hero:FindModifierByName("modifier_slayers_low"):GetStackCount()
+				hero.slayer:AddNewModifier(hero.slayer, hero.slayer, "modifier_slayers_low_aura", {}):SetStackCount(stack)
+			end
+			if hero:FindModifierByName("modifier_slayers_max")  then
+				local stack = hero:FindModifierByName("modifier_slayers_max"):GetStackCount()
+				hero.slayer:AddNewModifier(hero.slayer, hero.slayer, "modifier_slayers_max_aura", {}):SetStackCount(stack)
+			end
+			
 			return true
 		elseif unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
 			SendErrorMessage(playerID, "error_not_slayers_many")
@@ -576,7 +618,11 @@ function SpawnUnitOnChannelSucceeded(event)
 					}
 				end
 				UpdateSpells(hero)
-			end			
+			end
+			if hero:FindModifierByName("modifier_hp_wood_worker") and string.match(unit_name,"wood_worker") then
+				local stack = hero:FindModifierByName("modifier_hp_wood_worker"):GetStackCount()
+				unit:AddNewModifier(unit, unit, "modifier_hp_wood_worker_aura", {}):SetStackCount(stack)
+			end		
 		end
 	--end
 end

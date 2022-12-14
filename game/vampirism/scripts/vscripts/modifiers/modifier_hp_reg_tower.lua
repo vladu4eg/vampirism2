@@ -6,10 +6,6 @@ function  modifier_hp_reg_tower:CheckState()
     return { [MODIFIER_STATE_BLOCK_DISABLED] = false}
 end
 --------------------------------------------------------------------------------
-function  modifier_hp_reg_tower:IsAura()
-	return true
-end
-
 function  modifier_hp_reg_tower:IsHidden()
     return true
 end
@@ -26,32 +22,9 @@ function  modifier_hp_reg_tower:IsPermanent()
 	return false
 end
 
-function  modifier_hp_reg_tower:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_BASIC
-end
-
-function  modifier_hp_reg_tower:GetAuraRadius()
-	return 9999999
-end
-
-function  modifier_hp_reg_tower:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_FRIENDLY
-end
-
-function  modifier_hp_reg_tower:GetAuraSearchFlags()
-	return DOTA_UNIT_TARGET_FLAG_NONE
-end
-
-function  modifier_hp_reg_tower:GetModifierAura()
-	return "modifier_hp_reg_tower_aura"
-end
 
 --------------------------------------------------------------------------------
  modifier_hp_reg_tower_aura = class({})
-
-function  modifier_hp_reg_tower_aura:IsAura()
-	return true
-end
 
 function  modifier_hp_reg_tower_aura:IsHidden()
     return true
@@ -67,50 +40,56 @@ end
 
 function  modifier_hp_reg_tower_aura:OnCreated( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
-				local countStack = caster:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
-				if countStack == 0 then
-					countStack = 1
-				end
-				target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
-				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
-				target:SetHealth(target:GetHealth() + 2000 * countStack)
-				target:SetBaseHealthRegen(target:GetBaseHealthRegen() + 5 * countStack)
-				
-			end
-		
+		local target = self:GetParent()
+		local countStack = self:GetStackCount()
+		if countStack == 0 then
+			countStack = 1
+		end
+		target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
+		target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
+		target:SetHealth(target:GetHealth() + 2000 * countStack)
+		target:SetBaseHealthRegen(target:GetBaseHealthRegen() + 5 * countStack)
 	end
 end
 
 function  modifier_hp_reg_tower_aura:OnRefresh( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
-				local countStack = caster:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
-				target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
-				target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
-				target:SetHealth(target:GetHealth() + 2000 * countStack)
-				target:SetBaseHealthRegen(target:GetBaseHealthRegen() + 5 * countStack)
-				
-			end
-		
+		local target = self:GetParent()
+		local countStack = self:GetStackCount()
+		target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
+		target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
+		target:SetHealth(target:GetHealth() + 2000 * countStack)
+		target:SetBaseHealthRegen(target:GetBaseHealthRegen() + 5 * countStack)
 	end
 end
 
 function  modifier_hp_reg_tower_aura:OnRemoved(kv)
 	if IsServer() then
-		local caster = self:GetCaster()
 		local target = self:GetParent()
-		if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "tower")  then
-			local hp = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealth"))
-			local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
-			target:SetMaxHealth(hp)
-			target:SetBaseMaxHealth(hp)
-			target:SetHealth(hp)
-			target:SetBaseHealthRegen(regen)
-		end
+		local hp = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealth"))
+		local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
+		target:SetMaxHealth(hp)
+		target:SetBaseMaxHealth(hp)
+		target:SetHealth(hp)
+		target:SetBaseHealthRegen(regen)
+	end
+end
+
+function modifier_hp_reg_tower_aura:OnStackCountChanged()
+	if IsServer() then
+		local target = self:GetParent()
+		local hp = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealth"))
+		local regen = tonumber(GetUnitKV(target:GetUnitName(), "StatusHealthRegen")) 
+		target:SetMaxHealth(hp)
+		target:SetBaseMaxHealth(hp)
+		target:SetHealth(hp)
+		target:SetBaseHealthRegen(regen)
+
+		local countStack = self:GetStackCount()
+		target:SetMaxHealth(target:GetMaxHealth() + 2000 * countStack)
+		target:SetBaseMaxHealth(target:GetBaseMaxHealth() + 2000 * countStack)
+		target:SetHealth(target:GetHealth() + 2000 * countStack)
+		target:SetBaseHealthRegen(target:GetBaseHealthRegen() + 5 * countStack)
+
 	end
 end

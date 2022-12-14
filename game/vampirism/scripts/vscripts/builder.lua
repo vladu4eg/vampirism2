@@ -241,7 +241,34 @@ function Build( event )
             end
         end
         
-
+        if hero:FindModifierByName("modifier_hp_walls_proc") and string.match(building_name,"rock") then
+            local stack = hero:FindModifierByName("modifier_hp_walls_proc"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_hp_walls_proc_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_range_tower") and string.match(building_name,"tower") then
+            local stack = hero:FindModifierByName("modifier_range_tower"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_range_tower_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_regen_walls_proc") and string.match(building_name,"rock") then
+            local stack = hero:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_regen_walls_proc_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_mana_buffwalls") and string.match(building_name,"buff") then
+            local stack = hero:FindModifierByName("modifier_mana_buffwalls"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_mana_buffwalls_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_damage_tower") and string.match(building_name,"tower") then
+            local stack = hero:FindModifierByName("modifier_damage_tower"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_damage_tower_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_armor_wall") and string.match(building_name,"rock") then
+            local stack = hero:FindModifierByName("modifier_armor_wall"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_armor_wall_aura", {}):SetStackCount(stack)    
+        elseif hero:FindModifierByName("modifier_hp_reg_tower") and string.match(building_name,"tower") then
+            local stack = hero:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_hp_reg_tower_aura", {}):SetStackCount(stack)   
+        elseif hero:FindModifierByName("modifier_hp_walls") and string.match(building_name,"buff") then
+            local stack = hero:FindModifierByName("modifier_hp_walls"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_hp_walls_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_range_no_miss") and string.match(building_name,"tower") and tonumber(string.match(building_name,"%d+")) >= 9 then
+            local stack = hero:FindModifierByName("modifier_range_no_miss"):GetStackCount()
+            unit:AddNewModifier(unit, unit, "modifier_range_no_miss_aura", {}):SetStackCount(stack)
+        end
     end)
     
     event:OnBelowHalfHealth(function(unit)
@@ -497,6 +524,34 @@ function UpgradeBuilding( event )
                     end
                 end
             end
+        end
+        if hero:FindModifierByName("modifier_hp_walls_proc") and string.match(newBuildingName,"rock") then
+            local stack = hero:FindModifierByName("modifier_hp_walls_proc"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_hp_walls_proc_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_range_tower") and string.match(newBuildingName,"tower") then
+            local stack = hero:FindModifierByName("modifier_range_tower"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_range_tower_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_regen_walls_proc") and string.match(newBuildingName,"rock") then
+            local stack = hero:FindModifierByName("modifier_regen_walls_proc"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_regen_walls_proc_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_mana_buffwalls") and string.match(newBuildingName,"buff") then
+            local stack = hero:FindModifierByName("modifier_mana_buffwalls"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_mana_buffwalls_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_damage_tower") and string.match(newBuildingName,"tower") then
+            local stack = hero:FindModifierByName("modifier_damage_tower"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_damage_tower_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_armor_wall") and string.match(newBuildingName,"rock") then
+            local stack = hero:FindModifierByName("modifier_armor_wall"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_armor_wall_aura", {}):SetStackCount(stack)    
+        elseif hero:FindModifierByName("modifier_hp_reg_tower") and string.match(newBuildingName,"tower") then
+            local stack = hero:FindModifierByName("modifier_hp_reg_tower"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_hp_reg_tower_aura", {}):SetStackCount(stack)
+        elseif hero:FindModifierByName("modifier_hp_walls") and string.match(newBuildingName,"buff") then
+            local stack = hero:FindModifierByName("modifier_hp_walls"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_hp_walls_aura", {}):SetStackCount(stack)   
+        elseif hero:FindModifierByName("modifier_range_no_miss") and string.match(newBuildingName,"tower") and tonumber(string.match(newBuildingName,"%d+")) >= 9 then
+            local stack = hero:FindModifierByName("modifier_range_no_miss"):GetStackCount()
+            newBuilding:AddNewModifier(newBuilding, newBuilding, "modifier_range_no_miss_aura", {}):SetStackCount(stack)
         end
     end)
 end

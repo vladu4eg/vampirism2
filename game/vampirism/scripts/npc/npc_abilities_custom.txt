@@ -8336,7 +8336,7 @@
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityTextureName"		"SpellBookPage09_add_004"
-		"MaxLevel"					"5"
+		"MaxLevel"					"1"
 		"SkillName"					"modifier_range_no_miss"
 		
 		"AbilitySpecial"

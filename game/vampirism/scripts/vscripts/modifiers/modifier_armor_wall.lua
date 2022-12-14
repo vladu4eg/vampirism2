@@ -6,9 +6,6 @@ function  modifier_armor_wall:CheckState()
     return { [MODIFIER_STATE_BLOCK_DISABLED] = false}
 end
 --------------------------------------------------------------------------------
-function  modifier_armor_wall:IsAura()
-	return true
-end
 
 function  modifier_armor_wall:IsHidden()
     return true
@@ -26,32 +23,8 @@ function  modifier_armor_wall:IsPermanent()
 	return false
 end
 
-function  modifier_armor_wall:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_BASIC
-end
-
-function  modifier_armor_wall:GetAuraRadius()
-	return 9999999
-end
-
-function  modifier_armor_wall:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_FRIENDLY
-end
-
-function  modifier_armor_wall:GetAuraSearchFlags()
-	return DOTA_UNIT_TARGET_FLAG_NONE
-end
-
-function  modifier_armor_wall:GetModifierAura()
-	return "modifier_armor_wall_aura"
-end
-
 --------------------------------------------------------------------------------
  modifier_armor_wall_aura = class({})
-
-function  modifier_armor_wall_aura:IsAura()
-	return true
-end
 
 function  modifier_armor_wall_aura:IsHidden()
     return true
@@ -79,24 +52,5 @@ end
 
 function modifier_armor_wall_aura:OnCreated( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
-				local countStack = caster:FindModifierByName("modifier_armor_wall"):GetStackCount()
-				if countStack == 0 then
-					countStack = 1
-				end
-				self:SetStackCount(countStack)
-			end
-	end
-end
-function modifier_armor_wall_aura:OnRefresh( kv )
-	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and string.match(target:GetUnitName(), "rock")  then
-				local countStack = caster:FindModifierByName("modifier_armor_wall"):GetStackCount()
-				self:SetStackCount(countStack)
-			end
 	end
 end

@@ -33,7 +33,7 @@
 	    "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
 	    "AttackDamageMin"     "300"                   // Damage range min.
 	    "AttackDamageMax"     "300"                   // Damage range max.
-		"AttackRange"			"300"
+		"AttackRange"			"64"
 	    //"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
 	    "AttributeBaseStrength"   "0"                   // Base strength
 	    "AttributeStrengthGain"   "0"                   // Strength bonus per level.

@@ -6,10 +6,6 @@ function  modifier_slayers_max:CheckState()
     return { [MODIFIER_STATE_BLOCK_DISABLED] = false}
 end
 --------------------------------------------------------------------------------
-function  modifier_slayers_max:IsAura()
-	return true
-end
-
 function  modifier_slayers_max:IsHidden()
     return true
 end
@@ -26,32 +22,8 @@ function  modifier_slayers_max:IsPermanent()
 	return false
 end
 
-function  modifier_slayers_max:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_HERO
-end
-
-function  modifier_slayers_max:GetAuraRadius()
-	return 9999999
-end
-
-function  modifier_slayers_max:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_FRIENDLY
-end
-
-function  modifier_slayers_max:GetAuraSearchFlags()
-	return DOTA_UNIT_TARGET_FLAG_NONE
-end
-
-function  modifier_slayers_max:GetModifierAura()
-	return "modifier_slayers_max_aura"
-end
-
 --------------------------------------------------------------------------------
  modifier_slayers_max_aura = class({})
-
-function  modifier_slayers_max_aura:IsAura()
-	return true
-end
 
 function  modifier_slayers_max_aura:IsHidden()
     return true
@@ -86,27 +58,11 @@ end
 
 function modifier_slayers_max_aura:OnCreated( kv )
 	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
-				local countStack = caster:FindModifierByName("modifier_slayers_max"):GetStackCount()
-				if countStack == 0 then
-					countStack = 1
-				end
-				self:SetStackCount(countStack)
-			end
-	end
-end
-
-function modifier_slayers_max_aura:OnRefresh( kv )
-	if IsServer() then
-			local caster = self:GetCaster()
-			local target = self:GetParent()
-
-			if caster:GetPlayerOwnerID() == target:GetPlayerOwnerID() and target:GetUnitName() == "npc_dota_hero_templar_assassin"  then
-				local countStack = caster:FindModifierByName("modifier_slayers_max"):GetStackCount()
-				self:SetStackCount(countStack)
-			end
+	local target = self:GetParent()
+		local countStack = self:GetStackCount()
+		if countStack == 0 then
+			countStack = 1
+		end
+		self:SetStackCount(countStack)
 	end
 end

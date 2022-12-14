@@ -41,6 +41,19 @@ LinkLuaModifier("modifier_slayers_max", "modifiers/modifier_slayers_max.lua", LU
 LinkLuaModifier("modifier_range_no_miss", "modifiers/modifier_range_no_miss.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_hp_elf_2", "modifiers/modifier_hp_elf_2.lua", LUA_MODIFIER_MOTION_NONE)
 
+LinkLuaModifier("modifier_hp_wood_worker_aura", "modifiers/modifier_hp_wood_worker_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_walls_proc_aura", "modifiers/modifier_hp_walls_proc_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_range_tower_aura", "modifiers/modifier_range_tower_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_regen_walls_proc_aura", "modifiers/modifier_regen_walls_proc_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_mana_buffwalls_aura", "modifiers/modifier_mana_buffwalls_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_slayers_low_aura", "modifiers/modifier_slayers_low_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_tower_aura", "modifiers/modifier_damage_tower_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_armor_wall_aura", "modifiers/modifier_armor_wall_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_reg_tower_aura", "modifiers/modifier_hp_reg_tower_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hp_walls_aura", "modifiers/modifier_hp_walls_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_slayers_max_aura", "modifiers/modifier_slayers_max_aura.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_range_no_miss_aura", "modifiers/modifier_range_no_miss_aura.lua", LUA_MODIFIER_MOTION_NONE)
+
 if trollnelves2 == nil then
     DebugPrint('[TROLLNELVES2] creating trollnelves2 game mode')
     _G.trollnelves2 = class({})
