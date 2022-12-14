@@ -64,8 +64,12 @@ function Build( event )
     -- Position for a building was confirmed and valid
     event:OnBuildingPosChosen(function(vPos)
         PlayerResource:ModifyGold(hero,-gold_cost)
-        PlayerResource:ModifyLumber(hero,-lumber_cost)
-        PlayerResource:ModifyMine(hero, mine_cost)
+        PlayerResource:ModifyLumber(hero,-lumber_cost) 
+        if mine_cost ~= nil then
+            if mine_cost ~= 0 then
+                PlayerResource:ModifyMine(hero, mine_cost)
+            end
+        end
         EmitSoundOnEntityForPlayer("DOTA_Item.ObserverWard.Activate", hero, hero:GetPlayerOwnerID())
     end)
     
@@ -84,7 +88,11 @@ function Build( event )
         if work.refund and work.refund == true and not work.repair then
             PlayerResource:ModifyGold(hero,gold_cost,true)
             PlayerResource:ModifyLumber(hero,lumber_cost,true)
-            PlayerResource:ModifyMine(hero, -1)
+            if mine_cost ~= nil then
+                if mine_cost ~= 0 then
+                    PlayerResource:ModifyMine(hero, -1)
+                end
+            end
         end
     end)
     

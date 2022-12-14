@@ -145,7 +145,7 @@ function GatherLumber( event )
 	if caster.lumber_gathered < max_lumber_carried then
 	else
 		PlayerResource:ModifyLumber(hero,caster.lumber_gathered,true)
-		PopupLumber(caster,math.floor(caster.lumber_gathered),true)
+		--PopupLumber(caster,math.floor(caster.lumber_gathered),true)
 		caster.lumber_gathered = 0
 	end
 end

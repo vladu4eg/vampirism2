@@ -8897,7 +8897,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"15"
+				"food_cost"			"20"
 			}	
 			"04"
 			{
@@ -8958,7 +8958,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"20"
+				"food_cost"			"25"
 			}	
 			"04"
 			{

@@ -156,11 +156,6 @@ function CDOTA_PlayerResource:ModifyMine(hero, mine)
     mine = string.match(mine,"[-]?%d+") or 0
     local playerID = hero:GetPlayerOwnerID()
     hero.mine = hero.mine + mine
-	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_mine_changed", {
-		playerID = playerID,
-		mine = math.floor(hero.mine),
-		maxMine = GameRules.maxMine,
-	})
 end
 
 function CDOTA_PlayerResource:GetScore(pID,team)

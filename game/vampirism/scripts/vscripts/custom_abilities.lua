@@ -493,7 +493,6 @@ function SpawnUnitOnSpellStart(event)
 		PlayerResource:ModifyGold(hero,-gold_cost)
 		PlayerResource:ModifyLumber(hero,-lumber_cost)
 		PlayerResource:ModifyFood(hero,food)
-		PlayerResource:ModifyMine(hero,mine_cost)
 
 		if PlayerResource:GetGold(playerID) < 0 then
 			SendErrorMessage(playerID, "error_not_enough_gold")
@@ -511,15 +510,6 @@ function SpawnUnitOnSpellStart(event)
 			ability:EndChannel(false)
 			return false
 		end
-		if mine_cost ~= nil then
-            if mine_cost ~= 0 then
-            if hero.mine > GameRules.maxMine  then
-                SendErrorMessage(playerID, "error_not_enough_mine")
-                caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
-                return false
-            end
-            end
-        end
 		if unit_name == "npc_dota_hero_templar_assassin" and hero.slayer then
 			if not hero.slayer:GetRespawnsDisabled() then
 				SendErrorMessage(playerID, "error_not_slayers_many")
@@ -606,11 +596,6 @@ function SpawnUnitOnChannelInterrupted(event)
 		PlayerResource:ModifyGold(hero,gold_cost,true)
 		PlayerResource:ModifyLumber(hero,lumber_cost,true)
 		PlayerResource:ModifyFood(hero,-food)
-		if mine_cost ~= nil then
-            if mine_cost ~= 0 then
-				PlayerResource:ModifyMine(hero,-mine_cost)
-			end
-		end
 	end
 end
 

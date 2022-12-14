@@ -1057,7 +1057,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"9"
+		"Limit"						"6"
 		"StartingBuilding"          "1"
 
 	    // Stats
@@ -4925,7 +4925,7 @@
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"20"
+		"Limit"						"15"
 		
 
 	    // Stats
@@ -10642,18 +10642,18 @@
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
 	
-	  "BountyXP"					"150"		// Experience earn.
-	  "BountyGoldMin"				"15"		// Gold earned min.
-	  "BountyGoldMax"				"15"		// Gold earned max.
+	  "BountyXP"					"200"		// Experience earn.
+	  "BountyGoldMin"				"20"		// Gold earned min.
+	  "BountyGoldMax"				"20"		// Gold earned max.
 	
 	  "BoundsHullName"   "DOTA_HULL_SIZE_SMALL"
 	  "RingRadius"    "40"
 	  "CollisionSize"    "5"
 	  "FormationRank"    "4"
 	  "WispCost" 						"1"
-	  "FoodCost" 						"15"
+	  "FoodCost" 						"20"
 	  "LumberInterval"			"5"
-	 "LumberAmount"				"300"
+	  "LumberAmount"				"400"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "350"
 	  "MovementTurnRate"   "1.6"
@@ -10694,18 +10694,18 @@
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
 	
-	  "BountyXP"					"60"		// Experience earn.
-	  "BountyGoldMin"				"60"		// Gold earned min.
-	  "BountyGoldMax"				"60"		// Gold earned max.
+	  "BountyXP"					"300"		// Experience earn.
+	  "BountyGoldMin"				"75"		// Gold earned min.
+	  "BountyGoldMax"				"75"		// Gold earned max.
 	
 	  "BoundsHullName"   "DOTA_HULL_SIZE_SMALL"
 	  "RingRadius"    "40"
 	  "CollisionSize"    "5"
 	  "FormationRank"    "4"
 	"WispCost" 						"1"
-	"FoodCost" 						"20"
+	"FoodCost" 						"25"
 	"LumberInterval"			"5"
-		"LumberAmount"				"800"
+		"LumberAmount"				"1000"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "350"
 	  "MovementTurnRate"   "1.6"
@@ -10750,7 +10750,7 @@
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
 	
-	  "BountyXP"					"250"		// Experience earn.
+	  "BountyXP"					"450"		// Experience earn.
 	  "BountyGoldMin"				"250"		// Gold earned min.
 	  "BountyGoldMax"				"250"		// Gold earned max.
 	
@@ -10807,7 +10807,7 @@
 	
 	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
 	
-	  "BountyXP"					"500"		// Experience earn.
+	  "BountyXP"					"750"		// Experience earn.
 	  "BountyGoldMin"				"500"		// Gold earned min.
 	  "BountyGoldMax"				"500"		// Gold earned max.
 	
