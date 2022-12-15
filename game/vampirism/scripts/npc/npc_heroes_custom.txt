@@ -450,7 +450,7 @@
 
     "ProjectileModel"     "particles/units/heroes/hero_templar_assassin/templar_assassin_base_attack.vpcf"
     "ProjectileSpeed"     "1200"
-	"BountyXP"          "50"                 // Experience earn.
+	"BountyXP"          "200"                 // Experience earn.
 	"BountyGoldMin"       "50"                   // Gold earned min.
 	"BountyGoldMax"       "50"                   // Gold earned max.
 

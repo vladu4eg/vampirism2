@@ -59,7 +59,7 @@ function ChainLightning( event )
 			-- Track the possible targets to bounce from the units in radius
 			local possibleTargetsBounce = {}
 			for _,v in pairs(units) do
-				if not v.struckByChain then
+				if (not v.struckByChain and v.state ~= "complete") or (not v.struckByChain and ability:GetName() == "item_pulse_ricochet")   then
 					table.insert(possibleTargetsBounce,v)
 				end
 			end

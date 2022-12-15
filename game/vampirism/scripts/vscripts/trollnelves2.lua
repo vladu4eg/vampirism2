@@ -425,6 +425,9 @@ function InitializeBuilder(hero)
             unit:AddNewModifier(unit, nil, "modifier_phased", {})
         end
     end
+    --hero:SetMaximumGoldBounty(0)
+    --hero:SetMinimumGoldBounty(0)
+    --hero:SetBountyGain(0)
 end
 
 function InitializeTroll(hero)
@@ -967,9 +970,9 @@ function FakeHeroTroll()
                 
             elseif unit_name == "blood_shop_troll" then
                 local abil = unit:FindAbilityByName("buy_item_gold_blade")
-                abil:StartCooldown(600)
+                abil:StartCooldown(1000)
                 abil = unit:FindAbilityByName("buy_item_gold_staff")
-                abil:StartCooldown(240)
+                abil:StartCooldown(480)
                 
             elseif unit_name == "black_shop_troll" then
                 local abil = unit:FindAbilityByName("buy_item_burst_gem")

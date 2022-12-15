@@ -24,7 +24,6 @@ function trollnelves2:_Inittrollnelves2()
   GameRules:SetGoldPerTick(0)
   GameRules:SetGoldTickTime(0)
   GameRules:SetRuneSpawnTime(0)
-  GameRules:SetUseBaseGoldBountyOnHeroes(false)
   GameRules:SetFirstBloodActive(false)
   GameRules:SetHideKillMessageHeaders(true)
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 17)
@@ -33,6 +32,7 @@ function trollnelves2:_Inittrollnelves2()
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_2, 6)
   GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_3, 6)
   GameRules:SetUseBaseGoldBountyOnHeroes(true)
+
   -- Setup game mode
   mode = GameRules:GetGameModeEntity()     
   mode:SetCustomXPRequiredToReachNextLevel( XP_PER_LEVEL_TABLE )  
@@ -52,7 +52,7 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetMinimumAttackSpeed(MINIMUM_ATTACK_SPEED)
   mode:SetMaximumAttackSpeed(MAXIMUM_ATTACK_SPEED)
   
-
+  mode:SetHudCombatEventsDisabled(true)
   mode:SetUseCustomHeroLevels ( true )
   mode:SetCameraDistanceOverride(1400)
     
@@ -65,7 +65,7 @@ function trollnelves2:_Inittrollnelves2()
 
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0.1)
-  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,15)
+  mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,13)
 
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA, 0.5)
   mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,  0.00000000000)
@@ -244,7 +244,6 @@ function trollnelves2:GoldFilter( kv )
           end
         end
         PlayerResource:ModifyGold(hero,kv.gold)
-        --SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, hero, kv.gold, nil )
   end
   return true
 end

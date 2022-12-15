@@ -29,7 +29,7 @@ function lord_of_lightning_chain_lightning:OnSpellStart()
 	local bounce_range = self:GetSpecialValueFor("bounce_range")
 	local time_between_bounces = self:GetSpecialValueFor("time_between_bounces")
 
-	local lightningBolt = ParticleManager:CreateParticle("particles/items_fx/chain_lightning.vpcf", PATTACH_WORLDORIGIN, caster)
+	local lightningBolt = ParticleManager:CreateParticle("particles/econ/items/antimage/antimage_weapon_basher_ti5_gold/am_basher_lightning_gold.vpcf", PATTACH_WORLDORIGIN, caster)
 	--local lightningBolt = ParticleManager:CreateParticle("particles/units/casteres/caster_rubick/rubick_fade_bolt.vpcf", PATTACH_WORLDORIGIN, caster)
 	ParticleManager:SetParticleControl(lightningBolt,0,Vector(caster:GetAbsOrigin().x,caster:GetAbsOrigin().y,caster:GetAbsOrigin().z + caster:GetBoundingMaxs().z ))	
 	ParticleManager:SetParticleControl(lightningBolt,1,Vector(target:GetAbsOrigin().x,target:GetAbsOrigin().y,target:GetAbsOrigin().z + target:GetBoundingMaxs().z ))	
@@ -74,7 +74,7 @@ function lord_of_lightning_chain_lightning:OnSpellStart()
 			-- Track the possible targets to bounce from the units in radius
 			local possibleTargetsBounce = {}
 			for _,v in pairs(units) do
-				if not v.struckByChain then
+				if not v.struckByChain and v.state ~= "complete" then
 					table.insert(possibleTargetsBounce,v)
 				end
 			end
@@ -108,7 +108,7 @@ function lord_of_lightning_chain_lightning:OnSpellStart()
 				return	
 			end
 
-			local lightningChain = ParticleManager:CreateParticle("particles/items_fx/chain_lightning.vpcf", PATTACH_WORLDORIGIN, dummy)
+			local lightningChain = ParticleManager:CreateParticle("particles/econ/items/antimage/antimage_weapon_basher_ti5_gold/am_basher_lightning_gold.vpcf", PATTACH_WORLDORIGIN, dummy)
 			--local lightningChain = ParticleManager:CreateParticle("particles/units/heroes/hero_rubick/rubick_fade_bolt.vpcf", PATTACH_WORLDORIGIN, dummy)
 			ParticleManager:SetParticleControl(lightningChain,0,Vector(dummy:GetAbsOrigin().x,dummy:GetAbsOrigin().y,dummy:GetAbsOrigin().z + dummy:GetBoundingMaxs().z ))	
 			

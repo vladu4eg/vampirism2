@@ -17340,7 +17340,7 @@
 		"BaseClass" 					"ability_lua"
 		"ScriptFile"					"abilities\lord_of_lightning_chain_lightning.lua"
 	
-		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityTextureName"			"vowen_from_blood_steal_blood"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"SpellImmunityType"       		"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -17358,7 +17358,7 @@
 		
 		"precache"
 		{
-			"particle" 	"particles/units/heroes/hero_rubick/rubick_fade_bolt.vpcf"
+			"particle" 	"particles/econ/items/antimage/antimage_weapon_basher_ti5_gold/am_basher_lightning_gold.vpcf"
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
 		}
 	
@@ -17383,7 +17383,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_range"			"800"
+				"bounce_range"			"300"
 			}
 			"05"
 			{
