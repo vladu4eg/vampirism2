@@ -1234,9 +1234,14 @@ end
 function GiveWoodGoldForAttackTree (event)
 	if IsServer() then
 		local caster = event.caster
-		if caster:IsElf() then
+		local ability = event.ability
+		local point = ability:GetCursorPosition()
+		if BuildingHelper:IdBaseArea(caster) and BuildingHelper:IsInsideBaseArea(caster, caster, "", true) then
 			PlayerResource:ModifyGold(caster, tonumber(event.Gold))
 			PlayerResource:ModifyLumber(caster, tonumber(event.Wood))
+			GridNav:DestroyTreesAroundPoint( point, event.Radius, false )
+		else
+			SendErrorMessage(caster:GetPlayerOwnerID(), "error_no_attack_tree")
 		end
 	end	
 end

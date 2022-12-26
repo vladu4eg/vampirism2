@@ -3323,5 +3323,6 @@ Invisible Assassin kills your lumberjacks. Don't forget to set True Sight!<br>
 Fel Beast kills the wall repairmen."
 		"information_description6"						"<h1>The vampire can buy Sphere Doom, which will give him Blink for short distances. All bases have weak spots that the Vampire can use Blink to push into. You need to build up weak spots and the Vampire will not be able to get to your base. A vampire can buy an ax and cut down a tree that prevents him from blinking or just passing through. Fortify places like this! A vampire can buy a rocket. The rocket is slow to fly, but on impact completely destroys a structure or living units. Be sure to build some walls to prevent the Vampire from entering your base on the first try. The Vampire can buy a long ax and break your Gold Mine, which covered your weak points from the Sphere Doom item."
 
+		"error_no_attack_tree"							"This tree cannot be cut down!"
 	}
 }

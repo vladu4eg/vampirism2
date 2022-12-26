@@ -17,7 +17,7 @@
 		"Ability8" 					"build_gold_mine_1" //
 		"Ability9"					"attack_tree_skill"
 		"Ability10"					"build_tree"
-		"Ability11"					""
+		"Ability11"					"build_flag"
 		"Ability12"					""
 		"Ability13"					"repair"
 		"Ability14"   	    		"attribute_antibonuses"

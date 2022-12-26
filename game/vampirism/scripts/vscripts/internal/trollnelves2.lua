@@ -52,7 +52,7 @@ function trollnelves2:_Inittrollnelves2()
   mode:SetMinimumAttackSpeed(MINIMUM_ATTACK_SPEED)
   mode:SetMaximumAttackSpeed(MAXIMUM_ATTACK_SPEED)
   
-  mode:SetHudCombatEventsDisabled(true)
+  mode:SetHudCombatEventsDisabled(false)
   mode:SetUseCustomHeroLevels ( true )
   mode:SetCameraDistanceOverride(1400)
     

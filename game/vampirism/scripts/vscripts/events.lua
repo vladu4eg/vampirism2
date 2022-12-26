@@ -130,27 +130,8 @@ function trollnelves2:OnDisconnect(event)
                 end)
             end
         end
-        elseif team == DOTA_TEAM_BADGUYS then
-        hero:MoveToPosition(Vector(0, 0, 0))
-        if hero:IsWolf() then
-            Timers:CreateTimer(60, function()
-                if hero ~= nil and GameRules.KickList[playerID] ~= 1 then
-                    if PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 then
-                        local wolfNetworth = hero:GetNetworth()
-                        local lumber = wolfNetworth / 64000 or 0
-                        local gold = math.floor((lumber - math.floor(lumber)) * 64000) or 0
-                        lumber = math.floor(lumber)
-                        hero:ClearInventory()
-                        hero:RemoveDesol2()
-                        PlayerResource:ModifyGold(GameRules.trollHero, gold, true)
-                        PlayerResource:ModifyLumber(GameRules.trollHero, lumber, true)
-                        PlayerResource:SetGold(hero, 0, true)
-                        PlayerResource:SetLumber(hero, 0, true)
-                    end
-                end
-            end)
-            
-        end
+    elseif team == DOTA_TEAM_BADGUYS then
+        hero:MoveToPosition(Vector(0, 0, 0))            
     end
 end
 
@@ -480,6 +461,9 @@ function GiveResources(eventSourceIndex, event)
                     SendErrorMessage(casterID, "error_not_enough_resources")
                     return
                 end
+                if event.target:IsTroll() then
+                    SendErrorMessage(casterID, "error_not_send_money_vamp")
+                end
                 if ((lastSendTime[targetID] == nil or lastSendTime[targetID] + 300 < GameRules:GetGameTime())
                 and (lastTakeGoldTime[casterID] == nil or lastTakeGoldTime[casterID] + 60 < GameRules:GetGameTime())) then
                     if gold > 99 or lumber > 1 then
@@ -506,8 +490,10 @@ function GiveResources(eventSourceIndex, event)
                         end
                         text = text .. " to " .. PlayerResource:GetPlayerName(hero:GetPlayerOwnerID()) .. "(" .. GetModifiedName(hero:GetUnitName()) .. ")!"
                         GameRules:SendCustomMessageToTeam(text, casterHero:GetTeamNumber(), 0, 0)
-                        lastSendTime[targetID] = GameRules:GetGameTime()
-                        lastTakeGoldTime[targetID] = GameRules:GetGameTime()
+                        if GameRules:GetGameTime() - GameRules.startTime < 2400 then
+                            lastSendTime[targetID] = GameRules:GetGameTime()
+                            lastTakeGoldTime[targetID] = GameRules:GetGameTime()
+                        end  
                     else
                         SendErrorMessage(casterID, "#error_enter_need_money")
                     end

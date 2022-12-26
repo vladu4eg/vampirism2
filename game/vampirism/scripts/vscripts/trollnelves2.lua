@@ -545,9 +545,10 @@ function InitializeWolf(hero)
     local lumber = trollNetworth / 64000 * WOLF_STARTING_RESOURCES_FRACTION
     local gold = math.floor((lumber - math.floor(lumber)) * 64000)
     lumber = math.floor(lumber)
-    
+    local xp = math.floor(GameRules.trollHero:GetCurrentXP() * WOLF_STARTING_RESOURCES_FRACTION)
     PlayerResource:SetGold(hero, math.floor(gold))
     PlayerResource:SetLumber(hero, math.floor(lumber))
+    hero:AddExperience(xp, DOTA_ModifyXP_Unspecified, false,false)
     hero:CalculateStatBonus(true)
     PlayerResource:SetUnitShareMaskForPlayer(GameRules.shopTroll:GetPlayerID(), playerID, 2, true)
 end
@@ -917,13 +918,14 @@ function BuffGold()
                 end
             end
         end
-        if countBuffGold <= 10 then
+        GameRules:SendCustomMessage("<font color='#009900'>HUMAN</font> got "..BUFF_GOLD_SUM_ELF[countBuffGold].." gold", 0, 0)
+        GameRules:SendCustomMessage("<font color='#9A2E00'>VAMPIRE</font> got "..BUFF_GOLD_SUM_TROLL[countBuffGold].." gold", 0, 0)  
+        if countBuffGold <= #BUFF_GOLD_SUM_TROLL-1 then
             countBuffGold = countBuffGold + 1
         else
-            countBuffGold = 10
+            countBuffGold = #BUFF_GOLD_SUM_TROLL-1
         end
-        GameRules:SendCustomMessage("<font color='#009900'>HUMAN</font> got "..BUFF_GOLD_SUM_ELF[countBuffGold].." gold", 0, 0)
-        GameRules:SendCustomMessage("<font color='#9A2E00'>VAMPIRE</font> got "..BUFF_GOLD_SUM_TROLL[countBuffGold].." gold", 0, 0)     
+           
     return BUFF_GOLD_TIME end)
 end
 

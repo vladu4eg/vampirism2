@@ -6,15 +6,15 @@
 
   "classic"
   {
-    "MaxPlayers"                    "7"
+    "MaxPlayers"                    "8"
   }
   "winter"
   {
-    "MaxPlayers"                    "12"
+    "MaxPlayers"                    "8"
   }
   "mini"
   {
-    "MaxPlayers"                    "5"
+    "MaxPlayers"                    "4"
   }
   
   "Default_Keys"

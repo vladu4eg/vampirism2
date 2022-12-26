@@ -6295,17 +6295,17 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"buff_duration"	"30"
+				"buff_duration"	"10"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_hero"			"30"
+				"duration_hero"			"10"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_creep"		"30"
+				"duration_creep"		"10"
 			}
 			"07"
 			{
@@ -6350,6 +6350,7 @@
 				"States"
 				{
 					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"		"MODIFIER_STATE_VALUE_ENABLED"		
 				}
 				"ThinkInterval"	"1"
 				"OnIntervalThink"
@@ -7336,7 +7337,7 @@
 			{
 				"Passive"           "1"
 				"IsHidden"          "1"
-				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Attributes"        "MODIFIER_ATTRIBUTE_NONE"
 				
 				"Properties"
 				{
@@ -7392,7 +7393,7 @@
 			{
 				"Passive"           "1"
 				"IsHidden"          "1"
-				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Attributes"        "MODIFIER_ATTRIBUTE_NONE"
 				
 				"Properties"
 				{
@@ -7448,7 +7449,7 @@
 			{
 				"Passive"           "1"
 				"IsHidden"          "1"
-				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Attributes"        "MODIFIER_ATTRIBUTE_NONE"
 				
 				"Properties"
 				{
@@ -7505,7 +7506,7 @@
 			{
 				"Passive"           "1"
 				"IsHidden"          "1"
-				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Attributes"        "MODIFIER_ATTRIBUTE_NONE"
 				
 				"Properties"
 				{
@@ -8057,7 +8058,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1500"
+				"gold_cost"				"3000"
 			}	
 			"03"
 			{
@@ -8101,7 +8102,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"300"
+				"gold_cost"				"600"
 			}	
 			"03"
 			{
@@ -8510,8 +8511,17 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%bonus_armor"
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"        "%bonus_evasion"
 					"MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK"		"%bonus_block"
+				}
+			}
+			"modifier_item_mirage_datadriven"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_NONE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"        "%bonus_evasion"
 				}
 			}
 		}
@@ -8566,13 +8576,6 @@
 		{
 			"SpendCharge"
 			{}
-			"RunScript"
-			{
-				"ScriptFile"	"custom_abilities.lua"
-				"Function"		"GiveWoodGoldForAttackTree"
-				"Gold"			"0"
-				"Wood"			"0"
-			}	
 			"DestroyTrees"
 		    {
 		    	"Target"	"POINT"
@@ -9830,17 +9833,17 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_int"				"100"
+				"bonus_int"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_str"				"100"
+				"bonus_str"				"400"
 			}
 			"06"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"bonus_agi"				"100"
+				"bonus_agi"				"400"
 			}
 			"07"
 			{
