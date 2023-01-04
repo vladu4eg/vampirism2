@@ -250,11 +250,13 @@ function KnowledgeLVL(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -282,11 +284,13 @@ function DamageHealth(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -325,11 +329,13 @@ function DamageAllStats(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -364,11 +370,13 @@ function AllStats(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -397,11 +405,13 @@ function Agility(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -428,11 +438,13 @@ function Strength(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()
@@ -459,11 +471,13 @@ function Intelligence(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	--[[
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
 	end
+	]]
 	if gold_cost > PlayerResource:GetGold(playerID) then
 		SendErrorMessage(playerID, "error_not_enough_gold")
 		ability:EndCooldown()

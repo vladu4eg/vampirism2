@@ -5,8 +5,9 @@
 ]]
 function Teleport( event )
 	local caster = event.caster
-	local playerID = caster:GetPlayerID()
+	local playerID = caster:GetPlayerOwnerID()
 	local point = event.target:GetAbsOrigin()
+	local hull = caster:GetHullRadius()
 	if string.match(event.target:GetUnitName(), "ward") or 
 	   string.match(event.target:GetUnitName(), "assasin") or 
 	   string.match(event.target:GetUnitName(), "golem") or 
@@ -31,7 +32,7 @@ function Teleport( event )
 		FindClearSpaceForUnit(caster, point, true)
 	end
     caster:Stop() 
-    EndTeleport(event)   
+    EndTeleport(event,hull)   
 end
 
 function CreateTeleportParticles( event )
@@ -42,12 +43,12 @@ function CreateTeleportParticles( event )
 	ParticleManager:SetParticleControl(caster.teleportParticle, 1, point)	
 end
 
-function EndTeleport( event )
+function EndTeleport( event,hull )
 	local caster = event.caster
 	local team = caster:GetTeamNumber()
 	ParticleManager:DestroyParticle(caster.teleportParticle, false)
 	caster:StopSound("Hero_Furion.Teleport_Grow")
 	if team == DOTA_TEAM_BADGUYS then
-		caster:SetHullRadius(32) --160
+		caster:SetHullRadius(hull) --160
 	end
 end

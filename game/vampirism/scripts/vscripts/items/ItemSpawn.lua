@@ -4,7 +4,7 @@ function Spawn(event)
 	local duration = event.ability:GetSpecialValueFor("duration")
     local food = event.ability:GetSpecialValueFor("food_cost")
     PlayerResource:ModifyFood(caster,food)
-	if (caster.food > GameRules.maxFood[playerID] and food ~= 0) or caster.food > 15 then
+	if (caster.food > GameRules.maxFood[playerID] and food ~= 0) or caster.food > 20 then
 		SendErrorMessage(playerID, "error_not_enough_food")
 		PlayerResource:ModifyFood(caster,-food)
 		return false

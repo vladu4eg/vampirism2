@@ -846,7 +846,19 @@ function BuyItem(event)
 
 	
 
-	if not IsInsideShopArea(hero) and item_name ~=  "item_book_of_agility" and item_name ~=  "item_book_of_strength" and item_name ~=  "item_book_of_intelligence" then
+	if not IsInsideShopArea(hero) 
+	and item_name ~=  "item_golem_fire" 
+	and item_name ~=  "item_golem_stone" 
+	and item_name ~=  "item_golem_flesh" 
+	and item_name ~=  "item_shade" 
+	and item_name ~=  "item_assasin" 
+	and item_name ~=  "item_fel_best" 
+	and item_name ~=  "item_shade_2" 
+	and item_name ~=  "item_sucied_boy" 
+	and item_name ~=  "item_meat_carier" 
+	and item_name ~=  "item_sniper" 
+	and item_name ~=  "item_vamp_pudge" 
+	then
 		SendErrorMessage(playerID, "error_shop_out_of_range")
 		ability:EndCooldown()
 		return
@@ -929,7 +941,7 @@ end
 function FountainRegen(event)
 	local caster = event.caster
 	local radius = event.Radius
-	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , radius , DOTA_UNIT_TARGET_TEAM_BOTH ,  DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
+	local units = FindUnitsInRadius(caster:GetTeamNumber() , caster:GetAbsOrigin() , nil , radius , DOTA_UNIT_TARGET_TEAM_BOTH ,  DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false)
 	for _,unit in pairs(units) do
 		unit:SetHealth(unit:GetHealth() + unit:GetMaxHealth() * 0.004)
 		unit:SetMana(unit:GetMana() + unit:GetMaxMana() * 0.004)

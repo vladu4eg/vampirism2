@@ -31,7 +31,7 @@
 				<Label text="#CustomEndScreenClose" />
 			</Button>
 			<Panel id="ActiveButtons" >
-				<Panel class="ActiveButton" id="Button_1" onactivate="ExternalBrowserGoToURL('https://patreon.com/troll_vs_elves3');" >
+				<Panel class="ActiveButton" id="Button_1" onactivate="ExternalBrowserGoToURL('https://patreon.com/vamp_shop');" >
 					<Label class="ActiveButton_text" text="Patreon" />
 				</Panel>
 				<Panel class="ActiveButton"  id="Button_2" onactivate="ExternalBrowserGoToURL('https://paypal.me/elves3');" >

@@ -9814,7 +9814,7 @@
 		"Ability1"					"buy_item_troll_boots"
 		"Ability2"					""
 		"Ability3"					"buy_item_lia_magic_helm"
-		"Ability4"					"buy_item_clock_invis"
+		"Ability4"					""
 		"Ability5"					"buy_item_troll_teleport"
 		"Ability6"					"sell_lumber_1"
 		"Ability7"					"sell_lumber_8"
@@ -10070,8 +10070,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10111,7 +10111,7 @@
 		"Ability8"					"buy_item_sucied_boy"
 		"Ability9"					"buy_item_meat_carier"
 		"Ability10"					"buy_item_sniper"
-		"Ability11"					""
+		"Ability11"					"buy_item_vamp_pudge"
 		"Ability12"					""
 		"Ability13"					""
 		"Ability14"					""
@@ -10204,8 +10204,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10271,8 +10271,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10338,8 +10338,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10405,8 +10405,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10472,8 +10472,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10539,8 +10539,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -10606,8 +10606,8 @@
 	    "TeamName"                  "DOTA_TEAM_BADGUYS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "0"
-	    "VisionNighttimeRange"        "0"
+	    "VisionDaytimeRange"        "300"
+	    "VisionNighttimeRange"        "300"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -11308,7 +11308,7 @@
 		"AbilityLayout"				"4"
 		"Ability1" 					"invis_unit"
 		"Ability2" 					"deniable"
-		"Ability3" 					""
+		"Ability3" 					"furion_teleportation_datadriven"
 		"Ability4" 					""
 		"Ability5"					""
 		"Ability6" 					""
@@ -11398,7 +11398,7 @@
 	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
 
 		"AbilityLayout"				"4"
-		"Ability1" 					""
+		"Ability1" 					"furion_teleportation_datadriven"
 		"Ability2" 					"deniable"
 		"Ability3" 					""
 		"Ability4" 					""
@@ -11505,7 +11505,7 @@
 		"Ability1" 					"invis_unit"
 		"Ability2" 					"true_sight_ability"
 		"Ability3" 					"deniable"
-		"Ability4" 					""
+		"Ability4" 					"furion_teleportation_datadriven"
 		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
@@ -11595,7 +11595,7 @@
 
 		"AbilityLayout"				"4"
 		"Ability1" 					"techies_suicide_datadriven"
-		"Ability2" 					""
+		"Ability2" 					"furion_teleportation_datadriven"
 		"Ability3" 					"deniable"
 		"Ability4" 					""
 		"Ability5"					""
@@ -11702,7 +11702,7 @@
 		"Ability1" 					"blink_datadriven"
 		"Ability2" 					"invis_unit"
 		"Ability3" 					"deniable"
-		"Ability4" 					""
+		"Ability4" 					"furion_teleportation_datadriven"
 		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
@@ -11781,7 +11781,7 @@
 		"AttackDamageMin"			"4800"		// Damage range min.
 		"AttackDamageMax"			"4800"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackRate"				"8.0"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"150"		// Range within a target can be acquired.
 		"AttackRange"				"150"		// Range within a target can be attacked.
@@ -11791,8 +11791,8 @@
 	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
 
 		"AbilityLayout"				"4"
-		"Ability1" 					""
-		"Ability2" 					""
+		"Ability1" 					"pudge_meat_hook_lua"
+		"Ability2" 					"furion_teleportation_datadriven"
 		"Ability3" 					"deniable"
 		"Ability4" 					""
 		"Ability5"					""
@@ -11822,14 +11822,14 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"                         "400"
+		"MovementSpeed"                         "522"
 		"MovementTurnRate"                      "0.6"
 
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"                          "12000"
 		"StatusHealthRegen"                     "1"
-		"StatusMana"                            "200"
+		"StatusMana"                            "2000"
 		"StatusManaRegen"                       "1"
 
 		// Vision
@@ -11848,13 +11848,13 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "Wearable1" {"ItemDef" "9966"}//mount("Skip of the Sapper's Guile")
-		"Wearable2" {"ItemDef" "9965"}//head("Helm of the Sapper's Guile")
-		"Wearable3" {"ItemDef" "9964"}//back("Sack of the Sapper's Guile")
-		"Wearable4" {"ItemDef" "9963"}//shoulder("Implements of the Sapper's Guile")
-		"Wearable5" {"ItemDef" "9961"}//arms("Arsenal of the Sapper's Guile")
-		"Wearable6" {"ItemDef" "9960"}//belt("Sign of the Sapper's Guile")
-		"Wearable7" {"ItemDef" "9962"}//("Auxiliary of the Sapper's Guile")
+		"Wearable1" {"ItemDef" "8497"}//arms("Plague Bracers of the Nurgle Champion")
+		"Wearable2" {"ItemDef" "8496"}//back("Plague Orifice of the Nurgle Champion")
+		"Wearable3" {"ItemDef" "8498"}//belt("Plague Belt of the Nurgle Champion")
+		"Wearable4" {"ItemDef" "8495"}//head("Plague Helm of the Nurgle Champion")
+		"Wearable5" {"ItemDef" "8499"}//offhand_weapon("Plague Hatchet of the Nurgle Champion")
+		"Wearable6" {"ItemDef" "8500"}//shoulder("Plague Shoulder of the Nurgle Champion")
+		"Wearable7" {"ItemDef" "8501"}//("Plague Cleaver of the Nurgle Champion")
 	        }
 	    }
 	}
@@ -11900,7 +11900,7 @@
 
 		"AbilityLayout"				"4"
 		"Ability1" 					"5_megaboss_firestorm"
-		"Ability2" 					""
+		"Ability2" 					"furion_teleportation_datadriven"
 		"Ability3" 					"deniable"
 		"Ability4" 					""
 		"Ability5"					""
@@ -11995,7 +11995,7 @@
 		"Ability1" 					"blink_datadriven"
 		"Ability2" 					"invis_unit"
 		"Ability3" 					"deniable"
-		"Ability4" 					""
+		"Ability4" 					"furion_teleportation_datadriven"
 		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
@@ -12286,6 +12286,6 @@
 	
 		"vscripts"                    "units\item_lia_healing_ward_unit.lua" 
 	}
-	
+
 
 }

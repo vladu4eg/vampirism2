@@ -28,7 +28,7 @@ var chest_opened_time = 1
 
 //////////ССЫЛКИ НА КНОПКИ С ДОНАТОМ ПРИ ПОКУПКЕ ВАЛЮТЫ///////////
 
-var button_donate_link_1 = "https://patreon.com/troll_vs_elves3"
+var button_donate_link_1 = "https://patreon.com/vamp_shop"
 var button_donate_link_2 = "https://paypal.me/elves3"
 var button_donate_link_3 = "https://donate.stream/en/vladu4eg"
 var button_donate_link_4 = "https://discord.gg/cfkjMbffsu"

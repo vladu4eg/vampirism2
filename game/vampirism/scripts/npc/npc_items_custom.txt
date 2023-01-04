@@ -6951,6 +6951,8 @@
 	}
 	}
 
+	
+
 	"item_shade"
 	{
 	"BaseClass"                     "item_datadriven"
@@ -7005,6 +7007,64 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"food_cost"				"3"
+		}
+	}
+	}
+
+	"item_vamp_pudge"
+	{
+	"BaseClass"                     "item_datadriven"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"            "item_build_rock_13"
+	
+	"ItemStockInitial" "1" 
+	"ItemStockMax" "1"
+	"ItemStockTime" "20"
+
+	"ItemCost"                      "90" 
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"troll healer;th;тролль-лекарь;тл"
+	"ItemPermanent"					"0"
+	"AbilityCooldown"               "20"
+	"ItemKillable"                  "0"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemInitialCharges"            "1"
+	"ItemStackable"					"1"
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"items\ItemSpawn.lua"
+			"Function"		"Spawn"
+			"name_creep"		"vamp_pudge"
+		}
+		
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"999999"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"300"
+		}	
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"food_cost"				"5"
 		}
 	}
 	}

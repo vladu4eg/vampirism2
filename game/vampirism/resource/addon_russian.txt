@@ -3,7 +3,7 @@
 	"Language"		"russian"
 	"Tokens"
 	{
-		"addon_game_name"			"VAMPIRISM 2"
+		"addon_game_name"			"VAMPIRISM SPEED"
 		
 		"shop_button"	"Магазин"
 
@@ -644,7 +644,7 @@
 		"patreonbuttontext1"																"Donate PayPal Page"
 		"patreonbuttontext2"																"Donate Yandex Page"
 		"patreontext"	"If you want to support the project and help in development, 
-then you can make your donations using the site https://patreon.com/troll_vs_elves3 or https://paypal.me/elves3 or https://donate.stream/en/vladu4eg
+then you can make your donations using the site https://patreon.com/vamp_shop or https://paypal.me/elves3 or https://donate.stream/en/vladu4eg
 The money received will be spent on maintaining the servers and improving the quality of the content.
 Be sure to include a link to the profile in Steam, nickname in Discord / Steam. 
 Please provide as much information as possible about yourself so that I can thank you for your support. 
@@ -691,7 +691,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_max_level"																	"Достигнут максимальный уровень!"
 		"error_not_time_3_min"																"Обмен доступен после 3 минуты."
 		
-		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon: https://patreon.com/vamp_shop</font>"
 		"donate2"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
 		"donate3"																			"<font color='#58ACFA'>Если вам нужна помощь - пишите в Discord: https://discord.gg/cfkjMbffsu</font>"
 

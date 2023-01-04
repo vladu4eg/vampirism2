@@ -242,7 +242,7 @@
 		
 		"donate1"																			"<font color='#58ACFA'>你可以在Patreon上支持这个游戏。</font>"
 		"donate2"																			"<font color='#58ACFA'>你可以通过在Patreon上支持我们的项目来增加你获得吸血鬼的机会，增加你获得的点数或获得其中一个独特的化妆品效果。</font>"
-		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/vamp_shop</font>"
 		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
 		"donate5"																			"<font color='#58ACFA'>你可以在我们的Discord服务器上分享想法/错误/愿望!</font>"
 		"donate6"																			"<font color='#58ACFA'>感谢所有的测试者为定制化的发展做出了巨大的贡献! 谢谢你 ：*</font>"

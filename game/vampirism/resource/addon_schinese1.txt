@@ -1920,7 +1920,7 @@
 		"patreonbuttontext1"																"Donate PayPal Page"
 		"patreonbuttontext2"																"Donate Yandex Page"
 		"patreontext"	"If you want to support the project and help in development, 
-then you can make your donations using the site https://patreon.com/troll_vs_elves3 or https://paypal.me/elves3 or https://donate.stream/en/vladu4eg
+then you can make your donations using the site https://patreon.com/vamp_shop or https://paypal.me/elves3 or https://donate.stream/en/vladu4eg
 The money received will be spent on maintaining the servers and improving the quality of the content.
 Be sure to include a link to the profile in Steam, nickname in Discord / Steam. 
 Please provide as much information as possible about yourself so that I can thank you for your support. 
@@ -1991,7 +1991,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		
 		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon.</font>"
 		"donate2"																			"<font color='#58ACFA'>You can increase the chance of getting a Vampire, increase the number of points you receive or get one of the unique cosmetic effects by supporting our project on Patreon.</font>"
-		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/troll_vs_elves3</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/vamp_shop</font>"
 		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/cfkjMbffsu</font>"
 		"donate5"																			"<font color='#58ACFA'>Submit your ideas on what to add to the game in our Discord server!</font>"
 		"donate6"																			"<font color='#58ACFA'>Thanks to all the testers for such a significant contribution to the development of the game! Thank:*</font>"
